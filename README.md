@@ -1,4 +1,8 @@
-# thesourceproject.github.io
+# For Fun. For Learning. For Everyone.
+
+The Source Project is an e-learning platform composed of free tutorials on Java, Javascript, Python and so on. Whether you want to build softwares, games or web applications, our tutorials will definitely assist you.
+
+### So, let's [begin learning...](https://thesourceproject.github.io)
 
 ## Build Setup
 
