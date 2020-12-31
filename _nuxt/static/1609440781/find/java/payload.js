@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/find/java", {data:[{}],fetch:[],mutations:void 0});

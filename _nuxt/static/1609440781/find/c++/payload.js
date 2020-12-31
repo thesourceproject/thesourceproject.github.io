@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/find/c++", {data:[{}],fetch:[],mutations:void 0});
