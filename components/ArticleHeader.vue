@@ -6,7 +6,7 @@
       <NuxtLink
         v-for="tag in tags"
         :key="tag"
-        :to="`find/${tag}`"
+        :to="`/find/${tag}`"
         class="mr-4 hover:underline focus:underline focus:outline-none"
       >
         #{{ tag }}
