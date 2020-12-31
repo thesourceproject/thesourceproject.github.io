@@ -20,7 +20,14 @@ export default {
         content: "NBXKl5RAGYQH3Rp9PKrszzdV4bRMOLkHjIjvfNDo2xE"
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&display=swap"
+      }
+    ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -42,5 +49,10 @@ export default {
   modules: [],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {}
+  build: {},
+
+  // Configure the generation of your universal web application to a static web application.
+  generate: {
+    crawler: false
+  }
 };

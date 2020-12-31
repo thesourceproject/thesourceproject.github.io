@@ -6,7 +6,9 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "predeploy": "npm run generate",
+    "deploy": "gh-pages -d dist -t true"
   },
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.2",
@@ -18,6 +20,7 @@
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^3.1.0"
+    "@nuxtjs/tailwindcss": "^3.1.0",
+    "gh-pages": "^3.1.0"
   }
 }
