@@ -142,13 +142,6 @@ export default {
   name: "about-us",
   head: {
     title: "About Us | The Source Project",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content: "Home page description",
-      },
-    ],
   },
 };
 </script>

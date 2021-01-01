@@ -69,13 +69,6 @@ export default {
   name: "find",
   head: {
     title: "Find | The Source Project",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content: "Home page description",
-      },
-    ],
   },
   data() {
     return {

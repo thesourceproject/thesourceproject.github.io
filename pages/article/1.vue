@@ -215,7 +215,8 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "Home page description",
+        content:
+          "Visual Studio Code is a powerful free open source text editor by Microsoft. Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
       },
     ],
   },
