@@ -23,7 +23,7 @@
       <figure class="flex flex-col items-center group">
         <figcaption>About Us</figcaption>
         <NuxtLink
-          to="about-us"
+          to="/about-us"
           class="mt-2 group-hover:animate-bounce focus:outline-none"
         >
           <svg
