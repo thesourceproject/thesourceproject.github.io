@@ -26,11 +26,7 @@ export default {
   },
   methods: {
     changeTheme() {
-      if (this.theme === "light") {
-        this.theme = "dark";
-      } else {
-        this.theme = "light";
-      }
+      this.theme = this.theme === "light" ? "dark" : "light";
       localStorage.setItem("theme", this.theme);
     },
   },
