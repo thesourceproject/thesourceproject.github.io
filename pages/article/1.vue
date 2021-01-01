@@ -1,7 +1,5 @@
 <template>
-  <main
-    class="flex-grow container mx-auto p-4 sm:px-8 flex flex-col leading-loose"
-  >
+  <main>
     <article class="w-full max-w-4xl mx-auto flex flex-col">
       <ArticleHeader
         title="Installing Visual Studio Code and Git in Windows"

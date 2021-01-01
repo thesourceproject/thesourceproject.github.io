@@ -1,7 +1,5 @@
 <template>
-  <main
-    class="flex-grow container mx-auto p-4 sm:px-8 flex flex-col leading-loose"
-  >
+  <main>
     <section class="my-12 max-w-4xl mx-auto flex flex-col">
       <h1 class="text-3xl font-bold">
         <span class="hidden sm:block">

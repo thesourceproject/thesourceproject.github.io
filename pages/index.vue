@@ -1,7 +1,5 @@
 <template>
-  <main
-    class="flex-grow container mx-auto p-4 sm:px-8 flex flex-col leading-loose"
-  >
+  <main>
     <section
       class="bg-background-3 p-8 rounded-3xl flex items-center flex-col-reverse md:flex-row justify-evenly"
     >

@@ -4,7 +4,9 @@
     :class="theme"
   >
     <Header @change-theme="changeTheme" />
-    <Nuxt />
+    <Nuxt
+      class="flex-grow container mx-auto p-4 sm:px-8 flex flex-col leading-loose"
+    />
     <Footer />
   </div>
 </template>

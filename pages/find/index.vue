@@ -1,7 +1,5 @@
 <template>
-  <main
-    class="flex-grow container mx-auto p-4 sm:px-8 flex flex-col leading-loose"
-  >
+  <main>
     <label
       class="mx-auto w-full max-w-md px-6 py-4 rounded-full flex items-center bg-background-4 text-text-3"
       ><button v-if="query" class="focus:outline-none" @click="query = ''">
