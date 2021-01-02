@@ -1,6 +1,6 @@
 <template>
   <header
-    class="container mx-auto p-4 sm:px-8 flex items-center justify-between"
+    class="container mx-auto px-4 py-6 sm:px-8 flex items-center justify-between"
   >
     <NuxtLink to="/" class="font-title text-lg text-text-4 select-none">
       <span>TheSourceProject<strong class="text-text-3">_</strong></span>
