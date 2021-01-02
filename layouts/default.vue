@@ -58,7 +58,7 @@ html {
   --text-2: #ffffff;
   --text-3: #ff2f2f;
   --text-4: #002e46;
-  --text-5: #ffffff;
+  --text-5: #191D30;
 }
 
 .dark {
@@ -70,6 +70,6 @@ html {
   --text-2: #eeeeee;
   --text-3: #fc4422;
   --text-4: #eeeeee;
-  --text-5: #eeeeee;
+  --text-5: #98DFAF;
 }
 </style>

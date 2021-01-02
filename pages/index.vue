@@ -5,7 +5,7 @@
     >
       <div class="flex flex-col">
         <p
-          class="mt-6 md:mt-0 text-text-5 text-2xl leading-relaxed md:text-xl md:leading-relaxed lg:text-2xl lg:leading-loose xl:text-3xl xl:leading-extra-loose"
+          class="mt-6 md:mt-0 text-text-2 text-2xl leading-relaxed md:text-xl md:leading-relaxed lg:text-2xl lg:leading-loose xl:text-3xl xl:leading-extra-loose"
         >
           Collection of free<br />
           tutorials to level-up<br />
