@@ -110,7 +110,10 @@ export default {
   },
   computed: {
     fuse() {
-      return new Fuse(this.articles, { keys: ["title", "tags"] });
+      return new Fuse(this.articles, {
+        keys: ["title", "tags"],
+        shouldSort: true,
+      });
     },
     queryArticles() {
       if (this.query) {
@@ -123,7 +126,7 @@ export default {
     },
   },
   mounted() {
-    this.query = this.$route.params.query || "";
+    this.query = this.$route.query.q || "";
   },
 };
 </script>
