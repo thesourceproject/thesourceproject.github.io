@@ -33,7 +33,7 @@
         class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8 text-text-2 text-xl"
       >
         <NuxtLink
-          to="/find?q=c++"
+          :to="{ path: '/find', query: { q: 'c++' } }"
           class="h-52 bg-cpp p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
         >
           <p>C++</p>
@@ -48,7 +48,7 @@
             /></svg
         ></NuxtLink>
         <NuxtLink
-          to="/find?q=java"
+          :to="{ path: '/find', query: { q: 'java' } }"
           class="h-52 bg-java p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
         >
           <p>Java</p>
@@ -62,7 +62,7 @@
               d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"
             /></svg></NuxtLink
         ><NuxtLink
-          to="/find?q=javascript"
+          :to="{ path: '/find', query: { q: 'javascript' } }"
           class="h-52 bg-javascript p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
         >
           <p>Javascript</p>
@@ -76,7 +76,7 @@
               d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"
             /></svg></NuxtLink
         ><NuxtLink
-          to="/find?q=python"
+          :to="{ path: '/find', query: { q: 'python' } }"
           class="h-52 bg-python p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
         >
           <p>Python</p>
@@ -92,7 +92,7 @@
           </svg>
         </NuxtLink>
         <NuxtLink
-          to="/find?q=miscellaneous"
+          :to="{ path: '/find', query: { q: 'miscellaneous' } }"
           class="h-52 bg-misc p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
         >
           <p>Miscellaneous</p>
