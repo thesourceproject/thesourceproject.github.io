@@ -75,6 +75,16 @@ export default {
       query: "",
       articles: [
         {
+          id: 2,
+          category: "misc",
+          title: "Publishing your first project to Github",
+          readTime: "10 min read",
+          date: "4 Jan '21",
+          fragment:
+            "GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere...",
+          tags: ["miscellaneous", "github", "git", "basics", "beginner"],
+        },
+        {
           id: 1,
           category: "misc",
           title: "Installing Visual Studio Code and Git in Windows",

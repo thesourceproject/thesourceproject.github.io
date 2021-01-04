@@ -2,82 +2,71 @@
   <main>
     <article class="w-full max-w-4xl mx-auto flex flex-col">
       <ArticleHeader
-        title="Installing Visual Studio Code and Git in Windows"
-        date="23 Dec '20"
-        readTime="20 min read"
-        :tags="[
-          'miscellaneous',
-          'vscode',
-          'git',
-          'windows',
-          'basics',
-          'beginner',
-        ]"
+        title="Publishing your first project to Github"
+        date="4 Jan '21"
+        readTime="10 min read"
+        :tags="['miscellaneous', 'github', 'git', 'basics', 'beginner']"
       />
       <p>
+        In our
+        <a
+          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          href="https://thesourceproject.github.io/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
+          target="_blank"
+          >previous tutorial</a
+        >
+        we learnt how to create a local Git repository and make commits to it.
+        Now it's time to show-off your first project to the world.
+      </p>
+      <a
+        class="mx-auto mt-6 w-96 bg-white rounded-2xl"
+        href="https://github.com/"
+        target="_blank"
+      >
+        <img src="../../assets/images/article/2/Misc2-1.png" alt="Github" />
+      </a>
+      <p class="mt-6">
         <a
           class="text-text-3 text-lg font-bold hover:underline focus:underline focus:outline-none"
-          href="https://code.visualstudio.com/"
+          href="https://github.com/"
           target="_blank"
-          >Visual Studio Code</a
+          >GitHub</a
         >
-        is a powerful free open source text editor by Microsoft. VS Code is
-        available for Windows, Linux, and macOS. Use it to code in any
-        programming language, without switching editors. Visual Studio Code has
-        support for many languages, including Python, Java, C++, JavaScript, and
-        more.
-        <br /><br />
-        <a
-          class="text-text-3 text-lg font-bold hover:underline focus:underline focus:outline-none"
-          href="https://git-scm.com/"
-          target="_blank"
-          >Git</a
-        >
-        is a free and open source distributed version control system designed to
-        handle everything from small to very large projects with speed and
-        efficiency. <br /><br />
-        VS Code has integrated source control and includes Git support
-        in-the-box. VS Code will leverage your machine's Git installation, so
-        you need to install Git first before you get these features.
+        is a code hosting platform for version control and collaboration. It
+        allows you to showcase your work and lets you and others work together
+        on projects from anywhere.
       </p>
       <div class="flex flex-col max-w-4xl mt-12">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        Download VS Code from the
+        Sign up on
         <a
           class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
-          href="https://code.visualstudio.com/"
+          href="https://github.com/"
           target="_blank"
-          >official website</a
-        >.
+          >Github</a
+        >. After completing the sign-up process, open your project folder in VS
+        Code.<br />
+        <strong>Note</strong> - You need to have a local Git repository set up
+        before you can continue. You may refer to our
+        <a
+          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          href="https://thesourceproject.github.io/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
+          target="_blank"
+          >previous tutorial</a
+        >
+        for instructions on how to create a local Git repository.<br />
+        Click the <strong>Publish to Github</strong> button in the status bar on
+        the bottom.
       </p>
       <img
-        src="../../assets/images/article/1/Misc1-1.png"
-        alt="Download VS Code"
+        src="../../assets/images/article/2/Misc2-2.png"
+        alt="Open your project in VS Code"
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-8">
-        After downloading it, follow the instructions in the setup to install VS
-        Code on your computer.<br />
-        Then download Git from the
-        <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
-          href="https://git-scm.com/"
-          target="_blank"
-          >official website</a
-        >. At the time of writing this article, the latest version available is
-        <strong>2.29.2</strong>.
-      </p>
-      <img
-        src="../../assets/images/article/1/Misc1-2.png"
-        alt="Download Git"
-        class="mx-auto mt-6 max-w-full"
-      />
-      <p class="mt-8">
-        After downloading it, follow the instructions in the setup to install
-        Git on your computer.<br />
         Make sure you select
         <strong>Use Visual Studio Code as Git's default editor</strong> when
         prompted.<br />
@@ -209,14 +198,13 @@ export default {
     CodeSnippet,
   },
   head: {
-    title:
-      "Installing Visual Studio Code and Git in Windows | The Source Project",
+    title: "Publishing your first project to Github | The Source Project",
     meta: [
       {
         hid: "description",
         name: "description",
         content:
-          "Visual Studio Code is a powerful free open source text editor by Microsoft. Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
+          "In our previous tutorial we learnt how to create a local Git repository and make commits to it. Now it's time to show-off your first project to the world. GitHub is a code hosting platform for version control and collaboration.",
       },
     ],
   },
