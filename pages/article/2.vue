@@ -159,7 +159,7 @@
       />
       <p class="mt-6">
         And there you go! You have published your first project to Github. Now
-        show-off your work to your friends!
+        it's time to show-off your work to your friends!
       </p>
     </article>
   </main>
