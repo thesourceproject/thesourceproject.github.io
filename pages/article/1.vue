@@ -139,7 +139,7 @@
       <p>Run this HTML file in your browser to see the result.</p>
       <img
         src="../../assets/images/article/1/Misc1-7.png"
-        alt="First Commit"
+        alt="My First Project"
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">
@@ -169,7 +169,7 @@
       </p>
       <img
         src="../../assets/images/article/1/Misc1-9.png"
-        alt="First Commit"
+        alt="No Staged Commits"
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">
@@ -186,7 +186,7 @@
       </p>
       <img
         src="../../assets/images/article/1/Misc1-10.png"
-        alt="First Commit"
+        alt="Configure user.name and user.email"
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">

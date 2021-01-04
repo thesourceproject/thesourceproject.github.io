@@ -41,6 +41,29 @@
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
+        <strong>Note</strong> - You need to have
+        <a
+          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          href="https://code.visualstudio.com/"
+          target="_blank"
+          >Visual Studio Code</a
+        >
+        and local
+        <a
+          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          href="https://git-scm.com/"
+          target="_blank"
+          >Git</a
+        >
+        repository set up before you can continue. You may refer to our
+        <a
+          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          href="https://thesourceproject.github.io/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
+          target="_blank"
+          >previous tutorial</a
+        >
+        for instructions on how to install VS Code and create a local Git
+        repository.<br />
         Sign up on
         <a
           class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
@@ -49,140 +72,96 @@
           >Github</a
         >. After completing the sign-up process, open your project folder in VS
         Code.<br />
-        <strong>Note</strong> - You need to have a local Git repository set up
-        before you can continue. You may refer to our
-        <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
-          href="https://thesourceproject.github.io/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
-          target="_blank"
-          >previous tutorial</a
-        >
-        for instructions on how to create a local Git repository.<br />
         Click the <strong>Publish to Github</strong> button in the status bar on
         the bottom.
       </p>
       <img
         src="../../assets/images/article/2/Misc2-2.png"
-        alt="Open your project in VS Code"
+        alt="Publish to Github"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
-        Make sure you select
-        <strong>Use Visual Studio Code as Git's default editor</strong> when
-        prompted.<br />
-        Continue the rest of the steps with the default options checked.
-      </p>
-      <img
-        src="../../assets/images/article/1/Misc1-3.png"
-        alt="Choosing the default editor used by Git"
-        class="mx-auto mt-6 max-w-full"
-      />
-      <p class="mt-8">
-        And there you go. You have now installed VS Code and Git on your
-        computer.<br />
-        Now time to write your first piece of code.<br /><br />
-        Create a new folder in your computer, right-click on it and select
-        <strong>Open with Code</strong> in the context menu.<br />
-        <strong>Note -</strong> It is important to open a folder(not a file) in
-        VS Code otherwise the source control functions will not work.<br />
-        This folder will now act as a workspace for your project.<br /><br />
-        Now go to <strong>Source Control</strong> in the side bar and initialise
-        the local repository. Ignore the <em>Publish to Github</em> button for
-        now, we will cover that in the next tutorial.
-      </p>
-      <img
-        src="../../assets/images/article/1/Misc1-4.png"
-        alt="Initialize Repository"
-        class="mx-auto mt-6 max-w-full"
-      />
-      <p class="mt-8">
-        Now go to <strong>Explorer</strong> and create a new file named
-        <strong>myFirstProject.html</strong>.<br />
-      </p>
-      <img
-        src="../../assets/images/article/1/Misc1-5.jpg"
-        alt="Create New File"
-        class="mx-auto mt-6 max-w-full"
-      />
-      <p class="mt-8">
-        Now type <strong>!</strong>(yes, just an exclaimation mark) in the
-        editor and VS Code will show you that its an Emmet abbreviation.<br />
-        Press <strong>Enter</strong> and the file will be populated by some
-        boiler-plate code automatically.(Pretty cool, huh?)
-      </p>
-      <img
-        src="../../assets/images/article/1/Misc1-6.jpg"
-        alt="Emmet Abbreviation"
-        class="mx-auto mt-6 max-w-full"
-      />
-      <p class="mt-8">
-        Now paste this code in the <strong>&lt;body&gt;</strong> tag of your
-        document.
-      </p>
-      <CodeSnippet
-        :code="`
-&lt;h1 style=&quot;margin-top: 2rem;color: #ff2f2f;font-family: sans-serif;text-align: center;&quot;&gt;My First Project&lt;/h1&gt;
-&lt;h2 style=&quot;color: #002e46;font-family: monospace;text-align: center;&quot;&gt;For More Tutorials Visit &lt;a href=&quot;https://thesourceproject.github.io&quot; target=&quot;_blank&quot;&gt;TheSourceProject&lt;/a&gt;&lt;/h2&gt;
-    `"
-      />
-      <p>Run this HTML file in your browser to see the result.</p>
-      <img
-        src="../../assets/images/article/1/Misc1-7.png"
-        alt="First Commit"
-        class="mx-auto mt-6 max-w-full"
-      />
-      <p class="mt-8">
-        Not bad for a start. Now go back to <strong>Source Control</strong> and
-        type in <strong>first commit</strong> in the text box and press
-        <strong>Ctrl + Enter</strong> to make your first commit in the
-        repository.<br />
-      </p>
-      <img
-        src="../../assets/images/article/1/Misc1-8.png"
-        alt="First Commit"
-        class="mx-auto mt-6 max-w-full"
-      />
-      <p class="mt-8">
+      <p class="mt-6">
         A prompt will appear asking
-        <em
-          >Would you like to stage all your changes and commit them
-          directly?</em
-        ><br />
-        Click <strong>Always</strong>. You can learn more about changes
-        <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
-          href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository"
-          target="_blank"
-          >here</a
-        ><br />
+        <em>The extension 'Github' wants to sign in using Github</em><br />
+        Click <strong>Allow</strong>.
       </p>
       <img
-        src="../../assets/images/article/1/Misc1-9.png"
-        alt="First Commit"
+        src="../../assets/images/article/2/Misc2-3.png"
+        alt="The extension 'Github' wants to sign in using Github"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
-        Oops! We get an error message because we haven't yet configured our Git
-        user's name and email. Simply open the in-built
-        <strong>Windows Powershell</strong> in VS Code(Ctrl + `) and type in the
-        following two commands. <br />
-        Don't forget to replace the name and email for your own.
-      </p>
-      <p class="mt-2 mx-8">
-        <code>git config --global user.name "My Name"</code><br /><code
-          >git config --global user.email "myname@example.com"</code
-        >
+      <p class="mt-6">
+        Your browser will be opened automatically and you will receive another
+        prompt asking you to authorize Visual Studio Code to access Github.<br />
+        Click <strong>Continue</strong>.
       </p>
       <img
-        src="../../assets/images/article/1/Misc1-10.png"
-        alt="First Commit"
+        src="../../assets/images/article/2/Misc2-4.png"
+        alt="Authorize Visual Studio Code to access Github"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
-        Once you have configured the username and email try to make the commit
-        once more and it should work as normal.<br /><br />
-        And there you go! You have created your first local Git repository and
-        made your first commit. You're now ready to start creating!
+      <p class="mt-6">
+        You will then see a prompt asking you to allow an extension to open this
+        URI.<br />
+        Click <strong>Open</strong>.
+      </p>
+      <img
+        src="../../assets/images/article/2/Misc2-5.png"
+        alt="Allow an extension to open this
+        URI"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        Once the authentication is complete you will be asked by VS Code to set
+        a repository name for Github. By default it is set to the current folder
+        name.<br />
+        You are also given two options, whether to publish to a private
+        repository or a public repository. If you want your repository to be
+        private i.e. only be seen by you, you can select
+        <em>Publish to Github private repository</em>.<br />
+        But for now select
+        <em>Publish to Github public repository</em>.
+      </p>
+      <img
+        src="../../assets/images/article/2/Misc2-6.png"
+        alt="Allow an extension to open this
+        URI"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        You will prompted to sign in to Github.<br />
+        Click <strong>Sign in with your browser</strong> to continue.
+      </p>
+      <img
+        src="../../assets/images/article/2/Misc2-7.png"
+        alt="Sign in to Github with your browser"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        Your browser will show you that the authentication has succeeded. Close
+        the tab and return to VS Code.
+      </p>
+      <img
+        src="../../assets/images/article/2/Misc2-8.png"
+        alt="Sign in to Github with your browser"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        You will see a notification below saying that the repository has been
+        published successfully. You may click the
+        <strong>Open in Github</strong> button to open the repository in your
+        browser<br />
+        It may also show you another notification asking you to allow VS Code to
+        periodically run <em>git fetch</em>. You can ignore this for now.
+      </p>
+      <img
+        src="../../assets/images/article/2/Misc2-9.png"
+        alt="Sign in to Github with your browser"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        And there you go! You have published your first project to Github. Now
+        show-off your work to your friends!
       </p>
     </article>
   </main>
