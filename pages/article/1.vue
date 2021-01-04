@@ -75,7 +75,7 @@
         alt="Download Git"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
+      <p class="mt-6">
         After downloading it, follow the instructions in the setup to install
         Git on your computer.<br />
         Make sure you select
@@ -88,7 +88,7 @@
         alt="Choosing the default editor used by Git"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
+      <p class="mt-6">
         And there you go. You have now installed VS Code and Git on your
         computer.<br />
         Now time to write your first piece of code.<br /><br />
@@ -106,7 +106,7 @@
         alt="Initialize Repository"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
+      <p class="mt-6">
         Now go to <strong>Explorer</strong> and create a new file named
         <strong>myFirstProject.html</strong>.<br />
       </p>
@@ -115,7 +115,7 @@
         alt="Create New File"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
+      <p class="mt-6">
         Now type <strong>!</strong>(yes, just an exclaimation mark) in the
         editor and VS Code will show you that its an Emmet abbreviation.<br />
         Press <strong>Enter</strong> and the file will be populated by some
@@ -126,7 +126,7 @@
         alt="Emmet Abbreviation"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
+      <p class="mt-6">
         Now paste this code in the <strong>&lt;body&gt;</strong> tag of your
         document.
       </p>
@@ -142,7 +142,7 @@
         alt="First Commit"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
+      <p class="mt-6">
         Not bad for a start. Now go back to <strong>Source Control</strong> and
         type in <strong>first commit</strong> in the text box and press
         <strong>Ctrl + Enter</strong> to make your first commit in the
@@ -153,7 +153,7 @@
         alt="First Commit"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
+      <p class="mt-6">
         A prompt will appear asking
         <em
           >Would you like to stage all your changes and commit them
@@ -172,7 +172,7 @@
         alt="First Commit"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
+      <p class="mt-6">
         Oops! We get an error message because we haven't yet configured our Git
         user's name and email. Simply open the in-built
         <strong>Windows Powershell</strong> in VS Code(Ctrl + `) and type in the
@@ -189,7 +189,7 @@
         alt="First Commit"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
+      <p class="mt-6">
         Once you have configured the username and email try to make the commit
         once more and it should work as normal.<br /><br />
         And there you go! You have created your first local Git repository and
