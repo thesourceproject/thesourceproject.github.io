@@ -9,11 +9,10 @@
       />
       <p>
         In our
-        <a
+        <NuxtLink
           class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
-          href="https://thesourceproject.github.io/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
-          target="_blank"
-          >previous tutorial</a
+          to="/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
+          >previous tutorial</NuxtLink
         >
         we learnt how to create a local Git repository and make commits to it.
         Now it's time to show-off your first project to the world.
@@ -56,11 +55,10 @@
           >Git</a
         >
         repository set up before you can continue. You may refer to our
-        <a
+        <NuxtLink
           class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
-          href="https://thesourceproject.github.io/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
-          target="_blank"
-          >previous tutorial</a
+          to="/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
+          >previous tutorial</NuxtLink
         >
         for instructions on how to install VS Code and create a local Git
         repository.<br />

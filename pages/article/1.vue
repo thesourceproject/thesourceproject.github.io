@@ -193,7 +193,20 @@
         Once you have configured the username and email try to make the commit
         once more and it should work as normal.<br /><br />
         And there you go! You have created your first local Git repository and
-        made your first commit. You're now ready to start creating!
+        made your first commit. You're now ready to start creating! You may see
+        our
+        <NuxtLink
+          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          to="/article/2#Publishing-your-first-project-to-Github"
+          >next tutorial</NuxtLink
+        >
+        where we show you how to publish this project to
+        <a
+          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          href="https://github.com/"
+          target="_blank"
+          >Github</a
+        >.
       </p>
     </article>
   </main>
