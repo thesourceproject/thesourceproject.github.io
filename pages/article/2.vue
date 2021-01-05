@@ -22,7 +22,7 @@
         href="https://github.com/"
         target="_blank"
       >
-        <img src="../../assets/images/article/2/Misc2-1.png" alt="Github" />
+        <img src="~/assets/images/article/2/Misc2-1.png" alt="Github" />
       </a>
       <p class="mt-6">
         <a
@@ -74,7 +74,7 @@
         the bottom.
       </p>
       <img
-        src="../../assets/images/article/2/Misc2-2.png"
+        src="~/assets/images/article/2/Misc2-2.png"
         alt="Publish to Github"
         class="mx-auto mt-6 max-w-full"
       />
@@ -84,7 +84,7 @@
         Click <strong>Allow</strong>.
       </p>
       <img
-        src="../../assets/images/article/2/Misc2-3.png"
+        src="~/assets/images/article/2/Misc2-3.png"
         alt="The extension 'Github' wants to sign in using Github"
         class="mx-auto mt-6 max-w-full"
       />
@@ -94,7 +94,7 @@
         Click <strong>Continue</strong>.
       </p>
       <img
-        src="../../assets/images/article/2/Misc2-4.png"
+        src="~/assets/images/article/2/Misc2-4.png"
         alt="Authorize Visual Studio Code to access Github"
         class="mx-auto mt-6 max-w-full"
       />
@@ -104,7 +104,7 @@
         Click <strong>Open</strong>.
       </p>
       <img
-        src="../../assets/images/article/2/Misc2-5.png"
+        src="~/assets/images/article/2/Misc2-5.png"
         alt="Allow an extension to open this
         URI"
         class="mx-auto mt-6 max-w-full"
@@ -121,7 +121,7 @@
         <em>Publish to Github public repository</em>.
       </p>
       <img
-        src="../../assets/images/article/2/Misc2-6.png"
+        src="~/assets/images/article/2/Misc2-6.png"
         alt="Allow an extension to open this
         URI"
         class="mx-auto mt-6 max-w-full"
@@ -131,7 +131,7 @@
         Click <strong>Sign in with your browser</strong> to continue.
       </p>
       <img
-        src="../../assets/images/article/2/Misc2-7.png"
+        src="~/assets/images/article/2/Misc2-7.png"
         alt="Sign in to Github with your browser"
         class="mx-auto mt-6 max-w-full"
       />
@@ -140,7 +140,7 @@
         the tab and return to VS Code.
       </p>
       <img
-        src="../../assets/images/article/2/Misc2-8.png"
+        src="~/assets/images/article/2/Misc2-8.png"
         alt="Sign in to Github with your browser"
         class="mx-auto mt-6 max-w-full"
       />
@@ -153,7 +153,7 @@
         periodically run <em>git fetch</em>. You can ignore this for now.
       </p>
       <img
-        src="../../assets/images/article/2/Misc2-9.png"
+        src="~/assets/images/article/2/Misc2-9.png"
         alt="Sign in to Github with your browser"
         class="mx-auto mt-6 max-w-full"
       />
@@ -166,13 +166,11 @@
 </template>
 
 <script>
-import ArticleHeader from "../../components/ArticleHeader.vue";
-import CodeSnippet from "../../components/CodeSnippet.vue";
+import ArticleHeader from "~/components/ArticleHeader.vue";
 export default {
   name: "Misc1",
   components: {
     ArticleHeader,
-    CodeSnippet,
   },
   head: {
     title: "Publishing your first project to Github | The Source Project",

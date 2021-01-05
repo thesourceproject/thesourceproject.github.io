@@ -54,7 +54,7 @@
         >.
       </p>
       <img
-        src="../../assets/images/article/1/Misc1-1.png"
+        src="~/assets/images/article/1/Misc1-1.png"
         alt="Download VS Code"
         class="mx-auto mt-6 max-w-full"
       />
@@ -71,7 +71,7 @@
         <strong>2.29.2</strong>.
       </p>
       <img
-        src="../../assets/images/article/1/Misc1-2.png"
+        src="~/assets/images/article/1/Misc1-2.png"
         alt="Download Git"
         class="mx-auto mt-6 max-w-full"
       />
@@ -84,7 +84,7 @@
         Continue the rest of the steps with the default options checked.
       </p>
       <img
-        src="../../assets/images/article/1/Misc1-3.png"
+        src="~/assets/images/article/1/Misc1-3.png"
         alt="Choosing the default editor used by Git"
         class="mx-auto mt-6 max-w-full"
       />
@@ -102,7 +102,7 @@
         now, we will cover that in the next tutorial.
       </p>
       <img
-        src="../../assets/images/article/1/Misc1-4.png"
+        src="~/assets/images/article/1/Misc1-4.png"
         alt="Initialize Repository"
         class="mx-auto mt-6 max-w-full"
       />
@@ -111,7 +111,7 @@
         <strong>myFirstProject.html</strong>.<br />
       </p>
       <img
-        src="../../assets/images/article/1/Misc1-5.jpg"
+        src="~/assets/images/article/1/Misc1-5.jpg"
         alt="Create New File"
         class="mx-auto mt-6 max-w-full"
       />
@@ -122,7 +122,7 @@
         boiler-plate code automatically.(Pretty cool, huh?)
       </p>
       <img
-        src="../../assets/images/article/1/Misc1-6.jpg"
+        src="~/assets/images/article/1/Misc1-6.jpg"
         alt="Emmet Abbreviation"
         class="mx-auto mt-6 max-w-full"
       />
@@ -131,14 +131,13 @@
         document.
       </p>
       <CodeSnippet
-        :code="`
-&lt;h1 style=&quot;margin-top: 2rem;color: #ff2f2f;font-family: sans-serif;text-align: center;&quot;&gt;My First Project&lt;/h1&gt;
-&lt;h2 style=&quot;color: #002e46;font-family: monospace;text-align: center;&quot;&gt;For More Tutorials Visit &lt;a href=&quot;https://thesourceproject.github.io&quot; target=&quot;_blank&quot;&gt;TheSourceProject&lt;/a&gt;&lt;/h2&gt;
-    `"
+        :code="`&lt;h1 style=&quot;margin-top: 2rem;color: #ff2f2f;font-family: sans-serif;text-align: center;&quot;&gt;My First Project&lt;/h1&gt;
+&lt;h2 style=&quot;color: #002e46;font-family: monospace;text-align: center;&quot;&gt;For More Tutorials Visit &lt;a href=&quot;https://thesourceproject.github.io&quot; target=&quot;_blank&quot;&gt;TheSourceProject&lt;/a&gt;&lt;/h2&gt;`"
+        lang="language-html"
       />
       <p>Run this HTML file in your browser to see the result.</p>
       <img
-        src="../../assets/images/article/1/Misc1-7.png"
+        src="~/assets/images/article/1/Misc1-7.png"
         alt="My First Project"
         class="mx-auto mt-6 max-w-full"
       />
@@ -149,7 +148,7 @@
         repository.<br />
       </p>
       <img
-        src="../../assets/images/article/1/Misc1-8.png"
+        src="~/assets/images/article/1/Misc1-8.png"
         alt="First Commit"
         class="mx-auto mt-6 max-w-full"
       />
@@ -168,7 +167,7 @@
         ><br />
       </p>
       <img
-        src="../../assets/images/article/1/Misc1-9.png"
+        src="~/assets/images/article/1/Misc1-9.png"
         alt="No Staged Commits"
         class="mx-auto mt-6 max-w-full"
       />
@@ -185,7 +184,7 @@
         >
       </p>
       <img
-        src="../../assets/images/article/1/Misc1-10.png"
+        src="~/assets/images/article/1/Misc1-10.png"
         alt="Configure user.name and user.email"
         class="mx-auto mt-6 max-w-full"
       />
@@ -213,8 +212,8 @@
 </template>
 
 <script>
-import ArticleHeader from "../../components/ArticleHeader.vue";
-import CodeSnippet from "../../components/CodeSnippet.vue";
+import ArticleHeader from "~/components/ArticleHeader.vue";
+import CodeSnippet from "~/components/CodeSnippet.vue";
 export default {
   name: "Misc1",
   components: {

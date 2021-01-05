@@ -1,12 +1,16 @@
 <template>
-  <code class="mx-8 whitespace-pre-wrap">
-    {{ code }}
-  </code>
+  <div class="mx-10 my-4">
+    <pre><code :class="lang">{{ code }}</code></pre>
+  </div>
 </template>
 
 <script>
+import Prism from "~/plugins/prism";
 export default {
   name: "CodeSnippet",
-  props: ["code"],
+  props: ["code", "lang"],
+  mounted() {
+    Prism.highlightAll();
+  },
 };
 </script>

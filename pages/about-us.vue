@@ -41,7 +41,7 @@
       <div class="mt-16 grid justify-evenly items-center gap-8 md:grid-cols-2">
         <div class="flex items-center">
           <img
-            src="../assets/images/team1.jpg"
+            src="~/assets/images/team1.jpg"
             alt="Kritika"
             class="rounded-full w-48"
           />
@@ -77,7 +77,7 @@
         </div>
         <div class="flex items-center">
           <img
-            src="../assets/images/team2.jpg"
+            src="~/assets/images/team2.jpg"
             alt="Yetendra"
             class="rounded-full w-48"
           />

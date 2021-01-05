@@ -1,7 +1,7 @@
 <template>
   <main class="w-full max-w-4xl mx-auto flex flex-col">
     <figure>
-      <img src="../assets/images/404-image.svg" alt="404 Page Not Found" />
+      <img src="~/assets/images/404-image.svg" alt="404 Page Not Found" />
       <figcaption class="mt-6">
         <h1 class="font-title font-bold text-text-5 text-6xl text-center">
           OOPS!

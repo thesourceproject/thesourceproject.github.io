@@ -17,6 +17,7 @@
     "fuse.js": "^6.4.4",
     "nuxt": "^2.14.6",
     "postcss": "^8.2.2",
+    "prismjs": "^1.23.0",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {

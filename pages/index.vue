@@ -20,7 +20,7 @@
       </div>
       <img
         class="h-72 md:h-48 lg:h-64 xl:h-80"
-        src="../assets/images/hero-image.svg"
+        src="~/assets/images/hero-image.svg"
         alt="The Source Project"
       />
     </section>
