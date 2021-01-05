@@ -1,6 +1,6 @@
 <template>
-  <main class="my-12 max-w-4xl mx-auto">
-    <section>
+  <main class="mt-12">
+    <section class="max-w-4xl mx-auto">
       <h1 class="text-3xl font-bold">
         <span class="hidden sm:block">
           For Fun<span class="text-text-3">.</span> For Learning<span
@@ -33,7 +33,7 @@
         >
       </p>
     </section>
-    <section class="flex flex-col">
+    <section class="max-w-4xl mx-auto flex flex-col">
       <div class="mt-16 flex flex-col">
         <h2 class="text-2xl">Meet the team</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
