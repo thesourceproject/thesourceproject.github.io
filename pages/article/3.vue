@@ -55,7 +55,7 @@
       <p class="mt-6">
         Open a Powershell window, type in <em>python</em> and press
         <strong>Enter</strong>.<br />
-        This will open the Python interpreter. You can try out python code here.
+        This will open the Python interpreter. You can try out Python here.
       </p>
       <img
         src="~/assets/images/article/3/Python3-3.png"
@@ -65,7 +65,7 @@
       <p class="mt-6">
         Let's start with everyone's favourite, the
         <strong>Hello World!</strong> program. Enter this code in the python
-        shell.
+        shell and press <strong>Enter</strong>.
       </p>
       <CodeSnippet code="print('Hello World!')" lang="language-python" />
       <p>
@@ -90,7 +90,10 @@ print(z)`"
         Python, as in most programming languages, the <strong>*</strong> symbol
         means multiplication).<br />
         After that we simply print the value of
-        <strong>z</strong> that is <strong>35</strong>.<br />
+        <strong>z</strong>(i.e. 35).<br />
+        <strong>Note</strong> - You can add comments by writing
+        <strong>#</strong> and then typing in the desired comment. These do not
+        change the output of the program.<br /><br />
         Now let's take it up a notch. Enter these statements in the shell.
       </p>
       <CodeSnippet
@@ -109,13 +112,16 @@ print(a1, a2, a3, sep=', ')`"
         <strong>300.0, 300.0, 480.0</strong>(The default separator for the
         <strong>print</strong> function is a single space but it can be changed
         to anything as in the example).<br />
+        <strong>Note</strong> - It is important to know that variable/function
+        names can only start with either a letter or an underscore and may
+        contain digits after that.<br /><br />
         You might have noticed that we are reusing the same logic for
         calculating simple interest for 3 different values which is causing
         duplication in our code. Functions(Or methods) will help us avoid this
         duplication.<br />
-        <strong>Note</strong> - It is important to know that variable/function
-        names can only start with either a letter or an underscore and may
-        contain digits after that.
+        Enter the following statements one by one.
+        <strong>Don't forget the whitespace</strong> before the
+        <strong>return</strong> statement.
       </p>
       <CodeSnippet
         :code="`# Same program as above, now using a function
@@ -137,7 +143,37 @@ print(a1, a2, a3, sep=', ')`"
         <strong>Note</strong> - Notice that it is <em>necessary</em> to add
         white-space when starting a new block of code, like after declaring a
         function, loop or an if-else statement. Using camel-case for
-        variable/function names is <em>optional</em> but usually preferred.
+        variable/function names is <em>optional</em> but usually preferred.<br /><br />
+        In our previous code we ran our
+        <strong>simpleInterest</strong> function 3 times, what if wanted to run
+        it a 100 times or even a 1000 times. Now we need to learn about loops.
+        Copy the following and press <strong>Enter</strong>.
+      </p>
+      <CodeSnippet
+        :code="`for i in range(5):
+  print(i)`"
+        lang="language-python"
+      />
+      <p>
+        This is the simplest way to run a <strong>for</strong> loop. Here an
+        iterator <strong>i</strong> is created and it's value changes from 0 to
+        4(i.e less than 5). The <code>print(i)</code> statement in the block
+        prints the current value of <strong>i</strong> each time the loop is
+        executed(In our case <em>0, 1, 2, 3, 4</em>). We can also modify the
+        <strong>for</strong> loop so that it iterates through our required
+        range.
+      </p>
+      <CodeSnippet
+        :code="`for i in range(10, 101, 4):
+  print(i)`"
+        lang="language-python"
+      />
+      <p>
+        Here our iterator <strong>i</strong> is created and it's value changes
+        from 10 to 100(i.e less than 101) with a step value of 4(i.e. 10, 14,
+        18, 22...).<br /><br />
+        That's all for now. We will cover more topics in later tutorials.
+        Meanwhile, why don't you play around with Python yourself?
       </p>
     </article>
   </main>
