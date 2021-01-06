@@ -178,11 +178,11 @@
         following two commands. <br />
         Don't forget to replace the name and email for your own.
       </p>
-      <p class="mt-2 mx-8">
-        <code>git config --global user.name "My Name"</code><br /><code
-          >git config --global user.email "myname@example.com"</code
-        >
-      </p>
+      <CodeSnippet
+        :code="`git config --global user.name &quot;My Name&quot;
+git config --global user.email &quot;myname@example.com&quot;`"
+        lang="language-powershell"
+      />
       <img
         src="~/assets/images/article/1/Misc1-10.png"
         alt="Configure user.name and user.email"
