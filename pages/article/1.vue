@@ -58,7 +58,7 @@
         alt="Download VS Code"
         class="mx-auto mt-6 max-w-full"
       />
-      <p class="mt-8">
+      <p class="mt-6">
         After downloading it, follow the instructions in the setup to install VS
         Code on your computer.<br />
         Then download Git from the

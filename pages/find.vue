@@ -75,11 +75,21 @@ export default {
       query: "",
       articles: [
         {
+          id: 3,
+          category: "python",
+          title: "Python Fundamentals",
+          date: "6 Jan '21",
+          readTime: "15 min read",
+          fragment:
+            "Python is an interpreted, high-level and general-purpose programming language. Python is being used in web development, machine learning and even desktop applications...",
+          tags: ["python", "basics", "beginner"],
+        },
+        {
           id: 2,
           category: "misc",
           title: "Publishing your first project to Github",
-          readTime: "10 min read",
           date: "4 Jan '21",
+          readTime: "8 min read",
           fragment:
             "GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere...",
           tags: ["miscellaneous", "github", "git", "basics", "beginner"],
@@ -88,8 +98,8 @@ export default {
           id: 1,
           category: "misc",
           title: "Installing Visual Studio Code and Git in Windows",
-          readTime: "20 min read",
           date: "23 Dec '20",
+          readTime: "20 min read",
           fragment:
             "Visual Studio Code(also known as VS Code) is a powerful free open source text editor by Microsoft. VS Code is available for Windows, Linux, and macOS...",
           tags: [

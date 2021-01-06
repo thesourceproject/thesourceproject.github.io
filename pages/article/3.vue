@@ -1,0 +1,167 @@
+<template>
+  <main>
+    <article class="w-full max-w-4xl mx-auto flex flex-col">
+      <ArticleHeader
+        title="Python Fundamentals"
+        date="6 Jan '21"
+        readTime="15 min read"
+        :tags="['python', 'basics', 'beginner']"
+      />
+      <p>
+        <a
+          class="text-text-3 text-lg font-bold hover:underline focus:underline focus:outline-none"
+          href="https://www.python.org/"
+          target="_blank"
+          >Python</a
+        >
+        is an interpreted, high-level and general-purpose programming language.
+        Python is being used in web development, machine learning and even
+        desktop applications. Its easy to learn syntax is very well suited for
+        beginners as well as experienced programmers.
+      </p>
+      <a class="mx-auto mt-6" href="https://www.python.org/" target="_blank">
+        <img
+          class="w-96 rounded-2xl"
+          src="~/assets/images/article/3/Python3-1.png"
+          alt="Python"
+        />
+      </a>
+      <div class="flex flex-col max-w-4xl mt-12">
+        <h2 class="text-2xl">Getting Started</h2>
+        <div class="w-6 h-1 bg-background-2 rounded-full"></div>
+      </div>
+      <p class="mt-8">
+        First we need to install Python. You can download Python from the
+        <a
+          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          href="https://www.python.org/downloads/"
+          target="_blank"
+          >official website</a
+        >.<br />
+        At the time of writing this article, the latest version available is
+        <strong>3.9.1</strong>.<br />
+        Once the download is complete, you may begin the installation
+        process.<br />
+        <strong>Note</strong> - Make sure the
+        <strong>Add Python 3.9 to PATH</strong> option is checked. This will
+        allow you to access the Python interpreter in the Windows Powershell
+        from anywhere.
+      </p>
+      <img
+        src="~/assets/images/article/3/Python3-2.png"
+        alt="Install Python"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        Open a Powershell window, type in <em>python</em> and press
+        <strong>Enter</strong>.<br />
+        This will open the Python interpreter. You can try out python code here.
+      </p>
+      <img
+        src="~/assets/images/article/3/Python3-3.png"
+        alt="Windows Powershell"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        Let's start with everyone's favourite, the
+        <strong>Hello World!</strong> program. Enter this code in the python
+        shell.
+      </p>
+      <CodeSnippet code="print('Hello World!')" lang="language-python" />
+      <p>
+        It should print <strong>Hello World!</strong>(Obviously). But now let's
+        try some statements. Enter these statements one by one in the python
+        shell.
+      </p>
+      <CodeSnippet
+        :code="`x = 5
+y = 7
+# Can also be written as --> x, y = 5, 7
+z = x * y
+print(z)`"
+        lang="language-python"
+      />
+      <p>
+        It should print <strong>35</strong>. What we did here was that we first
+        declared a variable <strong>x</strong> while giving it a value of
+        <strong>5</strong>. Similarly we also declared <strong>y</strong> and
+        gave it a value of <strong>7</strong>. We then stored the product of
+        <strong>x</strong> and <strong>y</strong> in <strong>z</strong>(In
+        Python, as in most programming languages, the <strong>*</strong> symbol
+        means multiplication).<br />
+        After that we simply print the value of
+        <strong>z</strong> that is <strong>35</strong>.<br />
+        Now let's take it up a notch. Enter these statements in the shell.
+      </p>
+      <CodeSnippet
+        :code="`# Formula for simple interest --> (p * r * t) / 100
+p1, p2, p3 = 1200, 1500, 2000
+r1, r2, r3 = 5, 10, 8
+t1, t2, t3 = 5, 2, 3
+a1 = (p1 * r1 * t1) / 100
+a2 = (p2 * r2 * t2) / 100
+a3 = (p3 * r3 * t3) / 100
+print(a1, a2, a3, sep=', ')`"
+        lang="language-python"
+      />
+      <p>
+        You will get the output as three comma separated numbers
+        <strong>300.0, 300.0, 480.0</strong>(The default separator for the
+        <strong>print</strong> function is a single space but it can be changed
+        to anything as in the example).<br />
+        You might have noticed that we are reusing the same logic for
+        calculating simple interest for 3 different values which is causing
+        duplication in our code. Functions(Or methods) will help us avoid this
+        duplication.<br />
+        <strong>Note</strong> - It is important to know that variable/function
+        names can only start with either a letter or an underscore and may
+        contain digits after that.
+      </p>
+      <CodeSnippet
+        :code="`# Same program as above, now using a function
+def simpleInterest(p, r, t):
+  return (p * r * t) / 100
+p1, p2, p3 = 1200, 1500, 2000
+r1, r2, r3 = 5, 10, 8
+t1, t2, t3 = 5, 2, 3
+a1 = simpleInterest(p1, r1, t1)
+a2 = simpleInterest(p2, r2, t2)
+a3 = simpleInterest(p3, r3, t3)
+print(a1, a2, a3, sep=', ')`"
+        lang="language-python"
+      />
+      <p>
+        Now we can reuse our function as many times as needed. Also if we have
+        to modify the logic we only need to do it in one place. Therefore, this
+        code is a lot more maintainable than the previous one.<br />
+        <strong>Note</strong> - Notice that it is <em>necessary</em> to add
+        white-space when starting a new block of code, like after declaring a
+        function, loop or an if-else statement. Using camel-case for
+        variable/function names is <em>optional</em> but usually preferred.
+      </p>
+    </article>
+  </main>
+</template>
+
+<script>
+import ArticleHeader from "~/components/ArticleHeader.vue";
+import CodeSnippet from "~/components/CodeSnippet.vue";
+export default {
+  name: "Python3",
+  components: {
+    ArticleHeader,
+    CodeSnippet,
+  },
+  head: {
+    title: "Python Fundamentals | The Source Project",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Python is an interpreted, high-level and general-purpose programming language. Python is being used in web development, machine learning and even desktop applications.",
+      },
+    ],
+  },
+};
+</script>
