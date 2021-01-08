@@ -53,7 +53,7 @@ export default {
   modules: [],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: { extractCSS: true },
 
   // Configure the generation of your universal web application to a static web application.
   generate: {
