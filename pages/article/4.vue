@@ -93,7 +93,42 @@ print('Cube of the given number is ', number ** 3)"
         program, you will receive a message like
         <em>ValueError: invalid literal for int() with base 10</em>. This is
         because the <strong>int()</strong> function expects an integer string in
-        order to convert its type.
+        order to convert its type.<br /><br />
+        Similarly, we can input floating-point numbers by using the
+        <strong>float()</strong> function.
+      </p>
+      <CodeSnippet
+        code="num1 = float(input())
+num2 = float(input())
+print('Sum of the given numbers is ', num1 + num2)"
+        lang="language-python"
+      />
+      <p>
+        This program can not only take integers(e.g. 1, 4, 200512) but also
+        fractional-numbers(e.g. 3.14, 5.6, 925.163) as input.<br />
+        Like in the previous program, it will throw a <em>ValueError</em> if a
+        non-numeric value is supplied.<br /><br />
+        We can also use the <strong>input()</strong> function inside a loop.
+        This is useful when we do not know in advance how many times the user
+        input is needed.
+      </p>
+      <CodeSnippet
+        code="total = 0
+numbers = int(input('How many numbers do you want to enter: '))
+for i in range(numbers):
+  total = total + float(input()) # total += float(input())
+print('Sum of the given numbers is ', total)"
+        lang="language-python"
+      />
+      <p>
+        First we create a variable <strong>total</strong>(not <em>sum</em>, as
+        <em>sum</em> is an in-built function of Python). Then we ask the user
+        how many numbers he/she will input.<br />
+        After that, we run a <strong>for</strong> loop that many times, each
+        time asking for a number and adding it to our
+        <strong>total</strong>.<br /><br />
+        That's all you need to know about handling user input. Now you can
+        practice making some programs requiring user input on your own.
       </p>
     </article>
   </main>
