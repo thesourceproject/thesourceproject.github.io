@@ -18,7 +18,7 @@
       </NuxtLink>
     </nav>
     <nav class="flex items-center">
-      <button class="p-2" @click="changeTheme">
+      <button class="p-2" title="Change Theme" @click="changeTheme">
         <svg
           class="h-4 w-4"
           xmlns="http://www.w3.org/2000/svg"
@@ -33,6 +33,7 @@
       <NuxtLink
         to="/find"
         class="ml-2 sm:ml-4 bg-background-2 px-6 py-2 rounded-full text-text-2 hover:shadow-md focus:shadow-md focus:outline-none"
+        title="Find Article"
       >
         <figure class="flex items-center">
           <figcaption class="mr-4">Find</figcaption>

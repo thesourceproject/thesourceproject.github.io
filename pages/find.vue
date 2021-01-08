@@ -75,9 +75,19 @@ export default {
       query: "",
       articles: [
         {
+          id: 4,
+          category: "python",
+          title: "Handling user input in Python",
+          date: "8 Jan '21",
+          readTime: "5 min read",
+          fragment:
+            "While developing Python applications we often need to allow user interaction, either to obtain necessary data or to direct the flow of our program. Python enables this functionality through its inbuilt input() function...",
+          tags: ["python", "basics", "beginner"],
+        },
+        {
           id: 3,
           category: "python",
-          title: "Python Fundamentals",
+          title: "Python fundamentals",
           date: "6 Jan '21",
           readTime: "15 min read",
           fragment:

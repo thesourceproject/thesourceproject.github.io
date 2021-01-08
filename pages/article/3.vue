@@ -2,7 +2,7 @@
   <main>
     <article class="w-full max-w-4xl mx-auto flex flex-col">
       <ArticleHeader
-        title="Python Fundamentals"
+        title="Python fundamentals"
         date="6 Jan '21"
         readTime="15 min read"
         :tags="['python', 'basics', 'beginner']"
@@ -94,7 +94,29 @@ print(z)`"
         <strong>Note</strong> - You can add comments by writing
         <strong>#</strong> and then typing in the desired comment. These do not
         change the output of the program.<br /><br />
-        Now let's take it up a notch. Enter these statements in the shell.
+        Now let's take it up a notch. Till now we were using the Python shell to
+        type and run our code. It's a great tool to try out Python but real-life
+        applications are created in Python scripts. So now we will learn how to
+        use the popular text editor
+        <a
+          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          href="https://code.visualstudio.com/"
+          target="_blank"
+          >Visual Studio Code</a
+        >
+        to create Python scripts.<br />
+        <strong>Note</strong> - For instructions on how to install and work with
+        VS Code, refer to
+        <NuxtLink
+          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          to="/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
+          >this tutorial</NuxtLink
+        >.<br /><br />
+        Create a new folder on your computer named
+        <strong>TheSourceProject</strong>, right click on it and open it in VS
+        Code.<br />
+        Now create a new file <strong>myFirstProgram.py</strong> and paste in
+        the following code.
       </p>
       <CodeSnippet
         :code="`# Formula for simple interest --> (p * r * t) / 100
@@ -108,18 +130,30 @@ print(a1, a2, a3, sep=', ')`"
         lang="language-python"
       />
       <p>
-        You will get the output as three comma separated numbers
+        Save the file and then open the in-built Powershell(<strong
+          >Ctrl + `</strong
+        >) and it should show you the current working directory. Now type in the
+        following command.
+      </p>
+      <CodeSnippet
+        :code="`python myFirstProgram.py`"
+        lang="language-powershell"
+      />
+      <p>
+        This command will run your program and you will get the output as three
+        comma separated numbers
         <strong>300.0, 300.0, 480.0</strong>(The default separator for the
         <strong>print</strong> function is a single space but it can be changed
         to anything as in the example).<br />
         <strong>Note</strong> - It is important to know that variable/function
         names can only start with either a letter or an underscore and may
-        contain digits after that.<br /><br />
+        contain digits, letters and underscores after that.<br /><br />
         You might have noticed that we are reusing the same logic for
         calculating simple interest for 3 different values which is causing
         duplication in our code. Functions(Or methods) will help us avoid this
         duplication.<br />
-        Enter the following statements one by one.
+        Erase everything and type in the following statements and run the
+        program.
         <strong>Don't forget the whitespace</strong> before the
         <strong>return</strong> statement.
       </p>
@@ -137,9 +171,10 @@ print(a1, a2, a3, sep=', ')`"
         lang="language-python"
       />
       <p>
-        Now we can reuse our function as many times as needed. Also if we have
-        to modify the logic we only need to do it in one place. Therefore, this
-        code is a lot more maintainable than the previous one.<br />
+        Now we can reuse our <strong>simpleInterest</strong> function as many
+        times as needed. Also if we have to modify the logic we only need to do
+        it in one place. Therefore, this code is a lot more maintainable than
+        the previous one.<br />
         <strong>Note</strong> - Notice that it is <em>necessary</em> to add
         white-space when starting a new block of code, like after declaring a
         function, loop or an if-else statement. Using camel-case for
@@ -147,7 +182,7 @@ print(a1, a2, a3, sep=', ')`"
         In our previous code we ran our
         <strong>simpleInterest</strong> function 3 times, what if wanted to run
         it a 100 times or even a 1000 times. Now we need to learn about loops.
-        Copy the following and press <strong>Enter</strong>.
+        Run the following program.
       </p>
       <CodeSnippet
         :code="`for i in range(5):
@@ -189,7 +224,7 @@ export default {
     CodeSnippet,
   },
   head: {
-    title: "Python Fundamentals | The Source Project",
+    title: "Python fundamentals | The Source Project",
     meta: [
       {
         hid: "description",
