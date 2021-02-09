@@ -75,6 +75,16 @@ export default {
       query: "",
       articles: [
         {
+          id: 5,
+          category: "javascript",
+          title: "Creating a countdown timer using Javascript",
+          date: "9 Feb '21",
+          readTime: "30 min read",
+          fragment:
+            "In this tutorial, we will learn how to create a simple countdown timer application using Javascript that can then be run in your web-browser...",
+          tags: ["javascript", "basics", "beginner"],
+        },
+        {
           id: 4,
           category: "python",
           title: "Handling user input in Python",
