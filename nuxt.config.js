@@ -6,8 +6,13 @@ export default {
   head: {
     title: "The Source Project",
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        charset: "utf-8"
+      },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
+      },
       {
         hid: "description",
         name: "description",
@@ -21,7 +26,11 @@ export default {
       }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.png"
+      },
       {
         rel: "stylesheet",
         href:
@@ -50,14 +59,20 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: ["@nuxtjs/sitemap"],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: { extractCSS: true },
+  build: {
+    extractCSS: true
+  },
 
   // Configure the generation of your universal web application to a static web application.
   generate: {
     crawler: false,
     fallback: true
+  },
+
+  sitemap: {
+    hostname: "https://thesourceproject.github.io/"
   }
 };

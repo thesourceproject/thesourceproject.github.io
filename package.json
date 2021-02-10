@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist -t true"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^2.4.0",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^10.1.0",
     "core-js": "^3.6.5",
