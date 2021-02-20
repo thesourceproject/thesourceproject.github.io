@@ -31,10 +31,9 @@
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        First we need to write the HTML for our countdown timer.<br />
-        Create an empty file on your computer named
-        <strong>myCountdownTimer.html</strong> and paste in the following markup
-        in the <strong>body</strong> tag.
+        Basically we need to find a pair of numbers in the given array that add
+        up to <b>target</b>. The most straight-forward way to find this is to
+        try every possible pair.
       </p>
       <CodeSnippet
         code='<div id="countdownTimer">
@@ -76,13 +75,13 @@ export default {
     CodeSnippet,
   },
   head: {
-    title: "Creating a countdown timer using Javascript | The Source Project",
+    title: "LeetCode #1 Two Sum | The Source Project",
     meta: [
       {
         hid: "description",
         name: "description",
         content:
-          "In this tutorial, we will learn how to create a simple countdown timer application using Javascript that can then be run in your web-browser.",
+          "Check out this problem on LeetCode. Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
       },
     ],
   },
