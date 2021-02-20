@@ -16,13 +16,14 @@
           target="_blank"
           >LeetCode</a
         >.<br /><br />
-        Given an array of integers <b>nums</b> and an integer <b>target</b>,
-        return
+        Given an array of integers <strong>nums</strong> and an integer
+        <strong>target</strong>, return
         <em
-          >indices of the two numbers such that they add up to <b>target</b></em
+          >indices of the two numbers such that they add up to
+          <strong>target</strong></em
         >.<br />
         You may assume that each input would have
-        <b><em>exactly</em> one solution</b>, and you may not use the
+        <strong><em>exactly</em> one solution</strong>, and you may not use the
         <em>same</em> element twice.<br />
         You can return the answer in any order.
       </p>
@@ -32,34 +33,138 @@
       </div>
       <p class="mt-8">
         Basically we need to find a pair of numbers in the given array that add
-        up to <b>target</b>. The most straight-forward way to find this is to
-        try every possible pair.
+        up to <strong>target</strong>. The most straight-forward way to find it
+        is to try every possible pair.
       </p>
       <CodeSnippet
-        code='<div id="countdownTimer">
-  <input id="duration" type="number" placeholder="Timer Duration" />
-  <fieldset id="controls">
-    <button id="startButton" title="Start">Start</button>
-    <button id="stopButton" title="Stop">Stop</button>
-    <button id="resetButton" title="Reset">Reset</button>
-  </fieldset>
-  <p id="timer">0.0</p>
-</div>'
-        lang="language-html"
+        code="// Java
+public int[] twoSum(int[] nums, int target) {
+    for(int i = 0; i < nums.length; i++) {
+        for(int j = 0; j < nums.length; j++) {
+            if(i != j) { // You may not use the same element twice.
+                if(nums[i] + nums[j] == target) {
+                    return new int[] {i, j}; // Return the indices in an array.
+                }
+            }
+        }
+    }
+    return new int[] {-1, -1}; // Default return value if there is no solution.
+}"
+        lang="language-java"
+      />
+      <CodeSnippet
+        code="# Python3
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+    for i in range(len(nums)):
+        for j in range(len(nums)):
+            if(i != j):
+                if(nums[i] + nums[j] == target):
+                    return [i, j]"
+        lang="language-python"
       />
       <p>
-        We are giving each of our elements a unique
-        <strong>id</strong> attribute. This will help us with the styling and
-        also allow us to access the element with Javascript.<br />
-        <strong>Note</strong> - The <strong>class</strong> attribute should be
-        used for styling elements but since all of our elements are unique, we
-        may use <strong>id</strong>. Also the <strong>id</strong> will be
-        required for our Javascript.<br /><br />
-        If you open this HTML file right now, you'll notice that it doesn't look
-        anything like the image above. This is because we haven't added any CSS
-        yet. Time to add some styling.<br />
-        Paste the following CSS inside a <strong>style</strong> tag in the
-        <strong>head</strong> section of your HTML file.
+        Notice we added a default return value in the Java code at the end. This
+        is because the return type of the function is of
+        <strong>int[]</strong> type, therefore the function must return an array
+        of integers for all conditions. This is not required in the Python
+        version as the question states that we will get a unique solution for
+        every test case.<br /><br />
+        This solution has a time complexity of
+        <strong>O(n<sup>2</sup>)</strong> because we run 2 nested loops which
+        each run for the complete length of the array in the worst case. If we
+        submit this, it will get accepted. But we can improve upon this solution
+        slightly.<br /><br />
+        If you see our code, it runs 2 loops from the beginning and we are
+        checking every pair 2 times. For example, initially we check the pair
+        (i, j) = (0, 1) and when the inner loop completes once, we check the
+        pair (i, j) = (1, 0). The sum is going to be the same in either order so
+        we can save some time by skipping these pairs.<br />
+        Let's see how we can achieve this.<br /><br />
+        Suppose there's an array [0, 1, 2, 3, 4]. In the first outer loop we
+        will check the pairs (0, 1), (0, 2), (0, 3), (0, 4). For the next loop
+        we can start from (1, 2) instead of (1, 0) and continue on (1, 3), (1,
+        4). And then (2, 3), (2, 4) and finally (3, 4).<br />
+        We observe that we can start the inner loop from <em>i + 1</em> to avoid
+        the visited pairs.
+      </p>
+      <CodeSnippet
+        code="// Java
+public int[] twoSum(int[] nums, int target) {
+    for(int i = 0; i < nums.length; i++) {
+        for(int j = i + 1; j < nums.length; j++) {
+            if(nums[i] + nums[j] == target) {
+                return new int[] {i, j};
+            }
+        }
+    }
+    return new int[] {-1, -1};
+}"
+        lang="language-java"
+      />
+      <CodeSnippet
+        code="# Python3
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if(nums[i] + nums[j] == target):
+                return [i, j]"
+        lang="language-python"
+      />
+      <p>
+        This solution like the previous one has a space complexity of
+        <strong>O(1)</strong> as we only use constant amount of memory to store
+        our variables. Notice now we don't have to check for <em>i != j</em> as
+        i and j will never be equal.<br /><br />
+        We improved our solution slightly but it's time complexity is still
+        <strong>O(n<sup>2</sup>)</strong>. This is because in the worst case our
+        solution checks (n - 1) + (n - 2) + (n - 3) + ... + 2 + 1 = (n)(n - 1) ÷
+        2 pairs, thereby giving it an upper bound of
+        <strong>O(n<sup>2</sup>)</strong>.<br /><br />
+        Can we bring our solution down to
+        <strong>O(n)?</strong><br />
+        Yes! We can. Here comes
+        <strong>HashMap/Dictionary</strong> to the rescue.<br /><br />
+        Java Hashmaps &amp; Python Dictionaries can store key-value pairs that
+        allow lookup in <strong>O(1)</strong> time. But how will it help us? For
+        every number, if we could check whether its difference from
+        <strong>target</strong> exists in the array, we will get the answer.
+      </p>
+      <CodeSnippet
+        code="// Java
+// import java.util.*; // For the HashMap class, it is automatically imported on LeetCode.
+public int[] twoSum(int[] nums, int target) {
+    Map<Integer, Integer> indices = new HashMap<>();
+    for(int i = 0; i < nums.length; i++) {
+        if(indices.containsKey(target - nums[i])) {
+            return new int[] {indices.get(target - nums[i]), i};
+        }
+        indices.put(nums[i], i);
+    }
+    return new int[] {-1, -1};
+}"
+        lang="language-java"
+      />
+      <CodeSnippet
+        code="# Python3
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+    indices = {};
+    for i in range(len(nums)):
+        if((target - nums[i]) in indices):
+            return [indices[target - nums[i]], i]
+        indices[nums[i]] = i"
+        lang="language-python"
+      />
+      <p>
+        Here we create a HashMap/Dictionary to store the indices of the array
+        elements. Then we traverse over the array while checking if we have
+        encountered <em>target - nums[i]</em> previously. If not, we store the
+        index with the array element as the key in our HashMap/Dictionary.<br /><br />
+        So now we have a solution with a time complexity of
+        <strong>O(n)</strong> making it much faster than the previous ones,
+        however it also has a space complexity of <strong>O(n)</strong> because
+        we are using additional memory proportional the size of the input array
+        in the worst case.<br /><br />
+        So why stop here? Try some more problems and keep on learning.
       </p>
     </article>
   </main>

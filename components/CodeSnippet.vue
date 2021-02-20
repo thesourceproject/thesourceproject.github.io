@@ -8,6 +8,7 @@
 import Prism from "~/plugins/prism";
 import "prismjs/components/prism-powershell";
 import "prismjs/components/prism-python";
+import "prismjs/components/prism-java";
 export default {
   name: "CodeSnippet",
   props: ["code", "lang"],
