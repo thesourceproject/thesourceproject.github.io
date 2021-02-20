@@ -5,7 +5,7 @@
         title="Python fundamentals"
         date="6 Jan '21"
         readTime="15 min read"
-        :tags="['python', 'basics', 'beginner']"
+        :tags="['basics', 'python', 'beginner']"
       />
       <p>
         <a
@@ -22,7 +22,7 @@
       <a class="mx-auto mt-6" href="https://www.python.org/" target="_blank">
         <img
           class="w-96 rounded-2xl"
-          src="~/assets/images/article/3/Python3-1.png"
+          src="~/assets/images/article/3/basics3-1.png"
           alt="Python"
         />
       </a>
@@ -33,7 +33,7 @@
       <p class="mt-8">
         First we need to install Python. You can download Python from the
         <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://www.python.org/downloads/"
           target="_blank"
           >official website</a
@@ -48,7 +48,7 @@
         from anywhere.
       </p>
       <img
-        src="~/assets/images/article/3/Python3-2.png"
+        src="~/assets/images/article/3/basics3-2.png"
         alt="Install Python"
         class="mx-auto mt-6 max-w-full"
       />
@@ -58,7 +58,7 @@
         This will open the Python interpreter. You can try out Python here.
       </p>
       <img
-        src="~/assets/images/article/3/Python3-3.png"
+        src="~/assets/images/article/3/basics3-3.png"
         alt="Windows Powershell"
         class="mx-auto mt-6 max-w-full"
       />
@@ -99,7 +99,7 @@ print(z)`"
         applications are created in Python scripts. So now we will learn how to
         use the popular text editor
         <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://code.visualstudio.com/"
           target="_blank"
           >Visual Studio Code</a
@@ -108,7 +108,7 @@ print(z)`"
         <strong>Note</strong> - For instructions on how to install and work with
         VS Code, refer to
         <NuxtLink
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           to="/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
           >this tutorial</NuxtLink
         >.<br /><br />
@@ -218,7 +218,7 @@ print(a1, a2, a3, sep=', ')`"
 import ArticleHeader from "~/components/ArticleHeader.vue";
 import CodeSnippet from "~/components/CodeSnippet.vue";
 export default {
-  name: "Python3",
+  name: "basics3",
   components: {
     ArticleHeader,
     CodeSnippet,

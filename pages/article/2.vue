@@ -5,12 +5,12 @@
         title="Publishing your first project to Github"
         date="4 Jan '21"
         readTime="10 min read"
-        :tags="['miscellaneous', 'github', 'git', 'basics', 'beginner']"
+        :tags="['miscellaneous', 'git', 'github', 'beginner']"
       />
       <p>
         In our
         <NuxtLink
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           to="/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
           >previous tutorial</NuxtLink
         >
@@ -42,21 +42,21 @@
       <p class="mt-8">
         <strong>Note</strong> - You need to have
         <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://code.visualstudio.com/"
           target="_blank"
           >Visual Studio Code</a
         >
         and local
         <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://git-scm.com/"
           target="_blank"
           >Git</a
         >
         repository set up before you can continue. You may refer to our
         <NuxtLink
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           to="/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
           >previous tutorial</NuxtLink
         >
@@ -64,7 +64,7 @@
         repository.<br />
         Sign up on
         <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://github.com/"
           target="_blank"
           >Github</a

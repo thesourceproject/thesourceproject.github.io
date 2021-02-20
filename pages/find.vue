@@ -109,7 +109,7 @@ export default {
           category: "misc",
           title: "Publishing your first project to Github",
           date: "4 Jan '21",
-          readTime: "8 min read",
+          readTime: "10 min read",
           fragment:
             "GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere...",
           tags: ["miscellaneous", "git", "github", "beginner"],

@@ -5,14 +5,7 @@
         title="Installing Visual Studio Code and Git in Windows"
         date="23 Dec '20"
         readTime="20 min read"
-        :tags="[
-          'miscellaneous',
-          'vscode',
-          'git',
-          'windows',
-          'basics',
-          'beginner',
-        ]"
+        :tags="['miscellaneous', 'vscode', 'git', 'windows', 'beginner']"
       />
       <p>
         <a
@@ -47,7 +40,7 @@
       <p class="mt-8">
         Download VS Code from the
         <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://code.visualstudio.com/"
           target="_blank"
           >official website</a
@@ -63,7 +56,7 @@
         Code on your computer.<br />
         Then download Git from the
         <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://git-scm.com/"
           target="_blank"
           >official website</a
@@ -160,7 +153,7 @@
         ><br />
         Click <strong>Always</strong>. You can learn more about changes
         <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository"
           target="_blank"
           >here</a
@@ -195,13 +188,13 @@ git config --global user.email &quot;myname@example.com&quot;`"
         made your first commit. You're now ready to start creating! You may see
         our
         <NuxtLink
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           to="/article/2#Publishing-your-first-project-to-Github"
           >next tutorial</NuxtLink
         >
         where we show you how to publish this project to
         <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://github.com/"
           target="_blank"
           >Github</a

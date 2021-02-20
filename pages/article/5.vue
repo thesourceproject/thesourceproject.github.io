@@ -5,14 +5,14 @@
         title="Creating a countdown timer using Javascript"
         date="9 Feb'21"
         readTime="30 min read"
-        :tags="['javascript', 'basics', 'beginner']"
+        :tags="['frontend', 'html', 'css', 'javascript', 'beginner']"
       />
       <p>
         In this tutorial, we will learn how to create a simple countdown timer
         application using Javascript that can then be run in your web-browser.
       </p>
       <img
-        src="~/assets/images/article/5/Javascript5-1.png"
+        src="~/assets/images/article/5/frontend5-1.png"
         alt="Countdown Timer"
         class="mx-auto mt-6 max-w-full"
       />
@@ -261,7 +261,7 @@ let interval;'
         starts normally but soon you will see something like this.
       </p>
       <img
-        src="~/assets/images/article/5/Javascript5-2.png"
+        src="~/assets/images/article/5/frontend5-2.png"
         alt="Floating-Point Arithmetic Precision Problem"
         class="mx-auto mt-6 max-w-full"
       />
@@ -462,7 +462,7 @@ resetButton.addEventListener("click", () => {
 import ArticleHeader from "~/components/ArticleHeader.vue";
 import CodeSnippet from "~/components/CodeSnippet.vue";
 export default {
-  name: "Javascript5",
+  name: "frontend5",
   components: {
     ArticleHeader,
     CodeSnippet,

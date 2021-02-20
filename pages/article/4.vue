@@ -5,7 +5,7 @@
         title="Handling user input in Python"
         date="8 Jan '21"
         readTime="5 min read"
-        :tags="['python', 'basics', 'beginner']"
+        :tags="['basics', 'python', 'beginner']"
       />
       <p>
         While developing
@@ -19,7 +19,7 @@
         necessary data or to direct the flow of our program. Python enables this
         functionality through its inbuilt
         <a
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://docs.python.org/3/library/functions.html#input"
           target="_blank"
           >input()</a
@@ -29,7 +29,7 @@
         <strong>Note</strong> - This tutorial assumes you have some basic
         understanding of Python. You may refer to our
         <NuxtLink
-          class="text-text-3 font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           to="/article/3#Python-fundamentals"
           >previous tutorial</NuxtLink
         >
@@ -138,7 +138,7 @@ print('Sum of the given numbers is ', total)"
 import ArticleHeader from "~/components/ArticleHeader.vue";
 import CodeSnippet from "~/components/CodeSnippet.vue";
 export default {
-  name: "Python3",
+  name: "basics3",
   components: {
     ArticleHeader,
     CodeSnippet,
