@@ -76,33 +76,33 @@ export default {
       articles: [
         {
           id: 5,
-          category: "javascript",
+          category: "frontend",
           title: "Creating a countdown timer using Javascript",
           date: "9 Feb '21",
           readTime: "30 min read",
           fragment:
             "In this tutorial, we will learn how to create a simple countdown timer application using Javascript that can then be run in your web-browser...",
-          tags: ["javascript", "basics", "beginner"],
+          tags: ["frontend", "html", "css", "javascript", "beginner"],
         },
         {
           id: 4,
-          category: "python",
+          category: "basics",
           title: "Handling user input in Python",
           date: "8 Jan '21",
           readTime: "5 min read",
           fragment:
             "While developing Python applications we often need to allow user interaction, either to obtain necessary data or to direct the flow of our program. Python enables this functionality through its inbuilt input() function...",
-          tags: ["python", "basics", "beginner"],
+          tags: ["basics", "python", "beginner"],
         },
         {
           id: 3,
-          category: "python",
+          category: "basics",
           title: "Python fundamentals",
           date: "6 Jan '21",
           readTime: "15 min read",
           fragment:
             "Python is an interpreted, high-level and general-purpose programming language. Python is being used in web development, machine learning and even desktop applications...",
-          tags: ["python", "basics", "beginner"],
+          tags: ["basics", "python", "beginner"],
         },
         {
           id: 2,
@@ -112,7 +112,7 @@ export default {
           readTime: "8 min read",
           fragment:
             "GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere...",
-          tags: ["miscellaneous", "github", "git", "basics", "beginner"],
+          tags: ["miscellaneous", "git", "github", "beginner"],
         },
         {
           id: 1,
@@ -122,14 +122,7 @@ export default {
           readTime: "20 min read",
           fragment:
             "Visual Studio Code(also known as VS Code) is a powerful free open source text editor by Microsoft. VS Code is available for Windows, Linux, and macOS...",
-          tags: [
-            "miscellaneous",
-            "vscode",
-            "git",
-            "windows",
-            "basics",
-            "beginner",
-          ],
+          tags: ["miscellaneous", "vscode", "git", "windows", "beginner"],
         },
       ],
     };
@@ -140,10 +133,10 @@ export default {
     },
     getBackground(category) {
       return {
-        cpp: "bg-cpp",
-        java: "bg-java",
-        javascript: "bg-javascript",
-        python: "bg-python",
+        basics: "bg-basics",
+        competitive: "bg-competitive",
+        frontend: "bg-frontend",
+        backend: "bg-backend",
         misc: "bg-misc",
       }[category];
     },

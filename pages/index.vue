@@ -33,10 +33,10 @@
         class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8 text-text-2 text-xl"
       >
         <NuxtLink
-          :to="{ path: '/find', query: { q: 'c++' } }"
-          class="h-52 bg-cpp p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
+          :to="{ path: '/find', query: { q: 'basics' } }"
+          class="h-52 bg-basics p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
         >
-          <p>C++</p>
+          <p>Programming Basics</p>
           <svg
             class="mt-auto ml-auto h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -48,10 +48,10 @@
             /></svg
         ></NuxtLink>
         <NuxtLink
-          :to="{ path: '/find', query: { q: 'java' } }"
-          class="h-52 bg-java p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
+          :to="{ path: '/find', query: { q: 'competitive' } }"
+          class="h-52 bg-competitive p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
         >
-          <p>Java</p>
+          <p>Competitive Programming</p>
           <svg
             class="mt-auto ml-auto h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -62,10 +62,10 @@
               d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"
             /></svg></NuxtLink
         ><NuxtLink
-          :to="{ path: '/find', query: { q: 'javascript' } }"
-          class="h-52 bg-javascript p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
+          :to="{ path: '/find', query: { q: 'frontend' } }"
+          class="h-52 bg-frontend p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
         >
-          <p>Javascript</p>
+          <p>Frontend Development</p>
           <svg
             class="mt-auto ml-auto h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -76,10 +76,10 @@
               d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"
             /></svg></NuxtLink
         ><NuxtLink
-          :to="{ path: '/find', query: { q: 'python' } }"
-          class="h-52 bg-python p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
+          :to="{ path: '/find', query: { q: 'backend' } }"
+          class="h-52 bg-backend p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
         >
-          <p>Python</p>
+          <p>Backend Development</p>
           <svg
             class="mt-auto ml-auto h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"

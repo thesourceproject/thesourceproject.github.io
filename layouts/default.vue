@@ -42,10 +42,10 @@ html {
 }
 
 :root {
-  --cpp: #ed217c;
-  --java: #045fa0;
-  --javascript: #5703c2;
-  --python: #00a341;
+  --basics: #045fa0;
+  --competitive: #ed217c;
+  --frontend: #5703c2;
+  --backend: #00a341;
   --misc: #1b998b;
 }
 
@@ -58,7 +58,7 @@ html {
   --text-2: #ffffff;
   --text-3: #ff2f2f;
   --text-4: #002e46;
-  --text-5: #191D30;
+  --text-5: #191d30;
 }
 
 .dark {
@@ -70,6 +70,6 @@ html {
   --text-2: #eeeeee;
   --text-3: #fc4422;
   --text-4: #eeeeee;
-  --text-5: #98DFAF;
+  --text-5: #98dfaf;
 }
 </style>

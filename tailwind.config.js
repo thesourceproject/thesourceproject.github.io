@@ -8,10 +8,10 @@ module.exports = {
         body: ["Poppins", "sans-serif"]
       },
       colors: {
-        cpp: "var(--cpp)",
-        java: "var(--java)",
-        javascript: "var(--javascript)",
-        python: "var(--python)",
+        basics: "var(--basics)",
+        competitive: "var(--competitive)",
+        frontend: "var(--frontend)",
+        backend: "var(--backend)",
         misc: "var(--misc)",
         "background-1": "var(--background-1)",
         "background-2": "var(--background-2)",
