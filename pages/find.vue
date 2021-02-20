@@ -75,6 +75,16 @@ export default {
       query: "",
       articles: [
         {
+          id: 6,
+          category: "competitive",
+          title: "LeetCode #1 Two Sum",
+          date: "20 Feb '21",
+          readTime: "10 min read",
+          fragment:
+            "Check out this problem on LeetCode. Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target...",
+          tags: ["competitive", "data", "structures", "algorithms", "beginner"],
+        },
+        {
           id: 5,
           category: "frontend",
           title: "Creating a countdown timer using Javascript",
