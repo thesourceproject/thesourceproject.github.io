@@ -162,7 +162,7 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
         So now we have a solution with a time complexity of
         <strong>O(n)</strong> making it much faster than the previous ones,
         however it also has a space complexity of <strong>O(n)</strong> because
-        we are using additional memory proportional the size of the input array
+        we are using additional memory proportional to the size of the input array
         in the worst case.<br /><br />
         So why stop here? Try some more problems and keep on learning.
       </p>
