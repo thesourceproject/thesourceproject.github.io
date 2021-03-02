@@ -19,13 +19,15 @@
         desktop applications. Its easy to learn syntax is very well suited for
         beginners as well as experienced programmers.
       </p>
-      <a class="mx-auto mt-6" href="https://www.python.org/" target="_blank">
-        <img
-          class="w-96 rounded-2xl"
-          src="~/assets/images/article/3/basics3-1.png"
-          alt="Python"
-        />
-      </a>
+      <a
+        title="www.python.org, GPL &lt;http://www.gnu.org/licenses/gpl.html&gt;, via Wikimedia Commons"
+        href="https://commons.wikimedia.org/wiki/File:Python_logo_and_wordmark.svg"
+        class="mx-auto mt-6 p-6 bg-white rounded-2xl"
+        ><img
+          alt="Python logo and wordmark"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/640px-Python_logo_and_wordmark.svg.png"
+          class="w-96"
+      /></a>
       <div class="flex flex-col max-w-4xl mt-12">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
@@ -48,7 +50,7 @@
         from anywhere.
       </p>
       <img
-        src="~/assets/images/article/3/basics3-2.png"
+        src="~/assets/images/article/3/basics3-1.png"
         alt="Install Python"
         class="mx-auto mt-6 max-w-full"
       />
@@ -58,7 +60,7 @@
         This will open the Python interpreter. You can try out Python here.
       </p>
       <img
-        src="~/assets/images/article/3/basics3-3.png"
+        src="~/assets/images/article/3/basics3-2.png"
         alt="Windows Powershell"
         class="mx-auto mt-6 max-w-full"
       />

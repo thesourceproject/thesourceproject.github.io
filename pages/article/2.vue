@@ -18,12 +18,14 @@
         Now it's time to show-off your first project to the world.
       </p>
       <a
-        class="mx-auto mt-6 w-96 bg-white rounded-2xl"
-        href="https://github.com/"
-        target="_blank"
-      >
-        <img src="~/assets/images/article/2/misc2-1.png" alt="Github" />
-      </a>
+        title="GitHub, Public domain, via Wikimedia Commons"
+        href="https://commons.wikimedia.org/wiki/File:GitHub_logo_2013.svg"
+        class="mx-auto mt-6 p-6 bg-white rounded-2xl"
+        ><img
+          alt="GitHub logo 2013"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/GitHub_logo_2013.svg/512px-GitHub_logo_2013.svg.png"
+          class="w-96"
+      /></a>
       <p class="mt-6">
         <a
           class="text-text-3 text-lg font-bold hover:underline focus:underline focus:outline-none"
@@ -74,7 +76,7 @@
         the bottom.
       </p>
       <img
-        src="~/assets/images/article/2/misc2-2.png"
+        src="~/assets/images/article/2/misc2-1.png"
         alt="Publish to Github"
         class="mx-auto mt-6 max-w-full"
       />
@@ -84,7 +86,7 @@
         Click <strong>Allow</strong>.
       </p>
       <img
-        src="~/assets/images/article/2/misc2-3.png"
+        src="~/assets/images/article/2/misc2-2.png"
         alt="The extension 'Github' wants to sign in using Github"
         class="mx-auto mt-6 max-w-full"
       />
@@ -94,7 +96,7 @@
         Click <strong>Continue</strong>.
       </p>
       <img
-        src="~/assets/images/article/2/misc2-4.png"
+        src="~/assets/images/article/2/misc2-3.png"
         alt="Authorize Visual Studio Code to access Github"
         class="mx-auto mt-6 max-w-full"
       />
@@ -104,7 +106,7 @@
         Click <strong>Open</strong>.
       </p>
       <img
-        src="~/assets/images/article/2/misc2-5.png"
+        src="~/assets/images/article/2/misc2-4.png"
         alt="Allow an extension to open this
         URI"
         class="mx-auto mt-6 max-w-full"
@@ -121,7 +123,7 @@
         <em>Publish to Github public repository</em>.
       </p>
       <img
-        src="~/assets/images/article/2/misc2-6.png"
+        src="~/assets/images/article/2/misc2-5.png"
         alt="Allow an extension to open this
         URI"
         class="mx-auto mt-6 max-w-full"
@@ -131,7 +133,7 @@
         Click <strong>Sign in with your browser</strong> to continue.
       </p>
       <img
-        src="~/assets/images/article/2/misc2-7.png"
+        src="~/assets/images/article/2/misc2-6.png"
         alt="Sign in to Github with your browser"
         class="mx-auto mt-6 max-w-full"
       />
@@ -140,7 +142,7 @@
         the tab and return to VS Code.
       </p>
       <img
-        src="~/assets/images/article/2/misc2-8.png"
+        src="~/assets/images/article/2/misc2-7.png"
         alt="Sign in to Github with your browser"
         class="mx-auto mt-6 max-w-full"
       />
@@ -153,7 +155,7 @@
         periodically run <em>git fetch</em>. You can ignore this for now.
       </p>
       <img
-        src="~/assets/images/article/2/misc2-9.png"
+        src="~/assets/images/article/2/misc2-8.png"
         alt="Sign in to Github with your browser"
         class="mx-auto mt-6 max-w-full"
       />

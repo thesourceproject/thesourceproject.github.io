@@ -15,7 +15,18 @@
           href="https://leetcode.com/problems/two-sum/"
           target="_blank"
           >LeetCode</a
-        >.<br /><br />
+        >.
+      </p>
+      <a
+        title="LeetCode, Public domain, via Wikimedia Commons"
+        href="https://commons.wikimedia.org/wiki/File:LeetCode_Logo_black_with_text.svg"
+        class="mx-auto mt-6 p-6 bg-white rounded-2xl"
+        ><img
+          alt="LeetCode Logo black with text"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/LeetCode_Logo_black_with_text.svg/640px-LeetCode_Logo_black_with_text.svg.png"
+          class="w-96"
+      /></a>
+      <p class="mt-6">
         Given an array of integers <strong>nums</strong> and an integer
         <strong>target</strong>, return
         <em
@@ -162,8 +173,8 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
         So now we have a solution with a time complexity of
         <strong>O(n)</strong> making it much faster than the previous ones,
         however it also has a space complexity of <strong>O(n)</strong> because
-        we are using additional memory proportional to the size of the input array
-        in the worst case.<br /><br />
+        we are using additional memory proportional to the size of the input
+        array in the worst case.<br /><br />
         So why stop here? Try some more problems and keep on learning.
       </p>
     </article>
