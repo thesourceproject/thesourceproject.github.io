@@ -21,10 +21,15 @@ module.exports = {
         "text-2": "var(--text-2)",
         "text-3": "var(--text-3)",
         "text-4": "var(--text-4)",
-        "text-5": "var(--text-5)"
+        "text-5": "var(--text-5)",
+        "border-1": "var(--border-1)",
+        "border-2": "var(--border-2)"
       },
       lineHeight: {
         "extra-loose": "1.75"
+      },
+      maxHeight: {
+        "3xl": "48rem"
       }
     }
   },

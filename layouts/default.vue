@@ -59,6 +59,8 @@ html {
   --text-3: #ff2f2f;
   --text-4: #002e46;
   --text-5: #191d30;
+  --border-1: #000000;
+  --border-2: #ff2f2f;
 }
 
 .dark {
@@ -71,5 +73,21 @@ html {
   --text-3: #fc4422;
   --text-4: #eeeeee;
   --text-5: #98dfaf;
+  --border-1: #eeeeee;
+  --border-2: #98dfaf;
+}
+
+.parent {
+  max-height: 42rem;
+  overflow: auto;
+  border: var(--border-1) solid 2px;
+  border-radius: 0.25rem;
+}
+.parent > div {
+  border: var(--border-2) dashed 2px;
+  border-radius: 2rem;
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
 }
 </style>
