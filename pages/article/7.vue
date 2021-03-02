@@ -2,20 +2,31 @@
   <main>
     <article class="w-full max-w-4xl mx-auto flex flex-col">
       <ArticleHeader
-        title="Creating a countdown timer using Javascript"
-        date="9 Feb'21"
-        readTime="30 min read"
-        :tags="['frontend', 'html', 'css', 'javascript', 'beginner']"
+        title="Let's learn CSS Flexbox"
+        date="2 Mar '21"
+        readTime="10 min read"
+        :tags="['frontend', 'html', 'css', 'beginner']"
       />
       <p>
-        In this tutorial, we will learn how to create a simple countdown timer
-        application using Javascript that can then be run in your web-browser.
+        If you're just starting out with HTML and CSS, you must have heard about
+        <a
+          class="text-text-3 text-lg font-bold hover:underline focus:underline focus:outline-none"
+          href="https://fonts.google.com/"
+          target="_blank"
+          >Flexbox</a
+        >. This tutorial will teach you the basics of Flexbox so you can use it
+        in your own projects in no time.
       </p>
-      <img
-        src="~/assets/images/article/5/frontend5-1.png"
-        alt="Countdown Timer"
-        class="mx-auto mt-6 max-w-full"
-      />
+      <a
+        title="Rudloff, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons"
+        href="https://commons.wikimedia.org/wiki/File:CSS3_logo_and_wordmark.svg"
+        target="_blank"
+        class="mx-auto mt-6 p-6 bg-white rounded-2xl"
+        ><img
+          alt="CSS3 logo and wordmark"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/256px-CSS3_logo_and_wordmark.svg.png"
+          class="w-64"
+      /></a>
       <div class="flex flex-col max-w-4xl mt-12">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
@@ -170,13 +181,14 @@ p {
         We use the <strong>display: flex</strong> and
         <strong>justify-content: center</strong> properties to center the
         buttons.<br />
-        <strong>Note</strong> - You can learn more about the flex display
-        property in
-        <NuxtLink
+        <strong>Note</strong> - Don't worry if you do not understand the
+        <a
           class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/7#Let's-learn-CSS-Flexbox"
-          >this</NuxtLink
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox"
+          target="_blank"
+          >flex</a
         >
+        display property right now. It will be covered in depth in a later
         tutorial.
       </p>
       <CodeSnippet
@@ -467,13 +479,13 @@ export default {
     CodeSnippet,
   },
   head: {
-    title: "Creating a countdown timer using Javascript | The Source Project",
+    title: "Let's learn CSS Flexbox | The Source Project",
     meta: [
       {
         hid: "description",
         name: "description",
         content:
-          "In this tutorial, we will learn how to create a simple countdown timer application using Javascript that can then be run in your web-browser.",
+          "If you're just starting out with HTML and CSS, you must have heard about Flexbox. This tutorial will teach you the basics of Flexbox so you can use it in your own projects in no time.",
       },
     ],
   },

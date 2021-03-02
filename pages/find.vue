@@ -75,6 +75,16 @@ export default {
       query: "",
       articles: [
         {
+          id: 7,
+          category: "frontend",
+          title: "Let's learn CSS Flexbox",
+          date: "2 Mar '21",
+          readTime: "10 min read",
+          fragment:
+            "If you're just starting out with HTML and CSS, you must have heard about Flexbox. This tutorial will teach you the basics of Flexbox so you can use it in your own projects in no time...",
+          tags: ["frontend", "html", "css", "beginner"],
+        },
+        {
           id: 6,
           category: "competitive",
           title: "LeetCode #1 Two Sum",
