@@ -22,6 +22,7 @@
       <a
         title="www.python.org, GPL &lt;http://www.gnu.org/licenses/gpl.html&gt;, via Wikimedia Commons"
         href="https://commons.wikimedia.org/wiki/File:Python_logo_and_wordmark.svg"
+        target="_blank"
         class="mx-auto mt-6 p-6 bg-white rounded-2xl"
         ><img
           alt="Python logo and wordmark"

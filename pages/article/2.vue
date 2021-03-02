@@ -20,6 +20,7 @@
       <a
         title="GitHub, Public domain, via Wikimedia Commons"
         href="https://commons.wikimedia.org/wiki/File:GitHub_logo_2013.svg"
+        target="_blank"
         class="mx-auto mt-6 p-6 bg-white rounded-2xl"
         ><img
           alt="GitHub logo 2013"

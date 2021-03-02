@@ -9,17 +9,19 @@
         :tags="['competitive', 'data', 'structures', 'algorithms', 'beginner']"
       />
       <p>
-        Check out this problem on
+        Check out
         <a
-          class="text-text-3 text-lg font-bold hover:underline focus:underline focus:outline-none"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://leetcode.com/problems/two-sum/"
           target="_blank"
-          >LeetCode</a
-        >.
+          >this</a
+        >
+        problem on LeetCode.
       </p>
       <a
         title="LeetCode, Public domain, via Wikimedia Commons"
         href="https://commons.wikimedia.org/wiki/File:LeetCode_Logo_black_with_text.svg"
+        target="_blank"
         class="mx-auto mt-6 p-6 bg-white rounded-2xl"
         ><img
           alt="LeetCode Logo black with text"
