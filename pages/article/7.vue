@@ -60,7 +60,7 @@
       </p>
       <CodeSnippet
         code=".parent > div {
-  border: var(--border-2) dashed 2px;
+  border: red dashed 2px;
   border-radius: 2rem;
   padding: 2rem;
   font-size: 2rem;
@@ -70,7 +70,8 @@
       />
       <p>
         Now we will learn about different properties used to work with Flexbox
-        using our interactive examples.<br />
+        using our interactive examples. Just click on any of the values for the
+        respective CSS property to see its output.
       </p>
       <CSSHelper
         :elements="[
@@ -138,3 +139,18 @@ export default {
   },
 };
 </script>
+<style scoped>
+.parent {
+  max-height: 42rem;
+  overflow: auto;
+  border: var(--border-1) solid 2px;
+  border-radius: 0.25rem;
+}
+.parent > div {
+  border: var(--border-2) dashed 2px;
+  border-radius: 2rem;
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+</style>

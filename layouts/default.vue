@@ -81,18 +81,4 @@ html {
   --border-1: #eeeeee;
   --border-2: #98dfaf;
 }
-
-.parent {
-  max-height: 42rem;
-  overflow: auto;
-  border: var(--border-1) solid 2px;
-  border-radius: 0.25rem;
-}
-.parent > div {
-  border: var(--border-2) dashed 2px;
-  border-radius: 2rem;
-  padding: 2rem;
-  font-size: 2rem;
-  text-align: center;
-}
 </style>
