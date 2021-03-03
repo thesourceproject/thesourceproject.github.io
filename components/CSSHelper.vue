@@ -1,31 +1,29 @@
 <template>
-  <div class="my-4">
+  <div class="mx-10 my-4">
     <div
-      class="mb-4 p-4 bg-gray-800 rounded-md text-white grid gap-4 font-mono"
+      class="mb-4 p-4 bg-code-1 rounded-md text-code-2 grid gap-4 font-mono whitespace-nowrap overflow-x-auto"
     >
       <div v-for="element in elements" :key="element.ref">
-        <span class="text-yellow-200">.{{ element.name }}</span> {
-        <div class="ml-4">
-          <div
-            v-for="property in element.properties"
-            :key="property.name"
-            class="flex gap-4"
-          >
-            <p class="text-blue-300">{{ property.name }}:</p>
-            <div class="flex flex-wrap gap-4">
-              <button
-                v-for="value in property.values"
-                :key="value"
-                :class="
-                  active[element.ref][property.name] === value &&
-                  'text-green-400'
-                "
-                @click="setProperty(element.ref, property.name, value)"
-              >
-                {{ value }}
-              </button>
-            </div>
-          </div>
+        <span class="text-code-3">.{{ element.name }}</span> {
+        <div
+          v-for="property in element.properties"
+          :key="property.name"
+          class="ml-4"
+        >
+          <span class="text-code-4">{{ property.name }}:</span>
+          <template v-for="(value, i) in property.values">
+            <span v-if="i > 0" :key="'span' + value"> | </span
+            ><button
+              :key="'button' + value"
+              class="focus:outline-none focus:underline"
+              :class="
+                active[element.ref][property.name] === value && 'text-code-5'
+              "
+              @click="setProperty(element.ref, property.name, value)"
+            >
+              {{ value }}
+            </button></template
+          >;
         </div>
         }
       </div>

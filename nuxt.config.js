@@ -34,7 +34,7 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&display=swap"
+          "https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&family=Ubuntu+Mono&display=swap"
       }
     ]
   },

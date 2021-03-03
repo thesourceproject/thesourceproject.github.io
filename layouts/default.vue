@@ -47,6 +47,11 @@ html {
   --frontend: #5703c2;
   --backend: #00a341;
   --misc: #1b998b;
+  --code-1: #272822;
+  --code-2: #f8f8f2;
+  --code-3: #a6e22e;
+  --code-4: #f92672;
+  --code-5: #e6db74;
 }
 
 .light {

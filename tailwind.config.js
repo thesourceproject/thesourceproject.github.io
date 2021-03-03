@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         title: ["McLaren", "cursive"],
-        body: ["Poppins", "sans-serif"]
+        body: ["Poppins", "sans-serif"],
+        mono: ["Ubuntu Mono", "monospace"]
       },
       colors: {
         basics: "var(--basics)",
@@ -13,6 +14,11 @@ module.exports = {
         frontend: "var(--frontend)",
         backend: "var(--backend)",
         misc: "var(--misc)",
+        "code-1": "var(--code-1)",
+        "code-2": "var(--code-2)",
+        "code-3": "var(--code-3)",
+        "code-4": "var(--code-4)",
+        "code-5": "var(--code-5)",
         "background-1": "var(--background-1)",
         "background-2": "var(--background-2)",
         "background-3": "var(--background-3)",
