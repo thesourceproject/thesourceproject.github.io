@@ -72,6 +72,7 @@ export default {
   },
   data() {
     return {
+      fuse: null,
       query: "",
       articles: [
         {
@@ -162,12 +163,6 @@ export default {
     },
   },
   computed: {
-    fuse() {
-      return new Fuse(this.articles, {
-        keys: ["title", "tags"],
-        shouldSort: true,
-      });
-    },
     queryArticles() {
       if (this.query) {
         return this.fuse
@@ -179,6 +174,10 @@ export default {
     },
   },
   mounted() {
+    this.fuse = new Fuse(this.articles, {
+      keys: ["title", "tags"],
+      shouldSort: true,
+    });
     this.query = this.$route.query.q || "";
   },
 };
