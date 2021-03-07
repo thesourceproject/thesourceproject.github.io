@@ -75,7 +75,7 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
         lang="language-python"
       />
       <p>
-        Notice we added a default return value in the Java code at the end. This
+        Notice that we added a default return value in the Java code at the end. This
         is because the return type of the function is of
         <strong>int[]</strong> type, therefore the function must return an array
         of integers for all conditions. This is not required in the Python
