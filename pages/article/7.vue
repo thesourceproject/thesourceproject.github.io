@@ -474,7 +474,7 @@ import ArticleHeader from "~/components/ArticleHeader.vue";
 import CodeSnippet from "~/components/CodeSnippet.vue";
 import CSSHelper from "~/components/CSSHelper.vue";
 export default {
-  name: "frontend5",
+  name: "frontend7",
   components: {
     ArticleHeader,
     CodeSnippet,

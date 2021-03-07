@@ -186,7 +186,7 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 import ArticleHeader from "~/components/ArticleHeader.vue";
 import CodeSnippet from "~/components/CodeSnippet.vue";
 export default {
-  name: "frontend5",
+  name: "competitive6",
   components: {
     ArticleHeader,
     CodeSnippet,

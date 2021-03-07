@@ -138,7 +138,7 @@ print('Sum of the given numbers is ', total)"
 import ArticleHeader from "~/components/ArticleHeader.vue";
 import CodeSnippet from "~/components/CodeSnippet.vue";
 export default {
-  name: "basics3",
+  name: "basics4",
   components: {
     ArticleHeader,
     CodeSnippet,

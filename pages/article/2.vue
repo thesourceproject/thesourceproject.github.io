@@ -171,7 +171,7 @@
 <script>
 import ArticleHeader from "~/components/ArticleHeader.vue";
 export default {
-  name: "Misc1",
+  name: "misc2",
   components: {
     ArticleHeader,
   },

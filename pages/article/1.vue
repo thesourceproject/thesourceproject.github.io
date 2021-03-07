@@ -208,7 +208,7 @@ git config --global user.email &quot;myname@example.com&quot;`"
 import ArticleHeader from "~/components/ArticleHeader.vue";
 import CodeSnippet from "~/components/CodeSnippet.vue";
 export default {
-  name: "Misc1",
+  name: "misc1",
   components: {
     ArticleHeader,
     CodeSnippet,

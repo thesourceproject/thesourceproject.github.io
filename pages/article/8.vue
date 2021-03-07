@@ -166,19 +166,20 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 import ArticleHeader from "~/components/ArticleHeader.vue";
 import CodeSnippet from "~/components/CodeSnippet.vue";
 export default {
-  name: "frontend5",
+  name: "basics8",
   components: {
     ArticleHeader,
     CodeSnippet,
   },
   head: {
-    title: "LeetCode #1 Two Sum | The Source Project",
+    title:
+      "Using built-in data structures of Java and Python | The Source Project",
     meta: [
       {
         hid: "description",
         name: "description",
         content:
-          "Check out this problem on LeetCode. Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
+          "Today we will learn about data structures that are available in Java and Python. These are a must-know if you want to get into competitive programming.",
       },
     ],
   },
