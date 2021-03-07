@@ -324,9 +324,9 @@ resetButton.addEventListener("click", () => {
       <p>
         And there you go. We have successfully created a countdown timer app
         using Javascript. Now try building a stopwatch application on your own
-        with what you've learnt and keep learning.<br /><br />
-        Complete Code
+        with what you've learnt and keep learning.
       </p>
+      <h3 class="mt-6 text-xl">Complete Code</h3>
       <CodeSnippet
         code='<!DOCTYPE html>
 <html lang="en">
