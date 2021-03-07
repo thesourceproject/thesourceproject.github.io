@@ -2,42 +2,22 @@
   <main>
     <article class="w-full max-w-4xl mx-auto flex flex-col">
       <ArticleHeader
-        title="LeetCode #1 Two Sum"
-        date="20 Feb'21"
-        readTime="10 min read"
-        :tags="['competitive', 'data', 'structures', 'algorithms', 'beginner']"
+        title="Using built-in data structures of Java and Python"
+        date="7 Mar'21"
+        readTime="20 min read"
+        :tags="[
+          'basics',
+          'competitive',
+          'data',
+          'structures',
+          'algorithms',
+          'beginner',
+        ]"
       />
       <p>
-        Check out
-        <a
-          class="text-text-3 hover:underline focus:underline focus:outline-none"
-          href="https://leetcode.com/problems/two-sum/"
-          target="_blank"
-          >this</a
-        >
-        problem on LeetCode.
-      </p>
-      <a
-        title="LeetCode, Public domain, via Wikimedia Commons"
-        href="https://commons.wikimedia.org/wiki/File:LeetCode_Logo_black_with_text.svg"
-        target="_blank"
-        class="mx-auto mt-6 p-6 bg-white rounded-2xl"
-        ><img
-          alt="LeetCode Logo black with text"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/LeetCode_Logo_black_with_text.svg/640px-LeetCode_Logo_black_with_text.svg.png"
-          class="w-96"
-      /></a>
-      <p class="mt-6">
-        Given an array of integers <strong>nums</strong> and an integer
-        <strong>target</strong>, return
-        <em
-          >indices of the two numbers such that they add up to
-          <strong>target</strong></em
-        >.<br />
-        You may assume that each input would have
-        <strong><em>exactly</em> one solution</strong>, and you may not use the
-        <em>same</em> element twice.<br />
-        You can return the answer in any order.
+        Today we will learn about data structures that are available in Java and
+        Python. These are a must-know if you want to get into competitive
+        programming.
       </p>
       <div class="flex flex-col max-w-4xl mt-12">
         <h2 class="text-2xl">Getting Started</h2>

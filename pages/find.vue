@@ -76,6 +76,23 @@ export default {
       query: "",
       articles: [
         {
+          id: 8,
+          category: "basics",
+          title: "Using built-in data structures of Java and Python",
+          date: "7 Mar '21",
+          readTime: "20 min read",
+          fragment:
+            "Today we will learn about data structures that are available in Java and Python. These are a must-know if you want to get into competitive programming...",
+          tags: [
+            "basics",
+            "competitive",
+            "data",
+            "structures",
+            "algorithms",
+            "beginner",
+          ],
+        },
+        {
           id: 7,
           category: "frontend",
           title: "Let's learn CSS Flexbox",
