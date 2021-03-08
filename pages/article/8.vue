@@ -22,7 +22,7 @@
         impossible to do so for every problem. So why reinvent the wheel when
         you've got these built right into the library itself?
       </p>
-      <div class="flex flex-col max-w-4xl mt-12">
+      <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
@@ -33,12 +33,14 @@
         advanced ones - <strong>Set</strong>, <strong>Map</strong>,
         <strong>Heap</strong>.
       </p>
-      <h3 class="mt-6 text-xl">Array</h3>
+      <div class="mt-6 flex flex-col">
+        <h3 class="text-xl">Array</h3>
+        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
+      </div>
       <p class="mt-4">
-        An array is a data structure which allows for
-        <strong>O(1)</strong> read/write operations. This is because its
-        elements are kept in contiguous memory locations which makes it easy to
-        calculate the address of any position.
+        Array is a data structure which allows for O(1) read/write operations.
+        This is because its elements are kept in contiguous memory locations
+        which makes it easy to calculate the address of any position.
       </p>
       <CodeSnippet
         code="// Java
@@ -51,6 +53,7 @@ class DataStructures {
         array[2] = 6;
         System.out.println(Arrays.toString(array)); // [3, 0, 6, 0, 0]
         System.out.println(array[2]); // 6 (Get value at index 2)
+        System.out.println(array.length); // 5 (Get size of array)
     }
 }"
         lang="language-java"
@@ -61,46 +64,126 @@ class DataStructures {
         However, the Java Collections Framework provides the
         <strong>ArrayList</strong> class which is an array-like data structure
         but can dynamically grow in size as needed. It is present in the
-        <em>java.util</em> package.
+        <em>java.util</em> package(like the others below).
       </p>
       <CodeSnippet
         code="// Java
-import java.util.ArrayList;
+import java.util.*;
 class DataStructures {
     public static void main(String args[]) {
         List<Integer> arrayList = new ArrayList<>(); // Create an ArrayList of Integer type.
         System.out.println(arrayList); // []
+        System.out.println(arrayList.isEmpty()); // true
         arrayList.add(3); // Add value 3 to the end of list.
         arrayList.add(6);
         System.out.println(arrayList); // [3, 6]
         System.out.println(arrayList.get(1)); // 6 (Get value at index 1)
         arrayList.set(1, 7); // Set value at index 1 to 7.
         System.out.println(arrayList); // [3, 7]
-        arrayList.remove(0); // Remove value at index 0.
+        System.out.println(arrayList.size()); // 2 (Get size of arraylist)
+        System.out.println(arrayList.remove(0)); // 3 (Remove and return value at index 0)
         System.out.println(arrayList); // [7]
     }
 }"
         lang="language-java"
       />
       <p>
-        <strong>Notice</strong> - we declared our ArrayList using
-        <em>List&lt;Integer&gt;</em> instead of <em>List&lt;int&gt;</em> because
-        Java collections can only store objects and not primitive types.
-        Therefore, we need to use the wrapper classes(<em>Integer</em>,
-        <em>Long</em>, <em>Float</em>, <em>Double</em>, <em>Character</em>,
-        <em>Boolean</em>) for them.
+        The <em>List</em> interface contains all the basic methods required for
+        read/write operations while remaining more generic and flexible.
+        Therefore, it is preferred to ArrayList(which implements the
+        <em>List</em> interface) to declare list-like data structures.<br />
+        We can also declare our ArrayList with
+        <em>ArrayList&lt;Integer&gt;</em> which would allow us to use
+        ArrayList-specific methods like <em>ensureCapacity()</em>.<br />
+        <strong>Note</strong> - You might wonder why we used
+        <em>List&lt;Integer&gt;</em> instead of <em>List&lt;int&gt;</em>. This
+        is because Java collections can only store objects and not primitive
+        types. Therefore, we need to use their respective wrapper
+        classes(<em>Integer</em>, <em>Long</em>, <em>Float</em>,
+        <em>Double</em>, <em>Character</em>, <em>Boolean</em>) for them.
       </p>
       <CodeSnippet
         code="# Python3
-def twoSum(self, nums: List[int], target: int) -> List[int]:
-    for i in range(len(nums)):
-        for j in range(len(nums)):
-            if(i != j):
-                if(nums[i] + nums[j] == target):
-                    return [i, j]"
+array = []  # same as -> array = list()
+print(array)  # []
+array.append(3)  # Add value 3 to the end of list.
+array.append(6)
+print(array)  # [3, 6]
+print(array[1])  # 6 (Get value at index 1)
+array[1] = 7  # Set value at index 1 to 7.
+print(len(array))  # 2 (Get size of list)
+print(array.pop(0))  # 3 (Remove and return value at index 0)
+print(array)  # [7]"
         lang="language-python"
       />
-      <p>Notice we added a default return value in the Java code at the end.</p>
+      <p>
+        In Python, a <em>list</em> is used to store multiple elements in an
+        array-like manner. Python lists are resizable by default and can store
+        objects of any type.<br />
+        <strong>Note</strong> - Python has a module <em>array.array</em> which
+        is used to create C-like arrays which can store only a single type of
+        basic values(integers, characters, floating-point numbers). These take
+        up a lesser amount of space but are less flexible than lists.
+      </p>
+      <div class="mt-6 flex flex-col">
+        <h3 class="text-xl">Stack</h3>
+        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
+      </div>
+      <p class="mt-4">
+        Stack is a data structure which only allows read/write operations at one
+        end(i.e. the top) in O(1) time. Stack elements are accessed according to
+        the <strong>LIFO</strong>(last in first out) rule.
+      </p>
+      <CodeSnippet
+        code="// Java
+import java.util.Arrays; // Only required for using the Arrays.toString() function.
+class DataStructures {
+    public static void main(String args[]) {
+        int array[] = new int[5]; // Create a primitive int array.
+        System.out.println(Arrays.toString(array)); // [0, 0, 0, 0, 0]
+        array[0] = 3; // Set value at index 0 to 3.
+        array[2] = 6;
+        System.out.println(Arrays.toString(array)); // [3, 0, 6, 0, 0]
+        System.out.println(array[2]); // 6 (Get value at index 2)
+        System.out.println(array.length); // 5 (Get size of array)
+    }
+}"
+        lang="language-java"
+      />
+      <p>
+        The <em>List</em> interface contains all the basic methods required for
+        read/write operations while remaining more generic and flexible.
+        Therefore, it is preferred to <em>ArrayList</em> (which implements the
+        <em>List</em> interface) to declare list-like data structures.<br />
+        We can also declare our ArrayList with
+        <em>ArrayList&lt;Integer&gt;</em> which would allow us to use
+        ArrayList-specific methods like <em>ensureCapacity()</em>.<br />
+        <strong>Note</strong> - You might wonder why we used
+        <em>List&lt;Integer&gt;</em> instead of <em>List&lt;int&gt;</em>. This
+        is because Java collections can only store objects and not primitive
+        types. Therefore, we need to use their respective wrapper
+        classes(<em>Integer</em>, <em>Long</em>, <em>Float</em>,
+        <em>Double</em>, <em>Character</em>, <em>Boolean</em>) for them.
+      </p>
+      <CodeSnippet
+        code="# Python3
+array = []  # same as -> array = list()
+print(array)  # []
+array.append(3)  # Add value 3 to the end of list.
+array.append(6)
+print(array)  # [3, 6]
+print(array[1])  # 6 (Get value at index 1)
+array[1] = 7  # Set value at index 1 to 7.
+print(len(array))  # 2 (Get size of list)
+print(array.pop(0))  # 3 (Remove and return value at index 0)
+print(array)  # [7]"
+        lang="language-python"
+      />
+      <p>
+        In Python, a <em>list</em> is used to store multiple elements in an
+        array-like manner. Python lists are resizable by default and can store
+        objects of any type.
+      </p>
     </article>
   </main>
 </template>

@@ -29,7 +29,7 @@
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/640px-Python_logo_and_wordmark.svg.png"
           class="w-96"
       /></a>
-      <div class="flex flex-col max-w-4xl mt-12">
+      <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>

@@ -16,7 +16,7 @@
         alt="Countdown Timer"
         class="mx-auto mt-6 max-w-full"
       />
-      <div class="flex flex-col max-w-4xl mt-12">
+      <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>

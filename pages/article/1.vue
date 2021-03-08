@@ -33,7 +33,7 @@
         in-the-box. VS Code will leverage your machine's Git installation, so
         you need to install Git first before you get these features.
       </p>
-      <div class="flex flex-col max-w-4xl mt-12">
+      <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
@@ -87,7 +87,7 @@
         Now time to write your first piece of code.<br /><br />
         Create a new folder in your computer, right-click on it and select
         <strong>Open with Code</strong> in the context menu.<br />
-        <strong>Note -</strong> It is important to open a folder(not a file) in
+        <strong>Note</strong> - It is important to open a folder(not a file) in
         VS Code otherwise the source control functions will not work.<br />
         This folder will now act as a workspace for your project.<br /><br />
         Now go to <strong>Source Control</strong> in the side bar and initialise

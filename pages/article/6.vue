@@ -39,7 +39,7 @@
         <em>same</em> element twice.<br />
         You can return the answer in any order.
       </p>
-      <div class="flex flex-col max-w-4xl mt-12">
+      <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
@@ -75,8 +75,8 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
         lang="language-python"
       />
       <p>
-        Notice that we added a default return value in the Java code at the end. This
-        is because the return type of the function is of
+        Notice that we added a default return value in the Java code at the end.
+        This is because the return type of the function is of
         <strong>int[]</strong> type, therefore the function must return an array
         of integers for all conditions. This is not required in the Python
         version as the question states that we will get a unique solution for

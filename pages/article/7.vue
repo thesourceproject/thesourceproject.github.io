@@ -32,7 +32,7 @@
         Flexbox solves these problems by providing an easy method to arrange
         items in one dimension inside a container.
       </p>
-      <div class="flex flex-col max-w-4xl mt-12">
+      <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
@@ -69,7 +69,10 @@
         Just click on any of the values for the respective CSS property to see
         its output.
       </p>
-      <h3 class="mt-6 text-xl">flex-direction</h3>
+      <div class="mt-6 flex flex-col">
+        <h3 class="text-xl">flex-direction</h3>
+        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
+      </div>
       <CSSHelper
         :elements="[
           {
@@ -99,7 +102,10 @@
         Flex items are initially arranged in the row direction(left to right).
         This can be changed using the <strong>flex-direction</strong> property.
       </p>
-      <h3 class="mt-6 text-xl">flex-wrap</h3>
+      <div class="mt-6 flex flex-col">
+        <h3 class="text-xl">flex-wrap</h3>
+        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
+      </div>
       <CSSHelper
         :elements="[
           {
@@ -138,7 +144,10 @@
         across multiple lines as needed.<br />
         <em>wrap-reverse</em> will wrap the items from bottom to top.
       </p>
-      <h3 class="mt-6 text-xl">justify-content</h3>
+      <div class="mt-6 flex flex-col">
+        <h3 class="text-xl">justify-content</h3>
+        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
+      </div>
       <CSSHelper
         :elements="[
           {
@@ -179,7 +188,10 @@
         This property is useful for distributing remaining space left around
         child items.
       </p>
-      <h3 class="mt-6 text-xl">align-items</h3>
+      <div class="mt-6 flex flex-col">
+        <h3 class="text-xl">align-items</h3>
+        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
+      </div>
       <CSSHelper
         :elements="[
           {
@@ -250,7 +262,10 @@
         <em>baseline</em> arranges the items so that their baselines are
         aligned.
       </p>
-      <h3 class="mt-6 text-xl">align-content</h3>
+      <div class="mt-6 flex flex-col">
+        <h3 class="text-xl">align-content</h3>
+        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
+      </div>
       <CSSHelper
         :elements="[
           {
@@ -304,7 +319,10 @@
         <strong>flex-wrap</strong> property must be set to either
         <em>wrap</em> or <em>wrap-reverse</em>.
       </p>
-      <h3 class="mt-6 text-xl">flex-grow</h3>
+      <div class="mt-6 flex flex-col">
+        <h3 class="text-xl">flex-grow</h3>
+        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
+      </div>
       <CSSHelper
         :elements="[
           {
@@ -364,7 +382,10 @@
         It's initial value is 0 meaning that the flex item will not grow to take
         over the remaining space.
       </p>
-      <h3 class="mt-6 text-xl">align-self</h3>
+      <div class="mt-6 flex flex-col">
+        <h3 class="text-xl">align-self</h3>
+        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
+      </div>
       <CSSHelper
         :elements="[
           {

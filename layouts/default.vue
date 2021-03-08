@@ -74,7 +74,7 @@ html {
   --background-3: #191d30;
   --background-4: #ffe5e5;
   --text-1: #eeeeee;
-  --text-2: #eeeeee;
+  --text-2: #ffffff;
   --text-3: #fc4422;
   --text-4: #eeeeee;
   --text-5: #98dfaf;
