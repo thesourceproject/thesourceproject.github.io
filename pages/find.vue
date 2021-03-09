@@ -78,9 +78,9 @@ export default {
         {
           id: 8,
           category: "basics",
-          title: "Using built-in data structures of Java and Python",
+          title: "Using built-in data structures of Java and Python - Part 1",
           date: "7 Mar '21",
-          readTime: "20 min read",
+          readTime: "10 min read",
           fragment:
             "Today we will learn about data structures that are available in Java and Python. These are a must-know if you want to get into competitive programming...",
           tags: [
