@@ -2,24 +2,14 @@
   <main>
     <article class="w-full max-w-4xl mx-auto flex flex-col">
       <ArticleHeader
-        title="Using built-in data structures of Java and Python - Part 1"
-        date="7 Mar'21"
+        title="Using built-in data structures of Java and Python - Part 2"
+        date="10 Mar'21"
         readTime="10 min read"
-        :tags="[
-          'competitive',
-          'data',
-          'structures',
-          'algorithms',
-          'beginner',
-        ]"
+        :tags="['competitive', 'data', 'structures', 'algorithms', 'beginner']"
       />
       <p>
-        Today we will learn about data structures that are available in Java and
-        Python. These are a must-know if you want to get into competitive
-        programming.<br />
-        Although you can implement these data structures yourself too, it is
-        impossible to do so for every problem. So why reinvent the wheel when
-        you've got these built right into the library itself?
+        In our previous tutorial we covered some basic data structures. Here we
+        will cover Set, Map and Heap.
       </p>
       <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
@@ -261,13 +251,13 @@ export default {
   },
   head: {
     title:
-      "Using built-in data structures of Java and Python - Part 1 | The Source Project",
+      "Using built-in data structures of Java and Python - Part 2 | The Source Project",
     meta: [
       {
         hid: "description",
         name: "description",
         content:
-          "Today we will learn about data structures that are available in Java and Python. These are a must-know if you want to get into competitive programming.",
+          "In our previous tutorial we covered some basic data structures. Here we will cover Set, Map and Heap.",
       },
     ],
   },

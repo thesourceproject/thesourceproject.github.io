@@ -76,21 +76,24 @@ export default {
       query: "",
       articles: [
         {
+          id: 9,
+          category: "competitive",
+          title: "Using built-in data structures of Java and Python - Part 2",
+          date: "10 Mar '21",
+          readTime: "10 min read",
+          fragment:
+            "In our previous tutorial we covered some basic data structures. Here we will cover Set, Map and Heap...",
+          tags: ["competitive", "data", "structures", "algorithms", "beginner"],
+        },
+        {
           id: 8,
-          category: "basics",
+          category: "competitive",
           title: "Using built-in data structures of Java and Python - Part 1",
           date: "7 Mar '21",
           readTime: "10 min read",
           fragment:
             "Today we will learn about data structures that are available in Java and Python. These are a must-know if you want to get into competitive programming...",
-          tags: [
-            "basics",
-            "competitive",
-            "data",
-            "structures",
-            "algorithms",
-            "beginner",
-          ],
+          tags: ["competitive", "data", "structures", "algorithms", "beginner"],
         },
         {
           id: 7,
