@@ -84,10 +84,10 @@ class DataStructures {
         lang="language-java"
       />
       <p>
-        The <em>List</em> interface contains all the basic methods required for
-        read/write operations while remaining more generic and flexible.
-        Therefore, it is preferred to ArrayList(which implements the
-        <em>List</em> interface) to declare list-like data structures.<br />
+        The <strong>List</strong> interface contains all the basic methods
+        required for read/write operations while remaining more generic and
+        flexible. Therefore, it is preferred to ArrayList(which implements the
+        List interface) to declare list-like data structures.<br />
         We can also declare our ArrayList with
         <em>ArrayList&lt;Integer&gt;</em> which would allow us to use
         ArrayList-specific methods like <em>ensureCapacity()</em>.<br />
@@ -113,9 +113,9 @@ print(array)  # [7]"
         lang="language-python"
       />
       <p>
-        In Python, a <em>list</em> (not to be confused with linked-list) is used
-        to store multiple items in an array-like manner. Python lists are
-        resizable by default and can store objects of any type.<br />
+        In Python, a <strong>list</strong>(not to be confused with linked-list)
+        is used to store multiple items in an array-like manner. Python lists
+        are resizable by default and can store objects of any type.<br />
         <strong>Note</strong> - Python has a module <em>array.array</em> which
         is used to create C-like arrays which can store only a single type of
         basic values(integers, characters, floating-point numbers). These take
@@ -150,17 +150,17 @@ class DataStructures {
         lang="language-java"
       />
       <p>
-        There are multiple ways of implementing a stack(including
-        <em>ArrayList</em>) in Java but <strong>ArrayDeque</strong> is the most
-        preferred one. It allows amortized O(1) pushes and pops from both ends,
-        making it ideal for using as a stack. It implements the
-        <em>Queue</em> interface(not <em>List</em>) and does not allow random
-        access of its items.<br />
-        <strong>Note</strong> - there is also a dedicated <em>Stack</em> class
-        in Java that extends <em>Vector</em>(which itself implements the
-        <em>List</em> interface). It is a thread-safe legacy class which comes
-        with a performance cost but may be useful in a multi-threaded
-        environment.
+        There are multiple ways of implementing a stack(including ArrayList) in
+        Java but <strong>ArrayDeque</strong> is the most preferred one. It
+        allows amortized O(1) pushes and pops from both ends, making it ideal
+        for using as a stack. It implements the
+        <strong>Queue</strong> interface(not List) and therefore does not allow
+        random access of its items.<br />
+        <strong>Note</strong> - there is also a dedicated
+        <strong>Stack</strong> class in Java that extends
+        <strong>Vector</strong>(which itself implements the List interface). It
+        is a thread-safe legacy class which comes with a performance cost but
+        may be useful in a multi-threaded environment.
       </p>
       <CodeSnippet
         code="# Python3
@@ -210,11 +210,12 @@ class DataStructures {
         lang="language-java"
       />
       <p>
-        Like a stack, there are multiple ways of implementing a queue in Java.
-        We declared our <em>ArrayDeque</em> with <em>Queue&lt;String&gt;</em> as
-        the Queue interface provides the neccessary functionality and we don't
-        need any ArrayDeque-specific methods(like we did for a stack, i.e.
-        <em>push()</em> and <em>pop()</em>).
+        Like stacks, there are multiple ways of implementing a queue in Java.
+        Notice that we declared our ArrayDeque with
+        <em>Queue&lt;String&gt;</em> as the Queue interface provides all the
+        neccessary functionality and we don't need any ArrayDeque-specific
+        methods(like we did for stacks, i.e. <em>push()</em> and
+        <em>pop()</em>).
       </p>
       <CodeSnippet
         code="# Python3

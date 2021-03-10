@@ -82,7 +82,7 @@ export default {
           date: "10 Mar '21",
           readTime: "10 min read",
           fragment:
-            "In our previous tutorial we covered some basic data structures. Here we will understand some more and like the previous ones, these are also very important for competitive programming...",
+            "In our previous tutorial we covered some basic data structures. Here we will understand some more and like the previous ones, these are essential from a competitive programming perspective...",
           tags: ["competitive", "data", "structures", "algorithms", "beginner"],
         },
         {

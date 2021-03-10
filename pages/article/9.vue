@@ -15,8 +15,8 @@
           >previous tutorial</NuxtLink
         >
         we covered some basic data structures. Here we will understand some more
-        and like the previous ones, these are also very important for
-        competitive programming.
+        and like the previous ones, these are essential from a competitive
+        programming perspective.
       </p>
       <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
@@ -27,73 +27,39 @@
         <strong>Set</strong>, <strong>Map</strong> and <strong>Heap</strong>.
       </p>
       <div class="mt-6 flex flex-col">
-        <h3 class="text-xl">Array</h3>
+        <h3 class="text-xl">Set</h3>
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Array is a data structure which allows for O(1) read/write operations.
-        This is because its items are kept in contiguous memory locations which
-        makes it easy to calculate the address of any position.
-      </p>
-      <CodeSnippet
-        code="// Java
-import java.util.Arrays; // Only required for using the Arrays.toString() function.
-class DataStructures {
-    public static void main(String args[]) {
-        int array[] = new int[5]; // Create a primitive int array.
-        System.out.println(Arrays.toString(array)); // [0, 0, 0, 0, 0]
-        array[0] = 3; // Set value at index 0 to 3.
-        array[2] = 6;
-        System.out.println(Arrays.toString(array)); // [3, 0, 6, 0, 0]
-        System.out.println(array[2]); // 6 (Get value at index 2)
-        System.out.println(array.length); // 5 (Get size of array)
-    }
-}"
-        lang="language-java"
-      />
-      <p>
-        In Java, arrays are non-resizable and its size must be provided at
-        creation time.<br />
-        However, the Java Collections Framework provides the
-        <strong>ArrayList</strong> class which is an array-like data structure
-        but can dynamically grow in size as needed. It is present in the
-        <em>java.util</em> package(like the others below).
+        Set is an unordered data structure. This means that they do not remember
+        the order of insertion. They are used to store unique values and allow
+        lookups in O(k) time, where <strong>k</strong> is the length of the
+        key(1 in case of Numbers).
       </p>
       <CodeSnippet
         code="// Java
 import java.util.*;
 class DataStructures {
     public static void main(String args[]) {
-        List<Integer> arrayList = new ArrayList<>(); // Create an ArrayList of Integer type.
-        System.out.println(arrayList); // []
-        System.out.println(arrayList.isEmpty()); // true
-        arrayList.add(3); // Add value 3 to the end of list.
-        arrayList.add(6);
-        System.out.println(arrayList); // [3, 6]
-        System.out.println(arrayList.get(1)); // 6 (Get value at index 1)
-        arrayList.set(1, 7); // Set value at index 1 to 7.
-        System.out.println(arrayList); // [3, 7]
-        System.out.println(arrayList.size()); // 2 (Get size of arraylist)
-        System.out.println(arrayList.remove(0)); // 3 (Remove and return value at index 0)
-        System.out.println(arrayList); // [7]
+        Set<Integer> set = new HashSet<>(); // Create a new empty set.
+        System.out.println(set); // []
+        System.out.println(set.isEmpty()); // true
+        set.add(3); // Add 3 to the set.
+        set.add(6);
+        System.out.println(set); // [3, 6]
+        System.out.println(set.contains(6)); // true (Check if set contains 6)
+        set.remove(6); // Remove 6 from the set
+        System.out.println(set); // [3]
+        System.out.println(set.contains(6)); // false
     }
 }"
         lang="language-java"
       />
       <p>
-        The <em>List</em> interface contains all the basic methods required for
-        read/write operations while remaining more generic and flexible.
-        Therefore, it is preferred to ArrayList(which implements the
-        <em>List</em> interface) to declare list-like data structures.<br />
-        We can also declare our ArrayList with
-        <em>ArrayList&lt;Integer&gt;</em> which would allow us to use
-        ArrayList-specific methods like <em>ensureCapacity()</em>.<br />
-        <strong>Note</strong> - You might wonder why we used
-        <em>List&lt;Integer&gt;</em> instead of <em>List&lt;int&gt;</em>. This
-        is because Java collections can only store objects and not primitive
-        types. Therefore, we need to use their respective wrapper
-        classes(<em>Integer</em>, <em>Long</em>, <em>Float</em>,
-        <em>Double</em>, <em>Character</em>, <em>Boolean</em>) for them.
+        There are multiple ways of creating sets in Java. The most popular of
+        them are <strong>HashSet</strong> and <strong>TreeSet</strong>(both of
+        which implement the <strong>Set</strong> interface). Hashset performs
+        much faster than TreeSet in most cases but take up more space.
       </p>
       <CodeSnippet
         code="# Python3
@@ -261,7 +227,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "In our previous tutorial we covered some basic data structures. Here we will understand some more and like the previous ones, these are also very important for competitive programming.",
+          "In our previous tutorial we covered some basic data structures. Here we will understand some more and like the previous ones, these are essential from a competitive programming perspective.",
       },
     ],
   },
