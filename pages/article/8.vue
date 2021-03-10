@@ -5,13 +5,7 @@
         title="Using built-in data structures of Java and Python - Part 1"
         date="7 Mar'21"
         readTime="10 min read"
-        :tags="[
-          'competitive',
-          'data',
-          'structures',
-          'algorithms',
-          'beginner',
-        ]"
+        :tags="['competitive', 'data', 'structures', 'algorithms', 'beginner']"
       />
       <p>
         Today we will learn about data structures that are available in Java and
@@ -26,11 +20,14 @@
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        In this tutorial we will cover the basic data structures -
-        <strong>Array</strong>, <strong>Stack</strong>,
-        <strong>Queue</strong>.<br />
-        In the next tutorial we will cover the more advanced ones -
-        <strong>Set</strong>, <strong>Map</strong>, <strong>Heap</strong>.
+        In this tutorial we will cover <strong>Array</strong>,
+        <strong>Stack</strong> and <strong>Queue</strong>. More advanced ones
+        will be covered in the
+        <NuxtLink
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
+          to="/article/9#Using-built-in-data-structures-of-Java-and-Python---Part-2"
+          >next tutorial</NuxtLink
+        >.
       </p>
       <div class="mt-6 flex flex-col">
         <h3 class="text-xl">Array</h3>

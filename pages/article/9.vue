@@ -8,19 +8,23 @@
         :tags="['competitive', 'data', 'structures', 'algorithms', 'beginner']"
       />
       <p>
-        In our previous tutorial we covered some basic data structures. Here we
-        will cover Set, Map and Heap.
+        In our
+        <NuxtLink
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
+          to="/article/8#Using-built-in-data-structures-of-Java-and-Python---Part-1"
+          >previous tutorial</NuxtLink
+        >
+        we covered some basic data structures. Here we will understand some more
+        and like the previous ones, these are also very important for
+        competitive programming.
       </p>
       <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        In this tutorial we will cover the basic data structures -
-        <strong>Array</strong>, <strong>Stack</strong>,
-        <strong>Queue</strong>.<br />
-        In the next tutorial we will cover the more advanced ones -
-        <strong>Set</strong>, <strong>Map</strong>, <strong>Heap</strong>.
+        In this tutorial we will cover
+        <strong>Set</strong>, <strong>Map</strong> and <strong>Heap</strong>.
       </p>
       <div class="mt-6 flex flex-col">
         <h3 class="text-xl">Array</h3>
@@ -257,7 +261,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "In our previous tutorial we covered some basic data structures. Here we will cover Set, Map and Heap.",
+          "In our previous tutorial we covered some basic data structures. Here we will understand some more and like the previous ones, these are also very important for competitive programming.",
       },
     ],
   },
