@@ -8,27 +8,14 @@
         :tags="['miscellaneous', 'vscode', 'git', 'windows', 'beginner']"
       />
       <p>
-        <a
-          class="text-text-3 text-lg font-bold hover:underline focus:underline focus:outline-none"
-          href="https://code.visualstudio.com/"
-          target="_blank"
-          >Visual Studio Code</a
-        >
-        is a powerful free open source text editor by Microsoft. VS Code is
-        available for Windows, Linux, and macOS. Use it to code in any
-        programming language, without switching editors. Visual Studio Code has
-        support for many languages, including Python, Java, C++, JavaScript, and
-        more.
-        <br /><br />
-        <a
-          class="text-text-3 text-lg font-bold hover:underline focus:underline focus:outline-none"
-          href="https://git-scm.com/"
-          target="_blank"
-          >Git</a
-        >
-        is a free and open source distributed version control system designed to
-        handle everything from small to very large projects with speed and
-        efficiency. <br /><br />
+        <strong>Visual Studio Code</strong> is a powerful free open source text
+        editor by Microsoft. VS Code is available for Windows, Linux, and macOS.
+        Use it to code in any programming language, without switching editors.
+        Visual Studio Code has support for many languages, including Python,
+        Java, C++, JavaScript, and more. <br /><br />
+        <strong>Git</strong> is a free and open source distributed version
+        control system designed to handle everything from small to very large
+        projects with speed and efficiency. <br /><br />
         VS Code has integrated source control and includes Git support
         in-the-box. VS Code will leverage your machine's Git installation, so
         you need to install Git first before you get these features.

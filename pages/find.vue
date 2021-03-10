@@ -83,7 +83,15 @@ export default {
           readTime: "10 min read",
           fragment:
             "In our previous tutorial we covered some basic data structures. Here we will understand some more and like the previous ones, these are essential from a competitive programming perspective...",
-          tags: ["competitive", "data", "structures", "algorithms", "beginner"],
+          tags: [
+            "competitive",
+            "data",
+            "structures",
+            "algorithms",
+            "java",
+            "python",
+            "beginner",
+          ],
         },
         {
           id: 8,
@@ -93,7 +101,15 @@ export default {
           readTime: "10 min read",
           fragment:
             "Today we will learn about data structures that are available in Java and Python. These are a must-know if you want to get into competitive programming...",
-          tags: ["competitive", "data", "structures", "algorithms", "beginner"],
+          tags: [
+            "competitive",
+            "data",
+            "structures",
+            "algorithms",
+            "java",
+            "python",
+            "beginner",
+          ],
         },
         {
           id: 7,

@@ -8,16 +8,9 @@
         :tags="['basics', 'python', 'beginner']"
       />
       <p>
-        While developing
-        <a
-          class="text-text-3 text-lg font-bold hover:underline focus:underline focus:outline-none"
-          href="https://www.python.org/"
-          target="_blank"
-          >Python</a
-        >
-        applications we often need to allow user interaction, either to obtain
-        necessary data or to direct the flow of our program. Python enables this
-        functionality through its inbuilt
+        While developing Python applications we often need to allow user
+        interaction, either to obtain necessary data or to direct the flow of
+        our program. Python enables this functionality through its inbuilt
         <a
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://docs.python.org/3/library/functions.html#input"

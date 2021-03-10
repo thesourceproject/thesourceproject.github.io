@@ -28,15 +28,9 @@
           class="w-96"
       /></a>
       <p class="mt-6">
-        <a
-          class="text-text-3 text-lg font-bold hover:underline focus:underline focus:outline-none"
-          href="https://github.com/"
-          target="_blank"
-          >GitHub</a
-        >
-        is a code hosting platform for version control and collaboration. It
-        allows you to showcase your work and lets you and others work together
-        on projects from anywhere.
+        <strong>GitHub</strong> is a code hosting platform for version control
+        and collaboration. It allows you to showcase your work and lets you and
+        others work together on projects from anywhere.
       </p>
       <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>

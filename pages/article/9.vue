@@ -5,7 +5,15 @@
         title="Using built-in data structures of Java and Python - Part 2"
         date="10 Mar'21"
         readTime="10 min read"
-        :tags="['competitive', 'data', 'structures', 'algorithms', 'beginner']"
+        :tags="[
+          'competitive',
+          'data',
+          'structures',
+          'algorithms',
+          'java',
+          'python',
+          'beginner',
+        ]"
       />
       <p>
         In our
@@ -34,20 +42,22 @@
         Set is an unordered data structure. This means that they do not remember
         the order of insertion. They are used to store unique values and allow
         lookups in O(k) time, where <strong>k</strong> is the length of the
-        key(1 in case of Numbers).
+        key(1 in case of numbers).
       </p>
       <CodeSnippet
         code="// Java
 import java.util.*;
 class DataStructures {
     public static void main(String args[]) {
-        Set<Integer> set = new HashSet<>(); // Create a new empty set.
+        Set<Integer> set = new HashSet<>(); // Create an empty set.
         System.out.println(set); // []
         System.out.println(set.isEmpty()); // true
         set.add(3); // Add 3 to the set.
         set.add(6);
         System.out.println(set); // [3, 6]
+        System.out.println(set.size()); // 2
         System.out.println(set.contains(6)); // true (Check if set contains 6)
+        System.out.println(!set.contains(2)); // true (Check if set does not contain 2)
         set.remove(6); // Remove 6 from the set
         System.out.println(set); // [3]
         System.out.println(set.contains(6)); // false
@@ -58,56 +68,52 @@ class DataStructures {
       <p>
         There are multiple ways of creating sets in Java. The most popular of
         them are <strong>HashSet</strong> and <strong>TreeSet</strong>(both of
-        which implement the <strong>Set</strong> interface). Hashset performs
-        much faster than TreeSet in most cases but take up more space.
+        which implement the <strong>Set</strong> interface). Hashsets perform
+        much faster than TreeSets in most cases but take up more space.
       </p>
       <CodeSnippet
         code="# Python3
-array = []  # same as -> array = list()
-print(array)  # []
-array.append(3)  # Add value 3 to the end of list.
-array.append(6)
-print(array)  # [3, 6]
-print(array[1])  # 6 (Get value at index 1)
-array[1] = 7  # Set value at index 1 to 7.
-print(len(array))  # 2 (Get size of list)
-print(array.pop(0))  # 3 (Remove and return value at index 0)
-print(array)  # [7]"
+set1 = set()  # Create an empty set. Avoid using names of inbuilt functions as variable names.
+print(set1)  # set()
+set1.add(3)  # Add 3 to the set.
+set1.add(6)
+print(set1)  # {3, 6}
+print(len(set1))  # 2
+print(6 in set1)  # True (Check if 6 is in the set)
+print(2 not in set1)  # True (Check if 2 is not in the set)
+set1.remove(6)  # Remove 6 from the set.
+print(6 in set1)  # False
+print(set1)  # {3}"
         lang="language-python"
       />
-      <p>
-        In Python, a <em>list</em> (not to be confused with linked-list) is used
-        to store multiple items in an array-like manner. Python lists are
-        resizable by default and can store objects of any type.<br />
-        <strong>Note</strong> - Python has a module <em>array.array</em> which
-        is used to create C-like arrays which can store only a single type of
-        basic values(integers, characters, floating-point numbers). These take
-        up a lesser amount of space but are less flexible than lists.
-      </p>
+      <p>Python provides a set object using <em>set()</em> which we can use.</p>
       <div class="mt-6 flex flex-col">
-        <h3 class="text-xl">Stack</h3>
+        <h3 class="text-xl">Map</h3>
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Stack is a data structure which only allows read/write operations at one
-        end(i.e. the top) in O(1) time. Stack items are accessed according to
-        the <strong>LIFO</strong>(last in first out) rule.
+        Map is a special data structure that allows mapping of unique keys to a
+        respective value. Similar to a set, it allows lookup in O(k) time where
+        <strong>k</strong> is the length of key.
       </p>
       <CodeSnippet
         code="// Java
 import java.util.*;
 class DataStructures {
     public static void main(String args[]) {
-        ArrayDeque<Character> stack = new ArrayDeque<>(); // Create an ArrayDeque of Character type.
-        System.out.println(stack); // []
-        System.out.println(stack.isEmpty()); // true
-        stack.push('A'); // Push 'A' onto the stack.
-        stack.push('B');
-        System.out.println(stack); // [B, A] (Last in first out)
-        System.out.println(stack.peek()); // B (Peek at the top item without removing it)
-        System.out.println(stack.size()); // 2
-        System.out.println(stack.pop()); // B (Pop and return the character on top of the stack)
-        System.out.println(stack); // [A]
+        Map<Character, String> map = new HashMap<>(); // Create an empty map(Character to String)
+        System.out.println(map); // {}
+        System.out.println(map.isEmpty()); // true
+        map.put('A', &quot;Apple&quot;); // Map the key 'A' to the value &quot;Apple&quot;
+        map.put('B', &quot;Banana&quot;);
+        map.putIfAbsent('B', &quot;Blueberry&quot;); // If the key 'B' does not exist, map it to the value &quot;Blueberry&quot;
+        System.out.println(map); // {A=Apple, B=Banana}
+        System.out.println(map.size()); // 2
+        System.out.println(map.containsKey('C')); // false (Check if 'C' exists in the map as a key)
+        System.out.println(map.get('A')); // Apple (Get the value mapped for the key 'A')
+        System.out.println(map.getOrDefault('C', &quot;Cherry&quot;)); // Cherry (Get the value mapped for the key 'C', if it does not exist return &quot;Cherry&quot;)
+        map.remove('A'); // Remove the key(and its respective value) 'A'
+        System.out.println(map); // {B=Banana}
     }
 }"
         lang="language-java"

@@ -2,10 +2,19 @@
   <main>
     <article class="w-full max-w-4xl mx-auto flex flex-col">
       <ArticleHeader
-        title="Using built-in data structures of Java and Python - Part 1"
+        title="Using built-in data structures of Java and Python -
+      Part 1"
         date="7 Mar'21"
         readTime="10 min read"
-        :tags="['competitive', 'data', 'structures', 'algorithms', 'beginner']"
+        :tags="[
+          'competitive',
+          'data',
+          'structures',
+          'algorithms',
+          'java',
+          'python',
+          'beginner',
+        ]"
       />
       <p>
         Today we will learn about data structures that are available in Java and

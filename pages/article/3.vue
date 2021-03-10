@@ -8,16 +8,11 @@
         :tags="['basics', 'python', 'beginner']"
       />
       <p>
-        <a
-          class="text-text-3 text-lg font-bold hover:underline focus:underline focus:outline-none"
-          href="https://www.python.org/"
-          target="_blank"
-          >Python</a
-        >
-        is an interpreted, high-level and general-purpose programming language.
-        Python is being used in web development, machine learning and even
-        desktop applications. Its easy to learn syntax is very well suited for
-        beginners as well as experienced programmers.
+        <strong>Python</strong> is an interpreted, high-level and
+        general-purpose programming language. Python is being used in web
+        development, machine learning and even desktop applications. Its easy to
+        learn syntax is very well suited for beginners as well as experienced
+        programmers.
       </p>
       <a
         title="www.python.org, GPL &lt;http://www.gnu.org/licenses/gpl.html&gt;, via Wikimedia Commons"
