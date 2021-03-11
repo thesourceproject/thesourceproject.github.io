@@ -57,10 +57,12 @@ class DataStructures {
         System.out.println(set); // [3, 6]
         System.out.println(set.size()); // 2
         System.out.println(set.contains(6)); // true (Check if set contains 6)
-        System.out.println(!set.contains(2)); // true (Check if set does not contain 2)
         set.remove(6); // Remove 6 from the set
         System.out.println(set); // [3]
         System.out.println(set.contains(6)); // false
+        for (Integer num : set) {
+            System.out.println(num); // Perform action for every set element.
+        }
     }
 }"
         lang="language-java"
@@ -68,8 +70,13 @@ class DataStructures {
       <p>
         There are multiple ways of creating sets in Java. The most popular of
         them are <strong>HashSet</strong> and <strong>TreeSet</strong>(both of
-        which implement the <strong>Set</strong> interface). Hashsets perform
-        much faster than TreeSets in most cases but take up more space.
+        which implement the <strong>Set</strong> interface).<br />
+        Hashsets perform much faster than TreeSets in most cases but take up
+        more space. This is because TreeSets internally use a self-balancing
+        binary tree, thus ensuring a O(k×log n) time for operations(compared to
+        O(k) of HashSets).<br />
+        <strong>Note</strong> - HashSets can store a single
+        <strong>null</strong> value whereas TreeSets cannot.
       </p>
       <CodeSnippet
         code="# Python3
@@ -80,13 +87,14 @@ set1.add(6)
 print(set1)  # {3, 6}
 print(len(set1))  # 2
 print(6 in set1)  # True (Check if 6 is in the set)
-print(2 not in set1)  # True (Check if 2 is not in the set)
 set1.remove(6)  # Remove 6 from the set.
 print(6 in set1)  # False
-print(set1)  # {3}"
+print(set1)  # {3}
+for num in set1:
+    print(num)  # Perform action for every set element."
         lang="language-python"
       />
-      <p>Python provides a set object using <em>set()</em> which we can use.</p>
+      <p>Python provides an easy to use set object using <em>set()</em>.</p>
       <div class="mt-6 flex flex-col">
         <h3 class="text-xl">Map</h3>
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
@@ -110,47 +118,53 @@ class DataStructures {
         System.out.println(map); // {A=Apple, B=Banana}
         System.out.println(map.size()); // 2
         System.out.println(map.containsKey('C')); // false (Check if 'C' exists in the map as a key)
-        System.out.println(map.get('A')); // Apple (Get the value mapped for the key 'A')
+        System.out.println(map.get('A')); // Apple (Get the value mapped for the key 'A'. Returns null if the key does not exist)
         System.out.println(map.getOrDefault('C', &quot;Cherry&quot;)); // Cherry (Get the value mapped for the key 'C', if it does not exist return &quot;Cherry&quot;)
-        map.remove('A'); // Remove the key(and its respective value) 'A'
+        map.remove('A'); // Remove the key 'A' and return its value. Returns null if the key does not exist.
         System.out.println(map); // {B=Banana}
+        for (Character key : map.keySet()) {
+            System.out.println(key); // Perform action for every key in map.
+        }
+        for (String value : map.values()) {
+            System.out.println(value); // Perform action for every value mapped.
+        }
     }
 }"
         lang="language-java"
       />
       <p>
-        There are multiple ways of implementing a stack(including
-        <em>ArrayList</em>) in Java but <strong>ArrayDeque</strong> is the most
-        preferred one. It allows amortized O(1) pushes and pops from both ends,
-        making it ideal for using as a stack. It implements the
-        <em>Queue</em> interface(not <em>List</em>) and does not allow random
-        access of its items.<br />
-        <strong>Note</strong> - there is also a dedicated <em>Stack</em> class
-        in Java that extends <em>Vector</em>(which itself implements the
-        <em>List</em> interface). It is a thread-safe legacy class which comes
-        with a performance cost but may be useful in a multi-threaded
-        environment.
+        Like sets, there are two main classes for creating a map in Java. They
+        are <strong>HashMap</strong> and <strong>TreeMap</strong>(both
+        implementing the <strong>Map</strong> interface).<br />
+        <strong>Note</strong> - HashMaps can store a single
+        <strong>null</strong> key whereas TreeMaps cannot.
       </p>
       <CodeSnippet
         code="# Python3
-stack = []
-print(stack)  # []
-stack.append('A')  # Push 'A' onto the stack.
-stack.append('B')
-print(stack)  # ['A', 'B'] (Python prints lists from left to right)
-print(stack[-1])  # B (Peek at the top item without removing it)
-print(len(stack))  # 2
-print(stack.pop())  # B (Pop and return the character on top of the stack)
-print(stack)  # ['A']"
+map = {}  # Create a new map(dictionary). Same as -> map = dict()
+print(map)  # {}
+map['A'] = 'Apple'  # Map the key 'A' to the value &quot;Apple&quot;
+map['B'] = 'Banana'
+print(map.setdefault('B', 'Blueberry'))  # Banana (Return the value for the key 'B'. If it does not exist, map it to the value &quot;Blueberry&quot;)
+print(map)  # {'A': 'Apple', 'B': 'Banana'}
+print(len(map))  # 2
+print('C' in map)  # False (Check if 'C' exists in the map as a key)
+print(map['A'])  # Apple (Get the value mapped for the key 'A'. Throws KeyError exception if the key does not exist)
+print(map.get('C', 'Cherry'))  # Cherry (Get the value mapped for the key 'C', if it does not exist return &quot;Cherry&quot;)
+map.pop('A')  # Remove the key 'A' and return its value. Throws KeyError exception if the key does not exist.
+print(map)  # {'B': 'Banana'}
+for key in map:  # Same as -> for key in map.keys()
+    print(key)  # Perform action for every key in map.
+for value in map.values():
+    print(value)  # Perform action for every value mapped."
         lang="language-python"
       />
       <p>
-        In Python, a list can easily be used as a stack. We just have to make
-        sure that we apply push(append)/pop operations only at the end of the
-        list.
+        In Python, maps are known as dictionaries. They can be created using
+        <em>{}</em> or <em>dict()</em>.
       </p>
       <div class="mt-6 flex flex-col">
-        <h3 class="text-xl">Queue</h3>
+        <h3 class="text-xl">Heap</h3>
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">

@@ -109,7 +109,7 @@ class DataStructures {
       </p>
       <CodeSnippet
         code="# Python3
-array = []  # same as -> array = list()
+array = []  # Create a new list. Same as -> array = list()
 print(array)  # []
 array.append(3)  # Add value 3 to the end of list.
 array.append(6)
