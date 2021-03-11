@@ -78,17 +78,16 @@ export default {
         {
           id: 9,
           category: "competitive",
-          title: "Using built-in data structures of Java and Python - Part 2",
+          title: "Using inbuilt data structures of Python",
           date: "10 Mar '21",
           readTime: "10 min read",
           fragment:
-            "In our previous tutorial we covered some basic data structures. Here we will understand some more and like the previous ones, these are essential from a competitive programming perspective...",
+            "Python is slower than C++ and Java, yet it is being adopted more and more for its simplicity. In this tutorial we will understand the important data structures available in Python...",
           tags: [
             "competitive",
             "data",
             "structures",
             "algorithms",
-            "java",
             "python",
             "beginner",
           ],
@@ -96,18 +95,17 @@ export default {
         {
           id: 8,
           category: "competitive",
-          title: "Using built-in data structures of Java and Python - Part 1",
+          title: "Using inbuilt data structures of Java",
           date: "7 Mar '21",
           readTime: "10 min read",
           fragment:
-            "Today we will learn about data structures that are available in Java and Python. These are a must-know if you want to get into competitive programming...",
+            "Today we will learn about data structures that are available in Java. These are a must-know if you want to get into competitive programming...",
           tags: [
             "competitive",
             "data",
             "structures",
             "algorithms",
             "java",
-            "python",
             "beginner",
           ],
         },
