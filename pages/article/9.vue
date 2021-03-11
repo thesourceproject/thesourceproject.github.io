@@ -61,7 +61,7 @@ class DataStructures {
         System.out.println(set); // [3]
         System.out.println(set.contains(6)); // false
         for (Integer num : set) {
-            System.out.println(num); // Perform action for every set element.
+            System.out.println(num); // Perform action for every set item.
         }
     }
 }"
@@ -91,7 +91,7 @@ set1.remove(6)  # Remove 6 from the set.
 print(6 in set1)  # False
 print(set1)  # {3}
 for num in set1:
-    print(num)  # Perform action for every set element."
+    print(num)  # Perform action for every set item."
         lang="language-python"
       />
       <p>Python provides an easy to use set object using <em>set()</em>.</p>
@@ -168,63 +168,107 @@ for value in map.values():
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Queue is a data structure which allows adding(offering) of items to the
-        back and removing(polling) them from the front in O(1) time. Queue items
-        are accessed according to the
-        <strong>FIFO</strong>(first in first out) rule.
+        Heap is a tree-like data structure which satisfies the heap property. It
+        means that, in a min-heap, the value of every node is greater than or
+        equal to its parent. This ensures that the root of the tree always
+        contains the smallest value and vice-versa for max-heap.<br />
+        Min-heaps allow insertion and retrieval of minimum(or maximum in case of
+        max-heaps) in O(log n) time.
       </p>
       <CodeSnippet
-        code='// Java
+        code="// Java
 import java.util.*;
 class DataStructures {
     public static void main(String args[]) {
-        Queue<String> queue = new ArrayDeque<>(); // Create a Queue of String type.
-        System.out.println(queue); // []
-        System.out.println(queue.isEmpty()); // true
-        queue.offer("Apple"); // Add "Apple" to the back of the queue.
-        queue.offer("Banana");
-        System.out.println(queue); // [Apple, Banana] (First in first out)
-        System.out.println(queue.peek()); // Apple (Peek at the front item without removing it)
-        System.out.println(queue.size()); // 2
-        System.out.println(queue.poll()); // Apple (Remove and return the front item)
-        System.out.println(queue); // [Banana]
+        Queue<Integer> minHeap = new PriorityQueue<>(); // Create a new min-heap.
+        System.out.println(minHeap); // []
+        System.out.println(minHeap.isEmpty()); // true
+        minHeap.offer(2); // Add 2 to the heap.
+        minHeap.offer(5);
+        minHeap.offer(1);
+        System.out.println(minHeap); // [1, 5, 2] (Not necessarily in sorted order but the root will always contain the smallest element in a min-heap)
+        System.out.println(minHeap.size()); // 3
+        System.out.println(minHeap.peek()); // 1 (Peek at the root element without removing it, if heap is empty, return null)
+        System.out.println(minHeap.poll()); // 1 (Remove and return the root element, if heap is empty, return null)
+        System.out.println(minHeap.poll()); // 2
+        System.out.println(minHeap.poll()); // 5
+        System.out.println(minHeap); // []
     }
-}'
+}"
         lang="language-java"
       />
       <p>
-        Like a stack, there are multiple ways of implementing a queue in Java.
-        We declared our <em>ArrayDeque</em> with <em>Queue&lt;String&gt;</em> as
-        the Queue interface provides the neccessary functionality and we don't
-        need any ArrayDeque-specific methods(like we did for a stack, i.e.
-        <em>push()</em> and <em>pop()</em>).
+        Java provides the <strong>PriorityQueue</strong> class(which implements
+        the Queue interface) that can be used to create a heap. By default, it
+        creates a min-heap(i.e. the root contains the smallest element). We can
+        easily create a max-heap by passing a custom comparator to the
+        PriorityQueue constructor like this.
+      </p>
+      <CodeSnippet
+        code="...
+Queue<Integer> maxHeap = new PriorityQueue<>((a, b) -> -a.compareTo(b));
+// Or
+Queue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b.compareTo(a));
+// Or
+Queue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
+..."
+        lang="language-java"
+      />
+      <p>
+        We will learn more about Java's Comparator interface in a later
+        tutorial.
       </p>
       <CodeSnippet
         code="# Python3
-from collections import deque  # Import the deque module.
-queue = deque()  # Create a queue.
-print(queue)  # deque([])
-queue.append('Apple')  # Add 'Apple' to the right(back of the queue)
-queue.append('Banana')
-print(queue)  # deque(['Apple', 'Banana'])
-print(queue[0])  # Apple (Peek at the first(front) item without removing it)
-print(len(queue))  # 2
-print(queue.popleft())  # Apple (Pop and return the left(first) item)
-print(queue)  # deque(['Banana'])"
+import heapq
+heap = []  # Create an empty list which will be used as a min-heap.
+heapq.heappush(heap, 2)  # Add 2 to the heap.
+heapq.heappush(heap, 5)
+heapq.heappush(heap, 1)
+print(heap)  # [1, 5, 2] (Not necessarily in sorted order but the root will always contain the smallest element in a min-heap)
+print(len(heap))  # 3
+print(heap[0])  # 1 (Peek at the root element without removing it, IndexError will be thrown if heap is empty)
+print(heapq.heappop(heap))  # 1 (Remove and return the root element, IndexError will be thrown if heap is empty)
+print(heapq.heappop(heap))  # 2
+print(heapq.heappop(heap))  # 5
+print(heap)  # []"
         lang="language-python"
       />
       <p>
-        Python lists are not suitable for implementing queues. Though it allows
-        amortized O(1) appends at one end, it takes O(n) time to remove an item
-        at the start. This is because all the subsequent items have to be
-        shifted to the left.<br />
-        Fortunately, Python contains a <strong>deque</strong> module which
-        internally uses a doubly-linked list. This allows for O(1) appends and
-        pops from both ends making it suitable for implementing both stacks and
-        queues.<br /><br />
-        Now that we have a basic understanding of some important data
-        structures, what remains now is practice. So, try to do some algorithmic
-        problems on your own.
+        Python provides a <strong>heapq</strong> module for working with heaps.
+        An ordinary list is used to store the elements and the heap is
+        implemented using the heapq methods.<br />
+        By default, heapq implements a min-heap but we can use it as a max-heap
+        too. Simply invert the sign of each number when it is inserted and
+        restore it on removal.
+      </p>
+      <CodeSnippet
+        code="import heapq
+heap = []
+heapq.heappush(heap, (2, 3))  # Add heap items as tuples in the form of priority-value pairs.
+heapq.heappush(heap, (0, 6))
+heapq.heappush(heap, (1, 2))
+print(heap)  # [(0, 6), (2, 3), (1, 2)]"
+        lang="language-python"
+      />
+      <p>
+        If we want a different priority for each element we can store heap items
+        in tuples. The heapq functions will use the tuple's first argument to
+        compare heap items.
+      </p>
+      <CodeSnippet
+        code="import heapq
+heap = [3, 6, 1]
+heapq.heapify(heap)  # Heapify the list
+print(heap)  # [1, 6, 3]"
+        lang="language-python"
+      />
+      <p>
+        The heapq module also provides a <em>heapify()</em> function that
+        converts an existing list into a heap in O(n) time.<br /><br />
+        And there you go. We have covered all the important built-in data
+        structures of Python. Now use these to solve your algorithmic problems
+        more effeciently.
       </p>
     </article>
   </main>
