@@ -16,7 +16,7 @@
       />
       <p>
         Python is slower than C++ and Java, yet it is being adopted more and
-        more for its simplicity. In this tutorial we will understand the
+        more for its simplicity. In this tutorial, we will understand the
         important data structures available in Python. You'll need to understand
         these if you're planning to use Python for competitive programming.
       </p>
@@ -26,7 +26,7 @@
       </div>
       <p class="mt-8">
         This tutorial will cover <strong>Array</strong>, <strong>Stack</strong>,
-        <strong>Queue</strong>, <strong>Set</strong>, <strong>Map</strong> and
+        <strong>Queue</strong>, <strong>Set</strong>, <strong>Map</strong>, and
         <strong>Heap</strong>.
       </p>
       <div class="mt-6 flex flex-col">
@@ -34,7 +34,7 @@
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Array is a data structure which allows for O(1) read/write operations.
+        An array is a data structure that allows for O(1) read/write operations.
         This is because its items are kept in contiguous memory locations which
         makes it easy to calculate the address of any position.
       </p>
@@ -66,9 +66,9 @@ print(array)  # [7]"
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Stack is a data structure which only allows read/write operations at one
-        end(i.e. the top) in O(1) time. Stack items are accessed according to
-        the <strong>LIFO</strong>(last in first out) rule.
+        A stack is a data structure that only allows read/write operations at
+        one end(i.e. the top) in O(1) time. Stack items are accessed according
+        to the <strong>LIFO</strong>(last in first out) rule.
       </p>
       <CodeSnippet
         code="# Python3
@@ -93,7 +93,7 @@ print(stack)  # ['A']"
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Queue is a data structure which allows adding(offering) of items to the
+        A queue is a data structure that allows adding(offering) items to the
         back and removing(polling) them from the front in O(1) time. Queue items
         are accessed according to the
         <strong>FIFO</strong>(first in first out) rule.
@@ -117,7 +117,7 @@ print(queue)  # deque(['Banana'])"
         amortized O(1) appends at one end, it takes O(n) time to remove an item
         at the start. This is because all the subsequent items have to be
         shifted to the left.<br />
-        Fortunately, Python contains a <strong>deque</strong> module which
+        Fortunately, Python contains a <strong>deque</strong> module that
         internally uses a doubly-linked list. This allows for O(1) appends and
         pops from both ends making it suitable for implementing both stacks and
         queues.
@@ -154,9 +154,10 @@ for num in set1:
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Map is a special data structure that allows mapping of unique keys to a
-        respective value. Similar to a set, it allows lookup in O(k) time where
-        <strong>k</strong> is the length of key.
+        A map is a special data structure that allows mapping of unique keys to
+        a respective value. Similar to a set, it allows lookup in O(k) time
+        where
+        <strong>k</strong> is the length of the key.
       </p>
       <CodeSnippet
         code="# Python3
@@ -187,7 +188,7 @@ for value in map.values():
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Heap is a tree-like data structure which satisfies the heap property. It
+        Heap is a tree-like data structure that satisfies the heap property. It
         means that, in a min-heap, the value of every node is greater than or
         equal to its parent. This ensures that the root of the tree always
         contains the smallest value and vice-versa for max-heap.<br />
@@ -244,7 +245,7 @@ print(heap)  # [1, 6, 3]"
         converts an existing list into a heap in O(n) time.<br /><br />
         And there you go. We have covered all the important inbuilt data
         structures of Python. Now use these to solve your algorithmic problems
-        more effeciently.
+        more efficiently.
       </p>
     </article>
   </main>
