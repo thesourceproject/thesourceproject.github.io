@@ -1,7 +1,7 @@
 <!doctype html>
 <html data-n-head-ssr>
   <head>
-    <title>Creating a countdown timer using Javascript | The Source Project</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="google-site-verification" name="google-site-verification" content="NBXKl5RAGYQH3Rp9PKrszzdV4bRMOLkHjIjvfNDo2xE"><meta data-n-head="ssr" data-hid="description" name="description" content="In this tutorial, we will learn how to create a simple countdown timer application using Javascript that can then be run in your web-browser."><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&family=Ubuntu+Mono&display=swap"><link rel="preload" href="/_nuxt/914ab3b.js" as="script"><link rel="preload" href="/_nuxt/3d83840.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.8524b48.css" as="style"><link rel="preload" href="/_nuxt/753bf38.js" as="script"><link rel="preload" href="/_nuxt/app.404f1f6.css" as="style"><link rel="preload" href="/_nuxt/c73bd70.js" as="script"><link rel="preload" href="/_nuxt/494775a.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.8524b48.css"><link rel="stylesheet" href="/_nuxt/app.404f1f6.css"><link rel="preload" href="/_nuxt/static/1615483497/article/5/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1615483497/manifest.js" as="script">
+    <title>Creating a countdown timer using Javascript | The Source Project</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="google-site-verification" name="google-site-verification" content="NBXKl5RAGYQH3Rp9PKrszzdV4bRMOLkHjIjvfNDo2xE"><meta data-n-head="ssr" data-hid="description" name="description" content="In this tutorial, we will learn how to create a simple countdown timer application using Javascript that can then be run in your web-browser."><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&family=Ubuntu+Mono&display=swap"><link rel="preload" href="/_nuxt/ab6ff6b.js" as="script"><link rel="preload" href="/_nuxt/3d83840.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.8524b48.css" as="style"><link rel="preload" href="/_nuxt/753bf38.js" as="script"><link rel="preload" href="/_nuxt/app.404f1f6.css" as="style"><link rel="preload" href="/_nuxt/c73bd70.js" as="script"><link rel="preload" href="/_nuxt/85fe572.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.8524b48.css"><link rel="stylesheet" href="/_nuxt/app.404f1f6.css"><link rel="preload" href="/_nuxt/static/1615647543/article/5/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1615647543/manifest.js" as="script">
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="min-h-screen flex flex-col bg-background-1 text-text-1 font-body break-words transition-colors light"><header class="container mx-auto px-4 py-6 sm:px-8 flex items-center justify-between"><a href="/" class="font-title text-lg text-text-4 select-none nuxt-link-active"><span>TheSourceProject<strong class="text-text-3">_</strong></span></a> <nav class="hidden md:inline mx-auto"><a href="/" class="hover:underline focus:underline focus:outline-none nuxt-link-active">Home</a> <a href="/about-us" class="ml-4 hover:underline focus:underline focus:outline-none">About Us
@@ -17,9 +17,9 @@
       #beginner
     </a></p></header> <p>
         In this tutorial, we will learn how to create a simple countdown timer
-        application using Javascript that can then be run in your web-browser.
+        application using Javascript that can then be run in your web browser.
       </p> <img src="/_nuxt/img/frontend5-1.221b737.png" alt="Countdown Timer" class="mx-auto mt-6 max-w-full"> <div class="mt-12 flex flex-col"><h2 class="text-2xl">Getting Started</h2> <div class="w-6 h-1 bg-background-2 rounded-full"></div></div> <p class="mt-8">
-        First we need to write the HTML for our countdown timer.<br>
+        First, we need to write the HTML for our countdown timer.<br>
         Create an empty file on your computer named
         <strong>myCountdownTimer.html</strong> and paste in the following markup
         in the <strong>body</strong> tag.
@@ -36,7 +36,7 @@
         <strong>id</strong> attribute. This will help us with the styling and
         also allow us to access the element with Javascript.<br> <strong>Note</strong> - The <strong>class</strong> attribute should be
         used for styling elements but since all of our elements are unique, we
-        may use <strong>id</strong>. Also the <strong>id</strong> will be
+        may use <strong>id</strong>. Also, the <strong>id</strong> will be
         required for our Javascript.<br><br>
         If you open this HTML file right now, you'll notice that it doesn't look
         anything like the image above. This is because we haven't added any CSS
@@ -44,9 +44,9 @@
         Paste the following CSS inside a <strong>style</strong> tag in the
         <strong>head</strong> section of your HTML file.
       </p> <div class="mx-10 my-4"><pre><code class="language-css">@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");</code></pre></div> <p>
-        First we import <strong>Open Sans</strong> font-family from
+        First, we import <strong>Open Sans</strong> font-family from
         <a href="https://fonts.google.com/" target="_blank" class="text-text-3 hover:underline focus:underline focus:outline-none">Google Fonts</a>. Google Fonts has a large catalog of free fonts that you may use in
-        any of your own projects.
+        any of your projects.
       </p> <div class="mx-10 my-4"><pre><code class="language-css">body {
   margin: 0;
   display: flex;
@@ -68,8 +68,8 @@
         <strong>#countDownTimer</strong>(with a <strong>#</strong>). The
         <strong>#</strong> symbol is a CSS selector used to apply styles on a
         specific <strong>id</strong>. If we want to style any HTML elements, we
-        can do it so using their names, without any CSS selectors(such as
-        <strong>h1</strong>, <strong>input</strong>).
+        can do it so using their names(such as <strong>h1</strong>,
+        <strong>input</strong>), without any CSS selectors.
       </p> <div class="mx-10 my-4"><pre><code class="language-css">input,
 button,
 p {
@@ -79,20 +79,20 @@ p {
   border: none;
   text-align: center;
 }</code></pre></div> <p>
-        We add a padding of 0.5rem(1rem equals the font size of the html element
-        - which for most browsers has a default value of 16px) to our elements
-        and increase the font-size to 1.25rem. We continue on to add the rest of
-        the styles, including our imported font-family.<br> <strong>Note</strong> - We applied the font-family property to the
-        <strong>input</strong>, <strong>button</strong> and
+        We add padding of 0.5rem(1rem equals the font size of the
+        <em>html</em> element - which for most browsers has a default value of
+        16px) to our elements and increase the font-size to 1.25rem. We continue
+        to add the rest of the styles, including our imported font-family.<br> <strong>Note</strong> - We applied the font-family property to the
+        <strong>input</strong>, <strong>button</strong>, and
         <strong>p</strong> elements instead of just applying it on the body tag.
         This is because form elements such as <strong>input</strong>,
-        <strong>button</strong>, <strong>textarea</strong> and
+        <strong>button</strong>, <strong>textarea</strong>, and
         <strong>select</strong> don't inherit the font-family automatically.
       </p> <div class="mx-10 my-4"><pre><code class="language-css">button {
   border-radius: 0.25rem;
   cursor: pointer;
 }</code></pre></div> <p>
-        Now we add a border radius of 0.25rem to the button element to make its
+        Now we add a border-radius of 0.25rem to the button element to make its
         corners slightly round. The
         <strong>cursor: pointer</strong> property changes the mouse cursor to a
         pointer when it's over this element.
@@ -104,10 +104,10 @@ p {
 #duration:focus {
   border-color: darkblue;
 }</code></pre></div> <p><strong>outline: none</strong> removes the black outline which is shown
-        when the element is focused upon. Instead we will add a light-grey
+        when the element is focused upon. Instead, we will add a light-grey
         bottom border to the element which will change to dark-blue on focus. We
         achieve this using the <strong>:focus</strong> pseudo-class.<br> <strong>Note</strong> - border-bottom is a shorthand property for
-        setting border width, style and color.
+        setting border width, style, and color.
       </p> <div class="mx-10 my-4"><pre><code class="language-css">#controls {
   margin-top: 0.5rem;
   padding: 0;
@@ -143,7 +143,7 @@ p {
         We go on to add some background color and text color to the buttons and
         the timer element.<br><br>
         It looks much better now but we haven't added any functionality yet. So
-        let's move on to the Javascript.
+        let's move on to Javascript.
       </p> <div class="mx-10 my-4"><pre><code class="language-js">const duration = document.getElementById("duration");
 const startButton = document.getElementById("startButton");
 const stopButton = document.getElementById("stopButton");
@@ -151,7 +151,7 @@ const resetButton = document.getElementById("resetButton");
 const timer = document.getElementById("timer");
 
 let interval;</code></pre></div> <p>
-        First we fetch all of our necessory elements by using the
+        First, we fetch all of our necessary elements by using the
         <strong>document.getElementById()</strong> function. We use the same ids
         that we used in the HTML.<br> <strong>Note</strong> - We used <strong>const</strong> for declaring the
         variables for the HTML elements because they will never be reassigned
@@ -178,14 +178,14 @@ let interval;</code></pre></div> <p>
         returns an Interval ID which we store in the
         <strong>interval</strong> variable. This will be used later to stop the
         routine.<br><br>
-        In our routine we subtract 0.1(100 milliseconds) from
+        In our routine, we subtract 0.1(100 milliseconds) from
         <strong>remainingTime</strong> and update the timer. Then we check if
         remainingTime is 0 and pass our <strong>interval</strong> variable to
         the <strong>clearInterval()</strong> function to stop the routine.<br>
         Now let's try to run this. When you click the start button the timer
         starts normally but soon you will see something like this.
       </p> <img src="/_nuxt/img/frontend5-2.db0c51f.png" alt="Floating-Point Arithmetic Precision Problem" class="mx-auto mt-6 max-w-full"> <p class="mt-6">
-        This is because of floating-point arithmetic. Due to the their binary
+        This is because of floating-point arithmetic. Due to their binary
         nature, some decimal numbers cannot be represented with perfect accuracy
         in Javascript. Therefore we will use the
         <strong>toFixed()</strong> function to truncate the remaining time to 1
@@ -218,7 +218,7 @@ let interval;</code></pre></div> <p>
   }
 });</code></pre></div> <p>
         Now what's left is the easy stuff. We need to add the functionalities
-        for the stop and reset button.
+        for the stop and reset buttons.
       </p> <div class="mx-10 my-4"><pre><code class="language-js">stopButton.addEventListener("click", () => {
   clearInterval(interval);
 });
@@ -229,7 +229,7 @@ resetButton.addEventListener("click", () => {
 });</code></pre></div> <p>
         And there you go. We have successfully created a countdown timer app
         using Javascript. Now try building a stopwatch application on your own
-        with what you've learnt and keep learning.
+        with what you've learned and keep learning.
       </p> <h3 class="mt-6 text-xl">Complete Code</h3> <div class="mx-10 my-4"><pre><code class="language-html">&lt;!DOCTYPE html>
 &lt;html lang="en">
   &lt;head>
@@ -354,6 +354,6 @@ resetButton.addEventListener("click", () => {
   &lt;/body>
 &lt;/html></code></pre></div></article></main> <footer class="container mx-auto mt-24 p-4 sm:px-8"><section class="flex justify-between"><figure class="flex flex-col items-center group"><figcaption>Follow Us On</figcaption> <a href="https://www.instagram.com/the_source_project" target="_blank" class="mt-2 group-hover:animate-bounce focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-10 w-10"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></figure> <figure class="flex flex-col items-center group"><figcaption>About Us</figcaption> <a href="/about-us" class="mt-2 group-hover:animate-bounce focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-10 w-10"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></a></figure> <figure class="flex flex-col items-center group"><figcaption>Back To Top</figcaption> <button class="mt-2 group-hover:animate-bounce focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none" stroke="currentColor" stroke-width="25" class="h-10 w-10"><circle cx="250.22" cy="250.39" r="236.49"></circle> <path d="M183.31 283.89l65.81-69.12 68.01 71.24" stroke-miterlimit="10" stroke-linecap="round"></path></svg></button></figure></section> <p class="mt-4 text-center text-sm opacity-75">
     2021, The Source Project
-  </p></footer></div></div></div><script>window.__NUXT__={staticAssetsBase:"/_nuxt/static/1615483497",layout:"default",error:null,serverRendered:!0,routePath:"/article/5",config:{}}</script><script src="/_nuxt/914ab3b.js" defer></script><script src="/_nuxt/494775a.js" defer></script><script src="/_nuxt/3d83840.js" defer></script><script src="/_nuxt/753bf38.js" defer></script><script src="/_nuxt/c73bd70.js" defer></script>
+  </p></footer></div></div></div><script>window.__NUXT__={staticAssetsBase:"/_nuxt/static/1615647543",layout:"default",error:null,serverRendered:!0,routePath:"/article/5",config:{}}</script><script src="/_nuxt/ab6ff6b.js" defer></script><script src="/_nuxt/85fe572.js" defer></script><script src="/_nuxt/3d83840.js" defer></script><script src="/_nuxt/753bf38.js" defer></script><script src="/_nuxt/c73bd70.js" defer></script>
   </body>
 </html>
