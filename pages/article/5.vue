@@ -9,7 +9,7 @@
       />
       <p>
         In this tutorial, we will learn how to create a simple countdown timer
-        application using Javascript that can then be run in your web-browser.
+        application using Javascript that can then be run in your web browser.
       </p>
       <img
         src="~/assets/images/article/5/frontend5-1.png"
@@ -21,7 +21,7 @@
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        First we need to write the HTML for our countdown timer.<br />
+        First, we need to write the HTML for our countdown timer.<br />
         Create an empty file on your computer named
         <strong>myCountdownTimer.html</strong> and paste in the following markup
         in the <strong>body</strong> tag.
@@ -44,7 +44,7 @@
         also allow us to access the element with Javascript.<br />
         <strong>Note</strong> - The <strong>class</strong> attribute should be
         used for styling elements but since all of our elements are unique, we
-        may use <strong>id</strong>. Also the <strong>id</strong> will be
+        may use <strong>id</strong>. Also, the <strong>id</strong> will be
         required for our Javascript.<br /><br />
         If you open this HTML file right now, you'll notice that it doesn't look
         anything like the image above. This is because we haven't added any CSS
@@ -57,14 +57,14 @@
         lang="language-css"
       />
       <p>
-        First we import <strong>Open Sans</strong> font-family from
+        First, we import <strong>Open Sans</strong> font-family from
         <a
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://fonts.google.com/"
           target="_blank"
           >Google Fonts</a
         >. Google Fonts has a large catalog of free fonts that you may use in
-        any of your own projects.
+        any of your projects.
       </p>
       <CodeSnippet
         code="body {
@@ -97,8 +97,8 @@
         <strong>#countDownTimer</strong>(with a <strong>#</strong>). The
         <strong>#</strong> symbol is a CSS selector used to apply styles on a
         specific <strong>id</strong>. If we want to style any HTML elements, we
-        can do it so using their names, without any CSS selectors(such as
-        <strong>h1</strong>, <strong>input</strong>).
+        can do it so using their names(such as <strong>h1</strong>,
+        <strong>input</strong>), without any CSS selectors.
       </p>
       <CodeSnippet
         code='input,
@@ -113,15 +113,15 @@ p {
         lang="language-css"
       />
       <p>
-        We add a padding of 0.5rem(1rem equals the font size of the html element
-        - which for most browsers has a default value of 16px) to our elements
-        and increase the font-size to 1.25rem. We continue on to add the rest of
-        the styles, including our imported font-family.<br />
+        We add padding of 0.5rem(1rem equals the font size of the
+        <em>html</em> element - which for most browsers has a default value of
+        16px) to our elements and increase the font-size to 1.25rem. We continue
+        to add the rest of the styles, including our imported font-family.<br />
         <strong>Note</strong> - We applied the font-family property to the
-        <strong>input</strong>, <strong>button</strong> and
+        <strong>input</strong>, <strong>button</strong>, and
         <strong>p</strong> elements instead of just applying it on the body tag.
         This is because form elements such as <strong>input</strong>,
-        <strong>button</strong>, <strong>textarea</strong> and
+        <strong>button</strong>, <strong>textarea</strong>, and
         <strong>select</strong> don't inherit the font-family automatically.
       </p>
       <CodeSnippet
@@ -132,7 +132,7 @@ p {
         lang="language-css"
       />
       <p>
-        Now we add a border radius of 0.25rem to the button element to make its
+        Now we add a border-radius of 0.25rem to the button element to make its
         corners slightly round. The
         <strong>cursor: pointer</strong> property changes the mouse cursor to a
         pointer when it's over this element.
@@ -150,11 +150,11 @@ p {
       />
       <p>
         <strong>outline: none</strong> removes the black outline which is shown
-        when the element is focused upon. Instead we will add a light-grey
+        when the element is focused upon. Instead, we will add a light-grey
         bottom border to the element which will change to dark-blue on focus. We
         achieve this using the <strong>:focus</strong> pseudo-class.<br />
         <strong>Note</strong> - border-bottom is a shorthand property for
-        setting border width, style and color.
+        setting border width, style, and color.
       </p>
       <CodeSnippet
         code="#controls {
@@ -205,7 +205,7 @@ p {
         We go on to add some background color and text color to the buttons and
         the timer element.<br /><br />
         It looks much better now but we haven't added any functionality yet. So
-        let's move on to the Javascript.
+        let's move on to Javascript.
       </p>
       <CodeSnippet
         code='const duration = document.getElementById("duration");
@@ -218,7 +218,7 @@ let interval;'
         lang="language-js"
       />
       <p>
-        First we fetch all of our necessory elements by using the
+        First, we fetch all of our necessary elements by using the
         <strong>document.getElementById()</strong> function. We use the same ids
         that we used in the HTML.<br />
         <strong>Note</strong> - We used <strong>const</strong> for declaring the
@@ -252,7 +252,7 @@ let interval;'
         returns an Interval ID which we store in the
         <strong>interval</strong> variable. This will be used later to stop the
         routine.<br /><br />
-        In our routine we subtract 0.1(100 milliseconds) from
+        In our routine, we subtract 0.1(100 milliseconds) from
         <strong>remainingTime</strong> and update the timer. Then we check if
         remainingTime is 0 and pass our <strong>interval</strong> variable to
         the <strong>clearInterval()</strong> function to stop the routine.<br />
@@ -265,7 +265,7 @@ let interval;'
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">
-        This is because of floating-point arithmetic. Due to the their binary
+        This is because of floating-point arithmetic. Due to their binary
         nature, some decimal numbers cannot be represented with perfect accuracy
         in Javascript. Therefore we will use the
         <strong>toFixed()</strong> function to truncate the remaining time to 1
@@ -308,7 +308,7 @@ let interval;'
       />
       <p>
         Now what's left is the easy stuff. We need to add the functionalities
-        for the stop and reset button.
+        for the stop and reset buttons.
       </p>
       <CodeSnippet
         code='stopButton.addEventListener("click", () => {
@@ -324,7 +324,7 @@ resetButton.addEventListener("click", () => {
       <p>
         And there you go. We have successfully created a countdown timer app
         using Javascript. Now try building a stopwatch application on your own
-        with what you've learnt and keep learning.
+        with what you've learned and keep learning.
       </p>
       <h3 class="mt-6 text-xl">Complete Code</h3>
       <CodeSnippet

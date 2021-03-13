@@ -28,7 +28,7 @@
       </div>
       <p class="mt-8">
         This tutorial will cover <strong>Array</strong>, <strong>Stack</strong>,
-        <strong>Queue</strong>, <strong>Set</strong>, <strong>Map</strong> and
+        <strong>Queue</strong>, <strong>Set</strong>, <strong>Map</strong>, and
         <strong>Heap</strong>.
       </p>
       <div class="mt-6 flex flex-col">
@@ -36,7 +36,7 @@
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Array is a data structure which allows for O(1) read/write operations.
+        An array is a data structure that allows for O(1) read/write operations.
         This is because its items are kept in contiguous memory locations which
         makes it easy to calculate the address of any position.
       </p>
@@ -57,7 +57,7 @@ class DataStructures {
         lang="language-java"
       />
       <p>
-        In Java, arrays are non-resizable and its size must be provided at
+        In Java, arrays are non-resizable and their size must be provided at
         creation time.<br />
         However, the Java Collections Framework provides the
         <strong>ArrayList</strong> class which is an array-like data structure
@@ -105,9 +105,9 @@ class DataStructures {
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Stack is a data structure which only allows read/write operations at one
-        end(i.e. the top) in O(1) time. Stack items are accessed according to
-        the <strong>LIFO</strong>(last in first out) rule.
+        A stack is a data structure that only allows read/write operations at
+        one end(i.e. the top) in O(1) time. Stack items are accessed according
+        to the <strong>LIFO</strong>(last in first out) rule.
       </p>
       <CodeSnippet
         code="// Java
@@ -132,21 +132,21 @@ class DataStructures {
         There are multiple ways of implementing a stack(including ArrayList) in
         Java but <strong>ArrayDeque</strong> is the most preferred one. It
         allows amortized O(1) pushes and pops from both ends, making it ideal
-        for using as a stack. It implements the
+        for use as a stack. It implements the
         <strong>Queue</strong> interface(not List) and therefore does not allow
         random access of its items.<br />
         <strong>Note</strong> - there is also a dedicated
         <strong>Stack</strong> class in Java that extends
         <strong>Vector</strong>(which itself implements the List interface). It
-        is a thread-safe legacy class which comes with a performance cost but
-        may be useful in a multi-threaded environment.
+        is a thread-safe legacy class that comes with a performance cost but may
+        be useful in a multi-threaded environment.
       </p>
       <div class="mt-6 flex flex-col">
         <h3 class="text-xl">Queue</h3>
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Queue is a data structure which allows adding(offering) of items to the
+        A queue is a data structure that allows adding(offering) items to the
         back and removing(polling) them from the front in O(1) time. Queue items
         are accessed according to the
         <strong>FIFO</strong>(first in first out) rule.
@@ -174,7 +174,7 @@ class DataStructures {
         Like stacks, there are multiple ways of implementing a queue in Java.
         Notice that we declared our ArrayDeque with
         <em>Queue&lt;String&gt;</em> as the Queue interface provides all the
-        neccessary functionality and we don't need any ArrayDeque-specific
+        necessary functionality and we don't need any ArrayDeque-specific
         methods(like we did for stacks, i.e. <em>push()</em> and
         <em>pop()</em>).
       </p>
@@ -217,7 +217,7 @@ class DataStructures {
         which implement the <strong>Set</strong> interface).<br />
         Hashsets perform much faster than TreeSets in most cases but take up
         more space. This is because TreeSets internally use a self-balancing
-        binary tree, thus ensuring a O(k×log n) time for operations(compared to
+        binary tree, thus ensuring an O(k×log n) time for operations(compared to
         O(k) of HashSets).<br />
         <strong>Note</strong> - HashSets can store a single
         <strong>null</strong> value whereas TreeSets cannot.
@@ -227,9 +227,10 @@ class DataStructures {
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Map is a special data structure that allows mapping of unique keys to a
-        respective value. Similar to a set, it allows lookup in O(k) time where
-        <strong>k</strong> is the length of key.
+        A map is a special data structure that allows mapping of unique keys to
+        a respective value. Similar to a set, it allows lookup in O(k) time
+        where
+        <strong>k</strong> is the length of the key.
       </p>
       <CodeSnippet
         code="// Java
@@ -271,7 +272,7 @@ class DataStructures {
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-4">
-        Heap is a tree-like data structure which satisfies the heap property. It
+        Heap is a tree-like data structure that satisfies the heap property. It
         means that, in a min-heap, the value of every node is greater than or
         equal to its parent. This ensures that the root of the tree always
         contains the smallest value and vice-versa for max-heap.<br />

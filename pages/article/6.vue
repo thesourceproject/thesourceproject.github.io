@@ -44,9 +44,9 @@
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        Basically we need to find a pair of numbers in the given array that add
-        up to <strong>target</strong>. The most straight-forward way to find it
-        is to try every possible pair.
+        We need to find a pair of numbers in the given array that adds up to
+        <strong>target</strong>. The most straightforward way to find it is to
+        try every possible pair.
       </p>
       <CodeSnippet
         code="// Java
@@ -93,9 +93,9 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
         we can save some time by skipping these pairs.<br />
         Let's see how we can achieve this.<br /><br />
         Suppose there's an array [0, 1, 2, 3, 4]. In the first outer loop we
-        will check the pairs (0, 1), (0, 2), (0, 3), (0, 4). For the next loop
-        we can start from (1, 2) instead of (1, 0) and continue on (1, 3), (1,
-        4). And then (2, 3), (2, 4) and finally (3, 4).<br />
+        will check the pairs (0, 1), (0, 2), (0, 3), (0, 4). For the next loop,
+        we can start from (1, 2) instead of (1, 0) and continue (1, 3), (1, 4).
+        And then (2, 3), (2, 4) and finally (3, 4).<br />
         We observe that we can start the inner loop from <em>i + 1</em> to avoid
         the visited pairs.
       </p>
@@ -124,9 +124,9 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
       />
       <p>
         This solution like the previous one has a space complexity of
-        <strong>O(1)</strong> as we only use constant amount of memory to store
-        our variables. Notice now we don't have to check for <em>i != j</em> as
-        i and j will never be equal.<br /><br />
+        <strong>O(1)</strong> as we only use a constant amount of memory to
+        store our variables. Notice now we don't have to check for
+        <em>i != j</em> as i and j will never be equal.<br /><br />
         We improved our solution slightly but it's time complexity is still
         <strong>O(n<sup>2</sup>)</strong>. This is because in the worst case our
         solution checks (n - 1) + (n - 2) + (n - 3) + ... + 2 + 1 = (n)(n - 1) ÷
@@ -174,8 +174,8 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
         So now we have a solution with a time complexity of
         <strong>O(n)</strong> making it much faster than the previous ones,
         however it also has a space complexity of <strong>O(n)</strong> because
-        we are using additional memory proportional to the size of the input
-        array in the worst case.<br /><br />
+        we are using additional memory for the HashMap/Dictionary proportional
+        to the size of the input array in the worst case.<br /><br />
         So why stop here? Try some more problems and keep on learning.
       </p>
     </article>

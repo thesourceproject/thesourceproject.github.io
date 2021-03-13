@@ -8,9 +8,9 @@
         :tags="['frontend', 'html', 'css', 'beginner']"
       />
       <p>
-        If you're just starting out with HTML and CSS, you must have heard about
+        If you're just starting with HTML and CSS, you must have heard about
         Flexbox. This tutorial will teach you the basics of Flexbox so you can
-        use it in your own projects in no time.
+        use it in your projects in no time.
       </p>
       <a
         title="Rudloff, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons"
@@ -97,7 +97,7 @@
         </div></CSSHelper
       >
       <p>
-        In order to use Flexbox we need to use the <em>flex</em>
+        To use Flexbox we need to use the <em>flex</em>
         <strong>display</strong> property.<br />
         Flex items are initially arranged in the row direction(left to right).
         This can be changed using the <strong>flex-direction</strong> property.
@@ -185,7 +185,7 @@
       <p>
         The <strong>justify-content</strong> property controls the position of
         the child elements in the main axis(direction of flex items).<br />
-        This property is useful for distributing remaining space left around
+        This property is useful for distributing the remaining space left around
         child items.
       </p>
       <div class="mt-6 flex flex-col">
@@ -378,8 +378,8 @@
       >
       <p>
         The <strong>flex-grow</strong> property indicates how much the flex item
-        grows with respect to the other flex items along the main axis.<br />
-        It's initial value is 0 meaning that the flex item will not grow to take
+        grows compared to the other flex items along the main axis.<br />
+        Its initial value is 0 meaning that the flex item will not grow to take
         over the remaining space.
       </p>
       <div class="mt-6 flex flex-col">
@@ -476,7 +476,7 @@
         <strong>align-items</strong> property.<br /><br />
         We've covered the most commonly used Flexbox features but there are
         more(e.g. <em>flex-flow</em>, <em>flex-shrink</em>, <em>flex-basis</em>,
-        etc) which are not used as often. You can learn more about them
+        etc) that are not used as often. You can learn more about them
         <a
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox"
@@ -484,7 +484,7 @@
           >here</a
         >.<br /><br />
         Now that you have understood the basics of Flexbox, why not use this
-        powerful CSS feature in your own works?
+        powerful CSS feature in your work?
       </p>
     </article>
   </main>
