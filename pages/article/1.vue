@@ -8,12 +8,12 @@
         :tags="['miscellaneous', 'vscode', 'git', 'windows', 'beginner']"
       />
       <p>
-        <strong>Visual Studio Code</strong> is a powerful free open source text
+        <strong>Visual Studio Code</strong> is a powerful free open-source text
         editor by Microsoft. VS Code is available for Windows, Linux, and macOS.
         Use it to code in any programming language, without switching editors.
         Visual Studio Code has support for many languages, including Python,
         Java, C++, JavaScript, and more. <br /><br />
-        <strong>Git</strong> is a free and open source distributed version
+        <strong>Git</strong> is a free and open-source distributed version
         control system designed to handle everything from small to very large
         projects with speed and efficiency. <br /><br />
         VS Code has integrated source control and includes Git support
@@ -72,14 +72,14 @@
         And there you go. You have now installed VS Code and Git on your
         computer.<br />
         Now time to write your first piece of code.<br /><br />
-        Create a new folder in your computer, right-click on it and select
+        Create a new folder on your computer, right-click on it and select
         <strong>Open with Code</strong> in the context menu.<br />
         <strong>Note</strong> - It is important to open a folder(not a file) in
         VS Code otherwise the source control functions will not work.<br />
         This folder will now act as a workspace for your project.<br /><br />
-        Now go to <strong>Source Control</strong> in the side bar and initialise
-        the local repository. Ignore the <em>Publish to Github</em> button for
-        now, we will cover that in the next tutorial.
+        Now go to <strong>Source Control</strong> in the sidebar and initialize
+        the local repository. Ignore the <em>Publish to Github</em> button, for
+        now. We will cover that in the next tutorial.
       </p>
       <img
         src="~/assets/images/article/1/misc1-4.png"
@@ -96,10 +96,10 @@
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">
-        Now type <strong>!</strong>(yes, just an exclaimation mark) in the
-        editor and VS Code will show you that its an Emmet abbreviation.<br />
+        Now type <strong>!</strong>(yes, just an exclamation mark) in the editor
+        and VS Code will show you that its an Emmet abbreviation.<br />
         Press <strong>Enter</strong> and the file will be populated by some
-        boiler-plate code automatically.(Pretty cool, huh?)
+        boilerplate code automatically. Pretty cool, huh?
       </p>
       <img
         src="~/assets/images/article/1/misc1-6.jpg"
@@ -156,7 +156,7 @@
         user's name and email. Simply open the in-built
         <strong>Windows Powershell</strong> in VS Code(Ctrl + `) and type in the
         following two commands. <br />
-        Don't forget to replace the name and email for your own.
+        Don't forget to replace the name and email with your own.
       </p>
       <CodeSnippet
         :code="`git config --global user.name &quot;My Name&quot;

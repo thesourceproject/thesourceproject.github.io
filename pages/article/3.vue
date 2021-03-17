@@ -10,9 +10,9 @@
       <p>
         <strong>Python</strong> is an interpreted, high-level and
         general-purpose programming language. Python is being used in web
-        development, machine learning and even desktop applications. Its easy to
-        learn syntax is very well suited for beginners as well as experienced
-        programmers.
+        development, machine learning, and even desktop applications. Its
+        easy-to-learn syntax is very well suited for beginners as well as
+        experienced programmers.
       </p>
       <a
         title="www.python.org, GPL &lt;http://www.gnu.org/licenses/gpl.html&gt;, via Wikimedia Commons"
@@ -29,7 +29,7 @@
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        First we need to install Python. You can download Python from the
+        First, we need to install Python. You can download Python from the
         <a
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://www.python.org/downloads/"
@@ -51,7 +51,7 @@
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">
-        Open a Powershell window, type in <em>python</em> and press
+        Open a Powershell window, type in <em>python</em>, and press
         <strong>Enter</strong>.<br />
         This will open the Python interpreter. You can try out Python here.
       </p>
@@ -61,7 +61,7 @@
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">
-        Let's start with everyone's favourite, the
+        Let's start with everyone's favorite, the
         <strong>Hello World!</strong> program. Enter this code in the python
         shell and press <strong>Enter</strong>.
       </p>
@@ -82,12 +82,12 @@ print(z)`"
       <p>
         It should print <strong>35</strong>. What we did here was that we first
         declared a variable <strong>x</strong> while giving it a value of
-        <strong>5</strong>. Similarly we also declared <strong>y</strong> and
+        <strong>5</strong>. Similarly, we also declared <strong>y</strong> and
         gave it a value of <strong>7</strong>. We then stored the product of
         <strong>x</strong> and <strong>y</strong> in <strong>z</strong>(In
         Python, as in most programming languages, the <strong>*</strong> symbol
         means multiplication).<br />
-        After that we simply print the value of
+        After that, we simply print the value of
         <strong>z</strong>(i.e. 35).<br />
         <strong>Note</strong> - You can add comments by writing
         <strong>#</strong> and then typing in the desired comment. These do not
@@ -111,7 +111,7 @@ print(z)`"
           >this tutorial</NuxtLink
         >.<br /><br />
         Create a new folder on your computer named
-        <strong>TheSourceProject</strong>, right click on it and open it in VS
+        <strong>TheSourceProject</strong>, right-click on it and open it in VS
         Code.<br />
         Now create a new file <strong>myFirstProgram.py</strong> and paste in
         the following code.
@@ -139,7 +139,7 @@ print(a1, a2, a3, sep=', ')`"
       />
       <p>
         This command will run your program and you will get the output as three
-        comma separated numbers
+        comma-separated numbers
         <strong>300.0, 300.0, 480.0</strong>(The default separator for the
         <strong>print</strong> function is a single space but it can be changed
         to anything as in the example).<br />
@@ -175,12 +175,12 @@ print(a1, a2, a3, sep=', ')`"
         the previous one.<br />
         <strong>Note</strong> - Notice that it is <em>necessary</em> to add
         white-space when starting a new block of code, like after declaring a
-        function, loop or an if-else statement. Using camel-case for
+        function, loop, or an if-else statement. Using camel-case for
         variable/function names is <em>optional</em> but usually preferred.<br /><br />
-        In our previous code we ran our
+        In our previous code, we ran our
         <strong>simpleInterest</strong> function 3 times, what if wanted to run
-        it a 100 times or even a 1000 times. Now we need to learn about loops.
-        Run the following program.
+        it 100 times or even 1000 times. Now we need to learn about loops. Run
+        the following program.
       </p>
       <CodeSnippet
         :code="`for i in range(5):
@@ -189,7 +189,7 @@ print(a1, a2, a3, sep=', ')`"
       />
       <p>
         This is the simplest way to run a <strong>for</strong> loop. Here an
-        iterator <strong>i</strong> is created and it's value changes from 0 to
+        iterator <strong>i</strong> is created and its value changes from 0 to
         4(i.e less than 5). The <code>print(i)</code> statement in the block
         prints the current value of <strong>i</strong> each time the loop is
         executed(In our case <em>0, 1, 2, 3, 4</em>). We can also modify the
@@ -202,7 +202,7 @@ print(a1, a2, a3, sep=', ')`"
         lang="language-python"
       />
       <p>
-        Here our iterator <strong>i</strong> is created and it's value changes
+        Here our iterator <strong>i</strong> is created and its value changes
         from 10 to 100(i.e less than 101) with a step value of 4(i.e. 10, 14,
         18, 22...).<br /><br />
         That's all for now. We will cover more topics in later tutorials.

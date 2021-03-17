@@ -17,8 +17,8 @@
           target="_blank"
           >input()</a
         >
-        function. In this tutorial we will learn how to use this function in
-        order to create dynamic applications.<br />
+        function. In this tutorial, we will learn how to use it to create
+        dynamic applications.<br />
         <strong>Note</strong> - This tutorial assumes you have some basic
         understanding of Python. You may refer to our
         <NuxtLink
@@ -41,11 +41,11 @@ print('Hello', name)"
       <p>
         When you run this, Python will prompt you to enter your name in the
         terminal. Type anything and press enter to continue. It will print
-        <em>Hello</em> , then a space and then your name.<br />
-        What we did here was that we captured the user input and stored in a
+        <em>Hello</em>, then space, and then your name.<br />
+        What we did here was that we captured the user input and stored it in a
         variable called <strong>name</strong> and then printed a message using
         that variable. The <strong>input()</strong> function can also take an
-        <em>optional</em> string which can be shown to the user before giving an
+        <em>optional</em> string that can be shown to the user before giving an
         input which in our case was <strong>Enter your name:</strong
         ><br /><br />
         Now let's perform some mathematical operations on user input but before
@@ -53,14 +53,14 @@ print('Hello', name)"
         has some basic data types -
       </p>
       <ul class="mt-4 list-disc list-inside">
-        <li>Integer : represents mathematical integers.</li>
-        <li>Floating-Point Number : numbers with a fractional part.</li>
+        <li>Integer: represents mathematical integers.</li>
+        <li>Floating-Point Number: numbers with a fractional part.</li>
         <li>
-          Boolean : data type that can only have one of the two values,
+          Boolean: a data type that can only have one of the two values,
           <strong>True</strong> or <strong>False</strong>.
         </li>
         <li>
-          String : set of characters such as letters, numbers, symbols, etc.
+          String: a set of characters such as letters, numbers, symbols, etc.
         </li>
       </ul>
       <p class="mt-4">
@@ -85,8 +85,8 @@ print('Cube of the given number is ', number ** 3)"
         <strong>Note</strong> - if you supply a non-integer value to the
         program, you will receive a message like
         <em>ValueError: invalid literal for int() with base 10</em>. This is
-        because the <strong>int()</strong> function expects an integer string in
-        order to convert its type.<br /><br />
+        because the <strong>int()</strong> function expects an integer string to
+        convert its type.<br /><br />
         Similarly, we can input floating-point numbers by using the
         <strong>float()</strong> function.
       </p>
@@ -114,9 +114,9 @@ print('Sum of the given numbers is ', total)"
         lang="language-python"
       />
       <p>
-        First we create a variable <strong>total</strong>(not <em>sum</em>, as
-        <em>sum</em> is an in-built function of Python). Then we ask the user
-        how many numbers he/she will input.<br />
+        First, we create a variable <strong>total</strong>(not <em>sum</em>, as
+        <em>sum</em> is an in-built function of Python and therefore, should be
+        avoided). Then we ask the user how many numbers he/she will input.<br />
         After that, we run a <strong>for</strong> loop that many times, each
         time asking for a number and adding it to our
         <strong>total</strong>.<br /><br />

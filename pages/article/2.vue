@@ -13,9 +13,8 @@
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           to="/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
           >previous tutorial</NuxtLink
-        >
-        we learnt how to create a local Git repository and make commits to it.
-        Now it's time to show-off your first project to the world.
+        >, we learned how to create a local Git repository and make commits to
+        it. Now it's time to show off your first project to the world.
       </p>
       <a
         title="GitHub, Public domain, via Wikimedia Commons"
@@ -108,13 +107,13 @@
       />
       <p class="mt-6">
         Once the authentication is complete you will be asked by VS Code to set
-        a repository name for Github. By default it is set to the current folder
-        name.<br />
+        a repository name for Github. By default, it is set to the current
+        folder name.<br />
         You are also given two options, whether to publish to a private
         repository or a public repository. If you want your repository to be
         private i.e. only be seen by you, you can select
         <em>Publish to Github private repository</em>.<br />
-        But for now select
+        But for now, select
         <em>Publish to Github public repository</em>.
       </p>
       <img
@@ -124,7 +123,7 @@
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">
-        You will prompted to sign in to Github.<br />
+        You will be prompted to sign in to Github.<br />
         Click <strong>Sign in with your browser</strong> to continue.
       </p>
       <img
@@ -156,7 +155,7 @@
       />
       <p class="mt-6">
         And there you go! You have published your first project to Github. Now
-        it's time to show-off your work to your friends!
+        you are ready to showcase your work to the world!
       </p>
     </article>
   </main>
