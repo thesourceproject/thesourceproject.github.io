@@ -42,11 +42,11 @@ html {
 }
 
 :root {
-  --basics: #045fa0;
-  --competitive: #ed217c;
-  --frontend: #5703c2;
-  --backend: #00a341;
-  --misc: #1b998b;
+  --basics: #004d8b;
+  --competitive: #c91f44;
+  --frontend: #491d76;
+  --backend: #008a4c;
+  --misc: #008085;
   --code-1: #272822;
   --code-2: #f8f8f2;
   --code-3: #a6e22e;
