@@ -41,8 +41,7 @@
         makes it easy to calculate the address of any position.
       </p>
       <CodeSnippet
-        code="// Java
-import java.util.Arrays; // Only required for using the Arrays.toString() function.
+        code="import java.util.Arrays; // Only required for using the Arrays.toString() function.
 class DataStructures {
     public static void main(String args[]) {
         int array[] = new int[5]; // Create a primitive int array.
@@ -65,8 +64,7 @@ class DataStructures {
         <em>java.util</em> package(like the others below).
       </p>
       <CodeSnippet
-        code="// Java
-import java.util.*;
+        code="import java.util.*;
 class DataStructures {
     public static void main(String args[]) {
         List<Integer> arrayList = new ArrayList<>(); // Create an ArrayList of Integer type.
@@ -110,8 +108,7 @@ class DataStructures {
         to the <strong>LIFO</strong>(last in first out) rule.
       </p>
       <CodeSnippet
-        code="// Java
-import java.util.*;
+        code="import java.util.*;
 class DataStructures {
     public static void main(String args[]) {
         ArrayDeque<Character> stack = new ArrayDeque<>(); // Create an ArrayDeque of Character type.
@@ -152,8 +149,7 @@ class DataStructures {
         <strong>FIFO</strong>(first in first out) rule.
       </p>
       <CodeSnippet
-        code='// Java
-import java.util.*;
+        code='import java.util.*;
 class DataStructures {
     public static void main(String args[]) {
         Queue<String> queue = new ArrayDeque<>(); // Create a Queue of String type.
@@ -189,8 +185,7 @@ class DataStructures {
         key(1 in case of numbers).
       </p>
       <CodeSnippet
-        code="// Java
-import java.util.*;
+        code="import java.util.*;
 class DataStructures {
     public static void main(String args[]) {
         Set<Integer> set = new HashSet<>(); // Create an empty set.
@@ -233,8 +228,7 @@ class DataStructures {
         <strong>k</strong> is the length of the key.
       </p>
       <CodeSnippet
-        code="// Java
-import java.util.*;
+        code="import java.util.*;
 class DataStructures {
     public static void main(String args[]) {
         Map<Character, String> map = new HashMap<>(); // Create an empty map(Character to String)
@@ -280,8 +274,7 @@ class DataStructures {
         max-heaps) in O(log n) time.
       </p>
       <CodeSnippet
-        code="// Java
-import java.util.*;
+        code="import java.util.*;
 class DataStructures {
     public static void main(String args[]) {
         Queue<Integer> minHeap = new PriorityQueue<>(); // Create a new min-heap.

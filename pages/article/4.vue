@@ -11,12 +11,7 @@
         While developing Python applications we often need to allow user
         interaction, either to obtain necessary data or to direct the flow of
         our program. Python enables this functionality through its inbuilt
-        <a
-          class="text-text-3 hover:underline focus:underline focus:outline-none"
-          href="https://docs.python.org/3/library/functions.html#input"
-          target="_blank"
-          >input()</a
-        >
+        <strong>input()</strong>
         function. In this tutorial, we will learn how to use it to create
         dynamic applications.<br />
         <strong>Note</strong> - This tutorial assumes you have some basic
@@ -44,7 +39,7 @@ print('Hello', name)"
         <em>Hello</em>, then space, and then your name.<br />
         What we did here was that we captured the user input and stored it in a
         variable called <strong>name</strong> and then printed a message using
-        that variable. The <strong>input()</strong> function can also take an
+        that variable. The <em>input()</em> function can also take an
         <em>optional</em> string that can be shown to the user before giving an
         input which in our case was <strong>Enter your name:</strong
         ><br /><br />
@@ -64,8 +59,8 @@ print('Hello', name)"
         </li>
       </ul>
       <p class="mt-4">
-        The <strong>input()</strong> function returns a string that represents
-        the captured user input but we cannot directly perform mathematical
+        The <em>input()</em> function returns a string that represents the
+        captured user input but we cannot directly perform mathematical
         operations on strings in Python.<br />
         Therefore, we need to convert our input string to an appropriate data
         type first.<br />
@@ -101,9 +96,9 @@ print('Sum of the given numbers is ', num1 + num2)"
         fractional-numbers(e.g. 3.14, 5.6, 925.163) as input.<br />
         Like in the previous program, it will throw a <em>ValueError</em> if a
         non-numeric value is supplied.<br /><br />
-        We can also use the <strong>input()</strong> function inside a loop.
-        This is useful when we do not know in advance how many times the user
-        input is needed.
+        We can also use the <em>input()</em> function inside a loop. This is
+        useful when we do not know in advance how many times the user input is
+        needed.
       </p>
       <CodeSnippet
         code="total = 0
@@ -120,8 +115,50 @@ print('Sum of the given numbers is ', total)"
         After that, we run a <strong>for</strong> loop that many times, each
         time asking for a number and adding it to our
         <strong>total</strong>.<br /><br />
-        That's all you need to know about handling user input. Now you can
-        practice making some programs requiring user input on your own.
+        What if the user provides all input values in a single line separated by
+        spaces? For example, <em>10 25 12 47</em>. How will we unpack the
+        individual values?<br />
+        We know that the <em>input()</em> function returns a string. Python
+        strings have an inbuilt function called <strong>split()</strong> which
+        splits the string based on a given delimiter(by default, whitespace) and
+        returns a list containing the individual strings.
+      </p>
+      <CodeSnippet
+        code="fruits = input('Enter the names of fruits separated by comma: ')  # Apple, Banana, Cherry
+print(fruits.split(', '))  # ['Apple', 'Banana', 'Cherry'] (Split the string using the delimiter ', ')"
+        lang="language-python"
+      />
+      <p>
+        Notice that the split function will return a list of strings. But, what
+        if we had numbers in our input? We will simply loop over each string in
+        this list and call the <em>int()</em> or <em>float()</em> function upon
+        it.
+      </p>
+      <CodeSnippet
+        code="numbers = input('Enter the numbers separated by space: ')  # 10 25 12 47
+numberList = numbers.split()  # By default, the string will be split based on whitespace.
+print(numberList)  # ['10', '25', '12', '47']
+for i in range(len(numberList)):
+    numberList[i] = int(numberList[i])  # Convert each string to an integer.
+print(numberList)  # [10, 25, 12, 47]"
+        lang="language-python"
+      />
+      <p>
+        Luckily, Python has an easier way of doing this with the help of the
+        <strong>map()</strong> function. The <em>map()</em> function returns an
+        iterator that applies the given function to each of the items in the
+        iterable(list). We wrap this in a <em>list()</em> function call so that
+        we obtain the list from this iterator.
+      </p>
+      <CodeSnippet
+        code="numbers = input('Enter the numbers separated by space: ')  # 10 25 12 47
+numberList = list(map(int, numbers.split()))
+print(numberList)  # [10, 25, 12, 47]"
+        lang="language-python"
+      />
+      <p>
+        That's all you need to know about handling user input in Python. Now you
+        can practice making some programs requiring user input on your own.
       </p>
     </article>
   </main>

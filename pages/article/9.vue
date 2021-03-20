@@ -39,8 +39,7 @@
         makes it easy to calculate the address of any position.
       </p>
       <CodeSnippet
-        code="# Python3
-array = []  # Create a new list. Same as -> array = list()
+        code="array = []  # Create a new list. Same as -> array = list()
 print(array)  # []
 array.append(3)  # Add value 3 to the end of list.
 array.append(6)
@@ -71,8 +70,7 @@ print(array)  # [7]"
         to the <strong>LIFO</strong>(last in first out) rule.
       </p>
       <CodeSnippet
-        code="# Python3
-stack = []
+        code="stack = []
 print(stack)  # []
 stack.append('A')  # Push 'A' onto the stack.
 stack.append('B')
@@ -99,8 +97,7 @@ print(stack)  # ['A']"
         <strong>FIFO</strong>(first in first out) rule.
       </p>
       <CodeSnippet
-        code="# Python3
-from collections import deque  # Import the deque module.
+        code="from collections import deque  # Import the deque module.
 queue = deque()  # Create a queue.
 print(queue)  # deque([])
 queue.append('Apple')  # Add 'Apple' to the right(back of the queue)
@@ -133,8 +130,7 @@ print(queue)  # deque(['Banana'])"
         key(1 in case of numbers).
       </p>
       <CodeSnippet
-        code="# Python3
-set1 = set()  # Create an empty set. Avoid using names of inbuilt functions as variable names.
+        code="set1 = set()  # Create an empty set. Avoid using names of inbuilt functions as variable names.
 print(set1)  # set()
 set1.add(3)  # Add 3 to the set.
 set1.add(6)
@@ -160,8 +156,7 @@ for num in set1:
         <strong>k</strong> is the length of the key.
       </p>
       <CodeSnippet
-        code="# Python3
-map = {}  # Create a new map(dictionary). Same as -> map = dict()
+        code="map = {}  # Create a new map(dictionary). Same as -> map = dict()
 print(map)  # {}
 map['A'] = 'Apple'  # Map the key 'A' to the value &quot;Apple&quot;
 map['B'] = 'Banana'
@@ -196,8 +191,7 @@ for value in map.values():
         max-heaps) in O(log n) time.
       </p>
       <CodeSnippet
-        code="# Python3
-import heapq
+        code="import heapq
 heap = []  # Create an empty list which will be used as a min-heap.
 heapq.heappush(heap, 2)  # Add 2 to the heap.
 heapq.heappush(heap, 5)
