@@ -173,7 +173,7 @@ print(a1, a2, a3, sep=', ')`"
         times as needed. Also if we have to modify the logic we only need to do
         it in one place. Therefore, this code is a lot more maintainable than
         the previous one.<br />
-        <strong>Note</strong> - Notice that it is <em>necessary</em> to add
+        <strong>Note</strong> - It is <em>necessary</em> to add
         white-space when starting a new block of code, like after declaring a
         function, loop, or an if-else statement. Using camel-case for
         variable/function names is <em>optional</em> but usually preferred.<br /><br />
