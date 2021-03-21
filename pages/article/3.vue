@@ -62,14 +62,13 @@
       />
       <p class="mt-6">
         Let's start with everyone's favorite, the
-        <strong>Hello World!</strong> program. Enter this code in the python
-        shell and press <strong>Enter</strong>.
+        <em>Hello World!</em> program. Enter this code in the python shell and
+        press <strong>Enter</strong>.
       </p>
       <CodeSnippet code="print('Hello World!')" lang="language-python" />
       <p>
-        It should print <strong>Hello World!</strong>(Obviously). But now let's
-        try some statements. Enter these statements one by one in the python
-        shell.
+        It should print <em>Hello World!</em>(Obviously). But now let's try some
+        statements. Enter these statements one by one in the python shell.
       </p>
       <CodeSnippet
         :code="`x = 5
@@ -80,18 +79,16 @@ print(z)`"
         lang="language-python"
       />
       <p>
-        It should print <strong>35</strong>. What we did here was that we first
-        declared a variable <strong>x</strong> while giving it a value of
-        <strong>5</strong>. Similarly, we also declared <strong>y</strong> and
-        gave it a value of <strong>7</strong>. We then stored the product of
-        <strong>x</strong> and <strong>y</strong> in <strong>z</strong>(In
-        Python, as in most programming languages, the <strong>*</strong> symbol
-        means multiplication).<br />
-        After that, we simply print the value of
-        <strong>z</strong>(i.e. 35).<br />
-        <strong>Note</strong> - You can add comments by writing
-        <strong>#</strong> and then typing in the desired comment. These do not
-        change the output of the program.<br /><br />
+        It should print <em>35</em>. What we did here was that we first declared
+        a variable <em>x</em> while giving it a value of <em>5</em>. Similarly,
+        we also declared <em>y</em> and gave it a value of <em>7</em>. We then
+        stored the product of <em>x</em> and <em>y</em> in <em>z</em>. In
+        Python, as in most programming languages, the <em>*</em> symbol means
+        multiplication. After that, we simply print the value of <em>z</em>(i.e.
+        35).<br />
+        <strong>Note</strong> - You can add comments by writing <em>#</em> and
+        then typing in the desired comment. These do not change the output of
+        the program but will improve the readability of your code.<br /><br />
         Now let's take it up a notch. Till now we were using the Python shell to
         type and run our code. It's a great tool to try out Python but real-life
         applications are created in Python scripts. So now we will learn how to
@@ -129,9 +126,10 @@ print(a1, a2, a3, sep=', ')`"
       />
       <p>
         Save the file and then open the in-built Powershell(<strong
-          >Ctrl + `</strong
-        >) and it should show you the current working directory. Now type in the
-        following command.
+          >Ctrl</strong
+        >
+        + <strong>`</strong>) and it should show you the current working
+        directory. Now type in the following command.
       </p>
       <CodeSnippet
         :code="`python myFirstProgram.py`"
@@ -140,20 +138,20 @@ print(a1, a2, a3, sep=', ')`"
       <p>
         This command will run your program and you will get the output as three
         comma-separated numbers
-        <strong>300.0, 300.0, 480.0</strong>(The default separator for the
-        <strong>print</strong> function is a single space but it can be changed
-        to anything as in the example).<br />
+        <em>300.0, 300.0, 480.0</em>. The default separator for the
+        <em>print</em> function is a single space but it can be changed to
+        anything as in the example.<br />
         <strong>Note</strong> - It is important to know that variable/function
         names can only start with either a letter or an underscore and may
         contain digits, letters and underscores after that.<br /><br />
         You might have noticed that we are reusing the same logic for
         calculating simple interest for 3 different values which is causing
-        duplication in our code. Functions(Or methods) will help us avoid this
+        duplication in our code. Functions(or methods) will help us avoid this
         duplication.<br />
         Erase everything and type in the following statements and run the
         program.
         <strong>Don't forget the whitespace</strong> before the
-        <strong>return</strong> statement.
+        <em>return</em> statement.
       </p>
       <CodeSnippet
         :code="`# Same program as above, now using a function
@@ -169,18 +167,18 @@ print(a1, a2, a3, sep=', ')`"
         lang="language-python"
       />
       <p>
-        Now we can reuse our <strong>simpleInterest</strong> function as many
-        times as needed. Also if we have to modify the logic we only need to do
-        it in one place. Therefore, this code is a lot more maintainable than
-        the previous one.<br />
-        <strong>Note</strong> - It is <em>necessary</em> to add
+        Now we can reuse our <em>simpleInterest</em> function as many times as
+        needed. Also if we have to modify the logic we only need to do it in one
+        place. Therefore, this code is a lot more maintainable than the previous
+        one.<br />
+        <strong>Note</strong> - It is <strong>necessary</strong> to add
         white-space when starting a new block of code, like after declaring a
         function, loop, or an if-else statement. Using camel-case for
-        variable/function names is <em>optional</em> but usually preferred.<br /><br />
+        variable/function names is optional but usually preferred.<br /><br />
         In our previous code, we ran our
-        <strong>simpleInterest</strong> function 3 times, what if wanted to run
-        it 100 times or even 1000 times. Now we need to learn about loops. Run
-        the following program.
+        <em>simpleInterest</em> function 3 times, what if wanted to run it 100
+        times or even 1000 times. Now we need to learn about loops. Run the
+        following program.
       </p>
       <CodeSnippet
         :code="`for i in range(5):
@@ -188,13 +186,12 @@ print(a1, a2, a3, sep=', ')`"
         lang="language-python"
       />
       <p>
-        This is the simplest way to run a <strong>for</strong> loop. Here an
-        iterator <strong>i</strong> is created and its value changes from 0 to
-        4(i.e less than 5). The <code>print(i)</code> statement in the block
-        prints the current value of <strong>i</strong> each time the loop is
-        executed(In our case <em>0, 1, 2, 3, 4</em>). We can also modify the
-        <strong>for</strong> loop so that it iterates through our required
-        range.
+        This is the simplest way to run a <em>for</em> loop. Here an iterator
+        <em>i</em> is created and its value changes from 0 to 4(i.e less than
+        5). The <em>print(i)</em> statement in the block prints the current
+        value of <em>i</em> each time the loop is executed(in our case 0, 1, 2,
+        3, 4). We can also modify the <em>for</em> loop so that it iterates
+        through our required range.
       </p>
       <CodeSnippet
         :code="`for i in range(10, 101, 4):
