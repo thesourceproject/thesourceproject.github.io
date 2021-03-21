@@ -5,7 +5,15 @@
         title="LeetCode #1 Two Sum"
         date="20 Feb'21"
         readTime="10 min read"
-        :tags="['competitive', 'data', 'structures', 'algorithms', 'beginner']"
+        :tags="[
+          'competitive',
+          'data',
+          'structures',
+          'algorithms',
+          'java',
+          'python',
+          'beginner',
+        ]"
       />
       <p>
         Check out

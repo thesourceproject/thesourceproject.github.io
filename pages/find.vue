@@ -76,6 +76,16 @@ export default {
       query: "",
       articles: [
         {
+          id: 10,
+          category: "basics",
+          title: "Handling user input in Java",
+          date: "21 Mar '21",
+          readTime: "10 min read",
+          fragment:
+            "In Java, there are two main classes for dealing with user input, namely Scanner and BufferedReader. But which one is better? Let's learn and compare them...",
+          tags: ["basics", "java", "beginner"],
+        },
+        {
           id: 9,
           category: "competitive",
           title: "Using inbuilt data structures of Python",
@@ -127,7 +137,15 @@ export default {
           readTime: "10 min read",
           fragment:
             "Check out this problem on LeetCode. Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target...",
-          tags: ["competitive", "data", "structures", "algorithms", "beginner"],
+          tags: [
+            "competitive",
+            "data",
+            "structures",
+            "algorithms",
+            "java",
+            "python",
+            "beginner",
+          ],
         },
         {
           id: 5,
