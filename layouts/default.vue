@@ -46,7 +46,7 @@ html {
   --competitive: #c91f44;
   --frontend: #491d76;
   --backend: #008a4c;
-  --misc: #008085;
+  --miscellaneous: #008085;
   --code-1: #272822;
   --code-2: #f8f8f2;
   --code-3: #a6e22e;

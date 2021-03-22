@@ -64,9 +64,11 @@
 
 <script>
 import Fuse from "fuse.js";
+import helper from "~/mixins/helper";
 
 export default {
   name: "find",
+  mixins: [helper],
   head: {
     title: "Find | The Source Project",
   },
@@ -179,7 +181,7 @@ export default {
         },
         {
           id: 2,
-          category: "misc",
+          category: "miscellaneous",
           title: "Publishing your first project to Github",
           date: "4 Jan '21",
           readTime: "10 min read",
@@ -189,7 +191,7 @@ export default {
         },
         {
           id: 1,
-          category: "misc",
+          category: "miscellaneous",
           title: "Installing Visual Studio Code and Git in Windows",
           date: "23 Dec '20",
           readTime: "20 min read",
@@ -199,20 +201,6 @@ export default {
         },
       ],
     };
-  },
-  methods: {
-    kebabCase(title) {
-      return title.split(/\s+/).join("-");
-    },
-    getBackground(category) {
-      return {
-        basics: "bg-basics",
-        competitive: "bg-competitive",
-        frontend: "bg-frontend",
-        backend: "bg-backend",
-        misc: "bg-misc",
-      }[category];
-    },
   },
   computed: {
     queryArticles() {

@@ -3,17 +3,15 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      fontFamily: {
-        title: ["McLaren", "cursive"],
-        body: ["Poppins", "sans-serif"],
-        mono: ["Ubuntu Mono", "monospace"]
+      animation: {
+        shake: "shake 1s infinite"
       },
       colors: {
         basics: "var(--basics)",
         competitive: "var(--competitive)",
         frontend: "var(--frontend)",
         backend: "var(--backend)",
-        misc: "var(--misc)",
+        miscellaneous: "var(--miscellaneous)",
         "code-1": "var(--code-1)",
         "code-2": "var(--code-2)",
         "code-3": "var(--code-3)",
@@ -31,6 +29,23 @@ module.exports = {
         "border-1": "var(--border-1)",
         "border-2": "var(--border-2)"
       },
+      fontFamily: {
+        title: ["McLaren", "cursive"],
+        body: ["Poppins", "sans-serif"],
+        mono: ["Ubuntu Mono", "monospace"]
+      },
+      keyframes: {
+        shake: {
+          "0%, 100%": {
+            transform: "translateX(-25%)",
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)"
+          },
+          "50%": {
+            transform: "translateX(0)",
+            animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)"
+          }
+        }
+      },
       lineHeight: {
         "extra-loose": "1.75"
       },
@@ -40,7 +55,7 @@ module.exports = {
     }
   },
   variants: {
-    extend: { animation: ["group-hover"] }
+    extend: { animation: ["hover", "focus", "group-hover", "group-focus"] }
   },
   plugins: []
 };

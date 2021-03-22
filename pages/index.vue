@@ -33,12 +33,15 @@
         class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8 text-text-2 text-xl"
       >
         <NuxtLink
-          :to="{ path: '/find', query: { q: 'basics' } }"
-          class="h-52 bg-basics p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
+          v-for="category in categories"
+          :key="category.id"
+          :to="{ path: '/find', query: { q: category.id } }"
+          class="h-52 p-5 rounded-3xl flex flex-col group focus:outline-none"
+          :class="getBackground(category.id)"
         >
-          <p>Programming Basics</p>
+          <p>{{ category.name }}</p>
           <svg
-            class="mt-auto ml-auto h-5 w-5"
+            class="mt-auto ml-auto h-5 w-5 group-hover:animate-shake group-focus:animate-shake"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
           >
@@ -47,73 +50,27 @@
               d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"
             /></svg
         ></NuxtLink>
-        <NuxtLink
-          :to="{ path: '/find', query: { q: 'competitive' } }"
-          class="h-52 bg-competitive p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
-        >
-          <p>Competitive Programming</p>
-          <svg
-            class="mt-auto ml-auto h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fill="currentColor"
-              d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"
-            /></svg></NuxtLink
-        ><NuxtLink
-          :to="{ path: '/find', query: { q: 'frontend' } }"
-          class="h-52 bg-frontend p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
-        >
-          <p>Frontend Development</p>
-          <svg
-            class="mt-auto ml-auto h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fill="currentColor"
-              d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"
-            /></svg></NuxtLink
-        ><NuxtLink
-          :to="{ path: '/find', query: { q: 'backend' } }"
-          class="h-52 bg-backend p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
-        >
-          <p>Backend Development</p>
-          <svg
-            class="mt-auto ml-auto h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fill="currentColor"
-              d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"
-            />
-          </svg>
-        </NuxtLink>
-        <NuxtLink
-          :to="{ path: '/find', query: { q: 'miscellaneous' } }"
-          class="h-52 bg-misc p-5 rounded-3xl flex flex-col hover:shadow-lg focus:shadow-lg focus:outline-none"
-        >
-          <p>Miscellaneous</p>
-          <svg
-            class="mt-auto ml-auto h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fill="currentColor"
-              d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"
-            />
-          </svg>
-        </NuxtLink>
       </div>
     </section>
   </main>
 </template>
 
 <script>
+import helper from "~/mixins/helper";
+
 export default {
   name: "home",
+  mixins: [helper],
+  data() {
+    return {
+      categories: [
+        { id: "basics", name: "Programming Basics" },
+        { id: "competitive", name: "Competitive Programming" },
+        { id: "frontend", name: "Frontend Development" },
+        { id: "backend", name: "Backend Development" },
+        { id: "miscellaneous", name: "Miscellaneous" },
+      ],
+    };
+  },
 };
 </script>

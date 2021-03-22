@@ -2,8 +2,10 @@
   <header
     class="container mx-auto px-4 py-6 sm:px-8 flex items-center justify-between"
   >
-    <NuxtLink to="/" class="font-title text-lg text-text-4 select-none">
-      <span>TheSourceProject<strong class="text-text-3">_</strong></span>
+    <NuxtLink to="/" class="font-title text-lg text-text-4">
+      <span class="select-none"
+        >TheSourceProject<strong class="text-text-3">_</strong></span
+      >
     </NuxtLink>
     <nav class="hidden md:inline mx-auto">
       <NuxtLink
@@ -32,7 +34,7 @@
       </button>
       <NuxtLink
         to="/find"
-        class="ml-2 sm:ml-4 bg-background-2 px-6 py-2 rounded-full text-text-2 hover:shadow-md focus:shadow-md focus:outline-none"
+        class="ml-2 sm:ml-4 bg-background-2 px-6 py-2 rounded-full text-text-2"
         title="Find Article"
       >
         <figure class="flex items-center">

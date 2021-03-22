@@ -19,7 +19,7 @@
         <a
           href="https://github.com/thesourceproject"
           target="_blank"
-          class="text-text-3 text-lg hover:underline focus:underline"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           >The Source Project</a
         >
         is an e-learning platform composed of free tutorials on Java,
@@ -28,7 +28,9 @@
       </p>
       <p class="mt-6">
         So, let's
-        <NuxtLink to="/find" class="text-text-3 hover:underline focus:underline"
+        <NuxtLink
+          to="/find"
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
           >begin learning...</NuxtLink
         >
       </p>
@@ -129,7 +131,7 @@
       </a>
       <a
         href="mailto:thesourceprojectteam@gmail.com"
-        class="mt-4 mx-auto bg-background-2 px-8 py-2 text-text-2 rounded-full text-lg hover:shadow-md focus:shadow-md focus:outline-none"
+        class="mt-4 mx-auto bg-background-2 px-8 py-2 text-text-2 rounded-full text-lg"
       >
         Talk
       </a>
