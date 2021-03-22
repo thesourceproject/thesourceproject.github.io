@@ -84,7 +84,7 @@ export default {
           date: "21 Mar '21",
           readTime: "10 min read",
           fragment:
-            "In Java, there are two main classes for dealing with user input, namely Scanner and BufferedReader. But which one is better? In this tutorial we will learn and compare the two...",
+            "In Java, there are two main classes for dealing with user input, namely Scanner and BufferedReader. But which one is better? In this tutorial, we will learn how to use both...",
           tags: ["basics", "java", "beginner"],
         },
         {
