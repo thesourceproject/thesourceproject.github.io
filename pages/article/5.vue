@@ -4,7 +4,7 @@
       <ArticleHeader
         title="Creating a countdown timer using Javascript"
         date="9 Feb'21"
-        readTime="30 min read"
+        readTime="20 min read"
         :tags="['frontend', 'html', 'css', 'javascript', 'beginner']"
       />
       <p>

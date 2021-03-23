@@ -56,11 +56,8 @@
 </template>
 
 <script>
-import helper from "~/mixins/helper";
-
 export default {
   name: "home",
-  mixins: [helper],
   data() {
     return {
       categories: [
@@ -71,6 +68,17 @@ export default {
         { id: "miscellaneous", name: "Miscellaneous" },
       ],
     };
+  },
+  methods: {
+    getBackground(category) {
+      return {
+        basics: "bg-basics",
+        competitive: "bg-competitive",
+        frontend: "bg-frontend",
+        backend: "bg-backend",
+        miscellaneous: "bg-miscellaneous",
+      }[category];
+    },
   },
 };
 </script>

@@ -64,11 +64,9 @@
 
 <script>
 import Fuse from "fuse.js";
-import helper from "~/mixins/helper";
 
 export default {
   name: "find",
-  mixins: [helper],
   head: {
     title: "Find | The Source Project",
   },
@@ -82,7 +80,7 @@ export default {
           category: "basics",
           title: "Handling user input in Java",
           date: "21 Mar '21",
-          readTime: "10 min read",
+          readTime: "15 min read",
           fragment:
             "In Java, there are two main classes for dealing with user input, namely Scanner and BufferedReader. But which one is better? In this tutorial, we will learn how to use both...",
           tags: ["basics", "java", "beginner"],
@@ -154,7 +152,7 @@ export default {
           category: "frontend",
           title: "Creating a countdown timer using Javascript",
           date: "9 Feb '21",
-          readTime: "30 min read",
+          readTime: "20 min read",
           fragment:
             "In this tutorial, we will learn how to create a simple countdown timer application using Javascript that can then be run in your web-browser...",
           tags: ["frontend", "html", "css", "javascript", "beginner"],
@@ -211,6 +209,20 @@ export default {
       } else {
         return this.articles;
       }
+    },
+  },
+  methods: {
+    getBackground(category) {
+      return {
+        basics: "bg-basics",
+        competitive: "bg-competitive",
+        frontend: "bg-frontend",
+        backend: "bg-backend",
+        miscellaneous: "bg-miscellaneous",
+      }[category];
+    },
+    kebabCase(title) {
+      return title.split(/\s+/).join("-");
     },
   },
   mounted() {

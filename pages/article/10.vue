@@ -4,7 +4,7 @@
       <ArticleHeader
         title="Handling user input in Java"
         date="21 Mar '21"
-        readTime="10 min read"
+        readTime="15 min read"
         :tags="['basics', 'java', 'beginner']"
       />
       <p>
