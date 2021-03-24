@@ -174,10 +174,9 @@ p {
         property in
         <NuxtLink
           class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/7#Let's-learn-CSS-Flexbox"
-          >this</NuxtLink
-        >
-        tutorial.
+          to="/article/7-Lets-learn-CSS-Flexbox"
+          >this tutorial</NuxtLink
+        >.
       </p>
       <CodeSnippet
         code="#startButton {

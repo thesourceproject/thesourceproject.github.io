@@ -11,7 +11,7 @@
         In our
         <NuxtLink
           class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
+          to="/article/1-Installing-Visual-Studio-Code-and-Git-in-Windows"
           >previous tutorial</NuxtLink
         >, we learned how to create a local Git repository and make commits to
         it. Now it's time to show off your first project to the world.
@@ -36,25 +36,12 @@
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        <strong>Note</strong> - You need to have
-        <a
-          class="text-text-3 hover:underline focus:underline focus:outline-none"
-          href="https://code.visualstudio.com/"
-          target="_blank"
-          >Visual Studio Code</a
-        >
-        and local
-        <a
-          class="text-text-3 hover:underline focus:underline focus:outline-none"
-          href="https://git-scm.com/"
-          target="_blank"
-          >Git</a
-        >
-        repository set up before you can continue. You may refer to our
+        <strong>Note</strong> - You need to have Visual Studio Code and local
+        Git repository set up before you can continue. You may refer to
         <NuxtLink
           class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
-          >previous tutorial</NuxtLink
+          to="/article/1-Installing-Visual-Studio-Code-and-Git-in-Windows"
+          >this tutorial</NuxtLink
         >
         for instructions on how to install VS Code and create a local Git
         repository.<br />

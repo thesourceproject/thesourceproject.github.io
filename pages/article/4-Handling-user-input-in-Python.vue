@@ -18,7 +18,7 @@
         understanding of Python. You may refer to our
         <NuxtLink
           class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/3#Python-fundamentals"
+          to="/article/3-Python-fundamentals"
           >previous tutorial</NuxtLink
         >
         before you continue.

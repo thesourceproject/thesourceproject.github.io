@@ -151,13 +151,13 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
         <strong>Note</strong> - You can learn more about
         <NuxtLink
           class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/8#Using-inbuilt-data-structures-of-Java"
+          to="/article/8-Using-inbuilt-data-structures-of-Java"
           >HashMaps</NuxtLink
         >
         and
         <NuxtLink
           class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/9#Using-inbuilt-data-structures-of-Python"
+          to="/article/9-Using-inbuilt-data-structures-of-Python"
           >Dictionaries</NuxtLink
         >
         in our tutorials.

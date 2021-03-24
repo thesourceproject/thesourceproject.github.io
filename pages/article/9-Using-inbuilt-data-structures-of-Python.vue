@@ -27,7 +27,15 @@
       <p class="mt-8">
         This tutorial will cover <strong>Array</strong>, <strong>Stack</strong>,
         <strong>Queue</strong>, <strong>Set</strong>, <strong>Map</strong>, and
-        <strong>Heap</strong>.
+        <strong>Heap</strong>.<br />
+        <strong>Note</strong> - This tutorial assumes you have some basic
+        understanding of Python. You may refer to
+        <NuxtLink
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
+          to="/article/3-Python-fundamentals"
+          >this tutorial</NuxtLink
+        >
+        before you continue.
       </p>
       <div class="mt-6 flex flex-col">
         <h3 class="text-xl">Array</h3>

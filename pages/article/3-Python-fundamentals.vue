@@ -91,20 +91,19 @@ print(z)`"
         the program but will improve the readability of your code.<br /><br />
         Now let's take it up a notch. Till now we were using the Python shell to
         type and run our code. It's a great tool to try out Python but real-life
-        applications are created in Python scripts. So now we will learn how to
+        applications are written in Python scripts. So now we will learn how to
         use the popular text editor
         <a
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://code.visualstudio.com/"
           target="_blank"
           >Visual Studio Code</a
-        >
-        to create Python scripts.<br />
+        >.<br />
         <strong>Note</strong> - For instructions on how to install and work with
         VS Code, refer to
         <NuxtLink
           class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/1/#Installing-Visual-Studio-Code-and-Git-in-Windows"
+          to="/article/1-Installing-Visual-Studio-Code-and-Git-in-Windows"
           >this tutorial</NuxtLink
         >.<br /><br />
         Create a new folder on your computer named

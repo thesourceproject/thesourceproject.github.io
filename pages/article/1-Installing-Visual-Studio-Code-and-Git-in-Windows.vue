@@ -176,16 +176,10 @@ git config --global user.email &quot;myname@example.com&quot;`"
         our
         <NuxtLink
           class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/2#Publishing-your-first-project-to-Github"
+          to="/article/2-Publishing-your-first-project-to-Github"
           >next tutorial</NuxtLink
         >
-        where we show you how to publish this project to
-        <a
-          class="text-text-3 hover:underline focus:underline focus:outline-none"
-          href="https://github.com/"
-          target="_blank"
-          >Github</a
-        >.
+        where we show you how to publish this project to Github.
       </p>
     </article>
   </main>
