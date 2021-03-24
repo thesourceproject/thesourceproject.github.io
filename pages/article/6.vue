@@ -147,7 +147,20 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
         Java Hashmaps &amp; Python Dictionaries can store key-value pairs that
         allow lookup in <strong>O(1)</strong> time. But how will it help us? For
         every number, if we could check whether its difference from
-        <strong>target</strong> exists in the array, we will get the answer.
+        <strong>target</strong> exists in the array, we will get the answer.<br />
+        <strong>Note</strong> - You can learn more about
+        <NuxtLink
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
+          to="/article/8#Using-inbuilt-data-structures-of-Java"
+          >HashMaps</NuxtLink
+        >
+        and
+        <NuxtLink
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
+          to="/article/9#Using-inbuilt-data-structures-of-Python"
+          >Dictionaries</NuxtLink
+        >
+        in our tutorials.
       </p>
       <CodeSnippet
         code="// Java
