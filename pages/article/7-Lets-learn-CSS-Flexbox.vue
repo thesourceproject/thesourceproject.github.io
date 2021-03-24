@@ -5,7 +5,7 @@
         title="Let's learn CSS Flexbox"
         date="2 Mar '21"
         readTime="15 min read"
-        :tags="['frontend', 'html', 'css', 'beginner']"
+        :tags="['frontend', 'html', 'css', 'intermediate']"
       />
       <p>
         If you're just starting with HTML and CSS, you must have heard about

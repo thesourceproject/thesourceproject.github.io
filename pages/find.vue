@@ -41,7 +41,7 @@
         )} p-5 rounded-3xl flex flex-col text-sm`"
       >
         <NuxtLink
-          :to="`/article/${article.id}#${kebabCase(article.title)}`"
+          :to="`/article/${article.id}-${kebabCase(article.title)}`"
           class="hover:underline focus:underline focus:outline-none"
           ><h2 class="text-3xl leading-snug">{{ article.title }}</h2>
         </NuxtLink>
@@ -127,7 +127,7 @@ export default {
           readTime: "15 min read",
           fragment:
             "If you're just starting out with HTML and CSS, you must have heard about Flexbox. This tutorial will teach you the basics of Flexbox so you can use it in your own projects in no time...",
-          tags: ["frontend", "html", "css", "beginner"],
+          tags: ["frontend", "html", "css", "intermediate"],
         },
         {
           id: 6,
@@ -222,7 +222,10 @@ export default {
       }[category];
     },
     kebabCase(title) {
-      return title.split(/\s+/).join("-");
+      return title
+        .split(/\s+/)
+        .join("-")
+        .replace(/[^0-9a-zA-Z-]/, "");
     },
   },
   mounted() {
