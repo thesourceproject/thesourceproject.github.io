@@ -1,0 +1,174 @@
+<!doctype html>
+<html data-n-head-ssr>
+  <head>
+    <title>Using inbuilt data structures of Python | The Source Project</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="google-site-verification" name="google-site-verification" content="NBXKl5RAGYQH3Rp9PKrszzdV4bRMOLkHjIjvfNDo2xE"><meta data-n-head="ssr" data-hid="description" name="description" content="In this tutorial we will understand the important data structures available in Python. Python is slower than C++ and Java, yet it is being adopted for its simplicity."><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&family=Ubuntu+Mono&display=swap"><link rel="preload" href="/_nuxt/59e7011.js" as="script"><link rel="preload" href="/_nuxt/d644270.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.13b813f.css" as="style"><link rel="preload" href="/_nuxt/deccaf9.js" as="script"><link rel="preload" href="/_nuxt/app.5d81c44.css" as="style"><link rel="preload" href="/_nuxt/a4a4535.js" as="script"><link rel="preload" href="/_nuxt/8fc628f.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.13b813f.css"><link rel="stylesheet" href="/_nuxt/app.5d81c44.css"><link rel="preload" href="/_nuxt/static/1616587168/article/9-Using-inbuilt-data-structures-of-Python/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1616587168/manifest.js" as="script">
+  </head>
+  <body>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="min-h-screen flex flex-col bg-background-1 text-text-1 font-body break-words transition-colors light"><header class="container mx-auto px-4 py-6 sm:px-8 flex items-center justify-between"><a href="/" class="font-title text-lg text-text-4 nuxt-link-active"><span class="select-none">TheSourceProject<strong class="text-text-3">_</strong></span></a> <nav class="hidden md:inline mx-auto"><a href="/" class="hover:underline focus:underline focus:outline-none nuxt-link-active">Home</a> <a href="/about-us" class="ml-4 hover:underline focus:underline focus:outline-none">About Us
+    </a></nav> <nav class="flex items-center"><button title="Change Theme" class="p-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 w-4"><path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path></svg></button> <a href="/find" title="Find Article" class="ml-2 sm:ml-4 bg-background-2 px-6 py-2 rounded-full text-text-2"><figure class="flex items-center"><figcaption class="mr-4">Find</figcaption> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="h-4 w-4"><path fill="currentColor" d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path></svg></figure></a></nav></header> <main class="flex-grow container mx-auto p-4 sm:px-8 flex flex-col leading-loose"><article class="w-full max-w-4xl mx-auto flex flex-col"><header class="my-8 flex flex-col"><h1 class="text-5xl font-bold leading-snug">Using inbuilt data structures of Python</h1> <p class="mt-6 opacity-50">10 Mar'21 | 10 min read</p> <p class="mt-2 flex flex-wrap"><a href="/find?q=competitive" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #competitive
+    </a><a href="/find?q=data" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #data
+    </a><a href="/find?q=structures" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #structures
+    </a><a href="/find?q=algorithms" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #algorithms
+    </a><a href="/find?q=python" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #python
+    </a><a href="/find?q=beginner" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #beginner
+    </a></p></header> <p>
+        Python is slower than C++ and Java, yet it is being adopted more and
+        more for its simplicity. In this tutorial, we will understand the
+        important data structures available in Python. You'll need to understand
+        these if you're planning to use Python for competitive programming.
+      </p> <div class="mt-12 flex flex-col"><h2 class="text-2xl">Getting Started</h2> <div class="w-6 h-1 bg-background-2 rounded-full"></div></div> <p class="mt-8">
+        This tutorial will cover <strong>Array</strong>, <strong>Stack</strong>,
+        <strong>Queue</strong>, <strong>Set</strong>, <strong>Map</strong>, and
+        <strong>Heap</strong>.
+      </p> <div class="mt-6 flex flex-col"><h3 class="text-xl">Array</h3> <div class="w-4 h-1 bg-background-2 rounded-full"></div></div> <p class="mt-4">
+        An array is a data structure that allows for O(1) read/write operations.
+        This is because its items are kept in contiguous memory locations which
+        makes it easy to calculate the address of any position.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">array = []  # Create a new list. Same as -> array = list()
+print(array)  # []
+array.append(3)  # Add value 3 to the end of list.
+array.append(6)
+print(array)  # [3, 6]
+print(array[1])  # 6 (Get value at index 1)
+array[1] = 7  # Set value at index 1 to 7.
+print(len(array))  # 2 (Get size of list)
+print(array.pop(0))  # 3 (Remove and return value at index 0)
+print(array)  # [7]</code></pre></div> <p>
+        In Python, a <strong>list</strong>(not to be confused with linked-list)
+        is used to store multiple items in an array-like manner. Python lists
+        are resizable by default and can store objects of any type.<br> <strong>Note</strong> - Python has a module <em>array.array</em> which
+        is used to create C-like arrays which can store only a single type of
+        basic values(integers, characters, floating-point numbers). These take
+        up a lesser amount of space but are less flexible than lists.
+      </p> <div class="mt-6 flex flex-col"><h3 class="text-xl">Stack</h3> <div class="w-4 h-1 bg-background-2 rounded-full"></div></div> <p class="mt-4">
+        A stack is a data structure that only allows read/write operations at
+        one end(i.e. the top) in O(1) time. Stack items are accessed according
+        to the <strong>LIFO</strong>(last in first out) rule.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">stack = []
+print(stack)  # []
+stack.append('A')  # Push 'A' onto the stack.
+stack.append('B')
+print(stack)  # ['A', 'B'] (Python prints lists from left to right)
+print(stack[-1])  # B (Peek at the top item without removing it)
+print(len(stack))  # 2
+print(stack.pop())  # B (Pop and return the character on top of the stack)
+print(stack)  # ['A']</code></pre></div> <p>
+        In Python, a list can easily be used as a stack. We just have to make
+        sure that we apply push(append)/pop operations only at the end of the
+        list.
+      </p> <div class="mt-6 flex flex-col"><h3 class="text-xl">Queue</h3> <div class="w-4 h-1 bg-background-2 rounded-full"></div></div> <p class="mt-4">
+        A queue is a data structure that allows adding(offering) items to the
+        back and removing(polling) them from the front in O(1) time. Queue items
+        are accessed according to the
+        <strong>FIFO</strong>(first in first out) rule.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">from collections import deque  # Import the deque module.
+queue = deque()  # Create a queue.
+print(queue)  # deque([])
+queue.append('Apple')  # Add 'Apple' to the right(back of the queue)
+queue.append('Banana')
+print(queue)  # deque(['Apple', 'Banana'])
+print(queue[0])  # Apple (Peek at the first(front) item without removing it)
+print(len(queue))  # 2
+print(queue.popleft())  # Apple (Pop and return the left(first) item)
+print(queue)  # deque(['Banana'])</code></pre></div> <p>
+        Python lists are not suitable for implementing queues. Though it allows
+        amortized O(1) appends at one end, it takes O(n) time to remove an item
+        at the start. This is because all the subsequent items have to be
+        shifted to the left.<br>
+        Fortunately, Python contains a <strong>deque</strong> module that
+        internally uses a doubly-linked list. This allows for O(1) appends and
+        pops from both ends making it suitable for implementing both stacks and
+        queues.
+      </p> <div class="mt-6 flex flex-col"><h3 class="text-xl">Set</h3> <div class="w-4 h-1 bg-background-2 rounded-full"></div></div> <p class="mt-4">
+        Set is an unordered data structure. This means that they do not remember
+        the order of insertion. They are used to store unique values and allow
+        lookups in O(k) time, where <strong>k</strong> is the length of the
+        key(1 in case of numbers).
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">set1 = set()  # Create an empty set. Avoid using names of inbuilt functions as variable names.
+print(set1)  # set()
+set1.add(3)  # Add 3 to the set.
+set1.add(6)
+print(set1)  # {3, 6}
+print(len(set1))  # 2
+print(6 in set1)  # True (Check if 6 is in the set)
+set1.remove(6)  # Remove 6 from the set.
+print(6 in set1)  # False
+print(set1)  # {3}
+for num in set1:
+    print(num)  # Perform action for every set item.</code></pre></div> <p>Python provides an easy to use set object using <em>set()</em>.</p> <div class="mt-6 flex flex-col"><h3 class="text-xl">Map</h3> <div class="w-4 h-1 bg-background-2 rounded-full"></div></div> <p class="mt-4">
+        A map is a special data structure that allows mapping of unique keys to
+        a respective value. Similar to a set, it allows lookup in O(k) time
+        where
+        <strong>k</strong> is the length of the key.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">map = {}  # Create a new map(dictionary). Same as -> map = dict()
+print(map)  # {}
+map['A'] = 'Apple'  # Map the key 'A' to the value "Apple"
+map['B'] = 'Banana'
+print(map.setdefault('B', 'Blueberry'))  # Banana (Return the value for the key 'B'. If it does not exist, map it to the value "Blueberry")
+print(map)  # {'A': 'Apple', 'B': 'Banana'}
+print(len(map))  # 2
+print('C' in map)  # False (Check if 'C' exists in the map as a key)
+print(map['A'])  # Apple (Get the value mapped for the key 'A'. Throws KeyError exception if the key does not exist)
+print(map.get('C', 'Cherry'))  # Cherry (Get the value mapped for the key 'C', if it does not exist return "Cherry")
+map.pop('A')  # Remove the key 'A' and return its value. Throws KeyError exception if the key does not exist.
+print(map)  # {'B': 'Banana'}
+for key in map:  # Same as -> for key in map.keys()
+    print(key)  # Perform action for every key in map.
+for value in map.values():
+    print(value)  # Perform action for every value mapped.</code></pre></div> <p>
+        In Python, maps are known as dictionaries. They can be created using
+        <em>{}</em> or <em>dict()</em>.
+      </p> <div class="mt-6 flex flex-col"><h3 class="text-xl">Heap</h3> <div class="w-4 h-1 bg-background-2 rounded-full"></div></div> <p class="mt-4">
+        Heap is a tree-like data structure that satisfies the heap property. It
+        means that, in a min-heap, the value of every node is greater than or
+        equal to its parent. This ensures that the root of the tree always
+        contains the smallest value and vice-versa for max-heap.<br>
+        Min-heaps allow insertion and retrieval of minimum(or maximum in case of
+        max-heaps) in O(log n) time.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">import heapq
+heap = []  # Create an empty list which will be used as a min-heap.
+heapq.heappush(heap, 2)  # Add 2 to the heap.
+heapq.heappush(heap, 5)
+heapq.heappush(heap, 1)
+print(heap)  # [1, 5, 2] (Not necessarily in sorted order but the root will always contain the smallest element in a min-heap)
+print(len(heap))  # 3
+print(heap[0])  # 1 (Peek at the root element without removing it, IndexError will be thrown if heap is empty)
+print(heapq.heappop(heap))  # 1 (Remove and return the root element, IndexError will be thrown if heap is empty)
+print(heapq.heappop(heap))  # 2
+print(heapq.heappop(heap))  # 5
+print(heap)  # []</code></pre></div> <p>
+        Python provides a <strong>heapq</strong> module for working with heaps.
+        An ordinary list is used to store the elements and the heap is
+        implemented using the heapq methods.<br>
+        By default, heapq implements a min-heap but we can use it as a max-heap
+        too. Simply invert the sign of each number when it is inserted and
+        restore it on removal.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">import heapq
+heap = []
+heapq.heappush(heap, (2, 3))  # Add heap items as tuples in the form of priority-value pairs.
+heapq.heappush(heap, (0, 6))
+heapq.heappush(heap, (1, 2))
+print(heap)  # [(0, 6), (2, 3), (1, 2)]</code></pre></div> <p>
+        If we want a different priority for each element we can store heap items
+        in tuples. The heapq functions will use the tuple's first argument to
+        compare heap items.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">import heapq
+heap = [3, 6, 1]
+heapq.heapify(heap)  # Heapify the list
+print(heap)  # [1, 6, 3]</code></pre></div> <p>
+        The heapq module also provides a <em>heapify()</em> function that
+        converts an existing list into a heap in O(n) time.<br><br>
+        And there you go. We have covered all the important inbuilt data
+        structures of Python. Now use these to solve your algorithmic problems
+        more efficiently.
+      </p></article></main> <footer class="container mx-auto mt-24 p-4 sm:px-8"><section class="flex justify-between"><a href="https://www.instagram.com/the_source_project" target="_blank" class="flex flex-col items-center group focus:outline-none"><p>Follow Us On</p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a> <a href="/about-us" class="flex flex-col items-center group focus:outline-none"><p>About Us</p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></a> <button href="https://www.instagram.com/the_source_project" target="_blank" class="flex flex-col items-center group focus:outline-none"><p>Back To Top</p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none" stroke="currentColor" stroke-width="25" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce focus:outline-none"><circle cx="250.22" cy="250.39" r="236.49"></circle> <path d="M183.31 283.89l65.81-69.12 68.01 71.24" stroke-miterlimit="10" stroke-linecap="round"></path></svg></button></section> <p class="mt-4 text-center text-sm opacity-75">
+    2021, The Source Project
+  </p></footer></div></div></div><script>window.__NUXT__={staticAssetsBase:"/_nuxt/static/1616587168",layout:"default",error:null,serverRendered:!0,routePath:"/article/9-Using-inbuilt-data-structures-of-Python",config:{}}</script><script src="/_nuxt/59e7011.js" defer></script><script src="/_nuxt/8fc628f.js" defer></script><script src="/_nuxt/d644270.js" defer></script><script src="/_nuxt/deccaf9.js" defer></script><script src="/_nuxt/a4a4535.js" defer></script>
+  </body>
+</html>

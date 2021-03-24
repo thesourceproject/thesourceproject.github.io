@@ -1,0 +1,116 @@
+<!doctype html>
+<html data-n-head-ssr>
+  <head>
+    <title>Handling user input in Python | The Source Project</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="google-site-verification" name="google-site-verification" content="NBXKl5RAGYQH3Rp9PKrszzdV4bRMOLkHjIjvfNDo2xE"><meta data-n-head="ssr" data-hid="description" name="description" content="While developing Python applications we often need to allow user interaction, either to obtain necessary data or to direct the flow of our program. Python enables this functionality through its inbuilt input() function."><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&family=Ubuntu+Mono&display=swap"><link rel="preload" href="/_nuxt/59e7011.js" as="script"><link rel="preload" href="/_nuxt/d644270.js" as="script"><link rel="preload" href="/_nuxt/vendors/app.13b813f.css" as="style"><link rel="preload" href="/_nuxt/deccaf9.js" as="script"><link rel="preload" href="/_nuxt/app.5d81c44.css" as="style"><link rel="preload" href="/_nuxt/a4a4535.js" as="script"><link rel="preload" href="/_nuxt/2477de0.js" as="script"><link rel="stylesheet" href="/_nuxt/vendors/app.13b813f.css"><link rel="stylesheet" href="/_nuxt/app.5d81c44.css"><link rel="preload" href="/_nuxt/static/1616587168/article/4-Handling-user-input-in-Python/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1616587168/manifest.js" as="script">
+  </head>
+  <body>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="min-h-screen flex flex-col bg-background-1 text-text-1 font-body break-words transition-colors light"><header class="container mx-auto px-4 py-6 sm:px-8 flex items-center justify-between"><a href="/" class="font-title text-lg text-text-4 nuxt-link-active"><span class="select-none">TheSourceProject<strong class="text-text-3">_</strong></span></a> <nav class="hidden md:inline mx-auto"><a href="/" class="hover:underline focus:underline focus:outline-none nuxt-link-active">Home</a> <a href="/about-us" class="ml-4 hover:underline focus:underline focus:outline-none">About Us
+    </a></nav> <nav class="flex items-center"><button title="Change Theme" class="p-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 w-4"><path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path></svg></button> <a href="/find" title="Find Article" class="ml-2 sm:ml-4 bg-background-2 px-6 py-2 rounded-full text-text-2"><figure class="flex items-center"><figcaption class="mr-4">Find</figcaption> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="h-4 w-4"><path fill="currentColor" d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path></svg></figure></a></nav></header> <main class="flex-grow container mx-auto p-4 sm:px-8 flex flex-col leading-loose"><article class="w-full max-w-4xl mx-auto flex flex-col"><header class="my-8 flex flex-col"><h1 class="text-5xl font-bold leading-snug">Handling user input in Python</h1> <p class="mt-6 opacity-50">8 Jan '21 | 5 min read</p> <p class="mt-2 flex flex-wrap"><a href="/find?q=basics" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #basics
+    </a><a href="/find?q=python" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #python
+    </a><a href="/find?q=beginner" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #beginner
+    </a></p></header> <p>
+        While developing Python applications we often need to allow user
+        interaction, either to obtain necessary data or to direct the flow of
+        our program. Python enables this functionality through its inbuilt
+        <strong>input()</strong>
+        function. In this tutorial, we will learn how to use it to create
+        dynamic applications.<br> <strong>Note</strong> - This tutorial assumes you have some basic
+        understanding of Python. You may refer to our
+        <a href="/article/3#Python-fundamentals" class="text-text-3 hover:underline focus:underline focus:outline-none">previous tutorial</a>
+        before you continue.
+      </p> <div class="mt-12 flex flex-col"><h2 class="text-2xl">Getting Started</h2> <div class="w-6 h-1 bg-background-2 rounded-full"></div></div> <p class="mt-8">Let's start with a basic example.</p> <div class="mx-10 my-4"><pre><code class="language-python">name = input('Enter your name: ')
+print('Hello', name)</code></pre></div> <p>
+        When you run this, Python will prompt you to enter your name in the
+        terminal. Type anything and press enter to continue. It will print
+        <em>Hello</em>, then space, and then your name.<br>
+        What we did here was that we captured the user input and stored it in a
+        variable called <strong>name</strong> and then printed a message using
+        that variable. The <em>input()</em> function can also take an
+        <em>optional</em> string that can be shown to the user before giving an
+        input which in our case was <strong>Enter your name:</strong><br><br>
+        Now let's perform some mathematical operations on user input but before
+        we continue we need to learn a bit about data types in Python. Python
+        has some basic data types -
+      </p> <ul class="mt-4 list-disc list-inside"><li>Integer: represents mathematical integers.</li> <li>Floating-Point Number: numbers with a fractional part.</li> <li>
+          Boolean: a data type that can only have one of the two values,
+          <strong>True</strong> or <strong>False</strong>.
+        </li> <li>
+          String: a set of characters such as letters, numbers, symbols, etc.
+        </li></ul> <p class="mt-4">
+        The <em>input()</em> function returns a string that represents the
+        captured user input but we cannot directly perform mathematical
+        operations on strings in Python.<br>
+        Therefore, we need to convert our input string to an appropriate data
+        type first.<br>
+        Run the following.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">number = int(input())
+print('Cube of the given number is ', number ** 3)</code></pre></div> <p>
+        Before storing our user input in the variable
+        <strong>number</strong>, we convert it to an integer using the
+        <strong>int()</strong> function. Now we use the
+        <strong>**</strong>(Exponentiation operator) to find the cube of the
+        integer.<br> <strong>Note</strong> - if you supply a non-integer value to the
+        program, you will receive a message like
+        <em>ValueError: invalid literal for int() with base 10</em>. This is
+        because the <strong>int()</strong> function expects an integer string to
+        convert its type.<br><br>
+        Similarly, we can input floating-point numbers by using the
+        <strong>float()</strong> function.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">num1 = float(input())
+num2 = float(input())
+print('Sum of the given numbers is ', num1 + num2)</code></pre></div> <p>
+        This program can not only take integers(e.g. 1, 4, 200512) but also
+        fractional-numbers(e.g. 3.14, 5.6, 925.163) as input.<br>
+        Like in the previous program, it will throw a <em>ValueError</em> if a
+        non-numeric value is supplied.<br><br>
+        We can also use the <em>input()</em> function inside a loop. This is
+        useful when we do not know in advance how many times the user input is
+        needed.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">total = 0
+numbers = int(input('How many numbers do you want to enter: '))
+for i in range(numbers):
+  total = total + float(input()) # total += float(input())
+print('Sum of the given numbers is ', total)</code></pre></div> <p>
+        First, we create a variable <strong>total</strong>(not <em>sum</em>, as
+        <em>sum</em> is an in-built function of Python and therefore, should be
+        avoided). Then we ask the user how many numbers he/she will input.<br>
+        After that, we run a <strong>for</strong> loop that many times, each
+        time asking for a number and adding it to our
+        <strong>total</strong>.<br><br>
+        What if the user provides all input values in a single line separated by
+        spaces? For example, <em>10 25 12 47</em>. How will we unpack the
+        individual values?<br>
+        We know that the <em>input()</em> function returns a string. Python
+        strings have an inbuilt function called <strong>split()</strong> which
+        splits the string based on a given delimiter(by default, whitespace) and
+        returns a list containing the individual strings.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">fruits = input('Enter the names of fruits separated by comma: ')  # Apple, Banana, Cherry
+print(fruits.split(', '))  # ['Apple', 'Banana', 'Cherry'] (Split the string using the delimiter ', ')</code></pre></div> <p>
+        Notice that the split function will return a list of strings. But, what
+        if we had numbers in our input? We will simply loop over each string in
+        this list and call the <em>int()</em> or <em>float()</em> function upon
+        it.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">numbers = input('Enter the numbers separated by space: ')  # 10 25 12 47
+numberList = numbers.split()  # By default, the string will be split based on whitespace.
+print(numberList)  # ['10', '25', '12', '47']
+for i in range(len(numberList)):
+    numberList[i] = int(numberList[i])  # Convert each string to an integer.
+print(numberList)  # [10, 25, 12, 47]</code></pre></div> <p>
+        Luckily, Python has an easier way of doing this with the help of the
+        <strong>map()</strong> function. The <em>map()</em> function returns an
+        iterator that applies the given function to each of the items in the
+        iterable(list). We wrap this in a <em>list()</em> function call so that
+        we obtain the list from this iterator.
+      </p> <div class="mx-10 my-4"><pre><code class="language-python">numbers = input('Enter the numbers separated by space: ')  # 10 25 12 47
+numberList = list(map(int, numbers.split()))
+print(numberList)  # [10, 25, 12, 47]</code></pre></div> <p>
+        That's all you need to know about handling user input in Python. Now you
+        can practice making some programs requiring user input on your own.
+      </p></article></main> <footer class="container mx-auto mt-24 p-4 sm:px-8"><section class="flex justify-between"><a href="https://www.instagram.com/the_source_project" target="_blank" class="flex flex-col items-center group focus:outline-none"><p>Follow Us On</p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a> <a href="/about-us" class="flex flex-col items-center group focus:outline-none"><p>About Us</p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></a> <button href="https://www.instagram.com/the_source_project" target="_blank" class="flex flex-col items-center group focus:outline-none"><p>Back To Top</p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none" stroke="currentColor" stroke-width="25" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce focus:outline-none"><circle cx="250.22" cy="250.39" r="236.49"></circle> <path d="M183.31 283.89l65.81-69.12 68.01 71.24" stroke-miterlimit="10" stroke-linecap="round"></path></svg></button></section> <p class="mt-4 text-center text-sm opacity-75">
+    2021, The Source Project
+  </p></footer></div></div></div><script>window.__NUXT__={staticAssetsBase:"/_nuxt/static/1616587168",layout:"default",error:null,serverRendered:!0,routePath:"/article/4-Handling-user-input-in-Python",config:{}}</script><script src="/_nuxt/59e7011.js" defer></script><script src="/_nuxt/2477de0.js" defer></script><script src="/_nuxt/d644270.js" defer></script><script src="/_nuxt/deccaf9.js" defer></script><script src="/_nuxt/a4a4535.js" defer></script>
+  </body>
+</html>

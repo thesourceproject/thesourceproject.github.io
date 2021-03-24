@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/article/9-Using-inbuilt-data-structures-of-Python", {data:[{}],fetch:[],mutations:void 0});
