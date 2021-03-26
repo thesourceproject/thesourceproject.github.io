@@ -3,7 +3,7 @@
     <article class="w-full max-w-4xl mx-auto flex flex-col">
       <ArticleHeader
         title="Using inbuilt data structures of Java"
-        date="7 Mar'21"
+        date="7 Mar '21"
         readTime="10 min read"
         :tags="[
           'competitive',

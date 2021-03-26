@@ -3,7 +3,7 @@
     <article class="w-full max-w-4xl mx-auto flex flex-col">
       <ArticleHeader
         title="Creating a countdown timer using Javascript"
-        date="9 Feb'21"
+        date="9 Feb '21"
         readTime="20 min read"
         :tags="['frontend', 'html', 'css', 'javascript', 'beginner']"
       />

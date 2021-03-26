@@ -3,7 +3,7 @@
     <article class="w-full max-w-4xl mx-auto flex flex-col">
       <ArticleHeader
         title="LeetCode #1 Two Sum"
-        date="20 Feb'21"
+        date="20 Feb '21"
         readTime="10 min read"
         :tags="[
           'competitive',
