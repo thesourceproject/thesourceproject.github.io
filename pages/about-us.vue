@@ -133,8 +133,16 @@
         href="mailto:thesourceprojectteam@gmail.com"
         class="mt-4 mx-auto bg-background-2 px-8 py-2 text-text-2 rounded-full text-lg"
       >
-        Talk
-      </a>
+        Talk </a
+      ><a
+        href="https://nuxtjs.org/"
+        target="_blank"
+        class="mt-32 mx-auto w-2/3"
+      >
+        <img
+          src="https://nuxtjs.org/logos/built-with-nuxt.svg"
+          alt="Built With NuxtJS"
+      /></a>
     </section>
   </main>
 </template>
