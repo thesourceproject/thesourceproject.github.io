@@ -144,7 +144,7 @@
           href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository"
           target="_blank"
           >here</a
-        ><br />
+        >.<br />
       </p>
       <img
         src="~/assets/images/article/1/misc1-9.png"

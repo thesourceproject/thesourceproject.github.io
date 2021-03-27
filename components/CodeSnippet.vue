@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-10 my-4">
+  <div class="sm:mx-10 my-4">
     <pre><code :class="lang">{{ code }}</code></pre>
   </div>
 </template>
