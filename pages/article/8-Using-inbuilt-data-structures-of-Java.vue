@@ -6,7 +6,7 @@
         date="7 Mar '21"
         readTime="10 min read"
         :tags="[
-          'competitive',
+          'basics',
           'data',
           'structures',
           'algorithms',
@@ -338,7 +338,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Today we will learn about data structures that are available in Java and Python. These are a must-know if you want to get into competitive programming.",
+          "Today we will learn about data structures that are available in Java. These are a must-know if you want to get into competitive programming.",
       },
     ],
   },

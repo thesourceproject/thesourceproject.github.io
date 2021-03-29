@@ -162,7 +162,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "In our previous tutorial we learnt how to create a local Git repository and make commits to it. Now it's time to show-off your first project to the world. GitHub is a code hosting platform for version control and collaboration.",
+          "In our previous tutorial we learnt how to create a local Git repository and make commits to it. Now it's time to show-off your first project to the world.",
       },
     ],
   },

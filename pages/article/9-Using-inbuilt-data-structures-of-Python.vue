@@ -6,7 +6,7 @@
         date="10 Mar '21"
         readTime="10 min read"
         :tags="[
-          'competitive',
+          'basics',
           'data',
           'structures',
           'algorithms',
@@ -269,7 +269,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "In this tutorial we will understand the important data structures available in Python. Python is slower than C++ and Java, yet it is being adopted for its simplicity.",
+          "Python is slower than C++ and Java, yet it is being adopted more and more for its simplicity. In this tutorial, we will understand the important data structures available in Python.",
       },
     ],
   },

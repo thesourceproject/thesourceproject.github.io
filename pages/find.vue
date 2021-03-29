@@ -87,14 +87,14 @@ export default {
         },
         {
           id: 9,
-          category: "competitive",
+          category: "basics",
           title: "Using inbuilt data structures of Python",
           date: "10 Mar '21",
           readTime: "10 min read",
           fragment:
             "Python is slower than C++ and Java, yet it is being adopted more and more for its simplicity. In this tutorial we will understand the important data structures available in Python...",
           tags: [
-            "competitive",
+            "basics",
             "data",
             "structures",
             "algorithms",
@@ -104,14 +104,14 @@ export default {
         },
         {
           id: 8,
-          category: "competitive",
+          category: "basics",
           title: "Using inbuilt data structures of Java",
           date: "7 Mar '21",
           readTime: "10 min read",
           fragment:
             "Today we will learn about data structures that are available in Java. These are a must-know if you want to get into competitive programming...",
           tags: [
-            "competitive",
+            "basics",
             "data",
             "structures",
             "algorithms",
