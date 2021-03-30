@@ -61,122 +61,122 @@
       </p>
       <ul class="list-disc list-inside">
         <li>0 &lt;= s.length &lt;= 5 * 10<sup>4</sup></li>
-        <li>s consists of English letters, digits, symbols and spaces.</li>
+        <li>
+          <strong>s</strong> consists of English letters, digits, symbols and
+          spaces.
+        </li>
       </ul>
       <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        We need to find a pair of numbers in the given array that adds up to
-        <strong>target</strong>. The most straightforward way to find it is to
-        try every possible pair.
+        A <strong>substring</strong> is a contiguous sequence of characters
+        within a string. For example, <em>"cat"</em> is a substring of
+        <em>"a cat jumps"</em>.<br />
+        The brute-force approach is to try all possible substrings and find the
+        ones without any repeating characters. Among these, we will return the
+        length of the longest substring. Here, <strong>s</strong> can contain
+        any ASCII character, and not just lower-case letters. Hence, we'll
+        require an array of size 256.<br />
+        <strong>Note</strong> - This tutorial assumes you have some basic
+        understanding of Java and Python. You may refer to our
+        <NuxtLink
+          class="text-text-3 hover:underline focus:underline focus:outline-none"
+          :to="{ path: '/find', query: { q: 'basics' } }"
+          >previous tutorials</NuxtLink
+        >
+        before you continue.
       </p>
       <CodeSnippet
         code="// Java
-public int[] twoSum(int[] nums, int target) {
-    for(int i = 0; i < nums.length; i++) {
-        for(int j = 0; j < nums.length; j++) {
-            if(i != j) { // You may not use the same element twice.
-                if(nums[i] + nums[j] == target) {
-                    return new int[] {i, j}; // Return the indices in an array.
-                }
+public int lengthOfLongestSubstring(String s) {
+    int maxLength = 0;
+    for (int i = 0; i < s.length(); ++i) {
+        for (int j = i + 1; j < s.length() + 1; ++j) {
+            if (hasDistinctCharacters(s.substring(i, j))) { // Check if the substring of 's' from 'i' to 'j - 1' has distinct characters.
+                maxLength = Math.max(maxLength, j - i); // Store this length if it's greater than 'maxLength'.
             }
         }
     }
-    return new int[] {-1, -1}; // Default return value if there is no solution.
+    return maxLength;
+}
+boolean hasDistinctCharacters(String s) {
+    boolean[] exists = new boolean[256];
+    for (int i = 0; i < s.length(); ++i) {
+        if (exists[s.charAt(i)]) { // Check whether this character has been encountered previously.
+            return false;
+        }
+        exists[s.charAt(i)] = true; // Set the flag for this character to 'true'.
+    }
+    return true; // Default return value.
 }"
         lang="language-java"
       />
       <CodeSnippet
         code="# Python3
-def twoSum(self, nums: List[int], target: int) -> List[int]:
-    for i in range(len(nums)):
-        for j in range(len(nums)):
-            if(i != j):
-                if(nums[i] + nums[j] == target):
-                    return [i, j]"
+def lengthOfLongestSubstring(s: str) -> int:
+    maxLength = 0
+    for i in range(len(s)):
+        for j in range(i + 1, len(s) + 1):
+            if(hasDistinctCharacters(s[i:j])):  # Check if the substring of 's' from 'i' to 'j - 1' has distinct characters.
+                maxLength = max(maxLength, j - i)  # Store this length if it's greater than 'maxLength'.
+    return maxLength
+
+def hasDistinctCharacters(s: str) -> bool:
+    exists = [False] * 256
+    for c in s:  # For every character 'c' in 's'.
+        if(exists[ord(c)]):  # Check whether this character has been encountered previously.
+            return False
+        exists[ord(c)] = True  # Set the flag for this character to 'true'.
+    return True  # Default return value."
         lang="language-python"
       />
       <p>
-        Notice that we added a default return value in the Java code at the end.
-        This is because the return type of the function is of
-        <strong>int[]</strong> type, therefore the function must return an array
-        of integers for all conditions. This is not required in the Python
-        version as the question states that we will get a unique solution for
-        every test case.<br /><br />
-        This solution has a time complexity of
-        <strong>O(n<sup>2</sup>)</strong> because we run 2 nested loops which
-        each run for the complete length of the array in the worst case. If we
-        submit this, it will get accepted. But we can improve upon this solution
-        slightly.<br /><br />
-        If you see our code, it runs 2 loops from the beginning and we are
-        checking every pair 2 times. For example, initially we check the pair
-        (i, j) = (0, 1) and when the inner loop completes once, we check the
-        pair (i, j) = (1, 0). The sum is going to be the same in either order so
-        we can save some time by skipping these pairs.<br />
-        Let's see how we can achieve this.<br /><br />
-        Suppose there's an array [0, 1, 2, 3, 4]. In the first outer loop we
-        will check the pairs (0, 1), (0, 2), (0, 3), (0, 4). For the next loop,
-        we can start from (1, 2) instead of (1, 0) and continue (1, 3), (1, 4).
-        And then (2, 3), (2, 4) and finally (3, 4).<br />
-        We observe that we can start the inner loop from <em>i + 1</em> to avoid
-        the visited pairs.
+        At first glance, due to the two nested <em>for</em> loops, this solution
+        appears to be <strong>O(n<sup>2</sup>)</strong>. But in fact, it is
+        actually <strong>O(n<sup>3</sup>)</strong> because of the
+        <strong>O(n)</strong> time taken by <em>hasDistinctCharacters()</em>.
+        Also, it has a space complexity of <strong>O(n)</strong>, which is
+        required to store a substring. This solution will exceed the time limit
+        and won't be accepted.<br /><br />
+        We can improve this solution slightly by checking the longer substrings
+        first. This way, we can return the length of the first substring we
+        encounter that has no repeating characters.
       </p>
       <CodeSnippet
         code="// Java
-public int[] twoSum(int[] nums, int target) {
-    for(int i = 0; i < nums.length; i++) {
-        for(int j = i + 1; j < nums.length; j++) {
-            if(nums[i] + nums[j] == target) {
-                return new int[] {i, j};
+public int lengthOfLongestSubstring(String s) {
+    for (int i = s.length(); i > 0; --i) { // 'i' is the length of the substring.
+        for (int j = 0; j < s.length() - i + 1; ++j) { // 'j' is the starting index of the substring.
+            if (hasDistinctCharacters(s.substring(j, j + i))) { // Check if the substring of 's' from 'j' to 'j + i - 1' has distinct characters.
+                return i; // Return this length.
             }
         }
     }
-    return new int[] {-1, -1};
+    return 0; // Default return value.
 }"
         lang="language-java"
       />
       <CodeSnippet
         code="# Python3
-def twoSum(self, nums: List[int], target: int) -> List[int]:
-    for i in range(len(nums)):
-        for j in range(i + 1, len(nums)):
-            if(nums[i] + nums[j] == target):
-                return [i, j]"
+def lengthOfLongestSubstring(s: str) -> int:
+    for i in range(len(s), 0, -1):  # 'i' is the length of the substring
+        for j in range(len(s) - i + 1):  # 'j' is the starting index of the substring
+            if(hasDistinctCharacters(s[j:j + i])):  # Check if the substring of 's' from 'j' to 'j + i - 1' has distinct characters.
+                return i  # Return this length.
+    return 0  # Default return value."
         lang="language-python"
       />
       <p>
-        This solution like the previous one has a space complexity of
-        <strong>O(1)</strong> as we only use a constant amount of memory to
-        store our variables. Notice now we don't have to check for
-        <em>i != j</em> as i and j will never be equal.<br /><br />
-        We improved our solution slightly but it's time complexity is still
-        <strong>O(n<sup>2</sup>)</strong>. This is because in the worst case our
-        solution checks (n - 1) + (n - 2) + (n - 3) + ... + 2 + 1 = (n)(n - 1) ÷
-        2 pairs, thereby giving it an upper bound of
-        <strong>O(n<sup>2</sup>)</strong>.<br /><br />
-        Can we bring our solution down to
-        <strong>O(n)?</strong><br />
-        Yes! We can. Here comes
-        <strong>HashMap/Dictionary</strong> to the rescue.<br /><br />
-        Java Hashmaps &amp; Python Dictionaries can store key-value pairs that
-        allow lookup in <strong>O(1)</strong> time. But how will it help us? For
-        every number, if we could check whether its difference from
-        <strong>target</strong> exists in the array, we will get the answer.<br />
-        <strong>Note</strong> - You can learn more about
-        <NuxtLink
-          class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/8-Using-inbuilt-data-structures-of-Java"
-          >HashMaps</NuxtLink
-        >
-        and
-        <NuxtLink
-          class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/9-Using-inbuilt-data-structures-of-Python"
-          >Dictionaries</NuxtLink
-        >
-        in our tutorials.
+        Although, this solution is definitely faster than the previous one, it
+        has the same time and space complexity. This is because in the worst
+        case(i.e. when the answer is 1) our solution will have to process every
+        substring.<br /><br />
+        By now, it is clear that the brute-force approach will not work. The
+        constraints of the problem don't even allow an
+        <strong>O(n<sup>2</sup>)</strong> solution, let alone an
+        <strong>O(n<sup>3</sup>)</strong> one.
       </p>
       <CodeSnippet
         code="// Java
