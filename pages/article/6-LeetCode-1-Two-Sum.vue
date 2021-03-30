@@ -45,8 +45,26 @@
         You may assume that each input would have
         <strong><em>exactly</em> one solution</strong>, and you may not use the
         <em>same</em> element twice.<br />
-        You can return the answer in any order.
+        You can return the answer in any order.<br /><br />
+        <strong class="text-lg">Example 1:</strong><br />
+        <strong>Input:</strong> nums = [2, 7, 11, 15], target = 9<br />
+        <strong>Output:</strong> [0, 1]<br />
+        <strong>Explanation:</strong> Because nums[0] + nums[1] == 9, we return
+        [0, 1].<br /><br />
+        <strong class="text-lg">Example 2:</strong><br />
+        <strong>Input:</strong> nums = [3, 2, 4], target = 6<br />
+        <strong>Output:</strong> [1, 2]<br /><br />
+        <strong class="text-lg">Example 3:</strong><br />
+        <strong>Input:</strong> nums = [3, 3], target = 6<br />
+        <strong>Output:</strong> [0, 1]<br /><br />
+        <strong class="text-lg">Constraints:</strong>
       </p>
+      <ul class="list-disc list-inside">
+        <li>2 &lt;= nums.length &lt;= 10<sup>3</sup></li>
+        <li>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></li>
+        <li>-10<sup>9</sup> &lt;= target &lt;= 10<sup>9</sup></li>
+        <li>Only one valid answer exists.</li>
+      </ul>
       <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
