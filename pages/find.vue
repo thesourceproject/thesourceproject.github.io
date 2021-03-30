@@ -76,6 +76,24 @@ export default {
       query: "",
       articles: [
         {
+          id: 11,
+          category: "competitive",
+          title: "LeetCode #3 Longest Substring Without Repeating Characters",
+          date: "30 Mar '21",
+          readTime: "15 min read",
+          fragment:
+            "Check out this problem on LeetCode. Given a string s, find the length of the longest substring without repeating characters...",
+          tags: [
+            "competitive",
+            "data",
+            "structures",
+            "algorithms",
+            "java",
+            "python",
+            "intermediate",
+          ],
+        },
+        {
           id: 10,
           category: "basics",
           title: "Handling user input in Java",
