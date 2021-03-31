@@ -170,7 +170,7 @@ def lengthOfLongestSubstring(s: str) -> int:
       />
       <p>
         Although, this solution is definitely faster than the previous one, it
-        still has the same time and space complexity. This is because in the
+        still has the same time and space complexity. This is because, in the
         worst case(i.e. when the answer is 1) our solution will have to process
         every substring.<br /><br />
         By now, it is clear that the brute-force approach will not work. The
@@ -188,7 +188,23 @@ def lengthOfLongestSubstring(s: str) -> int:
       <p class="mt-6">
         In the diagram above, we can see a sliding window of size 5 moving
         across the array(or string). It is not necessary for a sliding window to
-        have a constant size as long as <em>L</em> &lt;= <em>R</em>.
+        have a constant size as long as <em>L</em> &lt;= <em>R</em>. A sliding
+        window expands towards the right and shrinks from the left while keeping
+        track of its contents in <strong>O(1)</strong> time. But how can this
+        help us?
+      </p>
+      <img
+        src="~/assets/images/article/11/competitive11-2.png"
+        alt="Sliding Window For Longest Substring Without Repeating Characters"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        In the diagram above, we can see a sliding window of size 5 moving
+        across the array(or string). It is not necessary for a sliding window to
+        have a constant size as long as <em>L</em> &lt;= <em>R</em>. A sliding
+        window expands towards the right and shrinks from the left while keeping
+        track of its contents in <strong>O(1)</strong> time. But how can this
+        help us?
       </p>
     </article>
   </main>
