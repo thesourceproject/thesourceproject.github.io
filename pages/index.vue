@@ -64,7 +64,6 @@ export default {
         { id: "basics", name: "Programming Basics" },
         { id: "competitive", name: "Competitive Programming" },
         { id: "frontend", name: "Frontend Development" },
-        { id: "backend", name: "Backend Development" },
         { id: "miscellaneous", name: "Miscellaneous" },
       ],
     };

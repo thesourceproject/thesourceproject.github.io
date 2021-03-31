@@ -77,7 +77,7 @@
         The brute-force approach is to try all possible substrings and find the
         ones without any repeating characters. Among these, we will return the
         length of the longest substring. Here, <strong>s</strong> can contain
-        any ASCII character, and not just lower-case letters. Hence, we'll
+        any ASCII character and not just lower-case letters. Hence, we'll
         require an array of size 256.<br />
         <strong>Note</strong> - This tutorial assumes you have some basic
         understanding of Java and Python. You may refer to our
@@ -135,14 +135,14 @@ def hasDistinctCharacters(s: str) -> bool:
       <p>
         At first glance, due to the two nested <em>for</em> loops, this solution
         appears to be <strong>O(n<sup>2</sup>)</strong>. But in fact, it is
-        actually <strong>O(n<sup>3</sup>)</strong> because of the
+        <strong>O(n<sup>3</sup>)</strong> because of the
         <strong>O(n)</strong> time taken by <em>hasDistinctCharacters()</em>.
         Also, it has a space complexity of <strong>O(n)</strong>, which is
         required to store a substring. This solution will exceed the time limit
         and won't be accepted.<br /><br />
         We can improve this solution slightly by checking the longer substrings
-        first. This way, we can return the length of the first substring we
-        encounter that has no repeating characters.
+        first. This way, we can return the length of the first substring we come
+        across that has no repeating characters.
       </p>
       <CodeSnippet
         code="// Java
@@ -169,16 +169,16 @@ def lengthOfLongestSubstring(s: str) -> int:
         lang="language-python"
       />
       <p>
-        Although, this solution is definitely faster than the previous one, it
-        still has the same time and space complexity. This is because, in the
+        Although this solution is definitely faster than the previous one, it
+        still has the same time and space complexity. This is because in the
         worst case(i.e. when the answer is 1) our solution will have to process
         every substring.<br /><br />
         By now, it is clear that the brute-force approach will not work. The
         constraints of the problem don't even allow an
         <strong>O(n<sup>2</sup>)</strong> solution, let alone an
         <strong>O(n<sup>3</sup>)</strong> one.<br />
-        These types of problems are solved using the sliding window technique.
-        But, what does it mean?
+        These types of problems are solved using the
+        <strong>sliding window</strong> technique. But, what does it mean?
       </p>
       <img
         src="~/assets/images/article/11/competitive11-1.png"
@@ -187,11 +187,10 @@ def lengthOfLongestSubstring(s: str) -> int:
       />
       <p class="mt-6">
         In the diagram above, we can see a sliding window of size 5 moving
-        across the array(or string). It is not necessary for a sliding window to
-        have a constant size as long as <em>L</em> &lt;= <em>R</em>. A sliding
-        window expands towards the right and shrinks from the left while keeping
-        track of its contents in <strong>O(1)</strong> time. But how can this
-        help us?
+        across the array(or string). A sliding window doesn't need to have a
+        constant size as long as <em>L</em> &lt;= <em>R</em>. A sliding window
+        expands towards the right and shrinks from the left while keeping track
+        of its contents in <strong>O(1)</strong> time. But how can this help us?
       </p>
       <img
         src="~/assets/images/article/11/competitive11-2.png"
@@ -199,12 +198,101 @@ def lengthOfLongestSubstring(s: str) -> int:
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">
-        In the diagram above, we can see a sliding window of size 5 moving
-        across the array(or string). It is not necessary for a sliding window to
-        have a constant size as long as <em>L</em> &lt;= <em>R</em>. A sliding
-        window expands towards the right and shrinks from the left while keeping
-        track of its contents in <strong>O(1)</strong> time. But how can this
-        help us?
+        The approach seems to be simple enough. The only thing that remains is
+        the implementation and there are many ways to do that.<br /><br />
+        One way is to use an array to store the character counts of our window.
+        The maximum distance between <em>L</em> and <em>R</em> at any given time
+        will be the answer. We just have to make sure whenever we come across a
+        character present in our window, we have to keep removing characters
+        from the left until the repeated character is removed.
+      </p>
+      <CodeSnippet
+        code="// Java
+public int lengthOfLongestSubstring(String s) {
+    int ans = 0, l = 0, r = 0, count[] = new int[256]; // Create an array to store the count of characters.
+    while(r < s.length()) { // Stop at the last character.
+        char c = s.charAt(r);
+        while(count[c] > 0) { // Run loop if the character is present in the window.
+            --count[s.charAt(l)]; // Remove characters of the window from the left.
+            ++l;
+        }
+        ++count[c]; // Add this character to the window.
+        ++r;
+        ans = Math.max(ans, r - l); // Store the maximum size of the window till now.
+    }
+    return ans;
+}"
+        lang="language-java"
+      />
+      <CodeSnippet
+        code="# Python3
+def lengthOfLongestSubstring(self, s: str) -> int:
+    ans, l, r, count = 0, 0, 0, [0] * 256  # Create an array to store the count of characters.
+    while(r < len(s)):  # Stop at the last character.
+        c = ord(s[r])
+        while(count[c] > 0):  # Run loop if the character is present in the window.
+            count[ord(s[l])] -= 1  # Remove characters of the window from the left.
+            l += 1
+        count[c] += 1  # Add this character to the window.
+        r += 1
+        ans = max(ans, r - l)  # Store the maximum size of the window till now.
+    return ans"
+        lang="language-python"
+      />
+      <p>
+        This solution has both the optimal <strong>O(n)</strong> time and
+        <strong>O(1)</strong> space complexities. <br />
+        <strong>Note</strong> - The auxiliary space used is constant because our
+        <em>count</em> array has a fixed size that is known beforehand.<br /><br />
+        It is impossible to go faster or be more efficient than this, but there
+        is a tiny optimization that we can make. Notice that we don't need to
+        store the count of characters as we can only have at most one of each
+        type in our window. Instead, we can use an array to store the last
+        position of a character. How will this help us? Well, upon encountering
+        a repeated character, we can directly skip over to its previous
+        position.
+      </p>
+      <CodeSnippet
+        code="// Java
+public int lengthOfLongestSubstring(String s) {
+    int ans = 0, l = 0, r = 0, pos[] = new int[256];
+    for(int i = 0; i < 256; ++i) {
+        pos[i] = -1; // '-1' indicates that character has not been found yet.
+    }
+    while(r < s.length()) {
+        char c = s.charAt(r);
+        l = Math.max(l, pos[c] + 1); // 'l' should not change if 'pos[c]' is outside the window.
+        pos[c] = r; // Store the current position of this character.
+        ++r;
+        ans = Math.max(ans, r - l);
+    }
+    return ans;
+}"
+        lang="language-java"
+      />
+      <CodeSnippet
+        code="# Python3
+def lengthOfLongestSubstring(self, s: str) -> int:
+    ans, l, r, pos = 0, 0, 0, [-1] * 256  # '-1' indicates that character has not been found yet.
+    while(r < len(s)):
+        c = ord(s[r])
+        l = max(l, pos[c] + 1)  # 'l' should not change if 'pos[c]' is outside the window.
+        pos[c] = r  # Store the current position of this character.
+        r += 1
+        ans = max(ans, r - l)
+    return ans"
+        lang="language-python"
+      />
+      <p>
+        This solution is slightly faster than the previous one, though it has
+        the same worst-case time and space complexities.<br /><br />
+        We have discussed a few of the many possible approaches to this problem.
+        One thing to remember is that you should always consider the sliding
+        window technique when facing problems similar to this one. It is
+        commonly used when you are looking for a range in an array or string
+        while following some conditions.<br /><br />
+        Now try to come up with your own methods to solve this problem and keep
+        on practicing.
       </p>
     </article>
   </main>
