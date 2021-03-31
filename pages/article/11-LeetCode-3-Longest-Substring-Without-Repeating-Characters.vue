@@ -170,50 +170,25 @@ def lengthOfLongestSubstring(s: str) -> int:
       />
       <p>
         Although, this solution is definitely faster than the previous one, it
-        has the same time and space complexity. This is because in the worst
-        case(i.e. when the answer is 1) our solution will have to process every
-        substring.<br /><br />
+        still has the same time and space complexity. This is because in the
+        worst case(i.e. when the answer is 1) our solution will have to process
+        every substring.<br /><br />
         By now, it is clear that the brute-force approach will not work. The
         constraints of the problem don't even allow an
         <strong>O(n<sup>2</sup>)</strong> solution, let alone an
-        <strong>O(n<sup>3</sup>)</strong> one.
+        <strong>O(n<sup>3</sup>)</strong> one.<br />
+        These types of problems are solved using the sliding window technique.
+        But, what does it mean?
       </p>
-      <CodeSnippet
-        code="// Java
-// import java.util.*; // For the HashMap class, it is automatically imported on LeetCode.
-public int[] twoSum(int[] nums, int target) {
-    Map<Integer, Integer> indices = new HashMap<>();
-    for(int i = 0; i < nums.length; i++) {
-        if(indices.containsKey(target - nums[i])) {
-            return new int[] {indices.get(target - nums[i]), i};
-        }
-        indices.put(nums[i], i);
-    }
-    return new int[] {-1, -1};
-}"
-        lang="language-java"
+      <img
+        src="~/assets/images/article/11/competitive11-1.png"
+        alt="Sliding Window"
+        class="mx-auto mt-6 max-w-full"
       />
-      <CodeSnippet
-        code="# Python3
-def twoSum(self, nums: List[int], target: int) -> List[int]:
-    indices = {};
-    for i in range(len(nums)):
-        if((target - nums[i]) in indices):
-            return [indices[target - nums[i]], i]
-        indices[nums[i]] = i"
-        lang="language-python"
-      />
-      <p>
-        Here we create a HashMap/Dictionary to store the indices of the array
-        elements. Then we traverse over the array while checking if we have
-        encountered <em>target - nums[i]</em> previously. If not, we store the
-        index with the array element as the key in our HashMap/Dictionary.<br /><br />
-        So now we have a solution with a time complexity of
-        <strong>O(n)</strong> making it much faster than the previous ones,
-        however it also has a space complexity of <strong>O(n)</strong> because
-        we are using additional memory for the HashMap/Dictionary proportional
-        to the size of the input array in the worst case.<br /><br />
-        So why stop here? Try some more problems and keep on learning.
+      <p class="mt-6">
+        In the diagram above, we can see a sliding window of size 5 moving
+        across the array(or string). It is not necessary for a sliding window to
+        have a constant size as long as <em>L</em> &lt;= <em>R</em>.
       </p>
     </article>
   </main>

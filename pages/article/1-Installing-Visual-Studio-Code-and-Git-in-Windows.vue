@@ -34,7 +34,7 @@
         >.
       </p>
       <img
-        src="~/assets/images/article/1/misc1-1.png"
+        src="~/assets/images/article/1/miscellaneous1-1.png"
         alt="Download VS Code"
         class="mx-auto mt-6 max-w-full"
       />
@@ -51,7 +51,7 @@
         <strong>2.29.2</strong>.
       </p>
       <img
-        src="~/assets/images/article/1/misc1-2.png"
+        src="~/assets/images/article/1/miscellaneous1-2.png"
         alt="Download Git"
         class="mx-auto mt-6 max-w-full"
       />
@@ -64,7 +64,7 @@
         Continue the rest of the steps with the default options checked.
       </p>
       <img
-        src="~/assets/images/article/1/misc1-3.png"
+        src="~/assets/images/article/1/miscellaneous1-3.png"
         alt="Choosing the default editor used by Git"
         class="mx-auto mt-6 max-w-full"
       />
@@ -82,7 +82,7 @@
         now. We will cover that in the next tutorial.
       </p>
       <img
-        src="~/assets/images/article/1/misc1-4.png"
+        src="~/assets/images/article/1/miscellaneous1-4.png"
         alt="Initialize Repository"
         class="mx-auto mt-6 max-w-full"
       />
@@ -91,7 +91,7 @@
         <strong>myFirstProject.html</strong>.<br />
       </p>
       <img
-        src="~/assets/images/article/1/misc1-5.jpg"
+        src="~/assets/images/article/1/miscellaneous1-5.jpg"
         alt="Create New File"
         class="mx-auto mt-6 max-w-full"
       />
@@ -102,7 +102,7 @@
         boilerplate code automatically. Pretty cool, huh?
       </p>
       <img
-        src="~/assets/images/article/1/misc1-6.jpg"
+        src="~/assets/images/article/1/miscellaneous1-6.jpg"
         alt="Emmet Abbreviation"
         class="mx-auto mt-6 max-w-full"
       />
@@ -117,7 +117,7 @@
       />
       <p>Run this HTML file in your browser to see the result.</p>
       <img
-        src="~/assets/images/article/1/misc1-7.png"
+        src="~/assets/images/article/1/miscellaneous1-7.png"
         alt="My First Project"
         class="mx-auto mt-6 max-w-full"
       />
@@ -128,7 +128,7 @@
         repository.<br />
       </p>
       <img
-        src="~/assets/images/article/1/misc1-8.png"
+        src="~/assets/images/article/1/miscellaneous1-8.png"
         alt="First Commit"
         class="mx-auto mt-6 max-w-full"
       />
@@ -147,7 +147,7 @@
         >.<br />
       </p>
       <img
-        src="~/assets/images/article/1/misc1-9.png"
+        src="~/assets/images/article/1/miscellaneous1-9.png"
         alt="No Staged Commits"
         class="mx-auto mt-6 max-w-full"
       />
@@ -164,7 +164,7 @@ git config --global user.email &quot;myname@example.com&quot;`"
         lang="language-powershell"
       />
       <img
-        src="~/assets/images/article/1/misc1-10.png"
+        src="~/assets/images/article/1/miscellaneous1-10.png"
         alt="Configure user.name and user.email"
         class="mx-auto mt-6 max-w-full"
       />
@@ -189,7 +189,7 @@ git config --global user.email &quot;myname@example.com&quot;`"
 import ArticleHeader from "~/components/ArticleHeader.vue";
 import CodeSnippet from "~/components/CodeSnippet.vue";
 export default {
-  name: "misc1",
+  name: "miscellaneous1",
   components: {
     ArticleHeader,
     CodeSnippet,
