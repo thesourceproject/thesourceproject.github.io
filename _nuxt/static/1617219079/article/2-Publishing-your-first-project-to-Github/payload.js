@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/article/2-Publishing-your-first-project-to-Github", {data:[{}],fetch:[],mutations:void 0});

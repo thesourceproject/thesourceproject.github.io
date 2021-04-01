@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/article/8-Using-inbuilt-data-structures-of-Java", {data:[{}],fetch:{},mutations:void 0});

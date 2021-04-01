@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/article/3-Python-fundamentals", {data:[{}],fetch:[],mutations:void 0});

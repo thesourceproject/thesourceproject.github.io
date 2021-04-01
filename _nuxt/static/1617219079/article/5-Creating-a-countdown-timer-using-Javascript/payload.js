@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/article/5-Creating-a-countdown-timer-using-Javascript", {data:[{}],fetch:[],mutations:void 0});

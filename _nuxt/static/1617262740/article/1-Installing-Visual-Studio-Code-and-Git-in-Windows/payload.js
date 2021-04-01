@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/article/1-Installing-Visual-Studio-Code-and-Git-in-Windows", {data:[{}],fetch:{},mutations:void 0});

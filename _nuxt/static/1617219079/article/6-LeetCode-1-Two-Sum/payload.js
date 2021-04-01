@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/article/6-LeetCode-1-Two-Sum", {data:[{}],fetch:[],mutations:void 0});

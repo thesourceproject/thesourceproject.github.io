@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/article/10-Handling-user-input-in-Java", {data:[{}],fetch:[],mutations:void 0});

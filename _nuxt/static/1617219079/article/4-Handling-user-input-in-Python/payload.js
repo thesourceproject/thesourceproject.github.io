@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/article/4-Handling-user-input-in-Python", {data:[{}],fetch:[],mutations:void 0});
