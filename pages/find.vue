@@ -76,6 +76,24 @@ export default {
       query: "",
       articles: [
         {
+          id: 12,
+          category: "basics",
+          title: "How to use lambda functions for custom sorting",
+          date: "4 Apr '21",
+          readTime: "5 min read",
+          fragment:
+            "Java and Python both provide an inbuilt sorting functionality that sorts items in a non-decreasing manner. But, what if we want to use a custom sorting logic?..",
+          tags: [
+            "basics",
+            "data",
+            "structures",
+            "algorithms",
+            "java",
+            "python",
+            "beginner",
+          ],
+        },
+        {
           id: 11,
           category: "competitive",
           title: "LeetCode #3 Longest Substring Without Repeating Characters",
