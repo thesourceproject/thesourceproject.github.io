@@ -59,6 +59,7 @@
       <p>
         First, we import <strong>Open Sans</strong> font-family from
         <a
+          rel="noopener noreferrer"
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://fonts.google.com/"
           target="_blank"

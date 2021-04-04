@@ -2,6 +2,7 @@
   <footer class="container mx-auto mt-24 p-4 sm:px-8">
     <section class="flex justify-between">
       <a
+        rel="noopener noreferrer"
         class="flex flex-col items-center group focus:outline-none"
         href="https://www.instagram.com/the_source_project"
         target="_blank"

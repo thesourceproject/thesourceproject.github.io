@@ -17,6 +17,7 @@
         it. Now it's time to show off your first project to the world.
       </p>
       <a
+        rel="noopener noreferrer"
         title="GitHub, Public domain, via Wikimedia Commons"
         href="https://commons.wikimedia.org/wiki/File:GitHub_logo_2013.svg"
         target="_blank"
@@ -47,6 +48,7 @@
         repository.<br />
         Sign up on
         <a
+          rel="noopener noreferrer"
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://github.com/"
           target="_blank"

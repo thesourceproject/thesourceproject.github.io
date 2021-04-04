@@ -27,6 +27,7 @@
       <p class="mt-8">
         Download VS Code from the
         <a
+          rel="noopener noreferrer"
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://code.visualstudio.com/"
           target="_blank"
@@ -43,6 +44,7 @@
         Code on your computer.<br />
         Then download Git from the
         <a
+          rel="noopener noreferrer"
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://git-scm.com/"
           target="_blank"
@@ -140,6 +142,7 @@
         ><br />
         Click <strong>Always</strong>. You can learn more about changes
         <a
+          rel="noopener noreferrer"
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository"
           target="_blank"

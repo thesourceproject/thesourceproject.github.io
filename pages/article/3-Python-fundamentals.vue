@@ -15,6 +15,7 @@
         experienced programmers.
       </p>
       <a
+        rel="noopener noreferrer"
         title="www.python.org, GPL &lt;http://www.gnu.org/licenses/gpl.html&gt;, via Wikimedia Commons"
         href="https://commons.wikimedia.org/wiki/File:Python_logo_and_wordmark.svg"
         target="_blank"
@@ -31,6 +32,7 @@
       <p class="mt-8">
         First, we need to install Python. You can download Python from the
         <a
+          rel="noopener noreferrer"
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://www.python.org/downloads/"
           target="_blank"
@@ -94,6 +96,7 @@ print(z)`"
         applications are written in Python scripts. So now we will learn how to
         use the popular text editor
         <a
+          rel="noopener noreferrer"
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://code.visualstudio.com/"
           target="_blank"

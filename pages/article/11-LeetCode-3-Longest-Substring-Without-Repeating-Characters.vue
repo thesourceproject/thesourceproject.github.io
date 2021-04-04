@@ -18,6 +18,7 @@
       <p>
         Check out
         <a
+          rel="noopener noreferrer"
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://leetcode.com/problems/longest-substring-without-repeating-characters/"
           target="_blank"
@@ -26,6 +27,7 @@
         problem on LeetCode.
       </p>
       <a
+        rel="noopener noreferrer"
         title="LeetCode, Public domain, via Wikimedia Commons"
         href="https://commons.wikimedia.org/wiki/File:LeetCode_Logo_black_with_text.svg"
         target="_blank"

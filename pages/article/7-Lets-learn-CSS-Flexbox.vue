@@ -13,6 +13,7 @@
         use it in your projects in no time.
       </p>
       <a
+        rel="noopener noreferrer"
         title="Rudloff, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons"
         href="https://commons.wikimedia.org/wiki/File:CSS3_logo_and_wordmark.svg"
         target="_blank"
@@ -478,6 +479,7 @@
         more(e.g. <em>flex-flow</em>, <em>flex-shrink</em>, <em>flex-basis</em>,
         etc) that are not used as often. You can learn more about them
         <a
+          rel="noopener noreferrer"
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox"
           target="_blank"
