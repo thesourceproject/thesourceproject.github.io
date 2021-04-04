@@ -4,7 +4,7 @@
       <ArticleHeader
         title="How to use lambda functions for custom sorting"
         date="29 Mar '21"
-        readTime="5 min read"
+        readTime="10 min read"
         :tags="[
           'basics',
           'data',
@@ -16,7 +16,7 @@
         ]"
       />
       <p>
-        Java and Python both provide an inbuilt sorting functionality that sorts
+        Java and Python provide an inbuilt sorting functionality that sorts
         items in a non-decreasing manner. But, what if we want to use a custom
         sorting logic?
       </p>
@@ -25,8 +25,6 @@
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        First, we will see a basic example of the
-        <em>sort()</em> function.<br />
         <strong>Note</strong> - This tutorial assumes you have some basic
         understanding of Java and Python. You may refer to our
         <NuxtLink
@@ -37,213 +35,163 @@
         before you continue.
       </p>
       <div class="mt-6 flex flex-col">
-        <h3 class="text-xl">Array</h3>
+        <h3 class="text-xl">Java</h3>
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
-      <p class="mt-4">
-        An array is a data structure that allows for O(1) read/write operations.
-        This is because its items are kept in contiguous memory locations which
-        makes it easy to calculate the address of any position.
-      </p>
       <CodeSnippet
-        code="array = []  # Create a new list. Same as -> array = list()
-print(array)  # []
-array.append(3)  # Add value 3 to the end of list.
-array.append(6)
-print(array)  # [3, 6]
-print(array[1])  # 6 (Get value at index 1)
-array[1] = 7  # Set value at index 1 to 7.
-print(len(array))  # 2 (Get size of list)
-print(array.pop(0))  # 3 (Remove and return value at index 0)
-print(array)  # [7]"
-        lang="language-python"
+        code="// Java
+import java.util.*; // Import 'Arrays' and 'Comparator' classes.
+class CustomSorting {
+    public static void main(String[] args) {
+        int[] array1 = { 2, 4, 1, 5, 3 }; // Declare a primitive int array.
+        Arrays.sort(array1); // Sort this array in a non-decreasing order.
+        System.out.println(Arrays.toString(array1)); // [1, 2, 3, 4, 5]
+        Integer[] array2 = { 2, 4, 1, 5, 3 }; // Declare an Integer array.
+        Arrays.sort(array2, Comparator.reverseOrder()); // Reverse the sorting order.
+        System.out.println(Arrays.toString(array2)); // [5, 4, 3, 2, 1]
+    }
+}"
+        lang="language-java"
       />
       <p>
-        In Python, a <strong>list</strong>(not to be confused with linked-list)
-        is used to store multiple items in an array-like manner. Python lists
-        are resizable by default and can store objects of any type.<br />
-        <strong>Note</strong> - Python has a module <em>array.array</em> which
-        is used to create C-like arrays which can store only a single type of
-        basic values(integers, characters, floating-point numbers). These take
-        up a lesser amount of space but are less flexible than lists.
+        The <em>java.util.Arrays</em> class of Java provides an in-place(i.e.
+        using no auxiliary space) <em>sort()</em> function that is used to sort
+        arrays in a non-decreasing manner. One big limitation of this function
+        is that
+        <strong>it can only sort generic-type arrays with a comparator</strong
+        >.<br />
+        We cannot use custom comparators or even
+        <em>Comparator.reverseOrder()</em> with primitive-type(int, long,
+        char,float, double) arrays. In that case, we can copy our array to its
+        respective wrapper-value(Integer, Long, Character, Float, Double) array
+        and apply the <em>sort()</em> function on it.
       </p>
+      <CodeSnippet
+        code="// Java
+import java.util.*;
+class CustomSorting {
+    public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(2, 4, 1, 5, 3); // Create a new list.
+        Collections.sort(list); // Sort the list with its natural order.
+        System.out.println(list); // [1, 2, 3, 4, 5]
+        Collections.sort(list, Comparator.reverseOrder()); // Reverse the sorting order.
+        System.out.println(list); // [5, 4, 3, 2, 1]
+    }
+}"
+        lang="language-java"
+      />
+      <p>
+        The Java Collections Interface also provides a similar
+        <em>sort()</em> function which can be used on any sequential
+        data-structures. It also takes an optional comparator to define the
+        sorting order.<br /><br />
+        Lambda expressions are used to create anonymous functions(i.e. which do
+        not belong to any class) which act like objects. They make the code
+        concise, especially if we only want a single functionality without
+        creating a separate class for it.<br />
+        <strong>Comparator</strong> is a functional-interface(i.e. it has only
+        one abstract method - <nobr><em>compare(T o1, T o2)</em></nobr
+        >) and can therefore be used as the assignment target for a lambda
+        expression.<br />
+        Let's understand this with an example.
+      </p>
+      <CodeSnippet
+        code="// Java
+import java.util.*; // Import 'Arrays' and 'Comparator' classes.
+
+class CompareBySecond implements Comparator<Integer[]> {
+    public int compare(Integer[] a, Integer[] b) {
+        return a[1].compareTo(b[1]); // Same as 'a[1] - b[1]' but safe from overflow.
+    }
+}
+
+public class CustomSorting {
+    public static void main(String[] args) {
+        Integer[][] array = { { 1, 2, 0 }, { 4, 1, 1 }, { 5, 0, 1 }, { 2, 5, 1 }, { 6, 3, 4 } }; // Declare a 2-D Integer array.
+        Arrays.sort(array, new CompareBySecond()); // Sort by second-indexed value.
+        System.out.println(Arrays.deepToString(array)); // [[5, 0, 1], [4, 1, 1], [1, 2, 0], [6, 3, 4], [2, 5, 1]]
+    }
+}"
+        lang="language-java"
+      />
+      <p>
+        The syntax for a lambda expression is
+        <nobr><strong>(parameter1, parameter2) -> expression</strong></nobr
+        ><br />
+        If we use a lambda expression instead, our code will look something like
+        this.
+      </p>
+      <CodeSnippet
+        code="// Java
+import java.util.*; // Import 'Arrays' and 'Comparator' classes.
+public class CustomSorting {
+    public static void main(String[] args) {
+        Integer[][] array = { { 1, 2, 0 }, { 4, 1, 1 }, { 5, 0, 1 }, { 2, 5, 1 }, { 6, 3, 4 } };
+        Arrays.sort(array, (a, b) -> a[1].compareTo(b[1])); // Pass lambda expression as comparator.
+        System.out.println(Arrays.deepToString(array)); // [[5, 0, 1], [4, 1, 1], [1, 2, 0], [6, 3, 4], [2, 5, 1]]
+    }
+}"
+        lang="language-java"
+      />
+      <p>
+        Notice how concise it looks now. No need for creating separate classes
+        for different comparators. If we wanted to sort according to the
+        third-indexed value, we simply modify the lambda expression.<br /><br />
+        We are not limited to simple expressions and can also use more complex
+        sorting logic in our lambda expressions. Simply enclose the multiple
+        statements and the return statement within curly braces.<br />
+        Suppose, we wanted to sort the integer arrays by the first-index, then
+        the second-index, and then finally the third index. Our lambda
+        expression would look like this.
+      </p>
+      <CodeSnippet
+        code="// Java
+public class CustomSorting {
+    public static void main(String[] args) {
+        Integer[][] array = { { 1, 2, 0 }, { 2, 1, 5 }, { 2, 1, 1 }, { 1, 5, 1 }, { 2, 3, 4 } };
+        Arrays.sort(array, (a, b) -> {
+            if (a[0] != b[0]) {
+                return a[0].compareTo(b[0]);
+            }
+            if (a[1] != b[1]) {
+                return a[1].compareTo(b[1]);
+            }
+            return a[2].compareTo(b[2]);
+        });
+        System.out.println(Arrays.deepToString(array)); // [[1, 2, 0], [1, 5, 1], [2, 1, 1], [2, 1, 5], [2, 3, 4]]
+    }
+}"
+        lang="language-java"
+      />
       <div class="mt-6 flex flex-col">
-        <h3 class="text-xl">Stack</h3>
+        <h3 class="text-xl">Python</h3>
         <div class="w-4 h-1 bg-background-2 rounded-full"></div>
       </div>
-      <p class="mt-4">
-        A stack is a data structure that only allows read/write operations at
-        one end(i.e. the top) in O(1) time. Stack items are accessed according
-        to the <strong>LIFO</strong>(last in first out) rule.
-      </p>
       <CodeSnippet
-        code="stack = []
-print(stack)  # []
-stack.append('A')  # Push 'A' onto the stack.
-stack.append('B')
-print(stack)  # ['A', 'B'] (Python prints lists from left to right)
-print(stack[-1])  # B (Peek at the top item without removing it)
-print(len(stack))  # 2
-print(stack.pop())  # B (Pop and return the character on top of the stack)
-print(stack)  # ['A']"
+        code="# Python3
+array1 = [2, 4, 1, 5, 3]  # Declare our array.
+array1.sort()  # Sort the array.
+print(array1)  # [1, 2, 3, 4, 5]
+array2 = [2, 4, 1, 5, 3]
+array2.sort(reverse=True)  # Reverse the sorting order.
+print(array2)  # [5, 4, 3, 2, 1]"
         lang="language-python"
       />
       <p>
-        In Python, a list can easily be used as a stack. We just have to make
-        sure that we apply push(append)/pop operations only at the end of the
-        list.
-      </p>
-      <div class="mt-6 flex flex-col">
-        <h3 class="text-xl">Queue</h3>
-        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
-      </div>
-      <p class="mt-4">
-        A queue is a data structure that allows adding(offering) items to the
-        back and removing(polling) them from the front in O(1) time. Queue items
-        are accessed according to the
-        <strong>FIFO</strong>(first in first out) rule.
+        Python lists have an in-place <em>sort()</em> function which accepts an
+        optional <em>reverse</em> parameter that reverses the sorting order.<br />
+        There's also a very helpful <em>sorted()</em> function that creates a
+        copy of the list, sorts it, and then returns it.
       </p>
       <CodeSnippet
-        code="from collections import deque  # Import the deque module.
-queue = deque()  # Create a queue.
-print(queue)  # deque([])
-queue.append('Apple')  # Add 'Apple' to the right(back of the queue)
-queue.append('Banana')
-print(queue)  # deque(['Apple', 'Banana'])
-print(queue[0])  # Apple (Peek at the first(front) item without removing it)
-print(len(queue))  # 2
-print(queue.popleft())  # Apple (Pop and return the left(first) item)
-print(queue)  # deque(['Banana'])"
+        code="# Python3
+array1 = [2, 4, 1, 5, 3]
+array2 = sorted(array1, reverse=True)  # Return a reverse-sorted copy of the list.
+print(array1)  # [2, 4, 1, 5, 3] (Original list remains unmodified)
+print(array2)  # [5, 4, 3, 2, 1]"
         lang="language-python"
       />
       <p>
-        Python lists are not suitable for implementing queues. Though it allows
-        amortized O(1) appends at one end, it takes O(n) time to remove an item
-        at the start. This is because all the subsequent items have to be
-        shifted to the left.<br />
-        Fortunately, Python contains a <strong>deque</strong> module that
-        internally uses a doubly-linked list. This allows for O(1) appends and
-        pops from both ends making it suitable for implementing both stacks and
-        queues.
-      </p>
-      <div class="mt-6 flex flex-col">
-        <h3 class="text-xl">Set</h3>
-        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
-      </div>
-      <p class="mt-4">
-        Set is an unordered data structure. This means that they do not remember
-        the order of insertion. They are used to store unique values and allow
-        lookups in O(k) time, where <strong>k</strong> is the length of the
-        key(1 in case of numbers).
-      </p>
-      <CodeSnippet
-        code="set1 = set()  # Create an empty set. Avoid using names of inbuilt functions as variable names.
-print(set1)  # set()
-set1.add(3)  # Add 3 to the set.
-set1.add(6)
-print(set1)  # {3, 6}
-print(len(set1))  # 2
-print(6 in set1)  # True (Check if 6 is in the set)
-set1.remove(6)  # Remove 6 from the set.
-print(6 in set1)  # False
-print(set1)  # {3}
-for num in set1:
-    print(num)  # Perform action for every set item."
-        lang="language-python"
-      />
-      <p>Python provides an easy to use set object using <em>set()</em>.</p>
-      <div class="mt-6 flex flex-col">
-        <h3 class="text-xl">Map</h3>
-        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
-      </div>
-      <p class="mt-4">
-        A map is a special data structure that allows mapping of unique keys to
-        a respective value. Similar to a set, it allows lookup in O(k) time
-        where
-        <strong>k</strong> is the length of the key.
-      </p>
-      <CodeSnippet
-        code="map = {}  # Create a new map(dictionary). Same as -> map = dict()
-print(map)  # {}
-map['A'] = 'Apple'  # Map the key 'A' to the value &quot;Apple&quot;
-map['B'] = 'Banana'
-print(map.setdefault('B', 'Blueberry'))  # Banana (Return the value for the key 'B'. If it does not exist, map it to the value &quot;Blueberry&quot;)
-print(map)  # {'A': 'Apple', 'B': 'Banana'}
-print(len(map))  # 2
-print('C' in map)  # False (Check if 'C' exists in the map as a key)
-print(map['A'])  # Apple (Get the value mapped for the key 'A'. Throws KeyError exception if the key does not exist)
-print(map.get('C', 'Cherry'))  # Cherry (Get the value mapped for the key 'C', if it does not exist return &quot;Cherry&quot;)
-map.pop('A')  # Remove the key 'A' and return its value. Throws KeyError exception if the key does not exist.
-print(map)  # {'B': 'Banana'}
-for key in map:  # Same as -> for key in map.keys()
-    print(key)  # Perform action for every key in map.
-for value in map.values():
-    print(value)  # Perform action for every value mapped."
-        lang="language-python"
-      />
-      <p>
-        In Python, maps are known as dictionaries. They can be created using
-        <em>{}</em> or <em>dict()</em>.
-      </p>
-      <div class="mt-6 flex flex-col">
-        <h3 class="text-xl">Heap</h3>
-        <div class="w-4 h-1 bg-background-2 rounded-full"></div>
-      </div>
-      <p class="mt-4">
-        Heap is a tree-like data structure that satisfies the heap property. It
-        means that, in a min-heap, the value of every node is greater than or
-        equal to its parent. This ensures that the root of the tree always
-        contains the smallest value and vice-versa for max-heap.<br />
-        Min-heaps allow insertion and retrieval of minimum(or maximum in case of
-        max-heaps) in O(log n) time.
-      </p>
-      <CodeSnippet
-        code="import heapq
-heap = []  # Create an empty list which will be used as a min-heap.
-heapq.heappush(heap, 2)  # Add 2 to the heap.
-heapq.heappush(heap, 5)
-heapq.heappush(heap, 1)
-print(heap)  # [1, 5, 2] (Not necessarily in sorted order but the root will always contain the smallest element in a min-heap)
-print(len(heap))  # 3
-print(heap[0])  # 1 (Peek at the root element without removing it, IndexError will be thrown if heap is empty)
-print(heapq.heappop(heap))  # 1 (Remove and return the root element, IndexError will be thrown if heap is empty)
-print(heapq.heappop(heap))  # 2
-print(heapq.heappop(heap))  # 5
-print(heap)  # []"
-        lang="language-python"
-      />
-      <p>
-        Python provides a <strong>heapq</strong> module for working with heaps.
-        An ordinary list is used to store the elements and the heap is
-        implemented using the heapq methods.<br />
-        By default, heapq implements a min-heap but we can use it as a max-heap
-        too. Simply invert the sign of each number when it is inserted and
-        restore it on removal.
-      </p>
-      <CodeSnippet
-        code="import heapq
-heap = []
-heapq.heappush(heap, (2, 3))  # Add heap items as tuples in the form of priority-value pairs.
-heapq.heappush(heap, (0, 6))
-heapq.heappush(heap, (1, 2))
-print(heap)  # [(0, 6), (2, 3), (1, 2)]"
-        lang="language-python"
-      />
-      <p>
-        If we want a different priority for each element we can store heap items
-        in tuples. The heapq functions will use the tuple's first argument to
-        compare heap items.
-      </p>
-      <CodeSnippet
-        code="import heapq
-heap = [3, 6, 1]
-heapq.heapify(heap)  # Heapify the list
-print(heap)  # [1, 6, 3]"
-        lang="language-python"
-      />
-      <p>
-        The heapq module also provides a <em>heapify()</em> function that
-        converts an existing list into a heap in O(n) time.<br /><br />
         And there you go. We have covered all the important inbuilt data
         structures of Python. Now use these to solve your algorithmic problems
         more efficiently.
@@ -269,7 +217,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Java and Python both provide an inbuilt sorting functionality which can sort items in a non-decreasing manner. But, what if we want to have a custom sorting order?",
+          "Java and Python provide an inbuilt sorting functionality that sorts items in a non-decreasing manner. But, what if we want to use a custom sorting logic?",
       },
     ],
   },

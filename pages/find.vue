@@ -80,9 +80,9 @@ export default {
           category: "basics",
           title: "How to use lambda functions for custom sorting",
           date: "4 Apr '21",
-          readTime: "5 min read",
+          readTime: "10 min read",
           fragment:
-            "Java and Python both provide an inbuilt sorting functionality that sorts items in a non-decreasing manner. But, what if we want to use a custom sorting logic?..",
+            "Java and Python provide an inbuilt sorting functionality that sorts items in a non-decreasing manner. But, what if we want to use a custom sorting logic?..",
           tags: [
             "basics",
             "data",
