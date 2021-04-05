@@ -89,7 +89,7 @@ class CustomSorting {
         not belong to any class) which act like objects. They make the code
         concise, especially if we only want a single functionality without
         creating a separate class for it.<br />
-        <strong>Comparator</strong> is a functional-interface(i.e. it has only
+        <strong>Comparator</strong> is a functional interface(i.e. it has only
         one abstract method - <nobr><em>compare(T o1, T o2)</em></nobr
         >) and can therefore be used as the assignment target for a lambda
         expression.<br />
@@ -115,9 +115,13 @@ public class CustomSorting {
         lang="language-java"
       />
       <p>
+        The <nobr><em>compare(T o1, T o2)</em></nobr> method takes in two
+        parameters and returns a value based on their comparison. A negative
+        value indicates that <em>o1</em> is smaller than <em>o2</em> and
+        vice-versa.<br />
         The syntax for a lambda expression is
-        <nobr><strong>(parameter1, parameter2) -> expression</strong></nobr
-        ><br />
+        <nobr><strong>(parameters) -> expression</strong></nobr
+        >.<br />
         If we use a lambda expression instead, our code will look something like
         this.
       </p>
@@ -181,20 +185,70 @@ print(array2)  # [5, 4, 3, 2, 1]"
         Python lists have an in-place <em>sort()</em> function which accepts an
         optional <em>reverse</em> parameter that reverses the sorting order.<br />
         There's also a very helpful <em>sorted()</em> function that creates a
-        copy of the list, sorts it, and then returns it.
+        copy of the list, sorts it, and then returns it. It supports all of the
+        optional parameters of <em>sort()</em>.
       </p>
       <CodeSnippet
         code="# Python3
 array1 = [2, 4, 1, 5, 3]
-array2 = sorted(array1, reverse=True)  # Return a reverse-sorted copy of the list.
+array2 = sorted(array1)  # Return a sorted copy of the list.
 print(array1)  # [2, 4, 1, 5, 3] (Original list remains unmodified)
-print(array2)  # [5, 4, 3, 2, 1]"
+print(array2)  # [1, 2, 3, 4, 5]"
         lang="language-python"
       />
       <p>
-        And there you go. We have covered all the important inbuilt data
-        structures of Python. Now use these to solve your algorithmic problems
-        more efficiently.
+        Python has a <em>lambda</em> keyword that is used to define
+        anonymous(nameless) functions. Its syntax is
+        <nobr
+          ><strong><em>lambda</em> parameters: expression</strong></nobr
+        >. There are no parentheses around the parameters.<br />
+        We can customize the sorting order of <em>sort()</em> using the
+        <em>key</em> parameter.
+      </p>
+      <CodeSnippet
+        code="# Python3
+array = [[1, 2, 0], [2, 1, 5], [2, 1, 1], [1, 5, 1], [2, 3, 4]]
+array.sort(key=lambda a: -a[1])  # Reverse-sort using the second-indexed value.
+print(array)  # [[1, 5, 1], [2, 3, 4], [1, 2, 0], [2, 1, 5], [2, 1, 1]]"
+        lang="language-python"
+      />
+      <p>
+        The <em>key</em> parameter of <em>sort()</em> takes in a single-argument
+        function that returns a key determining the sort order. Items with
+        smaller keys will be placed before the items with larger keys.<br /><br />
+        If we have multiple criteria, we can return tuples. Suppose, we wanted
+        to sort the integer arrays by the third-index, then the second-index,
+        and then finally the first index. Our lambda expression would look like
+        this.
+      </p>
+      <CodeSnippet
+        code="# Python3
+array = [[1, 2, 0], [3, 1, 1], [2, 1, 1], [1, 5, 1], [2, 3, 4]]
+array.sort(key=lambda a: (a[2], a[1], a[0]))  # Tuples are checked from left to right.
+print(array)  # [[1, 2, 0], [2, 1, 1], [3, 1, 1], [1, 5, 1], [2, 3, 4]]"
+        lang="language-python"
+      />
+      <p>
+        One limitation of lambda functions in Python is that we cannot have
+        multiple statements in the expression. In that case, we can use an
+        ordinary single-argument function and pass it as the <em>key</em>.<br />
+        Here, we want to sort integers based on the last digit of their squares.
+      </p>
+      <CodeSnippet
+        code="# Python3
+array = [1, 2, 3, 4, 5]
+def squareLastDigit(num):
+    square = num * num
+    return square % 10
+array.sort(key=squareLastDigit)  # Pass our comparison function as the 'key' parameter.
+print(array)  # [1, 2, 5, 4, 3]"
+        lang="language-python"
+      />
+      <p>
+        The <em>sort()</em> function is one of the most commonly used ones.
+        Knowing how to use it is essential, especially in competitive
+        programming.<br />
+        Now keep on practicing.
       </p>
     </article>
   </main>
