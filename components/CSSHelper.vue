@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-10 my-6">
+  <div class="sm:mx-10 my-6">
     <div
       class="mb-6 bg-code-1 rounded-md text-code-2 grid gap-4 font-mono whitespace-nowrap overflow-x-auto"
     >
