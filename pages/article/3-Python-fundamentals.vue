@@ -170,9 +170,9 @@ print(a1, a2, a3, sep=', ')`"
       />
       <p>
         Now we can reuse our <em>simpleInterest</em> function as many times as
-        needed. Also if we have to modify the logic we only need to do it in one
-        place. Therefore, this code is a lot more maintainable than the previous
-        one.<br />
+        needed. Also, if we have to modify the logic we only need to do it in
+        one place. Therefore, this code is a lot more maintainable than the
+        previous one.<br />
         <strong>Note</strong> - It is <strong>necessary</strong> to add
         white-space when starting a new block of code, like after declaring a
         function, loop, or an if-else statement. Using camel-case for
