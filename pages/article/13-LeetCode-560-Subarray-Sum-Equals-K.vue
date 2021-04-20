@@ -63,10 +63,10 @@
         array. For example, [1, 2] and [1, 2, 3] are subarrays of [0, 1, 2,
         3].<br />
         Before finding an optimal solution to a problem, we should always try
-        the brute-force technique. It helps us understand the problem better. We
-        will start by checking every subarray whether it adds up to the given
+        the brute-force technique. It helps us understand it better. We will
+        start by checking every subarray whether it adds up to the given
         target.<br />
-        <strong>Note</strong> - This is an intermediate level problem. If you
+        <strong>Note</strong> - This is an intermediate-level problem. If you
         are a beginner, you might want to solve
         <NuxtLink
           class="text-text-3 hover:underline focus:underline focus:outline-none"
@@ -109,10 +109,9 @@ def subarraySum(nums: List[int], k: int) -> int:
         lang="language-python"
       />
       <p>
-        Clearly, this solution takes <strong>O(n<sup>3</sup>)</strong> time as
-        result of the three nested for-loops. No extra space is required for
-        this.<br />
-        We can make a simple optimisation to this. Instead of running a loop to
+        This solution takes <strong>O(n<sup>3</sup>)</strong> time due to the
+        three nested for-loops. No extra space is necessary for this.<br />
+        We can make a simple optimization to this. Instead of running a loop to
         find the sum of every subarray, we can obtain it directly using a
         prefix-sum array. We will modify the original array to store the
         cumulative sum of all numbers until that index.<br />
@@ -168,7 +167,7 @@ def subarraySum(nums: List[int], k: int) -> int:
         is either <strong>O(n)</strong> or <strong>O(1)</strong> depending on
         whether or not modifying the original array counts as using extra
         space.<br />
-        This solution is much faster than the previous one, but still too
+        This solution is much faster than the previous one but still too
         slow.<br /><br />
         At first glance, this problem might appear to be solvable with the
         <NuxtLink
@@ -177,27 +176,27 @@ def subarraySum(nums: List[int], k: int) -> int:
           >sliding window technique</NuxtLink
         >, but it's not the case. Let's see why. Suppose, we have a large array
         like [1, -1, 1, -1......1, -1, 1] and the target sum is 0. The number of
-        subarrays with equal number of 0's and 1's are of an order of
+        subarrays with an equal number of 0's and 1's are of an order of
         <strong>n<sup>2</sup></strong
-        >. A sliding window will not be able count all of these. This is because
-        a sliding window expands towards the right and shrinks from the left
-        <strong>n</strong> times each.<br />
+        >. A sliding window will not be able to count all of these. This is
+        because a sliding window expands towards the right and shrinks from the
+        left <strong>n</strong> times each.<br />
         Let's consider the previous example again. [1, -1, 1, -1, 1, -1] can be
         modified to a prefix-sum array [1, 0, 1, 0, 1, 0]. If the target sum is
         0, the subarrays will be 9 in total. Let's traverse our prefix-sum array
         <em>sum</em> from left to right to see if we can find a pattern.<br /><br />
-        At <em>nums[0]</em> our <em>rSum</em> is 1. In order to obtain 0 as the
-        final sum, we need to find an <em>lSum</em> equal to 1(i.e. 1 - 1 = 0).
-        As this is the first index, we cannot find a non-zero <em>lSum</em> to
-        the left.<br />
+        At <em>nums[0]</em> our <em>rSum</em> is 1. To obtain 0 as the final
+        sum, we need to find an <em>lSum</em> equal to 1(i.e. 1 - 1 = 0). As
+        this is the first index, we cannot find a non-zero <em>lSum</em> to the
+        left.<br />
         At <em>nums[1]</em> our <em>rSum</em> is 0. We need to find an
         <em>lSum</em> equal to 0. This time, the <em>lSum</em> before the first
-        index(initial sum) is equal to zero. So, we have obtained 1 subarray so
-        far.<br />
+        index(initial sum) is equal to zero. So, we have obtained one subarray
+        so far.<br />
         At <em>nums[2]</em>, our <em>rSum</em> is 1. We have already encountered
         a 1 before and can obtain another subarray, bringing our tally to 2.<br />
         At <em>nums[3]</em>, our <em>rSum</em> is 0. We have encountered 0
-        twice(before the first index and at index-1) and can obtain 2 more
+        twice(before the first index and at index-1) and can obtain two more
         zero-sum subarrays.<br />
         We repeat this process for the remaining elements to find a total of 9
         subarrays.<br /><br />
@@ -243,9 +242,9 @@ def subarraySum(nums: List[int], k: int) -> int:
         This solution has the optimal <strong>O(n)</strong> time complexity. It
         also uses <strong>O(n)</strong> extra space for the
         <em>count</em> map/dictionary.<br />
-        The problem turned out to be much simpler than it looked. We simply
-        started from the brute-force technique and optimized it little by little
-        by observing patterns.<br /><br />
+        The problem turned out to be much simpler than it looked. We started
+        from the brute-force technique and optimized it further and further by
+        observing patterns.<br /><br />
         Hooray! You've solved a medium-level problem. But don't stop here and
         try some more problems.
       </p>
