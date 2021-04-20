@@ -82,7 +82,7 @@ export default {
           date: "19 Apr '21",
           readTime: "10 min read",
           fragment:
-            "Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k...",
+            "Check out this problem on LeetCode. Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k...",
           tags: [
             "competitive",
             "data",
