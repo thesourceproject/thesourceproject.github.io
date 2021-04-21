@@ -1,7 +1,7 @@
 <!doctype html>
 <html data-n-head-ssr>
   <head>
-    <title>LeetCode #560 Subarray Sum Equals K | The Source Project</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="google-site-verification" name="google-site-verification" content="NBXKl5RAGYQH3Rp9PKrszzdV4bRMOLkHjIjvfNDo2xE"><meta data-n-head="ssr" data-hid="description" name="description" content="Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k."><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&family=Ubuntu+Mono&display=swap"><link rel="preload" href="/_nuxt/5a581fa.js" as="script"><link rel="preload" href="/_nuxt/84f9ad6.js" as="script"><link rel="preload" href="/_nuxt/css/80717b5.css" as="style"><link rel="preload" href="/_nuxt/bababfc.js" as="script"><link rel="preload" href="/_nuxt/css/5d81c44.css" as="style"><link rel="preload" href="/_nuxt/8e6facb.js" as="script"><link rel="preload" href="/_nuxt/7399833.js" as="script"><link rel="stylesheet" href="/_nuxt/css/80717b5.css"><link rel="stylesheet" href="/_nuxt/css/5d81c44.css"><link rel="preload" href="/_nuxt/static/1618949658/article/13-LeetCode-560-Subarray-Sum-Equals-K/state.js" as="script"><link rel="preload" href="/_nuxt/static/1618949658/article/13-LeetCode-560-Subarray-Sum-Equals-K/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1618949658/manifest.js" as="script">
+    <title>LeetCode #560 Subarray Sum Equals K | The Source Project</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="google-site-verification" name="google-site-verification" content="NBXKl5RAGYQH3Rp9PKrszzdV4bRMOLkHjIjvfNDo2xE"><meta data-n-head="ssr" data-hid="description" name="description" content="Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k."><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&family=Ubuntu+Mono&display=swap"><link rel="preload" href="/_nuxt/b01e194.js" as="script"><link rel="preload" href="/_nuxt/84f9ad6.js" as="script"><link rel="preload" href="/_nuxt/css/80717b5.css" as="style"><link rel="preload" href="/_nuxt/bababfc.js" as="script"><link rel="preload" href="/_nuxt/css/5d81c44.css" as="style"><link rel="preload" href="/_nuxt/8e6facb.js" as="script"><link rel="preload" href="/_nuxt/3e001f8.js" as="script"><link rel="stylesheet" href="/_nuxt/css/80717b5.css"><link rel="stylesheet" href="/_nuxt/css/5d81c44.css"><link rel="preload" href="/_nuxt/static/1619016238/article/13-LeetCode-560-Subarray-Sum-Equals-K/state.js" as="script"><link rel="preload" href="/_nuxt/static/1619016238/article/13-LeetCode-560-Subarray-Sum-Equals-K/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1619016238/manifest.js" as="script">
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="min-h-screen flex flex-col bg-background-1 text-text-1 font-body break-words transition-colors light"><header class="container mx-auto px-4 py-6 sm:px-8 flex items-center justify-between"><a href="/" class="font-title text-lg text-text-4 nuxt-link-active"><span class="select-none">TheSourceProject<strong class="text-text-3">_</strong></span></a> <nav class="hidden md:inline mx-auto"><a href="/" class="hover:underline focus:underline focus:outline-none nuxt-link-active">Home</a> <a href="/about-us" class="ml-4 hover:underline focus:underline focus:outline-none">About Us
@@ -31,7 +31,7 @@
         array. For example, [1, 2] and [1, 2, 3] are subarrays of [0, 1, 2,
         3].<br>
         Before finding an optimal solution to a problem, we should always try
-        the brute-force technique. It helps us understand it better. We will
+        the brute-force technique. It will help us understand it better. We will
         start by checking every subarray whether it adds up to the given
         target.<br> <strong>Note</strong> - This is an intermediate-level problem. If you
         are a beginner, you might want to solve
@@ -115,16 +115,16 @@ def subarraySum(nums: List[int], k: int) -> int:
         This solution is much faster than the previous one but still too
         slow.<br><br>
         At first glance, this problem might appear to be solvable with the
-        <a href="/article/11-LeetCode-3-Longest-Substring-Without-Repeating-Characters" class="text-text-3 hover:underline focus:underline focus:outline-none">sliding window technique</a>, but it's not the case. Let's see why. Suppose, we have a large array
-        like [1, -1, 1, -1......1, -1, 1] and the target sum is 0. The number of
-        subarrays with an equal number of 0's and 1's are of an order of
-        <strong>n<sup>2</sup></strong>. A sliding window will not be able to count all of these. This is
+        <a href="/article/11-LeetCode-3-Longest-Substring-Without-Repeating-Characters" class="text-text-3 hover:underline focus:underline focus:outline-none">sliding window technique</a>, but that is not the case. Let's see why. Suppose, we have a large
+        array like [1, -1, 1, -1......1, -1, 1] and the target sum is 0. The
+        number of subarrays with an equal number of 0's and 1's are of an order
+        of <strong>n<sup>2</sup></strong>. A sliding window will not be able to count all of these. This is
         because a sliding window expands towards the right and shrinks from the
         left <strong>n</strong> times each.<br>
         Let's consider the previous example again. [1, -1, 1, -1, 1, -1] can be
         modified to a prefix-sum array [1, 0, 1, 0, 1, 0]. If the target sum is
         0, the subarrays will be 9 in total. Let's traverse our prefix-sum array
-        <em>sum</em> from left to right to see if we can find a pattern.<br><br>
+        from left to right to see if we can find a pattern.<br><br>
         At <em>nums[0]</em> our <em>rSum</em> is 1. To obtain 0 as the final
         sum, we need to find an <em>lSum</em> equal to 1(i.e. 1 - 1 = 0). As
         this is the first index, we cannot find a non-zero <em>lSum</em> to the
@@ -173,13 +173,13 @@ def subarraySum(nums: List[int], k: int) -> int:
         This solution has the optimal <strong>O(n)</strong> time complexity. It
         also uses <strong>O(n)</strong> extra space for the
         <em>count</em> map/dictionary.<br>
-        The problem turned out to be much simpler than it looked. We started
-        from the brute-force technique and optimized it further and further by
-        observing patterns.<br><br>
+        The problem turned out to be much simpler than it looked initially. We
+        started from the brute-force technique and optimized it further and
+        further.<br><br>
         Hooray! You've solved a medium-level problem. But don't stop here and
         try some more problems.
       </p></article></main> <footer class="container mx-auto mt-24 p-4 sm:px-8"><section class="flex justify-between"><a rel="noopener noreferrer" href="https://www.instagram.com/the_source_project" target="_blank" class="flex flex-col items-center group focus:outline-none"><p>Follow Us On</p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a> <a href="/about-us" class="flex flex-col items-center group focus:outline-none"><p>About Us</p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></a> <button href="https://www.instagram.com/the_source_project" target="_blank" class="flex flex-col items-center group focus:outline-none"><p>Back To Top</p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none" stroke="currentColor" stroke-width="25" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce focus:outline-none"><circle cx="250.22" cy="250.39" r="236.49"></circle> <path d="M183.31 283.89l65.81-69.12 68.01 71.24" stroke-miterlimit="10" stroke-linecap="round"></path></svg></button></section> <p class="mt-4 text-center text-sm opacity-75">
     2021, The Source Project
-  </p></footer></div></div></div><script defer src="/_nuxt/static/1618949658/article/13-LeetCode-560-Subarray-Sum-Equals-K/state.js"></script><script src="/_nuxt/5a581fa.js" defer></script><script src="/_nuxt/7399833.js" defer></script><script src="/_nuxt/84f9ad6.js" defer></script><script src="/_nuxt/bababfc.js" defer></script><script src="/_nuxt/8e6facb.js" defer></script>
+  </p></footer></div></div></div><script defer src="/_nuxt/static/1619016238/article/13-LeetCode-560-Subarray-Sum-Equals-K/state.js"></script><script src="/_nuxt/b01e194.js" defer></script><script src="/_nuxt/3e001f8.js" defer></script><script src="/_nuxt/84f9ad6.js" defer></script><script src="/_nuxt/bababfc.js" defer></script><script src="/_nuxt/8e6facb.js" defer></script>
   </body>
 </html>
