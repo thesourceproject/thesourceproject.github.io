@@ -63,7 +63,7 @@
         array. For example, [1, 2] and [1, 2, 3] are subarrays of [0, 1, 2,
         3].<br />
         Before finding an optimal solution to a problem, we should always try
-        the brute-force technique. It helps us understand it better. We will
+        the brute-force technique. It will help us understand it better. We will
         start by checking every subarray whether it adds up to the given
         target.<br />
         <strong>Note</strong> - This is an intermediate-level problem. If you
@@ -174,17 +174,17 @@ def subarraySum(nums: List[int], k: int) -> int:
           class="text-text-3 hover:underline focus:underline focus:outline-none"
           to="/article/11-LeetCode-3-Longest-Substring-Without-Repeating-Characters"
           >sliding window technique</NuxtLink
-        >, but it's not the case. Let's see why. Suppose, we have a large array
-        like [1, -1, 1, -1......1, -1, 1] and the target sum is 0. The number of
-        subarrays with an equal number of 0's and 1's are of an order of
-        <strong>n<sup>2</sup></strong
+        >, but that is not the case. Let's see why. Suppose, we have a large
+        array like [1, -1, 1, -1......1, -1, 1] and the target sum is 0. The
+        number of subarrays with an equal number of 0's and 1's are of an order
+        of <strong>n<sup>2</sup></strong
         >. A sliding window will not be able to count all of these. This is
         because a sliding window expands towards the right and shrinks from the
         left <strong>n</strong> times each.<br />
         Let's consider the previous example again. [1, -1, 1, -1, 1, -1] can be
         modified to a prefix-sum array [1, 0, 1, 0, 1, 0]. If the target sum is
         0, the subarrays will be 9 in total. Let's traverse our prefix-sum array
-        <em>sum</em> from left to right to see if we can find a pattern.<br /><br />
+        from left to right to see if we can find a pattern.<br /><br />
         At <em>nums[0]</em> our <em>rSum</em> is 1. To obtain 0 as the final
         sum, we need to find an <em>lSum</em> equal to 1(i.e. 1 - 1 = 0). As
         this is the first index, we cannot find a non-zero <em>lSum</em> to the
@@ -242,9 +242,9 @@ def subarraySum(nums: List[int], k: int) -> int:
         This solution has the optimal <strong>O(n)</strong> time complexity. It
         also uses <strong>O(n)</strong> extra space for the
         <em>count</em> map/dictionary.<br />
-        The problem turned out to be much simpler than it looked. We started
-        from the brute-force technique and optimized it further and further by
-        observing patterns.<br /><br />
+        The problem turned out to be much simpler than it looked initially. We
+        started from the brute-force technique and optimized it further and
+        further.<br /><br />
         Hooray! You've solved a medium-level problem. But don't stop here and
         try some more problems.
       </p>
