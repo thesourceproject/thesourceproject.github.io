@@ -1,7 +1,18 @@
 <template>
   <main>
     <label
-      class="mx-auto w-full max-w-md px-6 py-4 rounded-full flex items-center bg-background-4 text-text-3"
+      class="
+        mx-auto
+        w-full
+        max-w-md
+        px-6
+        py-4
+        rounded-full
+        flex
+        items-center
+        bg-background-4
+        text-text-3
+      "
       ><button v-if="query" class="focus:outline-none" @click="query = ''">
         <svg
           class="h-4 w-4"
@@ -27,7 +38,13 @@
       </svg>
       <input
         type="text"
-        class="ml-3 w-full bg-transparent placeholder-current focus:outline-none"
+        class="
+          ml-3
+          w-full
+          bg-transparent
+          placeholder-current
+          focus:outline-none
+        "
         placeholder="Type in something"
         v-model.trim="query"
       />
@@ -75,6 +92,16 @@ export default {
       fuse: null,
       query: "",
       articles: [
+        {
+          id: 14,
+          category: "backend",
+          title: "Installing MySQL on Windows",
+          date: "11 Jun '21",
+          readTime: "5 min read",
+          fragment:
+            "Check out this problem on LeetCode. Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k...",
+          tags: ["backend", "database", "sql", "windows", "beginner"],
+        },
         {
           id: 13,
           category: "competitive",

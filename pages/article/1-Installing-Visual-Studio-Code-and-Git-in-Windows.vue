@@ -49,7 +49,8 @@
           href="https://git-scm.com/"
           target="_blank"
           >official website</a
-        >. At the time of writing this article, the latest version available is
+        >.<br />
+        At the time of writing this article, the latest version available is
         <strong>2.29.2</strong>.
       </p>
       <img
