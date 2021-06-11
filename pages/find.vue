@@ -100,7 +100,7 @@ export default {
           readTime: "5 min read",
           fragment:
             "Check out this problem on LeetCode. Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k...",
-          tags: ["backend", "database", "sql", "windows", "beginner"],
+          tags: ["backend", "database", "sql", "mysql", "windows", "beginner"],
         },
         {
           id: 13,

@@ -9,6 +9,8 @@ import Prism from "~/plugins/prism";
 import "prismjs/components/prism-powershell";
 import "prismjs/components/prism-python";
 import "prismjs/components/prism-java";
+import "prismjs/components/prism-ini";
+import "prismjs/components/prism-sql";
 export default {
   name: "CodeSnippet",
   props: ["code", "lang"],

@@ -1,11 +1,31 @@
 <template>
   <main>
     <section
-      class="bg-background-3 p-8 rounded-3xl flex items-center flex-col-reverse md:flex-row justify-evenly"
+      class="
+        bg-background-3
+        p-8
+        rounded-3xl
+        flex
+        items-center
+        flex-col-reverse
+        md:flex-row
+        justify-evenly
+      "
     >
       <div class="flex flex-col">
         <p
-          class="mt-6 md:mt-0 text-text-2 text-2xl leading-relaxed md:text-xl md:leading-relaxed lg:text-2xl lg:leading-loose xl:text-3xl xl:leading-extra-loose"
+          class="
+            mt-6
+            md:mt-0
+            text-text-2 text-2xl
+            leading-relaxed
+            md:text-xl
+            md:leading-relaxed
+            lg:text-2xl
+            lg:leading-loose
+            xl:text-3xl
+            xl:leading-extra-loose
+          "
         >
           Collection of free<br />
           tutorials to level-up<br />
@@ -13,7 +33,20 @@
         </p>
         <NuxtLink
           to="/find"
-          class="mt-4 lg:mt-6 self-center md:self-start bg-background-2 py-3 px-6 md:text-sm lg:text-base xl:text-lg rounded-full text-text-2"
+          class="
+            mt-4
+            lg:mt-6
+            self-center
+            md:self-start
+            bg-background-2
+            py-3
+            px-6
+            md:text-sm
+            lg:text-base
+            xl:text-lg
+            rounded-full
+            text-text-2
+          "
         >
           Get Started
         </NuxtLink>
@@ -30,7 +63,17 @@
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <div
-        class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8 text-text-2 text-xl"
+        class="
+          mt-8
+          grid
+          sm:grid-cols-2
+          md:grid-cols-3
+          lg:grid-cols-4
+          xl:grid-cols-5
+          2xl:grid-cols-6
+          gap-8
+          text-text-2 text-xl
+        "
       >
         <NuxtLink
           v-for="category in categories"
@@ -41,7 +84,13 @@
         >
           <p>{{ category.name }}</p>
           <svg
-            class="mt-auto ml-auto h-5 w-5 group-hover:animate-shake group-focus:animate-shake"
+            class="
+              mt-auto
+              ml-auto
+              h-5
+              w-5
+              group-hover:animate-shake group-focus:animate-shake
+            "
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
           >
@@ -64,6 +113,7 @@ export default {
         { id: "basics", name: "Programming Basics" },
         { id: "competitive", name: "Competitive Programming" },
         { id: "frontend", name: "Frontend Development" },
+        { id: "backend", name: "Backend Development" },
         { id: "miscellaneous", name: "Miscellaneous" },
       ],
     };

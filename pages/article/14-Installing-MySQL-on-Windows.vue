@@ -5,7 +5,7 @@
         title="Installing MySQL on Windows"
         date="11 Jun '21"
         readTime="5 min read"
-        :tags="['backend', 'database', 'sql', 'windows', 'beginner']"
+        :tags="['backend', 'database', 'sql', 'mysql', 'windows', 'beginner']"
       />
       <p>
         If you are starting out with backend development or just want to dabble
@@ -34,13 +34,24 @@
         <strong>8.0.25</strong>.
       </p>
       <img
-        src="~/assets/images/article/14/backend-1.png"
+        src="~/assets/images/article/14/backend14-1.png"
         alt="Download MySQL Community Server"
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">
-        Extract this ZIP file and create an option file named
-        <strong>my.ini</strong> in it. Paste the following in this file.
+        Extract this ZIP archive and create an option file named
+        <strong>my.ini</strong> in it. Then, create an empty directory named
+        <strong>data</strong> anywhere on your system.
+      </p>
+      <img
+        src="~/assets/images/article/14/backend14-2.png"
+        alt="Create the option file name my.ini"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        Now, open the
+        <strong>my.ini</strong> file using notepad or any other text-editor and
+        paste the following.
       </p>
       <CodeSnippet
         :code="`[mysqld]
@@ -48,17 +59,112 @@
 basedir=E:/mysql
 # set datadir to the location of your data directory
 datadir=E:/mydata/data`"
+        lang="language-ini"
+      />
+      <p>
+        Don't forget to replace the above paths with the actual ones. Here,
+        <em>basedir</em> refers to the location where your extracted the ZIP
+        archive.<br />
+        <strong>Note</strong> - You can the shorten the name of your extracted
+        folder to just <strong>mysql</strong> as in the example. It will make it
+        easier to access it using the command-line.<br /><br />
+        Now, open the <strong>bin</strong> folder inside the
+        <strong>mysql</strong> folder in <strong>Windows PowerShell</strong>.
+        You can do this by pressing and holding <strong>shift</strong> and
+        <strong>right-clicking</strong> the folder. In the context-menu it will
+        give you an option saying <strong>Open PowerShell window here</strong>.
+      </p>
+      <img
+        src="~/assets/images/article/14/backend14-3.png"
+        alt="Initialize MySQL"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        Enter the following two commands in the PowerShell window.
+      </p>
+      <CodeSnippet
+        :code="`./mysqld.exe --initialize-insecure
+./mysqld.exe`"
         lang="language-powershell"
       />
       <p>
-        This solution has the optimal <strong>O(n)</strong> time complexity. It
-        also uses <strong>O(n)</strong> extra space for the
-        <em>count</em> map/dictionary.<br />
-        The problem turned out to be much simpler than it looked initially. We
-        started from the brute-force technique and optimized it further and
-        further.<br /><br />
-        Hooray! You've solved a medium-level problem. But don't stop here and
-        try some more problems.
+        The first command will initialize the data directory without a root
+        password. The second command will start the MySQL server. Now, let's
+        access our MySQL installation using the command-line client.<br /><br />
+        Leave this window running and open another PowerShell window in the same
+        directory. Then, run the following command. Notice that this time it's
+        <strong>mysql</strong> and not <strong>mysqld</strong>.
+      </p>
+      <CodeSnippet :code="`./mysql.exe -u root`" lang="language-powershell" />
+      <p>
+        You will be logged into MySQL as the root user. Before creating any new
+        databases, we should set a password for the root user.
+      </p>
+      <img
+        src="~/assets/images/article/14/backend14-4.png"
+        alt="Set the root password"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        Enter the following command in MySQL. Replace
+        <strong>root-password</strong> with any password of your choice.
+      </p>
+      <CodeSnippet
+        :code="`ALTER USER 'root'@'localhost' IDENTIFIED BY 'root-password';`"
+        lang="language-sql"
+      />
+      <p>
+        Now, exit MySQL by typing <strong>exit</strong> and login again using
+        the new password.
+      </p>
+      <CodeSnippet
+        :code="`./mysql.exe -u root -p`"
+        lang="language-powershell"
+      />
+      <p>
+        You will be prompted for the root password. We are now ready to play
+        around with some SQL.<br />
+        Type the following SQL queries in command-line.
+      </p>
+      <CodeSnippet
+        :code="`CREATE DATABASE classroom;
+USE classroom;
+CREATE TABLE student (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(20), marks TINYINT UNSIGNED);
+INSERT INTO student (name, marks) VALUES ('Ryan Smith', 25), ('James Adams', 33), ('Jeremy Williams', 29);`"
+        lang="language-sql"
+      />
+      <p>Now, we have created a database "classroom" and a table "student".</p>
+      <img
+        src="~/assets/images/article/14/backend14-5.png"
+        alt="Set the root password"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        Let's see the contents of the <strong>student</strong> table. Enter
+        these SQL queries.
+      </p>
+      <CodeSnippet
+        :code="`SELECT * FROM student;
+DELETE FROM student WHERE name = &quot;James Adams&quot;;
+SELECT * FROM student;`"
+        lang="language-sql"
+      />
+      <p>
+        We deleted a row using the <strong>DELETE</strong> query. Now, our table
+        looks like this.
+      </p>
+      <img
+        src="~/assets/images/article/14/backend14-6.png"
+        alt="Set the root password"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        We can see that our MySQL installation works like a charm. It's also
+        very easy to upgrade to a newer version later. Just extract the new ZIP
+        archive and create an option file just like this one's while refering to
+        the same data directory.<br /><br />
+        We have installed MySQL in Windows in the simplest way possible. Now,
+        why not play around with some SQL queries on your own?
       </p>
     </article>
   </main>
