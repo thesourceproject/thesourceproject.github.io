@@ -8,19 +8,18 @@
         :tags="['backend', 'database', 'sql', 'mysql', 'windows', 'beginner']"
       />
       <p>
-        If you are starting out with backend development or just want to dabble
-        a bit in SQL, you need to understand about databases. In this tutorial,
-        we will learn how to install the world's most popular database on
-        Windows.
+        If you are starting with backend development or just want to dabble in
+        SQL, you need to understand databases. In this tutorial, we will learn
+        how to install the world's most popular database on Windows.
       </p>
       <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        MySQL comes with its own installer that can simplify the process but I
-        prefer to use the ZIP archive as it offers more flexibility and can be
-        easily removed if not needed.<br /><br />
+        MySQL also comes with an installer that can simplify the process though
+        I prefer to use the ZIP archive as it offers more flexibility and can
+        easily be upgraded or removed.<br /><br />
         Download MySQL Community Server from the
         <a
           rel="noopener noreferrer"
@@ -40,7 +39,7 @@
       />
       <p class="mt-6">
         Extract this ZIP archive and create an option file named
-        <strong>my.ini</strong> in it. Then, create an empty directory named
+        <strong>my.ini</strong> in it. Then, create an empty directory
         <strong>data</strong> anywhere on your system.
       </p>
       <img
@@ -50,7 +49,7 @@
       />
       <p class="mt-6">
         Now, open the
-        <strong>my.ini</strong> file using notepad or any other text-editor and
+        <strong>my.ini</strong> file using notepad or any other text editor and
         paste the following.
       </p>
       <CodeSnippet
@@ -63,15 +62,15 @@ datadir=E:/mydata/data`"
       />
       <p>
         Don't forget to replace the above paths with the actual ones. Here,
-        <em>basedir</em> refers to the location where your extracted the ZIP
+        <em>basedir</em> refers to the location where you extracted the ZIP
         archive.<br />
-        <strong>Note</strong> - You can the shorten the name of your extracted
-        folder to just <strong>mysql</strong> as in the example. It will make it
-        easier to access it using the command-line.<br /><br />
+        <strong>Note</strong> - You can shorten the name of your extracted
+        folder to just <strong>mysql</strong> as in the example. It can make it
+        easier to access it using the command line.<br /><br />
         Now, open the <strong>bin</strong> folder inside the
         <strong>mysql</strong> folder in <strong>Windows PowerShell</strong>.
         You can do this by pressing and holding <strong>shift</strong> and
-        <strong>right-clicking</strong> the folder. In the context-menu it will
+        <strong>right-clicking</strong> the folder. In the context menu, it will
         give you an option saying <strong>Open PowerShell window here</strong>.
       </p>
       <img
@@ -92,12 +91,12 @@ datadir=E:/mydata/data`"
         password. The second command will start the MySQL server. Now, let's
         access our MySQL installation using the command-line client.<br /><br />
         Leave this window running and open another PowerShell window in the same
-        directory. Then, run the following command. Notice that this time it's
+        directory. Then, run the following command. Notice this time it's
         <strong>mysql</strong> and not <strong>mysqld</strong>.
       </p>
       <CodeSnippet :code="`./mysql.exe -u root`" lang="language-powershell" />
       <p>
-        You will be logged into MySQL as the root user. Before creating any new
+        You will log in to MySQL as the root user. Before creating any new
         databases, we should set a password for the root user.
       </p>
       <img
@@ -124,7 +123,7 @@ datadir=E:/mydata/data`"
       <p>
         You will be prompted for the root password. We are now ready to play
         around with some SQL.<br />
-        Type the following SQL queries in command-line.
+        Type the following SQL queries in command line.
       </p>
       <CodeSnippet
         :code="`CREATE DATABASE classroom;
@@ -160,9 +159,9 @@ SELECT * FROM student;`"
       />
       <p class="mt-6">
         We can see that our MySQL installation works like a charm. It's also
-        very easy to upgrade to a newer version later. Just extract the new ZIP
-        archive and create an option file just like this one's while refering to
-        the same data directory.<br /><br />
+        easy to upgrade to a newer version later. Just extract the new ZIP
+        archive and create an option file like this one while referring to the
+        same data directory.<br /><br />
         We have installed MySQL in Windows in the simplest way possible. Now,
         why not play around with some SQL queries on your own?
       </p>
@@ -186,7 +185,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "If you are starting out with backend development or just want to dabble a bit in SQL, you need to understand about databases. In this tutorial, we will learn how to install the world's most popular database on Windows.",
+          "If you are starting with backend development or just want to dabble in SQL, you need to understand databases. In this tutorial, we will learn how to install the world's most popular database on Windows.",
       },
     ],
   },

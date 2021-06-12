@@ -99,7 +99,7 @@ export default {
           date: "11 Jun '21",
           readTime: "5 min read",
           fragment:
-            "Check out this problem on LeetCode. Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k...",
+            "If you are starting with backend development or just want to dabble in SQL, you need to understand databases. In this tutorial, we will learn how to install the world's most popular database on Windows...",
           tags: ["backend", "database", "sql", "mysql", "windows", "beginner"],
         },
         {
