@@ -125,7 +125,15 @@
       <a
         rel="noopener noreferrer"
         href="mailto:thesourceprojectteam@gmail.com"
-        class="mt-4 mx-auto flex items-center hover:underline focus:underline focus:outline-none"
+        class="
+          mt-4
+          mx-auto
+          flex
+          items-center
+          hover:underline
+          focus:underline
+          focus:outline-none
+        "
       >
         <svg
           class="h-6 w-6"
@@ -142,9 +150,17 @@
       <a
         rel="noopener noreferrer"
         href="mailto:thesourceprojectteam@gmail.com"
-        class="mt-4 mx-auto bg-background-2 px-8 py-2 text-text-2 rounded-full text-lg"
-      >
-        Talk </a
+        class="
+          mt-4
+          mx-auto
+          bg-background-2
+          px-8
+          py-2
+          text-text-2
+          rounded-full
+          text-xl
+        "
+        >Talk</a
       ><a
         rel="noopener noreferrer"
         href="https://nuxtjs.org/"

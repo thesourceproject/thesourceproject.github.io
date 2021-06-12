@@ -99,7 +99,7 @@ export default {
           date: "11 Jun '21",
           readTime: "5 min read",
           fragment:
-            "If you are starting with backend development or just want to dabble in SQL, you need to understand databases. In this tutorial, we will learn how to install the world's most popular database on Windows...",
+            "If you are just starting with backend development or want to dabble in SQL, you will need to understand databases. In this tutorial, we will learn how to install the world's most popular database on Windows...",
           tags: ["backend", "database", "sql", "mysql", "windows", "beginner"],
         },
         {

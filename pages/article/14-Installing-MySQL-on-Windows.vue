@@ -8,17 +8,17 @@
         :tags="['backend', 'database', 'sql', 'mysql', 'windows', 'beginner']"
       />
       <p>
-        If you are starting with backend development or just want to dabble in
-        SQL, you need to understand databases. In this tutorial, we will learn
-        how to install the world's most popular database on Windows.
+        If you are just starting with backend development or want to dabble in
+        SQL, you will need to understand databases. In this tutorial, we will
+        learn how to install the world's most popular database on Windows.
       </p>
       <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        MySQL also comes with an installer that can simplify the process though
-        I prefer to use the ZIP archive as it offers more flexibility and can
+        MySQL also comes with an installer that can simplify this process though
+        I prefer the ZIP archive method as it offers more flexibility and can
         easily be upgraded or removed.<br /><br />
         Download MySQL Community Server from the
         <a
@@ -65,7 +65,7 @@ datadir=E:/mydata/data`"
         <em>basedir</em> refers to the location where you extracted the ZIP
         archive.<br />
         <strong>Note</strong> - You can shorten the name of your extracted
-        folder to just <strong>mysql</strong> as in the example. It can make it
+        folder to just <strong>mysql</strong> as in the example. It will make it
         easier to access it using the command line.<br /><br />
         Now, open the <strong>bin</strong> folder inside the
         <strong>mysql</strong> folder in <strong>Windows PowerShell</strong>.
@@ -122,7 +122,7 @@ datadir=E:/mydata/data`"
       />
       <p>
         You will be prompted for the root password. We are now ready to play
-        around with some SQL.<br />
+        around with SQL.<br />
         Type the following SQL queries in command line.
       </p>
       <CodeSnippet
@@ -158,7 +158,7 @@ SELECT * FROM student;`"
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">
-        We can see that our MySQL installation works like a charm. It's also
+        And there you go! Our MySQL installation works like a charm. It's also
         easy to upgrade to a newer version later. Just extract the new ZIP
         archive and create an option file like this one while referring to the
         same data directory.<br /><br />
@@ -185,7 +185,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "If you are starting with backend development or just want to dabble in SQL, you need to understand databases. In this tutorial, we will learn how to install the world's most popular database on Windows.",
+          "If you are just starting with backend development or want to dabble in SQL, you will need to understand databases. In this tutorial, we will learn how to install the world's most popular database on Windows.",
       },
     ],
   },
