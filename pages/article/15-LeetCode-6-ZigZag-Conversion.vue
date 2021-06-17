@@ -92,21 +92,74 @@ P     I"
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        A <strong>subarray</strong> is a contiguous sequence of items within an
-        array. For example, [1, 2] and [1, 2, 3] are subarrays of [0, 1, 2,
-        3].<br />
-        Before finding an optimal solution to a problem, we should always try
-        the brute-force technique. It will help us understand it better. We will
-        start by checking every subarray whether it adds up to the given
-        target.<br />
-        <strong>Note</strong> - This is an intermediate-level problem. If you
-        are a beginner, you might want to solve
-        <NuxtLink
-          class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/6-LeetCode-1-Two-Sum"
-          >this problem</NuxtLink
-        >
-        before you continue.
+        We are given a string
+        <strong>s</strong> and <strong>numRows</strong> i.e. number of rows in
+        the zigzag. The problem wants us to return a string representing
+        <strong>s</strong>'s zigzag form row-wise.<br />
+        There are multiple approaches to this problem and many of them involve
+        using extra space apart from what is required to store the output. Here,
+        we will discuss an algorithm that uses simple arithmetic to achieve our
+        goal.<br /><br />
+        Before getting to the actual problem, we will first cover the base case,
+        i.e. when <strong>numRows</strong> is equal to 1. This means that there
+        is a single row and the zigzag will be identical to <strong>s</strong>.
+        Therefore in this case, we can return
+        <strong>s</strong> directly.<br /><br />
+        Now, let's take an example.
+      </p>
+      <img
+        src="~/assets/images/article/15/competitive15-1.png"
+        alt="Zigzag String"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        Now, we should notice the top row of the zigzag carefully. We can see
+        that the first row contains characters separated by a constant number.
+        But what is that number?<br />
+        From <strong>A</strong> to <strong>I</strong>, we go down and up 4 times
+        to return to the same row. If <strong>numRows</strong> was 10. We would
+        go down and up 9 times to reach the next character of the top row.
+      </p>
+      <img
+        src="~/assets/images/article/15/competitive15-2.png"
+        alt="First and last rows"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        From this, we can derive that the jump distance between two characters
+        in the first row is <strong>(numRows - 1) × 2</strong>.<br />
+        The exact same applies for the bottom row. The only difference is the
+        starting character. The jump distance is the same for this row.<br /><br />
+        We have completed the easy part. Now, we just need to find a way to
+        derive the middle rows.
+      </p>
+      <img
+        src="~/assets/images/article/15/competitive15-3.png"
+        alt="Middle rows"
+        class="mx-auto mt-6 max-w-full"
+      />
+      <p class="mt-6">
+        Looking at the middle rows, we observe that the characters can be seen
+        as pairs of equal gap. The distance between <strong>B</strong> and
+        <strong>H</strong> is the same as <strong>J</strong> and
+        <strong>P</strong>.<br />
+        In the zigzag traversal, we visit <strong>B</strong> going down and
+        <strong>H</strong> when going up. It's the same for every pair in a same
+        row. We need to calculate the gap in each pair of a row.<br /><br />
+        On Row 1, We go down and back up 3 times.<br />
+        On Row 2, We go down and back up 2 times.<br />
+        On Row 3, We go down and back up 1 time.<br /><br />
+        To complete a pair, we skip characters equal to twice the number of rows
+        below it. For example, there are 2 rows below <strong>C</strong>, so we
+        skip 4 characters to reach <strong>G</strong>. Therefore, the pair gap
+        is equal to <strong>(numRows - 1 - Row</strong><sub>0-indexed</sub
+        ><strong>) × 2</strong><br /><br />
+        But how many characters should be skipped to reach the next pair?<br />
+        We can observe that the gap between the first characters of consecutive
+        pairs is the same as for the first and last rows, i.e.
+        <strong>(numRows - 1) × 2</strong>.<br /><br />
+        We have now understood the basic arithmetic needed to solve this
+        problem. It's time to write the code for this.
       </p>
       <CodeSnippet
         code='// Java
@@ -142,142 +195,9 @@ def subarraySum(nums: List[int], k: int) -> int:
         lang="language-python"
       />
       <p>
-        This solution takes <strong>O(n<sup>3</sup>)</strong> time due to the
-        three nested for-loops. No extra space is necessary for this.<br />
-        We can make a simple optimization to this. Instead of running a loop to
-        find the sum of every subarray, we can obtain it directly using a
-        prefix-sum array. We will modify the original array to store the
-        cumulative sum of all numbers until that index.<br />
-        For example, if we have an array [1, 2, 3, 4, 5], it will be modified to
-        [1, 3, 6, 10, 15]. Now, if we wanted to find the sum from index 2 to
-        4(inclusive), we simply subtract
-        <em>nums[1]</em> from <em>nums[4]</em> to obtain 12. To visualize this,
-        <em>(1 + 2 + 3 + 4 + 5) - (1 + 2) = (3 + 4 + 5)</em>.
-      </p>
-      <CodeSnippet
-        code='// Java
-public int subarraySum(int[] nums, int k) {
-    for (int i = 1; i < nums.length; ++i) { // Generate the prefix-sum array.
-        nums[i] += nums[i - 1]; // Add the cumulative sum of the previous index.
-    }
-    int ans = 0;
-    for (int left = 0; left < nums.length; ++left) {
-        for (int right = left; right < nums.length; ++right) {
-            int lSum = 0; // Initial sum is "0" before the left-most number.
-            if (left > 0) {
-                lSum = nums[left - 1]; // Cumulative sum of numbers till "left - 1".
-            }
-            int rSum = nums[right]; // Cumulative sum of numbers to till "right".
-            if (rSum - lSum == k) {
-                ++ans;
-            }
-        }
-    }
-    return ans;
-}'
-        lang="language-java"
-      />
-      <CodeSnippet
-        code='# Python3
-def subarraySum(nums: List[int], k: int) -> int:
-    for i in range(1, len(nums)):  # Generate the prefix-sum array.
-        nums[i] += nums[i - 1]  # Add the cumulative sum of the previous index.
-    ans = 0
-    for left in range(len(nums)):
-        for right in range(left, len(nums)):
-            lSum = 0  # Initial sum is "0" before the left-most number.
-            if(left > 0):
-                lSum = nums[left - 1]  # Cumulative sum of numbers till "left - 1".
-            rSum = nums[right]  # Cumulative sum of numbers to till "right".
-            if(rSum - lSum == k):
-                ans += 1
-    return ans'
-        lang="language-python"
-      />
-      <p>
-        We have optimized our solution to <strong>O(n<sup>2</sup>)</strong>, as
-        the subarray sum is obtained in constant time now. The space complexity
-        is either <strong>O(n)</strong> or <strong>O(1)</strong> depending on
-        whether or not modifying the original array counts as using extra
-        space.<br />
-        This solution is much faster than the previous one but still too
-        slow.<br /><br />
-        At first glance, this problem might appear to be solvable with the
-        <NuxtLink
-          class="text-text-3 hover:underline focus:underline focus:outline-none"
-          to="/article/11-LeetCode-3-Longest-Substring-Without-Repeating-Characters"
-          >sliding window technique</NuxtLink
-        >, but that is not the case. Let's see why. Suppose, we have a large
-        array like [1, -1, 1, -1......1, -1, 1] and the target sum is 0. The
-        number of subarrays with an equal number of 0's and 1's are of an order
-        of <strong>n<sup>2</sup></strong
-        >. A sliding window will not be able to count all of these. This is
-        because a sliding window expands towards the right and shrinks from the
-        left <strong>n</strong> times each.<br />
-        Let's consider the previous example again. [1, -1, 1, -1, 1, -1] can be
-        modified to a prefix-sum array [1, 0, 1, 0, 1, 0]. If the target sum is
-        0, the subarrays will be 9 in total. Let's traverse our prefix-sum array
-        from left to right to see if we can find a pattern.<br /><br />
-        At <em>nums[0]</em> our <em>rSum</em> is 1. To obtain 0 as the final
-        sum, we need to find an <em>lSum</em> equal to 1(i.e. 1 - 1 = 0). As
-        this is the first index, we cannot find a non-zero <em>lSum</em> to the
-        left.<br />
-        At <em>nums[1]</em> our <em>rSum</em> is 0. We need to find an
-        <em>lSum</em> equal to 0. This time, the <em>lSum</em> before the first
-        index(initial sum) is equal to zero. So, we have obtained one subarray
-        so far.<br />
-        At <em>nums[2]</em>, our <em>rSum</em> is 1. We have already encountered
-        a 1 before and can obtain another subarray, bringing our tally to 2.<br />
-        At <em>nums[3]</em>, our <em>rSum</em> is 0. We have encountered 0
-        twice(before the first index and at index-1) and can obtain two more
-        zero-sum subarrays.<br />
-        We repeat this process for the remaining elements to find a total of 9
-        subarrays.<br /><br />
-        We notice that if the target sum is <em>k</em>, for every cumulative sum
-        <em>rSum</em>, we need to find the total number of cumulative sums to
-        the left that are equal to <em>rSum - k</em> (since
-        <em>rSum - lSum = k</em>).<br />
-        Now, let's look at the code.
-      </p>
-      <CodeSnippet
-        code='// Java
-public int subarraySum(int[] nums, int k) {
-    for (int i = 1; i < nums.length; ++i) {
-        nums[i] += nums[i - 1];
-    }
-    Map<Integer, Integer> count = new HashMap<>(); // Maintain a count of each sum obtained so far.
-    count.put(0, 1); // Initial sum of "0" encountered once at the beginning.
-    int ans = 0;
-    for (int i = 0; i < nums.length; ++i) {
-        ans += count.getOrDefault(nums[i] - k, 0); // Add the count of "nums[i] - k" encountered till now.
-        count.put(nums[i], count.getOrDefault(nums[i], 0) + 1); // Increment the count of the current sum "nums[i]".
-    }
-    return ans;
-}'
-        lang="language-java"
-      />
-      <CodeSnippet
-        code='# Python3
-def subarraySum(nums: List[int], k: int) -> int:
-    from collections import defaultdict  # Dictionary that returns a default value for non-existing keys.
-    for i in range(1, len(nums)):
-        nums[i] += nums[i - 1]
-    ans = 0
-    count = defaultdict(int)  # Maintain a count of each sum obtained so far. This "defaultdict" returns "0" by default.
-    count[0] = 1  # Initial sum of "0" encountered once at the beginning.
-    for i in range(len(nums)):
-        ans += count[nums[i] - k]  # Add the count of "nums[i] - k" encountered till now.
-        count[nums[i]] += 1  # Increment the count of the current sum "nums[i]".
-    return ans'
-        lang="language-python"
-      />
-      <p>
         This solution has the optimal <strong>O(n)</strong> time complexity. It
         also uses <strong>O(n)</strong> extra space for the
-        <em>count</em> map/dictionary.<br />
-        The problem turned out to be much simpler than it looked initially. We
-        started from the brute-force technique and optimized it further and
-        further.<br /><br />
+        <em>zigzag</em> StringBuilder/List object.<br /><br />
         Hooray! You've solved a medium-level problem. But don't stop here and
         try some more problems.
       </p>
