@@ -93,6 +93,24 @@ export default {
       query: "",
       articles: [
         {
+          id: 15,
+          category: "competitive",
+          title: "LeetCode #6 ZigZag Conversion",
+          date: "17 Jun '21",
+          readTime: "10 min read",
+          fragment:
+            "Check out this problem on LeetCode. Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k...",
+          tags: [
+            "competitive",
+            "data",
+            "structures",
+            "algorithms",
+            "java",
+            "python",
+            "intermediate",
+          ],
+        },
+        {
           id: 14,
           category: "backend",
           title: "Installing MySQL on Windows",

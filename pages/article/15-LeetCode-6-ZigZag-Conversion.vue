@@ -2,8 +2,8 @@
   <main>
     <article class="w-full max-w-4xl mx-auto flex flex-col">
       <ArticleHeader
-        title="LeetCode #560 Subarray Sum Equals K"
-        date="19 Apr '21"
+        title="LeetCode #6 ZigZag Conversion"
+        date="17 Jun '21"
         readTime="10 min read"
         :tags="[
           'competitive',
@@ -20,7 +20,7 @@
         <a
           rel="noopener noreferrer"
           class="text-text-3 hover:underline focus:underline focus:outline-none"
-          href="https://leetcode.com/problems/subarray-sum-equals-k/"
+          href="https://leetcode.com/problems/zigzag-conversion/"
           target="_blank"
           >this</a
         >
@@ -38,21 +38,54 @@
           class="w-96"
       /></a>
       <p class="mt-6">
-        Given an array of integers <strong>nums</strong> and an integer
-        <strong>k</strong>, return the total number of continuous subarrays
-        whose sum equals to <strong>k</strong>.<br /><br />
+        The string <strong>"PAYPALISHIRING"</strong> is written in a zigzag
+        pattern on a given number of rows like this: (you may want to display
+        this pattern in a fixed font for better legibility)
+      </p>
+      <CodeSnippet
+        code="P   A   H   N
+A P L S I I G
+Y   I   R"
+        lang="language-none"
+      />
+      <p>
+        And then read line by line: <strong>"PAHNAPLSIIGYIR"</strong><br />
+        Write the code that will take a string and make this conversion given a
+        number of rows:
+      </p>
+      <CodeSnippet
+        code="string convert(string s, int numRows);"
+        lang="language-none"
+      />
+      <p>
         <strong class="text-lg">Example 1:</strong><br />
-        <strong>Input:</strong> nums = [1,1,1], k = 2<br />
-        <strong>Output:</strong> 2<br /><br />
+        <strong>Input:</strong> s = "PAYPALISHIRING", numRows = 3<br />
+        <strong>Output:</strong> "PAHNAPLSIIGYIR"<br /><br />
         <strong class="text-lg">Example 2:</strong><br />
-        <strong>Input:</strong> nums = [1,2,3], k = 3<br />
-        <strong>Output:</strong> 2<br /><br />
+        <strong>Input:</strong> s = "PAYPALISHIRING", numRows = 4<br />
+        <strong>Output:</strong> "PINALSIGYAHRPI"<br />
+        <strong>Explanation:</strong>
+      </p>
+      <CodeSnippet
+        code="P     I     N
+A   L S   I G
+Y A   H R
+P     I"
+        lang="language-none"
+      />
+      <p>
+        <strong class="text-lg">Example 3:</strong><br />
+        <strong>Input:</strong> s = "A", numRows = 1<br />
+        <strong>Output:</strong> "A"<br /><br />
         <strong class="text-lg">Constraints:</strong>
       </p>
       <ul class="list-disc list-inside">
-        <li>1 &lt;= nums.length &lt;= 2 * 10<sup>4</sup></li>
-        <li>-1000 &lt;= nums[i] &lt;= 1000</li>
-        <li>-10<sup>7</sup> &lt;= k &lt;= 10<sup>7</sup></li>
+        <li>1 &lt;= s.length &lt;= 1000</li>
+        <li>
+          <strong>s</strong> consists of English letters (lower-case and
+          upper-case), <strong>' , '</strong> and <strong>' . '</strong>.
+        </li>
+        <li>1 &lt;= numRows &lt;= 1000</li>
       </ul>
       <div class="mt-12 flex flex-col">
         <h2 class="text-2xl">Getting Started</h2>
@@ -262,13 +295,13 @@ export default {
     CodeSnippet,
   },
   head: {
-    title: "LeetCode #560 Subarray Sum Equals K | The Source Project",
+    title: "LeetCode #6 ZigZag Conversion | The Source Project",
     meta: [
       {
         hid: "description",
         name: "description",
         content:
-          "Check out this problem on LeetCode. Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k.",
+          'Check out this problem on LeetCode. The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this:',
       },
     ],
   },
