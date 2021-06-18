@@ -96,15 +96,14 @@ P     I"
         <strong>s</strong> and <strong>numRows</strong> i.e. number of rows in
         the zigzag. The problem wants us to return a string representing
         <strong>s</strong>'s zigzag form row-wise.<br />
-        There are multiple approaches to this problem and many of them involve
+        There are multiple approaches to this problem. Many of them involve
         using extra space apart from what is required to store the output. Here,
         we will discuss an algorithm that uses simple arithmetic to achieve our
         goal.<br /><br />
         Before getting to the actual problem, we will first cover the base case,
-        i.e. when <strong>numRows</strong> is equal to 1. This means that there
-        is a single row and the zigzag will be identical to <strong>s</strong>.
-        Therefore in this case, we can return
-        <strong>s</strong> directly.<br /><br />
+        i.e. when <strong>numRows</strong> is 1. Meaning, there is a single row
+        and the zigzag will be identical to <strong>s</strong>. In this case, we
+        will return <strong>s</strong> directly.<br /><br />
         Now, let's take an example.
       </p>
       <img
@@ -126,12 +125,12 @@ P     I"
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">
-        From this, we can derive that the jump distance between two characters
-        in the first row is <strong>(numRows - 1) × 2</strong>.<br />
-        The exact same applies for the bottom row. The only difference is the
-        starting character. The jump distance is the same for this row.<br /><br />
-        We have completed the easy part. Now, we just need to find a way to
-        derive the middle rows.
+        By this, we can derive that the jump distance between two characters in
+        the first row is <strong>(numRows - 1) × 2</strong>.<br />
+        The same applies to the bottom row. The only difference is the starting
+        character.<br /><br />
+        We have completed the easy part. Now, we need to find a way to derive
+        the middle rows.
       </p>
       <img
         src="~/assets/images/article/15/competitive15-3.png"
@@ -140,12 +139,12 @@ P     I"
       />
       <p class="mt-6">
         Looking at the middle rows, we observe that the characters can be seen
-        as pairs of equal gap. The distance between <strong>B</strong> and
+        as pairs of equal gaps. The distance between <strong>B</strong> and
         <strong>H</strong> is the same as <strong>J</strong> and
         <strong>P</strong>.<br />
         In the zigzag traversal, we visit <strong>B</strong> going down and
-        <strong>H</strong> when going up. It's the same for every pair in a same
-        row. We need to calculate the gap in each pair of a row.<br /><br />
+        <strong>H</strong> when going up. It's the same for every pair in the
+        same row. We need to calculate the gap in each pair of a row.<br /><br />
         On Row 1, We go down and back up 3 times.<br />
         On Row 2, We go down and back up 2 times.<br />
         On Row 3, We go down and back up 1 time.<br /><br />
@@ -162,44 +161,65 @@ P     I"
         problem. It's time to write the code for this.
       </p>
       <CodeSnippet
-        code='// Java
-public int subarraySum(int[] nums, int k) {
-    int ans = 0; // Store the answer.
-    for (int left = 0; left < nums.length; ++left) { // Run a loop from "0" to "nums.length - 1" for the left-index.
-        for (int right = left; right < nums.length; ++right) { // Run a loop from "left" to "nums.length - 1" for the right-index.
-            int sum = 0; // Store the sum of current subarray.
-            for (int i = left; i <= right; ++i) { // Run a loop from "left" to "right".
-                sum += nums[i]; // Add the current number to "sum".
+        code="// Java
+public String convert(String s, int numRows) {
+    if (numRows == 1) { // Base case.
+        return s;
+    }
+    StringBuilder zigzag = new StringBuilder(); // To store the output.
+    for (int i = 0; i < s.length(); i += (numRows - 1) * 2) {
+        zigzag.append(s.charAt(i)); // Append the characters of the first row.
+    }
+    for (int r = 1; r < numRows - 1; ++r) { // Iterate for all the middle-rows.
+        int i = r; // Starting character of each row
+        while (true) {
+            if (i >= s.length()) {
+                break; // Break the loop if the character is out of bounds.
             }
-            if (sum == k) { // If "sum" is equal to "k", increment "ans".
-                ++ans;
+            zigzag.append(s.charAt(i)); // Append the first character of the pair.
+            if (i + (numRows - r - 1) * 2 >= s.length()) {
+                break;
             }
+            zigzag.append(s.charAt(i + (numRows - r - 1) * 2)); // Append the second character of the pair.
+            i += (numRows - 1) * 2; // Skip over to the next pair.
         }
     }
-    return ans; // Return the answer.
-}'
+    for (int i = numRows - 1; i < s.length(); i += (numRows - 1) * 2) {
+        zigzag.append(s.charAt(i)); // Append the characters of the last row.
+    }
+    return zigzag.toString(); // Return the zigzag as a String.
+}"
         lang="language-java"
       />
       <CodeSnippet
         code='# Python3
-def subarraySum(nums: List[int], k: int) -> int:
-    ans = 0  # Store the answer.
-    for left in range(len(nums)):  # Run a loop from "0" to "nums.length - 1" for the left-index.
-        for right in range(left, len(nums)):  # Run a loop from "left" to "nums.length - 1" for the right-index.
-            sum = 0  # Store the sum of current subarray.
-            for i in range(left, right + 1):  # Run a loop from "left" to "right".
-                sum += nums[i]  # Add the current number to "sum".
-            if(sum == k):  # If "sum" is equal to "k", increment "ans".
-                ans += 1
-    return ans  # Return the answer.'
+def convert(s, numRows):
+    if (numRows == 1):  # Base case.
+        return s
+    zigzag = []
+    for i in range(0, len(s), (numRows - 1) * 2):
+        zigzag.append(s[i])  # Append the characters of the first row.
+    for r in range(1, numRows - 1):
+        i = r  # Starting character of each row
+        while(True):
+            if(i >= len(s)):
+                break  # Break the loop if the character is out of bounds.
+            zigzag.append(s[i])
+            if(i + (numRows - r - 1) * 2 >= len(s)):
+                break
+            zigzag.append(s[i + (numRows - r - 1) * 2])  # Append the second character of the pair.
+            i += (numRows - 1) * 2  # Skip over to the next pair.
+    for i in range(numRows - 1, len(s), (numRows - 1) * 2):
+        zigzag.append(s[i])  # Append the characters of the last row.
+    return "".join(zigzag)  # Return the zigzag as a String.
+'
         lang="language-python"
       />
       <p>
         This solution has the optimal <strong>O(n)</strong> time complexity. It
         also uses <strong>O(n)</strong> extra space for the
         <em>zigzag</em> StringBuilder/List object.<br /><br />
-        Hooray! You've solved a medium-level problem. But don't stop here and
-        try some more problems.
+        Hooray! You've solved one more problem. Now go and try some more.
       </p>
     </article>
   </main>
