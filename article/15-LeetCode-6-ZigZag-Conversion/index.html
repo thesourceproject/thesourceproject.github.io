@@ -1,0 +1,146 @@
+<!doctype html>
+<html data-n-head-ssr>
+  <head>
+    <title>LeetCode #6 ZigZag Conversion | The Source Project</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="google-site-verification" name="google-site-verification" content="NBXKl5RAGYQH3Rp9PKrszzdV4bRMOLkHjIjvfNDo2xE"><meta data-n-head="ssr" data-hid="description" name="description" content='Check out this problem on LeetCode. The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this:'><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&family=Ubuntu+Mono&display=swap"><link rel="preload" href="/_nuxt/8094fa9.js" as="script"><link rel="preload" href="/_nuxt/84f9ad6.js" as="script"><link rel="preload" href="/_nuxt/css/3cd7962.css" as="style"><link rel="preload" href="/_nuxt/d892478.js" as="script"><link rel="preload" href="/_nuxt/css/5d81c44.css" as="style"><link rel="preload" href="/_nuxt/a81104c.js" as="script"><link rel="preload" href="/_nuxt/ceab844.js" as="script"><link rel="stylesheet" href="/_nuxt/css/3cd7962.css"><link rel="stylesheet" href="/_nuxt/css/5d81c44.css"><link rel="preload" href="/_nuxt/static/1624004756/article/15-LeetCode-6-ZigZag-Conversion/state.js" as="script"><link rel="preload" href="/_nuxt/static/1624004756/article/15-LeetCode-6-ZigZag-Conversion/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1624004756/manifest.js" as="script">
+  </head>
+  <body>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="min-h-screen flex flex-col bg-background-1 text-text-1 font-body break-words transition-colors light"><header class="container mx-auto px-4 py-6 sm:px-8 flex items-center justify-between"><a href="/" class="font-title text-lg text-text-4 nuxt-link-active"><span class="select-none">TheSourceProject<strong class="text-text-3">_</strong></span></a> <nav class="hidden md:inline mx-auto"><a href="/" class="hover:underline focus:underline focus:outline-none nuxt-link-active">Home</a> <a href="/about-us" class="ml-4 hover:underline focus:underline focus:outline-none">About Us
+    </a></nav> <nav class="flex items-center"><button title="Change Theme" class="p-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 w-4"><path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path></svg></button> <a href="/find" title="Find Article" class="ml-2 sm:ml-4 bg-background-2 px-6 py-2 rounded-full text-text-2"><figure class="flex items-center"><figcaption class="mr-4">Find</figcaption> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="h-4 w-4"><path fill="currentColor" d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path></svg></figure></a></nav></header> <main class="flex-grow container mx-auto p-4 sm:px-8 flex flex-col leading-loose"><article class="w-full max-w-4xl mx-auto flex flex-col"><header class="my-8 flex flex-col"><h1 class="text-5xl font-bold leading-snug">LeetCode #6 ZigZag Conversion</h1> <p class="mt-6 opacity-50">17 Jun '21 | 10 min read</p> <p class="mt-2 flex flex-wrap"><a href="/find?q=competitive" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #competitive
+    </a><a href="/find?q=data" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #data
+    </a><a href="/find?q=structures" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #structures
+    </a><a href="/find?q=algorithms" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #algorithms
+    </a><a href="/find?q=java" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #java
+    </a><a href="/find?q=python" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #python
+    </a><a href="/find?q=intermediate" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #intermediate
+    </a></p></header> <p>
+        Check out
+        <a rel="noopener noreferrer" href="https://leetcode.com/problems/zigzag-conversion/" target="_blank" class="text-text-3 hover:underline focus:underline focus:outline-none">this</a>
+        problem on LeetCode.
+      </p> <a rel="noopener noreferrer" title="LeetCode, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:LeetCode_Logo_black_with_text.svg" target="_blank" class="mx-auto mt-6 p-6 bg-white rounded-2xl"><img alt="LeetCode Logo black with text" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/LeetCode_Logo_black_with_text.svg/640px-LeetCode_Logo_black_with_text.svg.png" class="w-96"></a> <p class="mt-6">
+        The string <strong>"PAYPALISHIRING"</strong> is written in a zigzag
+        pattern on a given number of rows like this: (you may want to display
+        this pattern in a fixed font for better legibility)
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-none">P   A   H   N
+A P L S I I G
+Y   I   R</code></pre></div> <p>
+        And then read line by line: <strong>"PAHNAPLSIIGYIR"</strong><br>
+        Write the code that will take a string and make this conversion given a
+        number of rows:
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-none">string convert(string s, int numRows);</code></pre></div> <p><strong class="text-lg">Example 1:</strong><br> <strong>Input:</strong> s = "PAYPALISHIRING", numRows = 3<br> <strong>Output:</strong> "PAHNAPLSIIGYIR"<br><br> <strong class="text-lg">Example 2:</strong><br> <strong>Input:</strong> s = "PAYPALISHIRING", numRows = 4<br> <strong>Output:</strong> "PINALSIGYAHRPI"<br> <strong>Explanation:</strong></p> <div class="sm:mx-10 my-4"><pre><code class="language-none">P     I     N
+A   L S   I G
+Y A   H R
+P     I</code></pre></div> <p><strong class="text-lg">Example 3:</strong><br> <strong>Input:</strong> s = "A", numRows = 1<br> <strong>Output:</strong> "A"<br><br> <strong class="text-lg">Constraints:</strong></p> <ul class="list-disc list-inside"><li>1 &lt;= s.length &lt;= 1000</li> <li><strong>s</strong> consists of English letters (lower-case and
+          upper-case), <strong>' , '</strong> and <strong>' . '</strong>.
+        </li> <li>1 &lt;= numRows &lt;= 1000</li></ul> <div class="mt-12 flex flex-col"><h2 class="text-2xl">Getting Started</h2> <div class="w-6 h-1 bg-background-2 rounded-full"></div></div> <p class="mt-8">
+        We are given a string
+        <strong>s</strong> and <strong>numRows</strong> i.e. number of rows in
+        the zigzag. The problem wants us to return a string representing
+        <strong>s</strong>'s zigzag form row-wise.<br>
+        There are multiple approaches to this problem. Many of them involve
+        using extra space apart from what is required to store the output. Here,
+        we will discuss an algorithm that uses simple arithmetic to achieve our
+        goal.<br><br>
+        Before getting to the actual problem, we will first cover the base case,
+        i.e. when <strong>numRows</strong> is 1. Meaning, there is a single row
+        and the zigzag will be identical to <strong>s</strong>. In this case, we
+        will return <strong>s</strong> directly.<br><br>
+        Now, let's take an example.
+      </p> <img src="/_nuxt/img/competitive15-1.a7d5de8.png" alt="Zigzag String" class="mx-auto mt-6 max-w-full"> <p class="mt-6">
+        Now, we should notice the top row of the zigzag carefully. We can see
+        that the first row contains characters separated by a constant number.
+        But what is that number?<br>
+        From <strong>A</strong> to <strong>I</strong>, we go down and up 4 times
+        to return to the same row. If <strong>numRows</strong> was 10. We would
+        go down and up 9 times to reach the next character of the top row.
+      </p> <img src="/_nuxt/img/competitive15-2.0bf12d4.png" alt="First and last rows" class="mx-auto mt-6 max-w-full"> <p class="mt-6">
+        By this, we can derive that the jump distance between two characters in
+        the first row is <strong>(numRows - 1) × 2</strong>.<br>
+        The same applies to the bottom row. The only difference is the starting
+        character.<br><br>
+        We have completed the easy part. Now, we need to find a way to derive
+        the middle rows.
+      </p> <img src="/_nuxt/img/competitive15-3.cb8279b.png" alt="Middle rows" class="mx-auto mt-6 max-w-full"> <p class="mt-6">
+        Looking at the middle rows, we observe that the characters can be seen
+        as pairs of equal gaps. The distance between <strong>B</strong> and
+        <strong>H</strong> is the same as <strong>J</strong> and
+        <strong>P</strong>.<br>
+        In the zigzag traversal, we visit <strong>B</strong> going down and
+        <strong>H</strong> when going up. It's the same for every pair in the
+        same row. We need to calculate the gap in each pair of a row.<br><br>
+        On Row 1, We go down and back up 3 times.<br>
+        On Row 2, We go down and back up 2 times.<br>
+        On Row 3, We go down and back up 1 time.<br><br>
+        To complete a pair, we skip characters equal to twice the number of rows
+        below it. For example, there are 2 rows below <strong>C</strong>, so we
+        skip 4 characters to reach <strong>G</strong>. Therefore, the pair gap
+        is equal to <strong>(numRows - 1 - Row</strong><sub>0-indexed</sub><strong>) × 2</strong><br><br>
+        But how many characters should be skipped to reach the next pair?<br>
+        We can observe that the gap between the first characters of consecutive
+        pairs is the same as for the first and last rows, i.e.
+        <strong>(numRows - 1) × 2</strong>.<br><br>
+        We have now understood the basic arithmetic needed to solve this
+        problem. It's time to write the code for this.
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-java">// Java
+public String convert(String s, int numRows) {
+    if (numRows == 1) { // Base case.
+        return s;
+    }
+    StringBuilder zigzag = new StringBuilder(); // To store the output.
+    for (int i = 0; i &lt; s.length(); i += (numRows - 1) * 2) {
+        zigzag.append(s.charAt(i)); // Append the characters of the first row.
+    }
+    for (int r = 1; r &lt; numRows - 1; ++r) { // Iterate for all the middle-rows.
+        int i = r; // Starting character of each row
+        while (true) {
+            if (i >= s.length()) {
+                break; // Break the loop if the character is out of bounds.
+            }
+            zigzag.append(s.charAt(i)); // Append the first character of the pair.
+            if (i + (numRows - r - 1) * 2 >= s.length()) {
+                break;
+            }
+            zigzag.append(s.charAt(i + (numRows - r - 1) * 2)); // Append the second character of the pair.
+            i += (numRows - 1) * 2; // Skip over to the next pair.
+        }
+    }
+    for (int i = numRows - 1; i &lt; s.length(); i += (numRows - 1) * 2) {
+        zigzag.append(s.charAt(i)); // Append the characters of the last row.
+    }
+    return zigzag.toString(); // Return the zigzag as a String.
+}</code></pre></div> <div class="sm:mx-10 my-4"><pre><code class="language-python"># Python3
+def convert(s, numRows):
+    if (numRows == 1):  # Base case.
+        return s
+    zigzag = []
+    for i in range(0, len(s), (numRows - 1) * 2):
+        zigzag.append(s[i])  # Append the characters of the first row.
+    for r in range(1, numRows - 1):
+        i = r  # Starting character of each row
+        while(True):
+            if(i >= len(s)):
+                break  # Break the loop if the character is out of bounds.
+            zigzag.append(s[i])
+            if(i + (numRows - r - 1) * 2 >= len(s)):
+                break
+            zigzag.append(s[i + (numRows - r - 1) * 2])  # Append the second character of the pair.
+            i += (numRows - 1) * 2  # Skip over to the next pair.
+    for i in range(numRows - 1, len(s), (numRows - 1) * 2):
+        zigzag.append(s[i])  # Append the characters of the last row.
+    return "".join(zigzag)  # Return the zigzag as a String.
+</code></pre></div> <p>
+        This solution has the optimal <strong>O(n)</strong> time complexity. It
+        also uses <strong>O(n)</strong> extra space for the
+        <em>zigzag</em> StringBuilder/List object.<br><br>
+        Hooray! You've solved one more problem. Now go and try some more.
+      </p></article></main> <footer class="container mx-auto mt-24 p-4 sm:px-8"><section class="flex justify-between"><a rel="noopener noreferrer" href="https://www.instagram.com/the_source_project" target="_blank" class="flex flex-col items-center group focus:outline-none"><p>Follow Us On</p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a> <a href="/about-us" class="flex flex-col items-center group focus:outline-none"><p>About Us</p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></a> <button href="https://www.instagram.com/the_source_project" target="_blank" class="flex flex-col items-center group focus:outline-none"><p>Back To Top</p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none" stroke="currentColor" stroke-width="25" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce focus:outline-none"><circle cx="250.22" cy="250.39" r="236.49"></circle> <path d="M183.31 283.89l65.81-69.12 68.01 71.24" stroke-miterlimit="10" stroke-linecap="round"></path></svg></button></section> <p class="mt-4 text-center text-sm opacity-75">
+    2021, The Source Project
+  </p></footer></div></div></div><script defer src="/_nuxt/static/1624004756/article/15-LeetCode-6-ZigZag-Conversion/state.js"></script><script src="/_nuxt/8094fa9.js" defer></script><script src="/_nuxt/ceab844.js" defer></script><script src="/_nuxt/84f9ad6.js" defer></script><script src="/_nuxt/d892478.js" defer></script><script src="/_nuxt/a81104c.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/article/15-LeetCode-6-ZigZag-Conversion", {data:[{}],fetch:{},mutations:void 0});
