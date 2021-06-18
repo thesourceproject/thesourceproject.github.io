@@ -99,7 +99,7 @@ export default {
           date: "17 Jun '21",
           readTime: "10 min read",
           fragment:
-            "Check out this problem on LeetCode. Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k...",
+            'Check out this problem on LeetCode. The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this...',
           tags: [
             "competitive",
             "data",
