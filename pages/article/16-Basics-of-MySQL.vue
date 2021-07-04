@@ -18,82 +18,45 @@
         <div class="w-6 h-1 bg-background-2 rounded-full"></div>
       </div>
       <p class="mt-8">
-        MySQL also comes with an installer that can simplify this process though
-        I prefer the ZIP archive method as it offers more flexibility and can
-        easily be upgraded or removed.<br /><br />
-        Download MySQL Community Server from the
-        <a
-          rel="noopener noreferrer"
+        If you haven't installed MySQL yet, refer to our
+        <NuxtLink
           class="text-text-3 hover:underline focus:underline focus:outline-none"
-          href="https://dev.mysql.com/downloads/mysql/"
-          target="_blank"
-          >official website</a
-        >. Look for <strong>Windows (x86, 64-bit), ZIP Archive</strong> under
-        <strong>Other Downloads</strong>.<br />
-        At the time of writing this article, the latest version available is
-        <strong>8.0.25</strong>.
+          to="/article/14-Installing-MySQL-on-Windows"
+          >previous tutorial</NuxtLink
+        >.<br /><br />
+        We will cover the following in this tutorial.
+      </p>
+      <ul class="mt-2 list-inside list-disc">
+        <li>How to create databases and tables.</li>
+        <li>Data types in SQL.</li>
+        <li>Performing CRUD(create/read/update/delete) operations.</li>
+      </ul>
+      <p class="mt-6">
+        Before diving into to SQL, we need to plan our database first. This
+        includes the tables along with their respective columns any relations.
       </p>
       <img
-        src="~/assets/images/article/14/backend14-1.png"
-        alt="Download MySQL Community Server"
+        src="~/assets/images/article/16/backend16-1.png"
+        alt="Set the root password"
         class="mx-auto mt-6 max-w-full"
       />
       <p class="mt-6">
-        Extract this ZIP archive and create an option file named
-        <strong>my.ini</strong> in it. Then, create an empty directory
-        <strong>data</strong> anywhere on your system.
-      </p>
-      <img
-        src="~/assets/images/article/14/backend14-2.png"
-        alt="Create the option file name my.ini"
-        class="mx-auto mt-6 max-w-full"
-      />
-      <p class="mt-6">
-        Now, open the
-        <strong>my.ini</strong> file using notepad or any other text editor and
-        paste the following.
-      </p>
-      <CodeSnippet
-        :code="`[mysqld]
-# set basedir to your installation path
-basedir=E:/mysql
-# set datadir to the location of your data directory
-datadir=E:/mydata/data`"
-        lang="language-ini"
-      />
-      <p>
-        Don't forget to replace the above paths with the actual ones. Here,
-        <em>basedir</em> refers to the location where you extracted the ZIP
-        archive.<br />
-        <strong>Note</strong> - You can shorten the name of your extracted
-        folder to just <strong>mysql</strong> as in the example. It will make it
-        easier to access it using the command line.<br /><br />
-        Now, open the <strong>bin</strong> folder inside the
-        <strong>mysql</strong> folder in <strong>Windows PowerShell</strong>.
-        You can do this by pressing and holding <strong>shift</strong> and
-        <strong>right-clicking</strong> the folder. In the context menu, it will
-        give you an option saying <strong>Open PowerShell window here</strong>.
-      </p>
-      <img
-        src="~/assets/images/article/14/backend14-3.png"
-        alt="Initialize MySQL"
-        class="mx-auto mt-6 max-w-full"
-      />
-      <p class="mt-6">
-        Enter the following two commands in the PowerShell window.
-      </p>
-      <CodeSnippet
-        :code="`./mysqld.exe --initialize-insecure
-./mysqld.exe`"
-        lang="language-powershell"
-      />
-      <p>
-        The first command will initialize the data directory without a root
-        password. The second command will start the MySQL server. Now, let's
-        access our MySQL installation using the command-line client.<br /><br />
-        Leave this window running and open another PowerShell window in the same
-        directory. Then, run the following command. Notice this time it's
-        <strong>mysql</strong> and not <strong>mysqld</strong>.
+        We can see in our <em>company</em> database that there are 2 tables
+        named <em>employee</em> and <em>department</em>. As you might have
+        guessed, the <em>head</em> column of <em>department</em> is a
+        foreign-key that refers to the primary key of
+        <em>employee</em>.<br /><br />
+        But what are primary and foreign keys?<br /><br />
+        In simple words, primary key is a column or a group of columns that can
+        uniquely identify a row of its table. Because a primary key can refer to
+        exactly 1 row, it needs to be unique. For example, if all employees are
+        guaranteed to have a different email address, it may be used as a
+        primary key.<br /><br />
+        However, it is not considered the best practice to use values that
+        describe the data. This is why we will use an integer <em>id</em> which
+        will auto-increment starting from 1, thus ensuring uniqueness. Also,
+        because the number itself contains no data, it will never need to change
+        later.
       </p>
       <CodeSnippet :code="`./mysql.exe -u root`" lang="language-powershell" />
       <p>
