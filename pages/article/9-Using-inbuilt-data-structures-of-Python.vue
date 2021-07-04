@@ -257,7 +257,7 @@ print(heap)  # [1, 6, 3]"
 import ArticleHeader from "~/components/ArticleHeader.vue";
 import CodeSnippet from "~/components/CodeSnippet.vue";
 export default {
-  name: "competitive9",
+  name: "basics9",
   components: {
     ArticleHeader,
     CodeSnippet,

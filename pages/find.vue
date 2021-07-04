@@ -93,6 +93,16 @@ export default {
       query: "",
       articles: [
         {
+          id: 16,
+          category: "backend",
+          title: "Basics of MySQL",
+          date: "4 Jul '21",
+          readTime: "15 min read",
+          fragment:
+            "We will learn the basics behind MySQL. After learning these, you will be able to create dynamic web applications...",
+          tags: ["backend", "database", "sql", "mysql", "beginner"],
+        },
+        {
           id: 15,
           category: "competitive",
           title: "LeetCode #6 ZigZag Conversion",
@@ -283,7 +293,7 @@ export default {
           date: "4 Jan '21",
           readTime: "10 min read",
           fragment:
-            "GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere...",
+            "In our previous tutorial, we learned how to create a local Git repository and make commits to it. Now it's time to show off your first project to the world...",
           tags: ["miscellaneous", "git", "github", "beginner"],
         },
         {

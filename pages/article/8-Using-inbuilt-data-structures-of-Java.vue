@@ -326,7 +326,7 @@ Queue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
 import ArticleHeader from "~/components/ArticleHeader.vue";
 import CodeSnippet from "~/components/CodeSnippet.vue";
 export default {
-  name: "competitive8",
+  name: "basics8",
   components: {
     ArticleHeader,
     CodeSnippet,

@@ -229,7 +229,7 @@ def convert(s, numRows):
 import ArticleHeader from "~/components/ArticleHeader.vue";
 import CodeSnippet from "~/components/CodeSnippet.vue";
 export default {
-  name: "competitive13",
+  name: "competitive15",
   components: {
     ArticleHeader,
     CodeSnippet,
