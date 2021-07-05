@@ -97,7 +97,7 @@ export default {
           category: "backend",
           title: "Basics of MySQL",
           date: "4 Jul '21",
-          readTime: "15 min read",
+          readTime: "25 min read",
           fragment:
             "We will learn the basics behind MySQL. After learning these, you will be able to create dynamic web applications...",
           tags: ["backend", "database", "sql", "mysql", "beginner"],
