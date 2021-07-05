@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/article/16-Basics-of-MySQL", {data:[{}],fetch:{},mutations:void 0});

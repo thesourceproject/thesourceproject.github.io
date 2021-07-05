@@ -1,0 +1,171 @@
+<!doctype html>
+<html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Basics of MySQL | The Source Project</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="google-site-verification" name="google-site-verification" content="NBXKl5RAGYQH3Rp9PKrszzdV4bRMOLkHjIjvfNDo2xE"><meta data-n-head="ssr" data-hid="description" name="description" content="We will learn the basics behind MySQL. After learning these, you will be able to create dynamic web applications."><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&family=Ubuntu+Mono&display=swap"><link rel="preload" href="/_nuxt/4aa2db6.js" as="script"><link rel="preload" href="/_nuxt/84f9ad6.js" as="script"><link rel="preload" href="/_nuxt/css/b297d30.css" as="style"><link rel="preload" href="/_nuxt/c105077.js" as="script"><link rel="preload" href="/_nuxt/css/5d81c44.css" as="style"><link rel="preload" href="/_nuxt/65bd88b.js" as="script"><link rel="preload" href="/_nuxt/ad58d21.js" as="script"><link rel="stylesheet" href="/_nuxt/css/b297d30.css"><link rel="stylesheet" href="/_nuxt/css/5d81c44.css"><link rel="preload" href="/_nuxt/static/1625510178/article/16-Basics-of-MySQL/state.js" as="script"><link rel="preload" href="/_nuxt/static/1625510178/article/16-Basics-of-MySQL/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1625510178/manifest.js" as="script">
+  </head>
+  <body>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div class="min-h-screen flex flex-col bg-background-1 text-text-1 font-body break-words transition-colors light"><header class="container mx-auto px-4 py-6 sm:px-8 flex items-center justify-between"><a href="/" class="font-title text-lg text-text-4 nuxt-link-active"><span class="select-none">TheSourceProject<strong class="text-text-3">_</strong></span></a> <nav class="hidden md:inline mx-auto"><a href="/" class="hover:underline focus:underline focus:outline-none nuxt-link-active">Home</a> <a href="/about-us" class="ml-4 hover:underline focus:underline focus:outline-none">About Us
+    </a></nav> <nav class="flex items-center"><button title="Change Theme" class="p-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 w-4"><path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path></svg></button> <a href="/find" title="Find Article" class="ml-2 sm:ml-4 bg-background-2 px-6 py-2 rounded-full text-text-2"><figure class="flex items-center"><figcaption class="mr-4">Find</figcaption> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="h-4 w-4"><path fill="currentColor" d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path></svg></figure></a></nav></header> <main class="flex-grow container mx-auto p-4 sm:px-8 flex flex-col leading-loose"><article class="w-full max-w-4xl mx-auto flex flex-col"><header class="my-8 flex flex-col"><h1 class="text-5xl font-bold leading-snug">Basics of MySQL</h1> <p class="mt-6 opacity-50">4 Jul '21 | 25 min read</p> <p class="mt-2 flex flex-wrap"><a href="/find?q=backend" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #backend
+    </a><a href="/find?q=database" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #database
+    </a><a href="/find?q=sql" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #sql
+    </a><a href="/find?q=mysql" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #mysql
+    </a><a href="/find?q=beginner" class="mr-4 hover:underline focus:underline focus:outline-none">
+      #beginner
+    </a></p></header> <p>
+        We will learn the basics behind MySQL. After learning these, you will be
+        able to create dynamic web applications. Even if you prefer other SQL
+        databases such as MariaDB or PostgreSQL, this tutorial will be helpful
+        as the difference between them is mostly syntactical.
+      </p> <div class="mt-12 flex flex-col"><h2 class="text-2xl">Getting Started</h2> <div class="w-6 h-1 bg-background-2 rounded-full"></div></div> <p class="mt-8">
+        If you haven't installed MySQL yet, refer to our
+        <a href="/article/14-Installing-MySQL-on-Windows" class="text-text-3 hover:underline focus:underline focus:outline-none">previous tutorial</a>.<br><br>
+        We will cover the following in this tutorial.
+      </p> <ul class="mt-2 list-inside list-disc"><li>How to create databases and tables.</li> <li>Data types in SQL.</li> <li>Performing CRUD(create/read/update/delete) operations.</li></ul> <p class="mt-6">
+        Before diving into SQL, we need to plan our database first which
+        includes the tables along with their respective columns any relations.
+      </p> <img src="/_nuxt/img/backend16-1.8ab22dc.png" alt="Set the root password" class="mx-auto mt-6 max-w-full"> <p class="mt-6">
+        We can see in our <em>company</em> database that there are 2 tables
+        named <em>employee</em> and <em>department</em>. As you might have
+        guessed, the <em>head</em> column of <em>department</em> is a foreign
+        key that refers to the primary key of <em>employee</em>. But what is a
+        primary key?<br><br>
+        In simple words, a primary key is a column or a group of columns that
+        can uniquely identify a row. Because it can refer to exactly 1 row, it
+        needs to be unique. For example, if all employees are guaranteed to have
+        a different email address, it may be used as a primary key.<br><br>
+        However, it is not considered the best practice to use values that
+        describe the data. This is why we will use an integer <em>id</em> which
+        will auto-increment starting from 1, thus ensuring uniqueness. Also,
+        because the number itself contains no data, it will never need to change
+        later.<br><br>
+        Enough theory. It's time to code. Let's start by creating our database.
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">CREATE DATABASE company;
+USE company;</code></pre></div> <p>
+        This will create a new database named <em>company</em> and make it
+        active.<br><br>
+        Now we need to create our tables and select the appropriate data type
+        for each column. This is similar to selecting data types for variables
+        in programming viz. by considering its possible values.<br><br>
+        You can refer to the
+        <a rel="noopener noreferrer" href="https://dev.mysql.com/doc/refman/8.0/en/data-types.html" target="_blank" class="text-text-3 hover:underline focus:underline focus:outline-none">official website</a>
+        for a complete list of data types.
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">CREATE TABLE employee (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(50) NOT NULL,
+email VARCHAR(50) NOT NULL UNIQUE,
+phone VARCHAR(15) NOT NULL,
+date_of_birth DATE NOT NULL,
+joining DATE NOT NULL DEFAULT (CURRENT_DATE)
+);</code></pre></div> <p>
+        We have created a new table <em>employee</em> with the following
+        columns.
+      </p> <ul class="mt-2 list-inside list-disc"><li>
+          id - an integer value that will auto-increment from 1. This will be
+          our primary key. <em>NOT NULL</em> ensures that a field is required.
+        </li> <li>name - a variable-length string with a maximum length of 50.</li> <li>
+          email - similar to name but with a
+          <em>UNIQUE</em> constraint so that no two employees can share the same
+          email address.
+        </li> <li>
+          phone - it is possible for phone numbers to have special characters
+          like '+'. So they are stored as strings and not integers.
+        </li> <li>
+          date_of_birth - the <em>DATE</em> data type stores dates in
+          'YYYY‑MM‑DD' format.
+        </li> <li>
+          joining - the <em>DEFAULT</em> constraint sets a default value for
+          this field if it is not given. In this case, the current date.
+        </li></ul> <p class="mt-6">
+        Now we will create our second table <em>department</em>. But first,
+        let's understand foreign keys.<br><br>
+        A Foreign key is a column or group of columns that refer to the primary
+        key of another table. This is one of the main benefits of relational
+        databases as it helps in reducing data duplication.<br><br>
+        In our case, each department has a head who is an employee. Instead of
+        duplicating all of the employee details in <em>department</em>, we can
+        refer to that employee using a foreign key. Later, if the head of a
+        department changes, we only need to change the foreign key to refer to
+        another employee, thus saving time.
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">CREATE TABLE department (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(50) NOT NULL UNIQUE,
+location VARCHAR(50) NOT NULL,
+date_established DATE NOT NULL DEFAULT (CURRENT_DATE),
+head INT,
+FOREIGN KEY (head) REFERENCES employee(id) ON DELETE SET NULL
+);</code></pre></div> <p>We have created a new table employee with the following columns.</p> <ul class="mt-2 list-inside list-disc"><li>
+          id, name, location, date_established - these are similar to our
+          previous table.
+        </li> <li>
+          head - this will be our foreign key. It has the same data type as the
+          column it is referring to. We've also specified an action to take if
+          its referred row gets deleted. In our case, if the head employee gets
+          deleted from the <em>employee</em> table, the department's head will
+          be set to <em>NULL</em>. This will ensure that there are no references
+          to non-existent employees.
+        </li></ul> <p class="mt-6"><strong>Notice</strong> - The order of creation of tables is important.
+        The parent table must be created before the child table. Here, the
+        <em>department</em> table is the child table as it has a foreign key
+        referring to <em>employee</em>.<br>
+        Because of this, circular dependencies cannot exist.<br><br>
+        Our tables are ready to be filled with data. Let's start with
+        <em>employee</em>.
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">INSERT INTO employee (name, email, phone, date_of_birth) VALUES
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+("John Smith", "johnsmith@mail.com", "12345", "1985-11-02"),
+("Mike Walker", "mikewalker@mail.com", "24613", "1989-02-12"),
+("Steve Simpson", "stevesimpson@mail.com", "11472", "1972-05-25"),
+("Jack Robinson", "jackrobinson@mail.com", "27465", "1991-09-18");</code></pre></div> <p>
+        The stored data can be seen using the <em>SELECT</em> command. You can
+        also retrieve specific columns by mentioning the column names.
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">SELECT * FROM employee;
+SELECT id, name, email FROM employee;</code></pre></div> <p>
+        The <em>id</em> field does not need to be inserted and increments
+        automatically.
+      </p> <img src="/_nuxt/img/backend16-2.943beb6.png" alt="Create the option file name my.ini" class="mx-auto mt-6 max-w-full"> <p class="mt-6">
+        We can filter rows using the <em>WHERE</em> clause with a condition.
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">SELECT * FROM employee WHERE id > 1;</code></pre></div> <p>
+        Now, let's create some departments. In the <em>head</em> column, we will
+        insert the <em>id</em> of the employee that we want to refer to. For
+        example, to make <em>John Smith</em> the head of <em>Research</em>, we
+        will use his employee id i.e. 1.
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">INSERT INTO department (name, location, date_established, head) VALUES
+("Research", "Portland, Oregon", "2010-07-21", 1),
+("Human Resources", "Jacksonville, Florida", "2011-03-02", 3);</code></pre></div> <p>Let's look at rows of <em>department</em>.</p> <img src="/_nuxt/img/backend16-3.6e2af07.png" alt="Create the option file name my.ini" class="mx-auto mt-6 max-w-full"> <p class="mt-6">
+        We can only see the employee id in the <em>head</em> column. So, how can
+        we retrieve the details of the employee that is being referred?<br><br>
+        By using the <em>JOIN</em> clause. This is one of the most powerful
+        features of RDBMS. The <em>JOIN</em> clause compares every row from the
+        first table with every row from the second table based on some condition
+        known as the predicate.<br><br>
+        Here, we want to join the two tables and only retrieve the rows where
+        the <em>id</em> value of <em>employee</em> is equal to the
+        <em>head</em> value of <em>department</em>.
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">SELECT * FROM department JOIN employee ON department.head = employee.id;
+SELECT department.name, location, employee.name, phone FROM department JOIN employee ON department.head = employee.id;</code></pre></div> <p>
+        Once again, we can specify the columns we want to retrieve. Keep in mind
+        when a column name is the same in both tables, we have to also specify
+        the table name.
+      </p> <img src="/_nuxt/img/backend16-4.130714e.png" alt="Create the option file name my.ini" class="mx-auto mt-6 max-w-full"> <p class="mt-6">
+        Rows can be deleted using the <em>DELETE</em> command combined with the
+        <em>WHERE</em> clause. Don't forget to specify the condition otherwise,
+        you may end up deleting every row of the table.
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">DELETE FROM employee WHERE id = 4;</code></pre></div> <p>
+        The <em>UPDATE</em> command is used to update rows in a table. The
+        <em>WHERE</em> clause is used to specify the row/rows. Just like
+        <em>DELETE</em>, use this command carefully.
+      </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">UPDATE department SET date_established = "2010-09-19" WHERE id = 2;</code></pre></div> <p>
+        We've covered the absolute basics of MySQL. There is a lot more to learn
+        about databases, but it's going to be a much easier journey from here
+        on.<br>
+        Try to experiment with SQL on your own and come up with databases for
+        different real-life use cases.
+      </p></article></main> <footer class="container mx-auto mt-24 p-4 sm:px-8"><div class="flex justify-between"><a href="/about-us" class="flex flex-col items-center group focus:outline-none"><span class="block">About Us</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></a> <button class="flex flex-col items-center group focus:outline-none"><span class="block">Back To Top</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none" stroke="currentColor" stroke-width="25" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce focus:outline-none"><circle cx="250.22" cy="250.39" r="236.49"></circle> <path d="M183.31 283.89l65.81-69.12 68.01 71.24" stroke-miterlimit="10" stroke-linecap="round"></path></svg></button></div> <p class="mt-4 text-center text-sm opacity-75">
+    2021, The Source Project
+  </p></footer></div></div></div><script defer src="/_nuxt/static/1625510178/article/16-Basics-of-MySQL/state.js"></script><script src="/_nuxt/4aa2db6.js" defer></script><script src="/_nuxt/ad58d21.js" defer></script><script src="/_nuxt/84f9ad6.js" defer></script><script src="/_nuxt/c105077.js" defer></script><script src="/_nuxt/65bd88b.js" defer></script>
+  </body>
+</html>
