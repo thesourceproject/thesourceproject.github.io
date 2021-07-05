@@ -114,7 +114,7 @@ P     I"
       <p class="mt-6">
         Now, we should notice the top row of the zigzag carefully. We can see
         that the first row contains characters separated by a constant number.
-        But what is that number?<br />
+        But what is that constant?<br />
         From <strong>A</strong> to <strong>I</strong>, we go down and up 4 times
         to return to the same row. If <strong>numRows</strong> was 10. We would
         go down and up 9 times to reach the next character of the top row.
