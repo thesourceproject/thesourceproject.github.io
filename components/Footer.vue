@@ -22,7 +22,6 @@
           />
         </svg>
       </NuxtLink>
-
       <button
         @click="goToTop"
         class="flex flex-col items-center group focus:outline-none"
