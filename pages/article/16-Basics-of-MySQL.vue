@@ -120,7 +120,7 @@ joining DATE NOT NULL DEFAULT (CURRENT_DATE)
       <p class="mt-6">
         Now we will create our second table <em>department</em>. But first,
         let's understand foreign keys.<br /><br />
-        A Foreign key is a column or group of columns that refer to the primary
+        A foreign key is a column or group of columns that refer to the primary
         key of another table. This is one of the main benefits of relational
         databases as it helps in reducing data duplication.<br /><br />
         In our case, each department has a head who is an employee. Instead of
@@ -160,13 +160,12 @@ FOREIGN KEY (head) REFERENCES employee(id) ON DELETE SET NULL
         The parent table must be created before the child table. Here, the
         <em>department</em> table is the child table as it has a foreign key
         referring to <em>employee</em>.<br />
-        Because of this, circular dependencies cannot exist.<br /><br />
+        Also, as a result, circular dependencies cannot exist.<br /><br />
         Our tables are ready to be filled with data. Let's start with
         <em>employee</em>.
       </p>
       <CodeSnippet
         :code="`INSERT INTO employee (name, email, phone, date_of_birth) VALUES
-id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 (&quot;John Smith&quot;, &quot;johnsmith@mail.com&quot;, &quot;12345&quot;, &quot;1985-11-02&quot;),
 (&quot;Mike Walker&quot;, &quot;mikewalker@mail.com&quot;, &quot;24613&quot;, &quot;1989-02-12&quot;),
 (&quot;Steve Simpson&quot;, &quot;stevesimpson@mail.com&quot;, &quot;11472&quot;, &quot;1972-05-25&quot;),
@@ -219,10 +218,10 @@ SELECT id, name, email FROM employee;`"
       <p class="mt-6">
         We can only see the employee id in the <em>head</em> column. So, how can
         we retrieve the details of the employee that is being referred?<br /><br />
-        By using the <em>JOIN</em> clause. This is one of the most powerful
-        features of RDBMS. The <em>JOIN</em> clause compares every row from the
-        first table with every row from the second table based on some condition
-        known as the predicate.<br /><br />
+        The <em>JOIN</em> clause. This is one of the most powerful features of
+        RDBMS. The <em>JOIN</em> clause compares every row from the first table
+        with every row from the second table based on some condition known as
+        the predicate.<br /><br />
         Here, we want to join the two tables and only retrieve the rows where
         the <em>id</em> value of <em>employee</em> is equal to the
         <em>head</em> value of <em>department</em>.
@@ -233,9 +232,9 @@ SELECT department.name, location, employee.name, phone FROM department JOIN empl
         lang="language-sql"
       />
       <p>
-        Once again, we can specify the columns we want to retrieve. Keep in mind
-        when a column name is the same in both tables, we have to also specify
-        the table name.
+        Once again, we can specify the columns we want to retrieve. Keep in
+        mind, when a column name is same in both the joined tables, we also
+        specify the table name.
       </p>
       <img
         src="~/assets/images/article/16/backend16-4.png"
@@ -244,7 +243,7 @@ SELECT department.name, location, employee.name, phone FROM department JOIN empl
       />
       <p class="mt-6">
         Rows can be deleted using the <em>DELETE</em> command combined with the
-        <em>WHERE</em> clause. Don't forget to specify the condition otherwise,
+        <em>WHERE</em> clause. Don't forget to specify the condition, or else
         you may end up deleting every row of the table.
       </p>
       <CodeSnippet
