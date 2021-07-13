@@ -1,7 +1,7 @@
 <!doctype html>
 <html data-n-head-ssr lang="en" data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
   <head>
-    <title>Basics of MySQL | The Source Project</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="google-site-verification" name="google-site-verification" content="NBXKl5RAGYQH3Rp9PKrszzdV4bRMOLkHjIjvfNDo2xE"><meta data-n-head="ssr" data-hid="description" name="description" content="We will learn the basics behind MySQL. After learning these, you will be able to create dynamic web applications."><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&family=Ubuntu+Mono&display=swap"><link rel="preload" href="/_nuxt/4aa2db6.js" as="script"><link rel="preload" href="/_nuxt/84f9ad6.js" as="script"><link rel="preload" href="/_nuxt/css/b297d30.css" as="style"><link rel="preload" href="/_nuxt/c105077.js" as="script"><link rel="preload" href="/_nuxt/css/5d81c44.css" as="style"><link rel="preload" href="/_nuxt/7a6f470.js" as="script"><link rel="preload" href="/_nuxt/ad58d21.js" as="script"><link rel="stylesheet" href="/_nuxt/css/b297d30.css"><link rel="stylesheet" href="/_nuxt/css/5d81c44.css"><link rel="preload" href="/_nuxt/static/1625572135/article/16-Basics-of-MySQL/state.js" as="script"><link rel="preload" href="/_nuxt/static/1625572135/article/16-Basics-of-MySQL/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1625572135/manifest.js" as="script">
+    <title>Basics of MySQL | The Source Project</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="google-site-verification" name="google-site-verification" content="NBXKl5RAGYQH3Rp9PKrszzdV4bRMOLkHjIjvfNDo2xE"><meta data-n-head="ssr" data-hid="description" name="description" content="We will learn the basics behind MySQL. After learning these, you will be able to create dynamic web applications."><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.png"><link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=McLaren&family=Poppins&family=Ubuntu+Mono&display=swap"><link rel="preload" href="/_nuxt/6bf8afd.js" as="script"><link rel="preload" href="/_nuxt/84f9ad6.js" as="script"><link rel="preload" href="/_nuxt/css/b297d30.css" as="style"><link rel="preload" href="/_nuxt/c105077.js" as="script"><link rel="preload" href="/_nuxt/css/5d81c44.css" as="style"><link rel="preload" href="/_nuxt/7a6f470.js" as="script"><link rel="preload" href="/_nuxt/b2ddb1c.js" as="script"><link rel="stylesheet" href="/_nuxt/css/b297d30.css"><link rel="stylesheet" href="/_nuxt/css/5d81c44.css"><link rel="preload" href="/_nuxt/static/1626204634/article/16-Basics-of-MySQL/state.js" as="script"><link rel="preload" href="/_nuxt/static/1626204634/article/16-Basics-of-MySQL/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1626204634/manifest.js" as="script">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0EPJL59N4T"></script>
     <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-0EPJL59N4T")</script>
@@ -85,7 +85,7 @@ joining DATE NOT NULL DEFAULT (CURRENT_DATE)
         </li></ul> <p class="mt-6">
         Now we will create our second table <em>department</em>. But first,
         let's understand foreign keys.<br><br>
-        A Foreign key is a column or group of columns that refer to the primary
+        A foreign key is a column or group of columns that refer to the primary
         key of another table. This is one of the main benefits of relational
         databases as it helps in reducing data duplication.<br><br>
         In our case, each department has a head who is an employee. Instead of
@@ -114,11 +114,10 @@ FOREIGN KEY (head) REFERENCES employee(id) ON DELETE SET NULL
         The parent table must be created before the child table. Here, the
         <em>department</em> table is the child table as it has a foreign key
         referring to <em>employee</em>.<br>
-        Because of this, circular dependencies cannot exist.<br><br>
+        Also, as a result, circular dependencies cannot exist.<br><br>
         Our tables are ready to be filled with data. Let's start with
         <em>employee</em>.
       </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">INSERT INTO employee (name, email, phone, date_of_birth) VALUES
-id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 ("John Smith", "johnsmith@mail.com", "12345", "1985-11-02"),
 ("Mike Walker", "mikewalker@mail.com", "24613", "1989-02-12"),
 ("Steve Simpson", "stevesimpson@mail.com", "11472", "1972-05-25"),
@@ -141,21 +140,21 @@ SELECT id, name, email FROM employee;</code></pre></div> <p>
 ("Human Resources", "Jacksonville, Florida", "2011-03-02", 3);</code></pre></div> <p>Let's look at rows of <em>department</em>.</p> <img src="/_nuxt/img/backend16-3.6e2af07.png" alt="Create the option file name my.ini" class="mx-auto mt-6 max-w-full"> <p class="mt-6">
         We can only see the employee id in the <em>head</em> column. So, how can
         we retrieve the details of the employee that is being referred?<br><br>
-        By using the <em>JOIN</em> clause. This is one of the most powerful
-        features of RDBMS. The <em>JOIN</em> clause compares every row from the
-        first table with every row from the second table based on some condition
-        known as the predicate.<br><br>
+        The <em>JOIN</em> clause. This is one of the most powerful features of
+        RDBMS. The <em>JOIN</em> clause compares every row from the first table
+        with every row from the second table based on some condition known as
+        the predicate.<br><br>
         Here, we want to join the two tables and only retrieve the rows where
         the <em>id</em> value of <em>employee</em> is equal to the
         <em>head</em> value of <em>department</em>.
       </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">SELECT * FROM department JOIN employee ON department.head = employee.id;
 SELECT department.name, location, employee.name, phone FROM department JOIN employee ON department.head = employee.id;</code></pre></div> <p>
-        Once again, we can specify the columns we want to retrieve. Keep in mind
-        when a column name is the same in both tables, we have to also specify
-        the table name.
+        Once again, we can specify the columns we want to retrieve. Keep in
+        mind, when a column name is same in both the joined tables, we also
+        specify the table name.
       </p> <img src="/_nuxt/img/backend16-4.130714e.png" alt="Create the option file name my.ini" class="mx-auto mt-6 max-w-full"> <p class="mt-6">
         Rows can be deleted using the <em>DELETE</em> command combined with the
-        <em>WHERE</em> clause. Don't forget to specify the condition otherwise,
+        <em>WHERE</em> clause. Don't forget to specify the condition, or else
         you may end up deleting every row of the table.
       </p> <div class="sm:mx-10 my-4"><pre><code class="language-sql">DELETE FROM employee WHERE id = 4;</code></pre></div> <p>
         The <em>UPDATE</em> command is used to update rows in a table. The
@@ -169,6 +168,6 @@ SELECT department.name, location, employee.name, phone FROM department JOIN empl
         different real-life use cases.
       </p></article></main> <footer class="container mx-auto mt-24 p-4 sm:px-8"><div class="flex justify-between"><a href="/about-us" class="flex flex-col items-center group focus:outline-none"><span class="block">About Us</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></a> <button class="flex flex-col items-center group focus:outline-none"><span class="block">Back To Top</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none" stroke="currentColor" stroke-width="25" class="mt-2 h-10 w-10 group-hover:animate-bounce group-focus:animate-bounce focus:outline-none"><circle cx="250.22" cy="250.39" r="236.49"></circle> <path d="M183.31 283.89l65.81-69.12 68.01 71.24" stroke-miterlimit="10" stroke-linecap="round"></path></svg></button></div> <p class="mt-4 text-center text-sm opacity-75">
     2021, The Source Project
-  </p></footer></div></div></div><script defer src="/_nuxt/static/1625572135/article/16-Basics-of-MySQL/state.js"></script><script src="/_nuxt/4aa2db6.js" defer></script><script src="/_nuxt/ad58d21.js" defer></script><script src="/_nuxt/84f9ad6.js" defer></script><script src="/_nuxt/c105077.js" defer></script><script src="/_nuxt/7a6f470.js" defer></script>
+  </p></footer></div></div></div><script defer src="/_nuxt/static/1626204634/article/16-Basics-of-MySQL/state.js"></script><script src="/_nuxt/6bf8afd.js" defer></script><script src="/_nuxt/b2ddb1c.js" defer></script><script src="/_nuxt/84f9ad6.js" defer></script><script src="/_nuxt/c105077.js" defer></script><script src="/_nuxt/7a6f470.js" defer></script>
   </body>
 </html>
